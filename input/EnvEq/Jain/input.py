@@ -1,5 +1,5 @@
 ##--Enter all the input variables here--##
-#parameters based on ATCC documentation, death rate not accurate
+#parameters based on Jain et al
 
 #Time parameters of simulation
 t_max = 1000*24*60 #maximum (mins)
@@ -27,13 +27,13 @@ mu_testTpro=2 #(units/min/cell)
 lam_o2=0.1 #(1/min)
 lam_test=0.1 #(1/min)
 #Growth rate
-r_Tpos= 3.40E-4 #(/min)
-r_Tpro= 2.88E-4 #(/min)
-r_Tneg= 4.62E-4 #(/min)
+r_Tpos= 1.85E-5 #(/min)
+r_Tpro= 1.85E-5 #(/min)
+r_Tneg= 1.1E-5 #(/min)
 #Death rate
 delta_Tpos= 2.5E-7 #(/min)
 delta_Tpro= 2.5E-7 #(/min)
-delta_Tneg= 1.7E-6 #(/min)
+delta_Tneg= 1.7E-8 #(/min)
 #Carrying capacity
 K=1000
 #Environmental Sensitivity? (dont think so)
@@ -59,4 +59,4 @@ u_lim_testTpos=10 #(units)
 l_lim_testTpro=0 #(units)
 u_lim_testTpro=10 #(units)
 #filename to save output in
-f_name='singlecelltype/testing/Tneg_alt'
+f_name='singlecelltype/testing/Tneg'

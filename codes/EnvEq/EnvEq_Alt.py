@@ -18,11 +18,11 @@ def enveq(t,x,p,mu,lam,r,K,delta,rho,lim):
     #Equation for testosterone: production by Tp, uptake by all Tp, T+, decay
     dtest=p[1]*x[0]-mu[1,0]*x[0]-mu[1,1]*x[1]-lam[1]*x[4]
     #Equation for T+
-    dTpos=r[0]*x[0]*(1-x[0]/(K+rho[0]*f_res(x[3],lim[0,0])*f_res(x[4],lim[1,0])))-delta[0]*x[0]
+    dTpos=r[0]*x[0]*f_res(x[3],lim[0,0])*f_res(x[4],lim[1,0])-delta[0]*x[0]
     #Equation for Tp
-    dTpro=r[1]*x[1]*(1-x[1]/(K+rho[1]*f_res(x[3],lim[0,1])*f_res(x[4],lim[1,1])))-delta[1]*x[1]
+    dTpro=r[1]*x[1]*f_res(x[3],lim[0,1])*f_res(x[4],lim[1,1])-delta[1]*x[1]
     #Equation for T-
-    dTneg=r[2]*x[2]*(1-x[2]/(K+rho[2]*f_res(x[3],lim[0,2])))-delta[2]*x[2]
+    dTneg=r[2]*x[2]*f_res(x[3],lim[0,2])-delta[2]*x[2]
     # Returns the array with dx_i/dt at that time
     return np.array([dTpos,dTpro,dTneg,do2,dtest])
 
