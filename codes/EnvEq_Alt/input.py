@@ -59,4 +59,4 @@ u_lim_testTpos=10 #(units)
 l_lim_testTpro=0 #(units)
 u_lim_testTpro=10 #(units)
 #filename to save output in
-f_name='singlecelltype/testing/Tneg'
+f_name='singlecelltype/testing/Tneg_alt'

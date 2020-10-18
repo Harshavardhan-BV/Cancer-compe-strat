@@ -26,25 +26,18 @@ def enveq(t,x,p,mu,lam,r,K,delta,rho,lim):
     # Returns the array with dx_i/dt at that time
     return np.array([dTpos,dTpro,dTneg,do2,dtest])
 
-#importing variables from input and parsing into numpy arrays
-from input import *
-y0=np.array([y0_Tpos,y0_Tpro,y0_Tneg,y0_o2,y0_test])
-p=np.array([p_o2,p_test])
-mu=np.array([[mu_o2Tpos,mu_o2Tpro,mu_o2Tneg],[mu_testTpos,mu_testTpro,0]])
-lam=np.array([lam_o2,lam_test])
-r=np.array([r_Tpos,r_Tpro,r_Tneg])
-delta=np.array([delta_Tpos,delta_Tpro,delta_Tneg])
-rho=np.array([rho_Tpos,rho_Tpro,rho_Tneg])
-lim=np.array([[[l_lim_o2Tpos,u_lim_o2Tpos],[l_lim_o2Tpro,u_lim_o2Tpro],[l_lim_o2Tneg,u_lim_o2Tneg]],[[l_lim_testTpos,u_lim_testTpos],[l_lim_testTpro,u_lim_testTpro],[0,0]]])
+def solve_eq(t_max,dt,y0,p,mu,lam,r,K,delta,rho,lim,f_name):
+    #Timeseries arrays
+    t=np.arange(0,t_max,dt)
+    #Numerical solution of equation
+    sol = solve_ivp(enveq, [0, t_max], y0, args=(p,mu,lam,r,K,delta,rho,lim),t_eval=t,dense_output=True)
+    plt.plot(t,sol.y.T)
+    plt.xlabel("Time (min)")
+    plt.ylabel("Density")
+    plt.legend(['T+','Tp','T-','O2','test'])
+    df=pd.DataFrame({'t':t,'Tpos':sol.y[0],'Tpro':sol.y[1],'Tneg':sol.y[2],'o2':sol.y[3],'test':sol.y[4]})
+    plt.savefig("../../figures/EnvEq/"+f_name+".svg")
+    df.to_csv("../../raw_output/EnvEq/"+f_name+".csv",index=False)
 
-#Timeseries arrays
-t=np.arange(0,t_max,dt)
-#Numerical solution of equation
-sol = solve_ivp(enveq, [0, t_max], y0, args=(p,mu,lam,r,K,delta,rho,lim),t_eval=t,dense_output=True)
-plt.plot(t,sol.y.T)
-plt.xlabel("Time (min)")
-plt.ylabel("Density")
-plt.legend(['T+','Tp','T-','O2','test'])
-df=pd.DataFrame({'t':t,'Tpos':sol.y[0],'Tpro':sol.y[1],'Tneg':sol.y[2],'o2':sol.y[3],'test':sol.y[4]})
-plt.savefig("../../figures/EnvEq/"+f_name+".svg")
-df.to_csv("../../raw_output/EnvEq/"+f_name+".csv",index=False)
+def test_parms(t_max,dt,y0,p,mu,lam,r,K,delta,rho,lim,f_name):
+    print(t_max,dt,y0,p,mu,lam,r,K,delta,rho,lim,f_name) #for debugging purposes
