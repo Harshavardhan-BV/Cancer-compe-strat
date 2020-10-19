@@ -12,7 +12,7 @@ def f_res(res,lim):
     else:
         return 1
 
-def enveq(t,x,p,mu,lam,r,K,delta,rho,lim):
+def enveq(t,x,p,mu,lam,r,delta,lim):
     #Equation for oxygen: constant production, uptake by all 3 cells, decay
     do2=p[0]-mu[0,0]*x[0]-mu[0,1]*x[1]-mu[0,2]*x[2]-lam[0]*x[3]
     #Equation for testosterone: production by Tp, uptake by all Tp, T+, decay
@@ -26,25 +26,18 @@ def enveq(t,x,p,mu,lam,r,K,delta,rho,lim):
     # Returns the array with dx_i/dt at that time
     return np.array([dTpos,dTpro,dTneg,do2,dtest])
 
-#importing variables from input and parsing into numpy arrays
-from input import *
-y0=np.array([y0_Tpos,y0_Tpro,y0_Tneg,y0_o2,y0_test])
-p=np.array([p_o2,p_test])
-mu=np.array([[mu_o2Tpos,mu_o2Tpro,mu_o2Tneg],[mu_testTpos,mu_testTpro,0]])
-lam=np.array([lam_o2,lam_test])
-r=np.array([r_Tpos,r_Tpro,r_Tneg])
-delta=np.array([delta_Tpos,delta_Tpro,delta_Tneg])
-rho=np.array([rho_Tpos,rho_Tpro,rho_Tneg])
-lim=np.array([[[l_lim_o2Tpos,u_lim_o2Tpos],[l_lim_o2Tpro,u_lim_o2Tpro],[l_lim_o2Tneg,u_lim_o2Tneg]],[[l_lim_testTpos,u_lim_testTpos],[l_lim_testTpro,u_lim_testTpro],[0,0]]])
-
-#Timeseries arrays
-t=np.arange(0,t_max,dt)
-#Numerical solution of equation
-sol = solve_ivp(enveq, [0, t_max], y0, args=(p,mu,lam,r,K,delta,rho,lim),t_eval=t,dense_output=True)
-plt.plot(t,sol.y.T)
-plt.xlabel("Time (min)")
-plt.ylabel("Density")
-plt.legend(['T+','Tp','T-','O2','test'])
-df=pd.DataFrame({'t':t,'Tpos':sol.y[0],'Tpro':sol.y[1],'Tneg':sol.y[2],'o2':sol.y[3],'test':sol.y[4]})
-plt.savefig("../../figures/EnvEq/"+f_name+".svg")
-df.to_csv("../../raw_output/EnvEq/"+f_name+".csv",index=False)
+def solve_eq(t_max,dt,y0,p,mu,lam,r,delta,lim,f_name):
+    inp=pd.DataFrame([t_max,dt,y0,p,mu,lam,r,delta,lim,f_name])
+    inp.to_csv("../../raw_output/EnvEq_Alt/"+f_name+"_inp.log",index=False)
+    #Timeseries arrays
+    t=np.arange(0,t_max,dt)
+    #Numerical solution of equation
+    sol = solve_ivp(enveq, [0, t_max], y0, args=(p,mu,lam,r,delta,lim),t_eval=t,dense_output=True)
+    fig, ax = plt.subplots()
+    ax.plot(t,sol.y.T)
+    ax.set_xlabel("Time (min)")
+    ax.set_ylabel("Density")
+    ax.legend(['T+','Tp','T-','O2','test'])
+    df=pd.DataFrame({'t':t,'Tpos':sol.y[0],'Tpro':sol.y[1],'Tneg':sol.y[2],'o2':sol.y[3],'test':sol.y[4]})
+    fig.savefig("../../figures/EnvEq_Alt/"+f_name+".svg")
+    df.to_csv("../../raw_output/EnvEq_Alt/"+f_name+".csv",index=False)

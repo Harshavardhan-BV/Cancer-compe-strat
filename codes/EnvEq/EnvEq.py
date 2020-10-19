@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from scipy.integrate import solve_ivp
 from scipy.stats import truncnorm
+import pandas as pd
 
 def f_res(res,lim):
     if res<=lim[0]:
@@ -27,17 +28,21 @@ def enveq(t,x,p,mu,lam,r,K,delta,rho,lim):
     return np.array([dTpos,dTpro,dTneg,do2,dtest])
 
 def solve_eq(t_max,dt,y0,p,mu,lam,r,K,delta,rho,lim,f_name):
+    #just dump the input to some text file for reference
+    inp=pd.DataFrame([t_max,dt,y0,p,mu,lam,r,K,delta,rho,lim,f_name])
+    inp.to_csv("../../raw_output/EnvEq/"+f_name+"_inp.log",index=False)
     #Timeseries arrays
     t=np.arange(0,t_max,dt)
     #Numerical solution of equation
     sol = solve_ivp(enveq, [0, t_max], y0, args=(p,mu,lam,r,K,delta,rho,lim),t_eval=t,dense_output=True)
-    plt.plot(t,sol.y.T)
-    plt.xlabel("Time (min)")
-    plt.ylabel("Density")
-    plt.legend(['T+','Tp','T-','O2','test'])
+    fig, ax = plt.subplots()
+    ax.plot(t,sol.y.T)
+    ax.set_xlabel("Time (min)")
+    ax.set_ylabel("Density")
+    ax.legend(['T+','Tp','T-','O2','test'])
     df=pd.DataFrame({'t':t,'Tpos':sol.y[0],'Tpro':sol.y[1],'Tneg':sol.y[2],'o2':sol.y[3],'test':sol.y[4]})
-    plt.savefig("../../figures/EnvEq/"+f_name+".svg")
+    fig.savefig("../../figures/EnvEq/"+f_name+".svg")
     df.to_csv("../../raw_output/EnvEq/"+f_name+".csv",index=False)
 
-def test_parms(t_max,dt,y0,p,mu,lam,r,K,delta,rho,lim,f_name):
-    print(t_max,dt,y0,p,mu,lam,r,K,delta,rho,lim,f_name) #for debugging purposes
+def test_parms(t_max,dt,y0,p,mu,lam,r,K,delta,rho,lim,f_name): #for debugging purposes
+    print(t_max,dt,y0,p,mu,lam,r,K,delta,rho,lim,f_name)
