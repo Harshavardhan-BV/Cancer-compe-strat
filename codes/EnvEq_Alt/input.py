@@ -7,8 +7,8 @@ dt = 60  #step (mins)
 #Initial Values
 ##cells
 y0_Tpos=0
-y0_Tpro=0
-y0_Tneg=10
+y0_Tpro=10
+y0_Tneg=0
 ##resource
 y0_o2=100 #(mmHg)
 y0_test=0 #(units)
@@ -53,4 +53,4 @@ u_lim_testTpos=10 #(units)
 l_lim_testTpro=0 #(units)
 u_lim_testTpro=10 #(units)
 #filename to save output in
-f_name='singlecelltype/p_o2/Tneg'
+f_name='singlecelltype/p_o2-p_test-mu_o2-mu_test/Tpro'
