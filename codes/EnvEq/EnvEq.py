@@ -35,13 +35,7 @@ def solve_eq(t_max,dt,y0,p,mu,lam,r,K,delta,rho,lim,f_name):
     t=np.arange(0,t_max,dt)
     #Numerical solution of equation
     sol = solve_ivp(enveq, [0, t_max], y0, args=(p,mu,lam,r,K,delta,rho,lim),t_eval=t,dense_output=True)
-    fig, ax = plt.subplots()
-    ax.plot(t,sol.y.T)
-    ax.set_xlabel("Time (min)")
-    ax.set_ylabel("Density")
-    ax.legend(['T+','Tp','T-','O2','test'])
     df=pd.DataFrame({'t':t,'Tpos':sol.y[0],'Tpro':sol.y[1],'Tneg':sol.y[2],'o2':sol.y[3],'test':sol.y[4]})
-    fig.savefig("../../figures/EnvEq/"+f_name+".svg")
     df.to_csv("../../raw_output/EnvEq/"+f_name+".csv",index=False)
 
 def test_parms(t_max,dt,y0,p,mu,lam,r,K,delta,rho,lim,f_name): #for debugging purposes
