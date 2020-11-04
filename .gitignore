@@ -1,0 +1,7 @@
+#Ignore files created by vscode
+.vscode
+#Ignore pycache
+**/__pycache__/*
+#Ignore folders/files explicitly said so
+**/*-ignore/
+**/*-ignore.*
