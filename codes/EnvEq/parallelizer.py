@@ -19,14 +19,14 @@ lim=np.array([[[l_lim_o2Tpos,u_lim_o2Tpos],[l_lim_o2Tpro,u_lim_o2Tpro],[l_lim_o2
 #make directories for saving raw_outputs
 try:
     os.makedirs("../../raw_output/EnvEq/"+f_name)
-except FileExistsError:
+except:
     pass
 
 #iterator over these 
 p_o2_arr=np.logspace(0,3,10) #10 values bw 10^0 to 10^3
 r_Tneg_arr=np.logspace(-3,1,10) #10 values bw 10^-3 to 10^1
 
-def solve_parm(p_o2,p_test,mu_o2Tpro,mu_testTpro): #calls the solve_eq function with all default inputs other than p_o2,mu_o2Tneg
+def solve_parm(p_o2,r_Tneg): #calls the solve_eq function with all default inputs other than p_o2,r_Tneg
     f_name_i=f_name+"{:.2f}".format(p_o2)+'-'+"{:.2f}".format(r_Tneg)
     p[0]=p_o2
     r[2]=r_Tneg
@@ -34,5 +34,7 @@ def solve_parm(p_o2,p_test,mu_o2Tpro,mu_testTpro): #calls the solve_eq function 
     ee.solve_eq(t_max,dt,y0,p,mu,lam,r,K,delta,rho,lim,f_name_i)
 
 if __name__ == '__main__':
-    pool = Pool()
+    pool = Pool(10)
     pool.starmap(solve_parm,it.product(p_o2_arr,r_Tneg_arr)) #iterate over the p_o2,r_Tneg
+    pool.close()
+    pool.join()

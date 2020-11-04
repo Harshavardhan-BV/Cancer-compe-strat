@@ -33,5 +33,7 @@ def solve_parm(p_o2,r_Tneg): #calls the solve_eq function with all default input
     ee.solve_eq(t_max,dt,y0,p,mu,lam,r,delta,lim,f_name_i)
 
 if __name__ == '__main__':
-    pool = Pool()
+    pool = Pool(10)
     pool.starmap(solve_parm,it.product(p_o2_arr,r_Tneg_arr)) #iterate over the p_o2,r_Tneg
+    pool.close()
+    pool.join()
