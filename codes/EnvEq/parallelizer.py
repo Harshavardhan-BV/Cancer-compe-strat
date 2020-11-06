@@ -27,7 +27,7 @@ p_o2_arr=np.logspace(0,3,10) #10 values bw 10^0 to 10^3
 r_Tneg_arr=np.logspace(-3,1,10) #10 values bw 10^-3 to 10^1
 
 def solve_parm(p_o2,r_Tneg): #calls the solve_eq function with all default inputs other than p_o2,r_Tneg
-    f_name_i=f_name+"{:.2f}".format(p_o2)+'-'+"{:.2f}".format(r_Tneg)
+    f_name_i=f_name+"{:.2E}".format(p_o2)+'-'+"{:.2E}".format(r_Tneg)
     p[0]=p_o2
     r[2]=r_Tneg
     delta=r-np.log(2)/t_D
