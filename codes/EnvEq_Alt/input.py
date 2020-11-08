@@ -10,7 +10,7 @@ y0_Tpos=0
 y0_Tpro=0
 y0_Tneg=10
 ##resource
-y0_o2=100 #(nmol)
+y0_o2=7000 #(nmol)
 y0_test=0 #(units)
 #Production rates of resources
 p_o2=100 #(nmol/min)
