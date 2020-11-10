@@ -22,8 +22,8 @@ except FileExistsError:
     pass
 
 #iterator over these 
-p_o2_arr=np.logspace(3,6,10) #10 values bw 10^3 to 10^6
-r_Tneg_arr=np.logspace(-3,1,10) #10 values bw 10^-3 to 10^1
+p_o2_arr=np.linspace(2500,4500,10) #10 values b/w 2500 to 4500
+r_Tneg_arr=np.linspace(0.001,0.02,5) #5 values b/w 0.001 to 0.02
 
 def solve_parm(p_o2,r_Tneg): #calls the solve_eq function with all default inputs other than p_o2,r_Tneg
     f_name_i=f_name+"{:.2E}".format(p_o2)+'-'+"{:.2E}".format(r_Tneg)

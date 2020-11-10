@@ -23,8 +23,8 @@ except:
     pass
 
 #iterator over these 
-p_o2_arr=np.logspace(3,6,10) #10 values bw 10^3 to 10^6
-r_Tneg_arr=np.logspace(-3,1,10) #10 values bw 10^-3 to 10^1
+p_o2_arr=np.logspace(3,3,1) #Just 10^3
+r_Tneg_arr=np.linspace(4.62E-4,1E-3,10) #10 values bw 4.62E-4 to 1E-3
 
 def solve_parm(p_o2,r_Tneg): #calls the solve_eq function with all default inputs other than p_o2,r_Tneg
     f_name_i=f_name+"{:.2E}".format(p_o2)+'-'+"{:.2E}".format(r_Tneg)
