@@ -23,7 +23,7 @@ except:
     pass
 
 #iterator over these 
-p_o2_arr=np.logspace(-4,0,10) #10^-4 to 1
+p_o2_arr=np.logspace(-4,0,20) #10^-4 to 1
 
 
 def solve_parm(p_o2): #calls the solve_eq function with all default inputs other than p_o2
