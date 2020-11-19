@@ -1,21 +1,9 @@
 # Parametes
 
 ## Growth Rates
-### Jain _et al_ @ https://www.pnas.org/cgi/doi/10.1073/pnas.1115750108
-- q_1 can be taken as r
-- q_3 can be taken as delta
--  T+ cell = N cells
-	- Androgen dependent cells
-	- r = 11.1 * 10^-4 /hr
-	- delta = (0.15-0.10) * 10^-4 /hr
-- T- cells = M cells
-	- Castrate resistant cells
-	- r = (2.8-6.6) * 10^-4 /hr
-	- delta = (0.01-0.009) * 10^-4 /hr 
-- Tp cells = NA :(
 ### ATCC population doubling time
 - Cell specifications have a rough estimate of doubling time
-- No data for death rate, delta =0 doesn't make sense
+- doubling time can be approximated to ln(2)/(r-delta)
 - T+ cells = LNCaP (CRL-1740)
 	- Androgen sensitive
 	- population doubling time = 34 hrs 
@@ -31,9 +19,18 @@
 		- other cell line data within 1hr 
 	- population doubling time =  25 hrs
 	- r - delta = 0.0277 /hr
+- delta could be taken as a free parameter with r being determined from it. 
+- Or delta can be taken from Jain et al and r fixed from it.
+
+## Mean tissue resource level
+### Stewart _et al_ @ https://bjui-journals.onlinelibrary.wiley.com/doi/full/10.1111/j.1464-410X.2009.08921.x
+- Oxygen:
+	- Normal Muscle tissue = 30mmHg
+	- Hypoxic Prostate Cancer = 2.5mmHg
 
 ## Uptake and Production rates
 - These determine the competition levels of the cell and a parameter space exploration has to be done to observe their impact.
+- converting to concentration by fixing volume and normalising with respect to known tissue concentrations.
 ### Hail Jr _et al_ @ https://www.sciencedirect.com/science/article/pii/S1476558610800041
 - Main paper details unrelated
 - oxygen consumption rate given in nmol/min/10^6cells
@@ -42,16 +39,14 @@
 - T- cells = PC-3
 	- mu_o2 ~= 3.5 nmol/min/10^6cells
 - Tp cells = NA :(
-### Higgins _et al_ @ https://www.sciencedirect.com/science/article/pii/S0005272809002047
-- oxygen consumption rate given in nmol/min/mg protein -> what protein 
--  T+ cell = LNCaP
-	- mu_o2 ~= 13 nmol/min/mg protein
-- T- cells = PC-3
-	- mu_o2 ~= 5 nmol/min/mg protein
-- Tp cells = NA :(
+- considering a mean tumour volume from a 2mm spherical tumour = 3.35E-5 L, 1.35 μM/mmHg
+	- T+ = 5.5E-9/(3.35E-5 * 1.35 * 2.5) = 4.86E-5 proportion/min
+	- Tp = assumed same as T+
+	- T- = 3.5E-9/(3.35E-5 * 1.35 * 2.5) = 3.10E-5 proportion/min
+
 ## Thresholds
 - These determine the sensitivity of the cell to resource and in extention survival.
-- Starting off with default Physicell parameters for now.
+- By normalising with respect to known tissue concentrations, the thresholds can be constrained to [0,1] and could be explored.
 
 ## Carrying capacity and sensitivity?
 - *shrug* depends on the final equation form we're using

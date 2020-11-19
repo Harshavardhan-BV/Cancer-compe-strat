@@ -1,5 +1,5 @@
 ##--Enter all the input variables here--##
-#parameters based on ATCC documentation
+#Refer doc/EnvEq_parms for further info
 
 #Time parameters of simulation
 t_max = 1000*24*60 #maximum (mins)
@@ -10,30 +10,34 @@ y0_Tpos=0
 y0_Tpro=0
 y0_Tneg=10
 ##resource
-y0_o2=7000 #(nmol)
-y0_test=0 #(units)
+y0_o2=0.5 #(prop)
+y0_test=0 #(prop)
 #Production rates of resources
-p_o2=100 #(nmol/min)
-p_test=60 #by Tp cells (units/min/cell)
+p_o2=0.5 #(prop/min)
+p_test=0.5 #by Tp cells (prop/min/cell)
 #Uptake rate of resources by cells
 ##oxygen
-mu_o2Tpos=5.5E-6 #(nmol/min/cell)
-mu_o2Tpro=5.5E-6 #(nmol/min/cell)
-mu_o2Tneg=3.5E-6 #(nmol/min/cell)
+mu_o2Tpos=4.86E-5 #(prop/min/cell)
+mu_o2Tpro=4.86E-5 #(prop/min/cell)
+mu_o2Tneg=3.10E-5 #(prop/min/cell)
 ##testosterone
-mu_testTpos=2 #(units/min/cell)
-mu_testTpro=2 #(units/min/cell)
+mu_testTpos=0.2 #(prop/min/cell)
+mu_testTpro=0.2 #(prop/min/cell)
 #Decay rates of resources
 lam_o2=0.1 #(1/min)
 lam_test=0.1 #(1/min)
 #Doubling time
 t_DTpos=34*60 #(min)
 t_DTpro=40*60 #(min)
-T_DTneg=25*60 #(min)
+t_DTneg=25*60 #(min)
 #Growth rate
-r_Tpos= 3.40E-4 #(/min)
-r_Tpro= 2.88E-4 #(/min)
-r_Tneg= 4.62E-4 #(/min)
+r_Tpos= 2.84E-3 #(/min)
+r_Tpro= 2.79E-3 #(/min)
+r_Tneg= 6.23E-4 #(/min)
+#Death rate
+delta_Tpos= 2.5E-3 #(/min)
+delta_Tpro= 2.5E-3 #(/min)
+delta_Tneg= 1.6E-4 #(/min)
 #Carrying capacity
 K=1000
 #Environmental Sensitivity? (dont think so)
@@ -43,20 +47,20 @@ rho_Tneg=1
 #Resource limits
 ##Oxygen
 ###T+
-l_lim_o2Tpos=5*1.35*1E3 #lower-threshold(nmol)
-u_lim_o2Tpos=35*1.35*1E3 #upper-saturation(nmol)
+l_lim_o2Tpos=0 #lower-threshold(prop)
+u_lim_o2Tpos=1 #upper-saturation(prop)
 ###Tp
-l_lim_o2Tpro=5*1.35*1E3 #(nmol)
-u_lim_o2Tpro=35*1.35*1E3 #(nmol)
+l_lim_o2Tpro=0 #(prop)
+u_lim_o2Tpro=1 #(prop)
 ###T-
-l_lim_o2Tneg=5*1.35*1E3 #(nmol)
-u_lim_o2Tneg=35*1.35*1E3 #(nmol)
+l_lim_o2Tneg=0 #(prop)
+u_lim_o2Tneg=1 #(prop)
 ##Testosterone
 ###T+
-l_lim_testTpos=0 #(units)
-u_lim_testTpos=10 #(units)
+l_lim_testTpos=0 #(prop)
+u_lim_testTpos=1 #(prop)
 ###Tp
-l_lim_testTpro=0 #(units)
-u_lim_testTpro=10 #(units)
+l_lim_testTpro=0 #(prop)
+u_lim_testTpro=1 #(prop)
 #filename to save output in
-f_name='singlecelltype/Tneg/p_o2-r_Tneg/'
+f_name='singlecelltype/Tneg/p_o2/'
