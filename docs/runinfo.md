@@ -59,6 +59,10 @@ deprecated bcos of issues with other parameter
 - lower limit chosen bcos uptake rate in orders of 10^-5
 - to see how it affects the equilibrium values of T_neg and o2
 
+### l_lim_o2Tneg x u_lim_o2Tneg
+- chose p_o2=8.86E-2 (proportion/min) for both OG & Alt Eq with an additional p_o2=3.36E-2 (proportion/min) for Alt Eq
+- changed (l_lim_o2Tneg,u_lim_o2Tneg) as (0,0.1),(0,0.3),...(0.2,0.3)(0.2,0.5)...(0.8,0.9)
+- to see how the limits affect the equilibrium values of Tneg and o2
+
 ### r
 
-### l_lim_o2 x u_lim_o2

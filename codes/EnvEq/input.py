@@ -13,7 +13,7 @@ y0_Tneg=10
 y0_o2=0.5 #(prop)
 y0_test=0 #(prop)
 #Production rates of resources
-p_o2=0.5 #(prop/min)
+p_o2=8.86E-2 #(prop/min)
 p_test=0.5 #by Tp cells (prop/min/cell)
 #Uptake rate of resources by cells
 ##oxygen
@@ -63,4 +63,4 @@ u_lim_testTpos=1 #(prop)
 l_lim_testTpro=0 #(prop)
 u_lim_testTpro=1 #(prop)
 #filename to save output in
-f_name='singlecelltype/Tneg/p_o2/'
+f_name='singlecelltype/Tneg/l_lim_o2Tneg-u_lim_o2Tneg/'
