@@ -23,16 +23,15 @@ except:
     pass
 
 #iterator over these 
-r_Tneg_arr=np.array([2.84E-3,2.79E-3,6.23E-4])
+delta_Tneg_arr=np.array([1.74E-3, 1.79E-3,1.62E-3])
 
-
-def solve_parm(r_Tneg): #calls the solve_eq function with all default inputs other than r_Tneg
-    f_name_i=f_name+"{:.2E}".format(r_Tneg)
-    r[2]=r_Tneg
+def solve_parm(delta_Tneg): #calls the solve_eq function with all default inputs other than delta_Tneg
+    f_name_i=f_name+"{:.2E}".format(delta_Tneg)
+    delta[2]=delta_Tneg
     ee.solve_eq(t_max,dt,y0,p,mu,lam,r,K,delta,rho,lim,f_name_i)
 
 if __name__ == '__main__':
     pool = Pool(4)
-    pool.map(solve_parm,r_Tneg_arr) #iterate over the r_Tneg
+    pool.map(solve_parm,delta_Tneg_arr) #iterate over the delta_Tneg
     pool.close()
     pool.join()
