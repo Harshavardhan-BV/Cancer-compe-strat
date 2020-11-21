@@ -33,11 +33,11 @@ t_DTneg=25*60 #(min)
 #Growth rate
 r_Tpos= 2.84E-3 #(/min)
 r_Tpro= 2.79E-3 #(/min)
-r_Tneg= 6.23E-4 #(/min)
+r_Tneg= 2.08E-3 #(/min)
 #Death rate
 delta_Tpos= 2.5E-3 #(/min)
 delta_Tpro= 2.5E-3 #(/min)
-delta_Tneg= 1.6E-4 #(/min)
+delta_Tneg= 1.72E-3 #(/min)
 #Resource limits
 ##Oxygen
 ###T+
@@ -57,4 +57,4 @@ u_lim_testTpos=1 #(prop)
 l_lim_testTpro=0 #(prop)
 u_lim_testTpro=1 #(prop)
 #filename to save output in
-f_name='singlecelltype/Tneg/l_lim_o2Tneg-u_lim_o2Tneg/po2=8.86E-2-'
+f_name='singlecelltype/Tneg/delta_Tneg/'

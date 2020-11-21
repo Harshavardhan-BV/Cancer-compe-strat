@@ -64,5 +64,22 @@ deprecated bcos of issues with other parameter
 - changed (l_lim_o2Tneg,u_lim_o2Tneg) as (0,0.1),(0,0.3),...(0.2,0.3)(0.2,0.5)...(0.8,0.9)
 - to see how the limits affect the equilibrium values of Tneg and o2
 
-### r
+### r_Tneg
+- Taking mean of delta from Jain _et al_
+    - delta_avg = 1.72E-3 /min
+- r_i = ln(2)/t_D,i + delta_avg, t_D from ATCC for each cell type
+    - r_1= 2.06E-3 /min
+    - r_2= 2.01E-3 /min
+    - r_3= 2.18E-3 /min
+- Only T- cell type present
+- Simulation run with fixed delta and changing r
 
+### delta_Tneg
+- Taking mean r from previous calculation
+    -  r_avg = 2.08E-3 /min
+- delta_i = r_avg -ln(2)/t_D,i, t_D from ATCC for each cell type
+    - delta_1= 1.74E-3 /min
+    - delta_2= 1.79E-3 /min
+    - delta_3= 1.62E-3 /min
+- Only T- cell type present
+- Simulation run with fixed r and changing delta
