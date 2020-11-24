@@ -41,9 +41,9 @@ delta_Tneg= 1.72E-3 #(/min)
 #Carrying capacity
 K=1000
 #Environmental Sensitivity? (dont think so)
-rho_Tpos=1
-rho_Tpro=1
-rho_Tneg=1
+rho_Tpos=1000
+rho_Tpro=1000
+rho_Tneg=1000
 #Resource limits
 ##Oxygen
 ###T+
