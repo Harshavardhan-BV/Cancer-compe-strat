@@ -8,7 +8,7 @@ dt = 60  #step (mins)
 ##cells
 y0_Tpos=0
 y0_Tpro=10
-y0_Tneg=0
+y0_Tneg=10
 ##resource
 y0_o2=0.5 #(prop)
 y0_test=0 #(prop)
@@ -63,4 +63,4 @@ u_lim_testTpos=-1E100 #(prop)
 l_lim_testTpro=0 #(prop)
 u_lim_testTpro=-1E100 #(prop)
 #filename to save output in
-f_name='singlecelltype/Tpro/l_lim_o2Tpro-u_lim_o2Tpro/testindep-'
+f_name='pairwise/Tneg-Tpro/l_lim_o2Tpro-l_lim_o2Tneg/testindep-'
