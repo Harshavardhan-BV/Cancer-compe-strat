@@ -6,18 +6,18 @@ from scipy.stats import truncnorm
 import pandas as pd
 
 def f_res(res,lim):
-    if res<=lim[0]:
-        return 0
-    elif res<=lim[1]:
+    if res>=lim[1]:
+        return 1
+    elif res>=lim[0]:
         return (res-lim[0])/(lim[1]-lim[0])
     else:
-        return 1
+        return 0
 
 def enveq(t,x,p,mu,lam,r,K,delta,rho,lim):
     #Equation for oxygen: constant production, uptake by all 3 cells, decay
     do2=p[0]-mu[0,0]*x[0]-mu[0,1]*x[1]-mu[0,2]*x[2]-lam[0]*x[3]
     #Equation for testosterone: production by Tp, uptake by all Tp, T+, decay
-    dtest=p[1]*x[0]-mu[1,0]*x[0]-mu[1,1]*x[1]-lam[1]*x[4]
+    dtest=p[1]*x[1]-mu[1,0]*x[0]-mu[1,1]*x[1]-lam[1]*x[4]
     #Equation for T+
     dTpos=r[0]*x[0]*(1-x[0]/(K+rho[0]*f_res(x[3],lim[0,0])*f_res(x[4],lim[1,0])))-delta[0]*x[0]
     #Equation for Tp

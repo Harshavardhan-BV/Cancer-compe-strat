@@ -7,8 +7,8 @@ dt = 60  #step (mins)
 #Initial Values
 ##cells
 y0_Tpos=0
-y0_Tpro=0
-y0_Tneg=10
+y0_Tpro=10
+y0_Tneg=0
 ##resource
 y0_o2=0.5 #(prop)
 y0_test=0 #(prop)
@@ -33,14 +33,14 @@ t_DTneg=25*60 #(min)
 #Growth rate
 r_Tpos= 2.84E-3 #(/min)
 r_Tpro= 2.79E-3 #(/min)
-r_Tneg= 2.08E-3 #(/min)
+r_Tneg= 6.23E-4 #(/min)
 #Death rate
 delta_Tpos= 2.5E-3 #(/min)
 delta_Tpro= 2.5E-3 #(/min)
-delta_Tneg= 1.72E-3 #(/min)
-#Carrying capacity
+delta_Tneg= 1.6E-4 #(/min)
+#Min Carrying capacity
 K=1
-#Environmental Sensitivity? (dont think so)
+#Environmental Carrying capacity (Scaling Factor)
 rho_Tpos=2000
 rho_Tpro=2000
 rho_Tneg=2000
@@ -58,9 +58,9 @@ u_lim_o2Tneg=1 #(prop)
 ##Testosterone
 ###T+
 l_lim_testTpos=0 #(prop)
-u_lim_testTpos=1 #(prop)
+u_lim_testTpos=-1E100 #(prop)
 ###Tp
 l_lim_testTpro=0 #(prop)
-u_lim_testTpro=1 #(prop)
+u_lim_testTpro=-1E100 #(prop)
 #filename to save output in
-f_name='singlecelltype/Tneg/delta_Tneg/'
+f_name='singlecelltype/Tpro/l_lim_o2Tpro-u_lim_o2Tpro/testindep-'
