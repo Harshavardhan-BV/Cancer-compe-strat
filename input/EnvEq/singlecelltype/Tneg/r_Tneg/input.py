@@ -38,12 +38,12 @@ r_Tneg= 6.23E-4 #(/min)
 delta_Tpos= 2.5E-3 #(/min)
 delta_Tpro= 2.5E-3 #(/min)
 delta_Tneg= 1.72E-3 #(/min)
-#Carrying capacity
-K=1000
-#Environmental Sensitivity? (dont think so)
-rho_Tpos=1000
-rho_Tpro=1000
-rho_Tneg=1000
+#Min Carrying capacity
+K=1
+#Environmental Carrying capacity (Scaling Factor)
+rho_Tpos=2000
+rho_Tpro=2000
+rho_Tneg=2000
 #Resource limits
 ##Oxygen
 ###T+
