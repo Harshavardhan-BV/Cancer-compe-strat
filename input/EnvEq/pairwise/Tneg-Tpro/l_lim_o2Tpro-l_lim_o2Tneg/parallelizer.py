@@ -27,15 +27,12 @@ o2_lim_arr=np.empty([0,2])
 for llim_Tpro in np.arange(0,1,0.2):
     for llim_Tneg in np.arange(0,1,0.2):
         o2_lim_arr=np.append(o2_lim_arr,[[llim_Tpro,llim_Tneg]],axis=0)
-cs_diff=0.2
 
 
 def solve_parm(l_lim_o2): #calls the solve_eq function with all default inputs other than o2_lim
-    f_name_i=f_name+"{:.1f}".format(l_lim_o2[0])+"-"+"{:.1f}".format(l_lim_o2[1])+"-cs_diff="+"{:.1f}".format(cs_diff)
+    f_name_i=f_name+"{:.1f}".format(l_lim_o2[0])+"-"+"{:.1f}".format(l_lim_o2[1])
     lim[0,1,0]=l_lim_o2[0]
     lim[0,2,0]=l_lim_o2[1]
-    lim[0,1,1]=l_lim_o2[0]+cs_diff
-    lim[0,2,1]=l_lim_o2[1]+cs_diff
     ee.solve_eq(t_max,dt,y0,p,mu,lam,r,K,delta,rho,lim,f_name_i)
 
 if __name__ == '__main__':

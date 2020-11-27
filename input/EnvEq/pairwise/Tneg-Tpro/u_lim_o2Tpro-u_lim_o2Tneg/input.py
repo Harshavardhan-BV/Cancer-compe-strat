@@ -63,4 +63,4 @@ u_lim_testTpos=-1E100 #(prop)
 l_lim_testTpro=0 #(prop)
 u_lim_testTpro=-1E100 #(prop)
 #filename to save output in
-f_name='pairwise/Tneg-Tpro/cs_lim_o2Tpro-cs_lim_o2Tneg/testindep-'
+f_name='pairwise/Tneg-Tpro/u_lim_o2Tpro-u_lim_o2Tneg/testindep-'
