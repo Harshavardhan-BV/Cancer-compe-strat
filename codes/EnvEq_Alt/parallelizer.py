@@ -22,15 +22,15 @@ except FileExistsError:
     pass
 
 #iterator over these 
-delta_Tneg_arr=np.array([1.74E-3, 1.79E-3,1.62E-3])
+y0_arr=np.logspace(1,3,20)
 
-def solve_parm(delta_Tneg): #calls the solve_eq function with all default inputs other than delta_Tneg
-    f_name_i=f_name+"{:.2E}".format(delta_Tneg)
-    delta[2]=delta_Tneg
+def solve_parm(y0_Tpro): #calls the solve_eq function with all default inputs other than y0
+    f_name_i=f_name+"{:.2E}".format(y0_Tpro)
+    y0[1]=y0_Tpro
     ee.solve_eq(t_max,dt,y0,p,mu,lam,r,delta,lim,f_name_i)
 
 if __name__ == '__main__':
     pool = Pool(4)
-    pool.map(solve_parm,delta_Tneg_arr) #iterate over the delta_Tneg
+    pool.map(solve_parm,y0_arr) #iterate over the y0s
     pool.close()
     pool.join()

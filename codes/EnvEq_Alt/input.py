@@ -7,25 +7,25 @@ dt = 60  #step (mins)
 #Initial Values
 ##cells
 y0_Tpos=0
-y0_Tpro=0
-y0_Tneg=10
+y0_Tpro=10
+y0_Tneg=0
 ##resource
 y0_o2=0.5 #(prop)
 y0_test=0 #(prop)
 #Production rates of resources
 p_o2=8.86E-2 #(prop/min)
-p_test=0.5 #by Tp cells (prop/min/cell)
+p_test=2.52E-7 #by Tp cells (prop/min/cell)
 #Uptake rate of resources by cells
 ##oxygen
 mu_o2Tpos=4.86E-5 #(prop/min/cell)
 mu_o2Tpro=4.86E-5 #(prop/min/cell)
 mu_o2Tneg=3.10E-5 #(prop/min/cell)
 ##testosterone
-mu_testTpos=0.2 #(prop/min/cell)
-mu_testTpro=0.2 #(prop/min/cell)
+mu_testTpos=0 #(prop/min/cell)
+mu_testTpro=0 #(prop/min/cell)
 #Decay rates of resources
 lam_o2=0.1 #(1/min)
-lam_test=0.1 #(1/min)
+lam_test=0.004 #(1/min)
 #Doubling time
 t_DTpos=34*60 #(min)
 t_DTpro=40*60 #(min)
@@ -57,4 +57,4 @@ u_lim_testTpos=1 #(prop)
 l_lim_testTpro=0 #(prop)
 u_lim_testTpro=1 #(prop)
 #filename to save output in
-f_name='singlecelltype/Tneg/delta_Tneg/'
+f_name='singlecelltype/Tpro/y0_Tpro/'
