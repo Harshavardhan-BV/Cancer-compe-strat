@@ -59,18 +59,23 @@ df1.to_csv('../analysed_data/EnvEq/singlecelltype/Tpro/y0_Tpro/eq_values.csv',in
 
 
 fig,ax1=plt.subplots()
-color="tab:blue"
-ax1.plot(df1.y0_Tpro,df1.o2_eq,color=color,marker='.',label='o2')
-ax1.plot(df1.y0_Tpro,df1.test_eq,color='tab:orange',marker='.',label='test')
-ax1.set_xlabel("y0_Tpro")
-ax1.set_ylabel("o2_eq/test_eq",color=color)
-ax1.tick_params(axis='y', labelcolor=color)
-ax1.legend()
 ax2=ax1.twinx()
-color="tab:red"
-ax2.plot(df1.y0_Tpro,df1.Tpro_eq,color=color,marker='.')
-ax2.tick_params(axis='y', labelcolor=color)
-ax2.set_ylabel("Tpro_eq",color=color)
+ax3=ax1.twinx()
+ax3.spines["right"].set_position(("axes", 1.2))
+
+ax2.plot(df1.y0_Tpro,df1.o2_eq,color='tab:pink',marker='.')
+ax2.set_ylabel("o2_eq",color='tab:pink')
+ax2.tick_params(axis='y', labelcolor='tab:pink')
+
+ax3.plot(df1.y0_Tpro,df1.test_eq,color='tab:orange',marker='.')
+ax3.set_ylabel("test_eq",color='tab:orange')
+ax3.tick_params(axis='y', labelcolor='tab:orange')
+
+ax1.plot(df1.y0_Tpro,df1.Tpro_eq,color='tab:blue',marker='.')
+ax1.set_ylabel("Tpro_eq",color='tab:blue')
+ax1.tick_params(axis='y', labelcolor='tab:blue')
+
+ax1.set_xlabel("y0_Tpro")
 fig.tight_layout()
 
 
@@ -129,18 +134,23 @@ df1.to_csv('../analysed_data/EnvEq/singlecelltype/Tpro/y0_Tpro/rhoTpro=2E6-eq_va
 
 
 fig,ax1=plt.subplots()
-color="tab:blue"
-ax1.plot(df1.y0_Tpro,df1.o2_eq,color=color,marker='.',label='o2')
-ax1.plot(df1.y0_Tpro,df1.test_eq,color='tab:orange',marker='.',label='test')
-ax1.set_xlabel("y0_Tpro")
-ax1.set_ylabel("o2_eq/test_eq",color=color)
-ax1.tick_params(axis='y', labelcolor=color)
-ax1.legend()
 ax2=ax1.twinx()
-color="tab:red"
-ax2.plot(df1.y0_Tpro,df1.Tpro_eq,color=color,marker='.')
-ax2.tick_params(axis='y', labelcolor=color)
-ax2.set_ylabel("Tpro_eq",color=color)
+ax3=ax1.twinx()
+ax3.spines["right"].set_position(("axes", 1.2))
+
+ax2.plot(df1.y0_Tpro,df1.o2_eq,color='tab:pink',marker='.')
+ax2.set_ylabel("o2_eq",color='tab:pink')
+ax2.tick_params(axis='y', labelcolor='tab:pink')
+
+ax3.plot(df1.y0_Tpro,df1.test_eq,color='tab:orange',marker='.')
+ax3.set_ylabel("test_eq",color='tab:orange')
+ax3.tick_params(axis='y', labelcolor='tab:orange')
+
+ax1.plot(df1.y0_Tpro,df1.Tpro_eq,color='tab:blue',marker='.')
+ax1.set_ylabel("Tpro_eq",color='tab:blue')
+ax1.tick_params(axis='y', labelcolor='tab:blue')
+
+ax1.set_xlabel("y0_Tpro")
 fig.tight_layout()
 
 
@@ -199,18 +209,23 @@ df1.to_csv('../analysed_data/EnvEq_Alt/singlecelltype/Tpro/y0_Tpro/eq_values.csv
 
 
 fig,ax1=plt.subplots()
-color="tab:blue"
-ax1.plot(df1.y0_Tpro,df1.o2_eq,color=color,marker='.',label='o2')
-ax1.plot(df1.y0_Tpro,df1.test_eq,color='tab:orange',marker='.',label='test')
-ax1.set_xlabel("y0_Tpro")
-ax1.set_ylabel("o2_eq/test_eq",color=color)
-ax1.tick_params(axis='y', labelcolor=color)
-ax1.legend()
 ax2=ax1.twinx()
-color="tab:red"
-ax2.plot(df1.y0_Tpro,df1.Tpro_eq,color=color,marker='.')
-ax2.tick_params(axis='y', labelcolor=color)
-ax2.set_ylabel("Tpro_eq",color=color)
+ax3=ax1.twinx()
+ax3.spines["right"].set_position(("axes", 1.2))
+
+ax2.plot(df1.y0_Tpro,df1.o2_eq,color='tab:pink',marker='.')
+ax2.set_ylabel("o2_eq",color='tab:pink')
+ax2.tick_params(axis='y', labelcolor='tab:pink')
+
+ax3.plot(df1.y0_Tpro,df1.test_eq,color='tab:orange',marker='.')
+ax3.set_ylabel("test_eq",color='tab:orange')
+ax3.tick_params(axis='y', labelcolor='tab:orange')
+
+ax1.plot(df1.y0_Tpro,df1.Tpro_eq,color='tab:blue',marker='.')
+ax1.set_ylabel("Tpro_eq",color='tab:blue')
+ax1.tick_params(axis='y', labelcolor='tab:blue')
+
+ax1.set_xlabel("y0_Tpro")
 fig.tight_layout()
 
 
