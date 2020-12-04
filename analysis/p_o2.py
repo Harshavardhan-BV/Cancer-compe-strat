@@ -12,7 +12,17 @@ parm_unit='(prop/min)'
 
 ## OG Eq
 pre_path='EnvEq/singlecelltype/Tneg/'
-
+### K=1000, rho=1
+post_path='K=1000-rho=1-'
+cf.timeseries(pre_path=pre_path,parm_name=parm_name,parm_array=p_o2_arr,parm_format=parm_format,plot_Tpos=False,plot_Tpro=False,plot_test=False,post_path=post_path)
+df=cf.eq_values(pre_path=pre_path,parm_name=parm_name,parm_array=p_o2_arr,parm_format=parm_format,post_path=post_path)
+cf.eqvparm(df,pre_path=pre_path,parm_name=parm_name,parm_unit=parm_unit,plot_Tpos=False,plot_Tpro=False,plot_test=False,post_path=post_path)
+### K=1000, rho=1000
+post_path='K=1000-'
+cf.timeseries(pre_path=pre_path,parm_name=parm_name,parm_array=p_o2_arr,parm_format=parm_format,plot_Tpos=False,plot_Tpro=False,plot_test=False,post_path=post_path)
+df=cf.eq_values(pre_path=pre_path,parm_name=parm_name,parm_array=p_o2_arr,parm_format=parm_format,post_path=post_path)
+cf.eqvparm(df,pre_path=pre_path,parm_name=parm_name,parm_unit=parm_unit,plot_Tpos=False,plot_Tpro=False,plot_test=False,post_path=post_path)
+### K=1, rho=2000
 cf.timeseries(pre_path=pre_path,parm_name=parm_name,parm_array=p_o2_arr,parm_format=parm_format,plot_Tpos=False,plot_Tpro=False,plot_test=False)
 df=cf.eq_values(pre_path=pre_path,parm_name=parm_name,parm_array=p_o2_arr,parm_format=parm_format)
 cf.eqvparm(df,pre_path=pre_path,parm_name=parm_name,parm_unit=parm_unit,plot_Tpos=False,plot_Tpro=False,plot_test=False)
