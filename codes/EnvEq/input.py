@@ -7,19 +7,19 @@ dt = 60  #step (mins)
 #Initial Values
 ##cells
 y0_Tpos=0
-y0_Tpro=0
-y0_Tneg=10
+y0_Tpro=2.1E7
+y0_Tneg=0
 ##resource
 y0_o2=0.5 #(prop)
 y0_test=0 #(prop)
 #Production rates of resources
-p_o2=1.5E-1 #(prop/min)
-p_test=2.52E-7 #by Tp cells (prop/min/cell)
+p_o2=0.4 #(prop/min)
+p_test=1.08E-9 #by Tp cells (prop/min/cell)
 #Uptake rate of resources by cells
 ##oxygen
-mu_o2Tpos=4.86E-5 #(prop/min/cell)
-mu_o2Tpro=4.86E-5 #(prop/min/cell)
-mu_o2Tneg=3.10E-5 #(prop/min/cell)
+mu_o2Tpos=1.625E-9 #(prop/min/cell)
+mu_o2Tpro=1.625E-9 #(prop/min/cell)
+mu_o2Tneg=1.625E-9 #(prop/min/cell)
 ##testosterone
 mu_testTpos=0 #(prop/min/cell)
 mu_testTpro=0 #(prop/min/cell)
@@ -41,9 +41,9 @@ delta_Tneg= 1.6E-4 #(/min)
 #Min Carrying capacity
 K=1
 #Environmental Carrying capacity (Scaling Factor)
-rho_Tpos=2000
-rho_Tpro=2000
-rho_Tneg=2000
+rho_Tpos=1.75E9
+rho_Tpro=2.02E9
+rho_Tneg=2.83E8
 #Resource limits
 ##Oxygen
 ###T+
@@ -63,4 +63,4 @@ u_lim_testTpos=1 #(prop)
 l_lim_testTpro=0 #(prop)
 u_lim_testTpro=1 #(prop)
 #filename to save output in
-f_name='singlecelltype/Tneg/rho_Tneg/p_o2=1.5E-1-'
+f_name='singlecelltype/Tpro/mu_test/'

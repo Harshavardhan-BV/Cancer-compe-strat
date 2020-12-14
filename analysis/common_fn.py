@@ -94,8 +94,8 @@ def heatmap_eqvparm(df,pre_path,parm_name,parm_name_array,post_path='',parm_unit
     sp_size=plot_Tpos+plot_Tpro+plot_Tneg+plot_o2+plot_test
     fig,ax=plt.subplots(1,sp_size,figsize=(10*sp_size,6))
     i=0
-    df[parm_name_array[0]]=df[parm_name_array[0]].round(1)
-    df[parm_name_array[1]]=df[parm_name_array[1]].round(1)
+    # df[parm_name_array[0]]=df[parm_name_array[0]].round(1)
+    # df[parm_name_array[1]]=df[parm_name_array[1]].round(1)
     if shareaxis:
         vmin_res=min(min(plot_o2*df.o2_eq),min(plot_test*df.test_eq))
         vmax_res=max(max(plot_o2*df.o2_eq),max(plot_test*df.test_eq))

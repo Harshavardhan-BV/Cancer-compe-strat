@@ -23,16 +23,15 @@ except:
     pass
 
 #iterator over these 
-rho_arr=np.logspace(3.5,6,20)
+mu_test_arr=np.linspace(1E-9,1.08E-9,20)
 
-
-def solve_parm(rho_Tneg): #calls the solve_eq function with all default inputs other than rho
-    f_name_i=f_name+"{:.2E}".format(rho_Tneg)
-    rho[2]=rho_Tneg
+def solve_parm(mu_test):
+    f_name_i=f_name+"{:.2E}".format(mu_test)
+    mu[1,1]=mu_test
     ee.solve_eq(t_max,dt,y0,p,mu,lam,r,K,delta,rho,lim,f_name_i)
 
 if __name__ == '__main__':
     pool = Pool(4)
-    pool.map(solve_parm,rho_arr) #iterate over the rhos
+    pool.map(solve_parm,mu_test_arr) 
     pool.close()
     pool.join()
