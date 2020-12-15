@@ -26,9 +26,16 @@ cf.eqvparm(df,pre_path=pre_path,parm_name=parm_name,parm_unit=parm_unit,plot_Tpo
 cf.timeseries(pre_path=pre_path,parm_name=parm_name,parm_array=p_o2_arr,parm_format=parm_format,plot_Tpos=False,plot_Tpro=False,plot_test=False)
 df=cf.eq_values(pre_path=pre_path,parm_name=parm_name,parm_array=p_o2_arr,parm_format=parm_format)
 cf.eqvparm(df,pre_path=pre_path,parm_name=parm_name,parm_unit=parm_unit,plot_Tpos=False,plot_Tpro=False,plot_test=False)
+### celleq=1E4: rho s.t T- at equilibrium is 10^4
+post_path='celleq=1E4-'
+p_o2_arr=np.linspace(0.1,0.2,20)
+cf.timeseries(pre_path=pre_path,parm_name=parm_name,parm_array=p_o2_arr,parm_format=parm_format,plot_Tpos=False,plot_Tpro=False,plot_test=False,post_path=post_path)
+df=cf.eq_values(pre_path=pre_path,parm_name=parm_name,parm_array=p_o2_arr,parm_format=parm_format,post_path=post_path)
+cf.eqvparm(df,pre_path=pre_path,parm_name=parm_name,parm_unit=parm_unit,plot_Tpos=False,plot_Tpro=False,plot_test=False,post_path=post_path)
 
 
 ## Alt Eq
+p_o2_arr=np.logspace(-4,0,20) #10^-4 to 1
 pre_path='EnvEq_Alt/singlecelltype/Tneg/'
 
 cf.timeseries(pre_path=pre_path,parm_name=parm_name,parm_array=p_o2_arr,parm_format=parm_format,plot_Tpos=False,plot_Tpro=False,plot_test=False)

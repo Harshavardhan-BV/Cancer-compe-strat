@@ -23,15 +23,17 @@ except:
     pass
 
 #iterator over these 
-mu_test_arr=np.linspace(1E-9,1.08E-9,20)
+p_test_arr=np.logspace(-6.35,0,10)
 
-def solve_parm(mu_test):
-    f_name_i=f_name+"{:.2E}".format(mu_test)
+def solve_parm(p_test):
+    mu_test=p_test-4.4E-7
+    f_name_i=f_name+"{:.2E}".format(p_test)
+    p[1]=p_test
     mu[1,1]=mu_test
     ee.solve_eq(t_max,dt,y0,p,mu,lam,r,K,delta,rho,lim,f_name_i)
 
 if __name__ == '__main__':
     pool = Pool(4)
-    pool.map(solve_parm,mu_test_arr) 
+    pool.map(solve_parm,p_test_arr) 
     pool.close()
     pool.join()
