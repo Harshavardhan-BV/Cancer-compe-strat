@@ -90,7 +90,7 @@ def eqvparm(df,pre_path,parm_name,post_path='',parm_unit='',plot_Tpos=True,plot_
     if save:
         fig.savefig('../figures/'+pre_path+parm_name+'/'+post_path+'eq-vs-'+parm_name+'.svg')
 
-def heatmap_eqvparm(df,pre_path,parm_name,parm_name_array,post_path='',parm_unit='',plot_Tpos=True,plot_Tpro=True,plot_Tneg=True,plot_o2=True,plot_test=True,save=True,shareaxis=False):
+def heatmap_eqvparm(df,pre_path,parm_name,parm_name_array,post_path='',parm_unit='',plot_Tpos=True,plot_Tpro=True,plot_Tneg=True,plot_o2=True,plot_test=True,save=True,shareaxis=True):
     sp_size=plot_Tpos+plot_Tpro+plot_Tneg+plot_o2+plot_test
     fig,ax=plt.subplots(1,sp_size,figsize=(10*sp_size,6))
     i=0
