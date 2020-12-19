@@ -1,0 +1,97 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{graphicx}
+%\usepackage{subcaption}
+\usepackage[margin=2cm]{geometry}
+\usepackage[maxbibnames=9,citestyle=nature,backend=bibtex]{biblatex}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+}
+\usepackage{mathtools}
+\usepackage{bm}
+\usepackage{caption}
+\DeclareCaptionLabelFormat{cont}{#1~#2\alph{ContinuedFloat}}
+\captionsetup[ContinuedFloat]{labelformat=cont}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\title{\textsc{Studying the effects of competition on adaptive therapy}\\\Large{Mid Year Report}}
+\author{Harshavardhan BV (20161100), 5th Year BS-MS\\
+Under the guidance of Prof. Sutirth Dey, IISER Pune}
+\date{January 2021}
+\bibliography{References}
+\graphicspath{ {./images/} }
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+\subsection{Adaptive therapy}
+Conventional therapy against cancer focusses on minimising tumour burden by administering cytotoxic drugs at the maximum tolerated dosage (MTD). However, most tumours are heterogenous in their sensitivity to these drugs, and such MTD regimens eliminate the most sensitive cells, allowing the resistant cells to re-establish a resistant population \cite{Scott}. Adaptive therapy aims to reduce such competitive release by administering the drug at a dosage less than the MTD in a fluctuating manner. This allows for some proportion of sensitive cells to survive in the tumour population while reducing the net tumour burden, thus preventing a complete takeover by the resistant phenotype.
+
+\subsection{Metastatic Castration-Resistant Prostate Cancer}
+The system of study was chosen to be Metastatic Castration-Resistant Prostate Cancer (mCRPC) since it has a history of adaptive therapy theory work \cite{Cunningham}. mCRPC is composed of three types of cells: $T^+$, $T^p$ and $T^-$. Only $T^+$ and $T^p$ require testosterone for proliferation and survival, and $T^-$ is testosterone-independent. While $T^+$ cannot secrete testosterone, $T^p$ cells produce testosterone through upregulation of the corresponding enzyme, $CYP17\alpha$ and $T^-$ cells have mutations in androgen receptors that allow them to survive without testosterone.
+
+\subsection{Competition between cells}
+The success of adaptive therapy in containing the tumour depends on the effectiveness of competition between sensitive and resistant cells. Cells can use different strategies such as higher proliferation rate, better survival at sub-optimal conditions or lower death rate to compete with each other, and several such strategies are seen to be acquired over the course of cancer progression, as shown by the ``hallmarks of cancer" framework \cite{Hanahan}. Existing theoretical models have studied the effect of factors like the strength of competition and the extent of cell turnover on adaptive therapy \cite{Viossat,Strobl}. However, the role of the choice of strategy on the final outcomes of cell competition and eventually, the efficacy of adaptive therapy, has not yet been studied closely.
+
+\section{Work done till now}
+\subsection{ODE Model}
+To begin with a simplistic Ordinary Differential Equation (ODE) model was used. This would help us with forming expectations of the system and parameterization for the upcoming Agent Based Model (ABM). The ODE model is less computationally costly at the tradeoff of not being able to capture complex behaviour when compared to ABM.
+
+The model we developed is based on a simple Logistic Model \cite{Logistic} but with an addition environmental dependence on carrying capacity. The ``environment" consists of the resources, oxygen and testosterone which have their own equations for production and consumption. Although a real cell would depend on a lot more resources, for simplicity they're all assumed to be in excess. The equations are given below:
+\begin{equation}
+  \frac{dy_i}{dt} = r_i y_i (1 - \frac{y_i}{K_{min} + \rho_i f_i(O_2) f_i(test)} )- \delta_i y_i
+  \label{celleq}
+\end{equation}
+\begin{equation}
+  \frac{dO_2}{dt} = p_{O_2} - \sum_i \mu_{O_2,i} y_i - \lambda_{O_2} O_2
+  \label{o2eq}
+\end{equation}
+\begin{equation}
+  \frac{dtest}{dt} = p_{test} y_{T^p} - \sum_i \mu_{test,i} y_i - \lambda_{test} test
+  \label{testeq}
+\end{equation}
+\begin{equation}
+  f_i(res) = \begin{cases}
+    1 &\text{if } ul_{res,i} \leq res\\
+    \frac{res-ll_{res,i}}{ul_{res,i}-ll_{res,i}} &\text{if } ll_{res,i} < res < ul_{res,i}\\
+    0 &\text{if } res \leq ll_{res,i}\\
+  \end{cases}
+  \label{freseq}
+\end{equation}
+
+Where,
+$i \in \{T^+,T^p,T-\}$ and $res \in \{O_2,test\}$.
+$y_i$ is the no. of cells of cell type $i$.
+$r_i$ is the population growth rate of cell type $i$.
+$\delta_i$ is the population death rate of cell type $i$.
+$K_{min}$ is the carrying capacity in the absence of resources. $\rho_i$ is the carrying capacity coming up through the environment/resources.
+$f_{i,res}$ is the functional dependence of cell type $i$ on resource $res$, normalised to 1 (Note that $f_{T^-,test}=1$).
+$p_{res}$ is the production rate of resource, either as bulk or by cells.
+$\mu_{res,i}$ is the uptake of resource $res$ by cell type $i$ (Note that $\mu_{test,T^-} = 0$).
+$\lambda_{res}$ is the decay rate of resource $res$.
+$ll_{res,i}$ is the lower limit/threshold level of resource $res$ for carrying capacity of cell type $i$.
+$ul_{res,i}$ is the upper limit/saturation level of resource $res$ for carrying capacity of cell type $i$.
+
+\subsection{Standardization}
+A major portion of the time was spent in standardising the model with suitable parameters. Some of the parameters were taken from literature, while others were got from assumed constraints.
+
+\subsection{Pairwise Competition}
+With the standardized model, runs with $T^p - T^-$, and $T^+ - T^p$ were done. Here, the parameters of limits were varied as combinations of:
+\begin{enumerate}
+  \item Fixing $ll_{res,i}$ and varying $ul_{res,i}$
+  \item Fixing $ul_{res,i}$ and varying $ll_{res,i}$
+  \item Changing $ll_{res,i}$ and $ul_{res,i}$ by the same amount
+  \item Changing $\mu_{test,T+}$ for $T^+ - T^p$ pair
+\end{enumerate}
+
+\section{Future Plans}
+With the ODE Model, we plan to move onto competitive runs between all three cell types and then towards simulating different regimens of adaptive therapy. Therapy in this model would involve a $p_{test} = f(dose)$.
+
+Parallely an ABM would be developed which has spatially explicity positioning of cells and diffusion of resources. The simulations run with ODE model would be replicated in the ABM and a comparison between the outcomes would be made.
+
+\printbibliography
+\end{document}

@@ -1,0 +1,118 @@
+\section{ODE Model}
+To begin with a simplistic Ordinary Differential Equation (ODE) model was used. This would help us with forming expectations of the system and parameterization for the upcoming Agent Based Model (ABM). The ODE model is less computationally costly at the tradeoff of not being able to capture complex behaviour when compared to ABM.
+
+The model we developed is based on a simple Logistic Model \cite{Logistic} but with an addition environmental dependence on carrying capacity. The ``environment" consists of the resources, oxygen and testosterone which have their own equations for production and consumption. Although a real cell would depend on a lot more resources, for simplicity they're all assumed to be in excess. The equations are given below:
+\begin{equation}
+  \frac{dy_i}{dt} = r_i y_i (1 - \frac{y_i}{K_{min} + \rho_i f_i(O_2) f_i(test)} )- \delta_i y_i
+  \label{celleq}
+\end{equation}
+\begin{equation}
+  \frac{dO_2}{dt} = p_{O_2} - \sum_i \mu_{O_2,i} y_i - \lambda_{O_2} O_2
+  \label{o2eq}
+\end{equation}
+\begin{equation}
+  \frac{dtest}{dt} = p_{test} y_{T^p} - \sum_i \mu_{test,i} y_i - \lambda_{test} test
+  \label{testeq}
+\end{equation}
+\begin{equation}
+  f_i(res) = \begin{cases}
+    1 &\text{if } ul_{res,i} \leq res\\
+    \frac{res-ll_{res,i}}{ul_{res,i}-ll_{res,i}} &\text{if } ll_{res,i} < res < ul_{res,i}\\
+    0 &\text{if } res \leq ll_{res,i}\\
+  \end{cases}
+  \label{freseq}
+\end{equation}
+
+Where,
+\begin{itemize}
+  \item $i \in \{T^+,T^p,T-\}$ and $res \in \{O_2,test\}$
+  \item $y_i$ is the no. of cells of cell type $i$
+  \item $r_i$ is the population growth rate of cell type $i$
+  \item $\delta_i$ is the population death rate of cell type $i$
+  \item $K_{min}$ is the carrying capacity in the absence of resources.
+  \item $\rho_i$ is the carrying capacity coming up through the environment/resources
+  \item $f_{i,res}$ is the functional dependence of cell type $i$ on resource $res$, normalised to 1. Note that $f_{T^-,test}=1$
+  \item $p_{res}$ is the production rate of resource, either as bulk or by cells
+  \item $\mu_{res,i}$ is the uptake of resource $res$ by cell type $i$. Note that $\mu_{test,T^-} = 0$
+  \item $\lambda_{res}$ is the decay rate of resource $res$
+  \item $ll_{res,i}$ is the lower limit/threshold level of resource $res$ for carrying capacity of cell type $i$.
+  \item $ul_{res,i}$ is the upper limit/saturation level of resource $res$ for carrying capacity of cell type $i$.
+\end{itemize}
+
+\subsection{Parameters}
+\subsubsection{Resource Normalization}
+For ease of use we took the typical tissue levels (TTL) of a resource and normalised the resource values with it. The corresponding parameters for the resource would also be normalised by the TTL. These values were taken from \cite{Steward} for oxygen and \cite{Titus} for testosterone.
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|}
+  \hline
+  Resource & Value             \\
+  \hline
+  $O_2$    & 2.5 mmHg          \\
+  $test$   & 3.74 pmol/g tissue\\
+  \hline
+\end{tabular}
+\end{table}
+\subsubsection{Tissue Volume}
+Some of the parameters differed from the other in terms of volume/mass of tumour. According to \cite{Stamey}, the volume of prostate cancer tumour vaired between 0.4 to 12 ml. A tumour volume of 1 ml was assumed for the model, which, translates to 1.03 g.
+\subsubsection{Growth Parameters}
+The following values were taken from \cite{ATCC-lncap,ATCC-22rv1} for doubling time ($\tau_d$) and \cite{Jain} for death rate. Considering the exponential phase of Equation \ref{celleq} with low cell numbers and excess resources,
+\begin{equation}
+r_i = \frac{ln(2)}{\tau_d} + \delta_i
+\end{equation}
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|l|l|l|}
+  \hline
+  Cell Type & Cell Line & $\tau_d$ (hr) & $\delta_i$ (min$^{-1}$) & $r_i$ (min$^{-1}$)    \\
+  \hline
+  $T^+$     & LNCap     & 34            & $2.5 \times 10^{-3}$    & $2.84 \times 10^{-3}$ \\
+  $T^p$     & 22Rv1     & 40            & $2.5 \times 10^{-3}$    & $2.79 \times 10^{-3}$ \\
+  $T^-$     & PC3       & 25            & $1.6 \times 10^{-4}$    & $6.23 \times 10^{-4}$ \\
+  \hline
+\end{tabular}
+\end{table}
+\subsubsection{Carrying Capacity}
+Due to constitutive dependence on the resources and to avoid divided by zero, $K_{min}$ is set to 1. \\
+Assuming the equilibrium values of the cells ($y^*$) to be 10000 in the excess of resources, the values of $\rho$ were obtained on setting Equation \ref{celleq} to 0,
+\begin{equation}
+\rho_i=\frac{r_i}{r_i-\delta_i} y^*
+\end{equation}
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|}
+  \hline
+  Cell Type & $\rho$             \\
+  \hline
+  $T^+$     & $8.35 \times 10^4$ \\
+  $T^p$     & $9.62 \times 10^4$ \\
+  $T^-$     & $1.34 \times 10^4$ \\
+  \hline
+\end{tabular}
+\end{table}
+\subsubsection{Oxygen uptake and production}
+The following values were taken from \cite{HailJr}.
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|l|}
+  \hline
+  Cell Type & Raw value (nmol/min/$10^6$ cells) & Normalised (min$^{-1}$cell$^{-1}$) \\
+  \hline
+  $T^+$     & 5.5                               & $1.63 \times 10^{-6}$              \\
+  $T^p$     & 5.5                               & $1.63 \times 10^{-6}$              \\
+  $T^-$     & 3.5                               & $1.04 \times 10^{-6}$              \\
+  \hline
+\end{tabular}
+\end{table}
+\\Using the uptake values for $T^-$ and assuming the equilibrium value for $O_2$ to be TTL (normalised to 1) in Equation \ref{o2eq} set to 0,
+\begin{equation}
+  p_{O_2} = \lambda_{O_2} O_2^* + y_i^* \mu_i
+\end{equation}
+\subsubsection{Testosterone uptake and production}
+Assuming the equilibrium value for $test$ to be TTL (normalised to 1) in Equation \ref{testeq} set to 0, the following constraint is obtained.
+\begin{equation}
+  p_{test} - \mu_{test,T^p} = \frac{test^* \lambda_{test}}{y_{T^p}^*} = 4 \times 10^{-4}
+\end{equation}
+\\$\mu_{test,T^+}$ has no constraint and has to be explored.
+\subsubsection{Limits}
+Since the resources are normalised to 1, the limits would $\in [0,1]$. This needs to be explored.
