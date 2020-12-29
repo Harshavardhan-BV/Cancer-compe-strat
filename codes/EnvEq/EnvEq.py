@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
-from scipy.integrate import solve_ivp
+from scipy.integrate import solve_ivp,odeint
 from scipy.stats import truncnorm
 import pandas as pd
 
@@ -34,8 +34,8 @@ def solve_eq(t_max,dt,y0,p,mu,lam,r,K,delta,rho,lim,f_name):
     #Timeseries arrays
     t=np.arange(0,t_max,dt)
     #Numerical solution of equation
-    sol = solve_ivp(enveq, [0, t_max], y0, args=(p,mu,lam,r,K,delta,rho,lim),t_eval=t,dense_output=True)
-    df=pd.DataFrame({'t':t,'Tpos':sol.y[0],'Tpro':sol.y[1],'Tneg':sol.y[2],'o2':sol.y[3],'test':sol.y[4]})
+    sol = odeint(enveq,y0,t,args=(p,mu,lam,r,K,delta,rho,lim),tfirst=True)
+    df=pd.DataFrame({'t':t,'Tpos':sol[:,0],'Tpro':sol[:,1],'Tneg':sol[:,2],'o2':sol[:,3],'test':sol[:,4]})
     df.to_csv("../../raw_output/EnvEq/"+f_name+".csv",index=False)
 
 def test_parms(t_max,dt,y0,p,mu,lam,r,K,delta,rho,lim,f_name): #for debugging purposes

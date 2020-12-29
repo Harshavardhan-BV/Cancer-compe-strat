@@ -6,9 +6,9 @@ t_max = 1000*24*60 #maximum (mins)
 dt = 60  #step (mins)
 #Initial Values
 ##cells
-y0_Tpos=0
+y0_Tpos=1000
 y0_Tpro=1000
-y0_Tneg=1000
+y0_Tneg=0
 ##resource
 y0_o2=0.5 #(prop)
 y0_test=0 #(prop)
@@ -63,4 +63,4 @@ u_lim_testTpos=1 #(prop)
 l_lim_testTpro=0 #(prop)
 u_lim_testTpro=1 #(prop)
 #filename to save output in
-f_name='pairwise/Tneg-Tpro/u_lim_o2Tpro-u_lim_o2Tneg/cell_sum-'
+f_name='pairwise/Tpos-Tpro/mu_testTpos/cell_sum-'
