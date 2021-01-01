@@ -133,3 +133,21 @@ def heatmap_eqvparm(df,pre_path,parm_name,parm_name_array,post_path='',parm_unit
     fig.tight_layout()
     if save:
         fig.savefig('../figures/'+pre_path+parm_name+'/'+post_path+'eq-vs-'+parm_name+'.svg')
+
+def plot_2parm(df,parm_name,pri_parm,sec_parm,plot_y,pre_path='',post_path='',save=True,axis_lim=True):
+    fig,ax=plt.subplots()
+    sns.lineplot(data=df,x=pri_parm,y=plot_y,hue=sec_parm,marker='o',ax=ax)
+    if axis_lim:
+        ax.set_ylim(0,1)
+    if save:
+        fig.savefig('../figures/'+pre_path+parm_name+'/'+post_path+'eq-vs-'+pri_parm+'.svg')
+
+def cell_eq_ratio(df,pri_cell,sec_cell):
+    df[pri_cell+'_ratio']=df[pri_cell+'_eq']/(df[pri_cell+'_eq']+df[sec_cell+'_eq'])
+    df[pri_cell+'_ratio'][(df[pri_cell+'_eq']<1) & (df[sec_cell+'_eq']<1)]=np.nan # set to nan if both cells are extinct (ratio makes no sense)
+    return df
+
+def round_df(df,parm_name_array,decimals=1):
+    for parm in parm_name_array:
+        df[parm]=df[parm].round(decimals)
+    return df
