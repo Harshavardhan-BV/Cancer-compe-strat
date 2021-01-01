@@ -63,4 +63,4 @@ u_lim_testTpos=1 #(prop)
 l_lim_testTpro=0 #(prop)
 u_lim_testTpro=1 #(prop)
 #filename to save output in
-f_name='pairwise/Tneg-Tpro/u_lim_o2Tpro-u_lim_o2Tneg/cell_sum-0.9Tp-'
+f_name='pairwise/Tneg-Tpro/l_lim_o2Tpro-l_lim_o2Tneg/cell_sum-0.9Tp-'

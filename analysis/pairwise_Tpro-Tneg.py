@@ -40,6 +40,14 @@ df=cf.round_df(df,parm_name_array)
 cf.heatmap_eqvparm(df,pre_path=pre_path,parm_name=parm_name,parm_name_array=parm_name_array,plot_Tpos=False,post_path=post_path,shareaxis=True)
 df=cf.cell_eq_ratio(df,'Tpro','Tneg')
 cf.plot_2parm(df=df,pre_path=pre_path,parm_name=parm_name,post_path=post_path,pri_parm=parm_name_array[0],sec_parm=parm_name_array[1],plot_y='Tpro_ratio')
+## the above with 0.9Tp y0
+post_path='cell_sum-0.9Tp-'
+cf.timeseries(pre_path=pre_path,parm_name=parm_name,parm_array=o2_lim_arr,parm_format=parm_format,plot_Tpos=False,post_path=post_path)
+df=cf.eq_values(pre_path=pre_path,parm_name=parm_name,parm_array=o2_lim_arr,parm_format=parm_format,parm_name_array=parm_name_array,post_path=post_path)
+df=cf.round_df(df,parm_name_array)
+cf.heatmap_eqvparm(df,pre_path=pre_path,parm_name=parm_name,parm_name_array=parm_name_array,plot_Tpos=False,post_path=post_path,shareaxis=True)
+df=cf.cell_eq_ratio(df,'Tpro','Tneg')
+cf.plot_2parm(df=df,pre_path=pre_path,parm_name=parm_name,post_path=post_path,pri_parm=parm_name_array[0],sec_parm=parm_name_array[1],plot_y='Tpro_ratio')
 
 # Changing l_lim_o2 with fixed u_lim_o2
 o2_lim_arr=np.empty([0,2])
@@ -68,6 +76,14 @@ df=cf.round_df(df,parm_name_array)
 cf.heatmap_eqvparm(df,pre_path=pre_path,parm_name=parm_name,parm_name_array=parm_name_array,plot_Tpos=False,post_path=post_path,shareaxis=True)
 df=cf.cell_eq_ratio(df,'Tpro','Tneg')
 cf.plot_2parm(df=df,pre_path=pre_path,parm_name=parm_name,post_path=post_path,pri_parm=parm_name_array[0],sec_parm=parm_name_array[1],plot_y='Tpro_ratio')
+## the above with 0.9Tp y0
+post_path='cell_sum-0.9Tp-'
+cf.timeseries(pre_path=pre_path,parm_name=parm_name,parm_array=o2_lim_arr,parm_format=parm_format,plot_Tpos=False,post_path=post_path)
+df=cf.eq_values(pre_path=pre_path,parm_name=parm_name,parm_array=o2_lim_arr,parm_format=parm_format,parm_name_array=parm_name_array,post_path=post_path)
+df=cf.round_df(df,parm_name_array)
+cf.heatmap_eqvparm(df,pre_path=pre_path,parm_name=parm_name,parm_name_array=parm_name_array,plot_Tpos=False,post_path=post_path,shareaxis=True)
+df=cf.cell_eq_ratio(df,'Tpro','Tneg')
+cf.plot_2parm(df=df,pre_path=pre_path,parm_name=parm_name,post_path=post_path,pri_parm=parm_name_array[0],sec_parm=parm_name_array[1],plot_y='Tpro_ratio')
 
 # Changing l_lim_o2 & u_lim_o2 by same amount (fixed difference)
 parm_name='cs_lim_o2Tpro-cs_lim_o2Tneg'
@@ -83,6 +99,14 @@ df=cf.round_df(df,parm_name_array)
 cf.heatmap_eqvparm(df,pre_path=pre_path,parm_name=parm_name,parm_name_array=parm_name_array,plot_Tpos=False,shareaxis=True)
 ## changed equation with sum over all cells for density dependence
 post_path='cell_sum-'
+cf.timeseries(pre_path=pre_path,parm_name=parm_name,parm_array=o2_lim_arr,parm_format=parm_format,plot_Tpos=False,post_path=post_path)
+df=cf.eq_values(pre_path=pre_path,parm_name=parm_name,parm_array=o2_lim_arr,parm_format=parm_format,parm_name_array=parm_name_array,post_path=post_path)
+df=cf.round_df(df,parm_name_array)
+cf.heatmap_eqvparm(df,pre_path=pre_path,parm_name=parm_name,parm_name_array=parm_name_array,plot_Tpos=False,post_path=post_path,shareaxis=True)
+df=cf.cell_eq_ratio(df,'Tpro','Tneg')
+cf.plot_2parm(df=df,pre_path=pre_path,parm_name=parm_name,post_path=post_path,pri_parm=parm_name_array[0],sec_parm=parm_name_array[1],plot_y='Tpro_ratio')
+## the above with 0.9Tp y0
+post_path='cell_sum-0.9Tp-'
 cf.timeseries(pre_path=pre_path,parm_name=parm_name,parm_array=o2_lim_arr,parm_format=parm_format,plot_Tpos=False,post_path=post_path)
 df=cf.eq_values(pre_path=pre_path,parm_name=parm_name,parm_array=o2_lim_arr,parm_format=parm_format,parm_name_array=parm_name_array,post_path=post_path)
 df=cf.round_df(df,parm_name_array)
