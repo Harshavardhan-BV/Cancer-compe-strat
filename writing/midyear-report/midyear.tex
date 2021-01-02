@@ -13,6 +13,7 @@
 \usepackage{mathtools}
 \usepackage{bm}
 \usepackage{caption}
+%\usepackage{multirow}
 \DeclareCaptionLabelFormat{cont}{#1~#2\alph{ContinuedFloat}}
 \captionsetup[ContinuedFloat]{labelformat=cont}
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
@@ -35,11 +36,11 @@ Conventional therapy against cancer focusses on minimising tumour burden by admi
 The system of study was chosen to be Metastatic Castration-Resistant Prostate Cancer (mCRPC) since it has a history of adaptive therapy theory work \cite{Cunningham}. mCRPC is composed of three types of cells: $T^+$, $T^p$ and $T^-$. Only $T^+$ and $T^p$ require testosterone for proliferation and survival, and $T^-$ is testosterone-independent. While $T^+$ cannot secrete testosterone, $T^p$ cells produce testosterone through upregulation of the corresponding enzyme, $CYP17\alpha$ and $T^-$ cells have mutations in androgen receptors that allow them to survive without testosterone.
 
 \subsection{Competition between cells}
-The success of adaptive therapy in containing the tumour depends on the effectiveness of competition between sensitive and resistant cells. Cells can use different strategies such as higher proliferation rate, better survival at sub-optimal conditions or lower death rate to compete with each other, and several such strategies are seen to be acquired over the course of cancer progression, as shown by the ``hallmarks of cancer" framework \cite{Hanahan}. Existing theoretical models have studied the effect of factors like the strength of competition and the extent of cell turnover on adaptive therapy \cite{Viossat,Strobl}. However, the role of the choice of strategy on the final outcomes of cell competition and eventually, the efficacy of adaptive therapy, has not yet been studied closely.
+The success of adaptive therapy in containing the tumour depends on the effectiveness of competition between sensitive and resistant cells. Cells can use different strategies such as higher proliferation rate, better survival at sub-optimal conditions or lower death rate to compete with each other, and several such strategies are seen to be acquired over the course of cancer progression, as shown by the ``hallmarks of cancer" framework \cite{Hanahan}. The role of the choice of strategy on the final outcomes of cell competition and eventually, the efficacy of adaptive therapy, has not yet been studied closely.
 
 \section{Work done till now}
 \subsection{ODE Model}
-To begin with a simplistic Ordinary Differential Equation (ODE) model was used. This would help us with forming expectations of the system and parameterization for the upcoming Agent Based Model (ABM). The ODE model is less computationally costly at the tradeoff of not being able to capture complex behaviour when compared to ABM.
+To begin with, a simplistic Ordinary Differential Equation (ODE) model was used. This would help us with forming expectations of the system and parameterization for the upcoming Agent Based Model (ABM). The ODE model is less computationally costly at the tradeoff of not being able to capture complex behaviour when compared to ABM.
 
 The model we developed is based on a simple Logistic Model \cite{Logistic} but with an addition environmental dependence on carrying capacity. The ``environment" consists of the resources, oxygen and testosterone which have their own equations for production and consumption. Although a real cell would depend on a lot more resources, for simplicity they're all assumed to be in excess. The equations are given below:
 \begin{equation}
@@ -63,21 +64,100 @@ The model we developed is based on a simple Logistic Model \cite{Logistic} but w
   \label{freseq}
 \end{equation}
 
-Where,
 $i \in \{T^+,T^p,T-\}$ and $res \in \{O_2,test\}$.
-$y_i$ is the no. of cells of cell type $i$.
-$r_i$ is the population growth rate of cell type $i$.
-$\delta_i$ is the population death rate of cell type $i$.
-$K_{min}$ is the carrying capacity in the absence of resources. $\rho_i$ is the carrying capacity coming up through the environment/resources.
-$f_{i,res}$ is the functional dependence of cell type $i$ on resource $res$, normalised to 1 (Note that $f_{T^-,test}=1$).
-$p_{res}$ is the production rate of resource, either as bulk or by cells.
-$\mu_{res,i}$ is the uptake of resource $res$ by cell type $i$ (Note that $\mu_{test,T^-} = 0$).
-$\lambda_{res}$ is the decay rate of resource $res$.
-$ll_{res,i}$ is the lower limit/threshold level of resource $res$ for carrying capacity of cell type $i$.
-$ul_{res,i}$ is the upper limit/saturation level of resource $res$ for carrying capacity of cell type $i$.
 
-\subsection{Standardization}
-A major portion of the time was spent in standardising the model with suitable parameters. Some of the parameters were taken from literature, while others were got from assumed constraints.
+\subsection{Parameters and Standardization}
+A major portion of the time was spent in standardising the model with suitable parameters. The following Table \ref{parmtable} gives a brief description of the parameters, the values used, and the source for the same. Note that all the resource parameters are normalised.\\
+Some of the constraints are derived from the following equations.
+\begin{equation}
+  r_i = \frac{ln(2)}{\tau_{d,i}} + \delta_i
+  \label{r_eq}
+\end{equation}
+\begin{equation}
+  \rho_i=\frac{r_i}{r_i-\delta_i} y_i^*
+  \label{rho_eq}
+\end{equation}
+\begin{equation}
+  p_{O_2} = \lambda_{O_2} O_2^* + y_i^* \mu_i
+  \label{p_o2_eq}
+\end{equation}
+\begin{equation}
+  p_{test} - \mu_{test,T^p} = \frac{test^* \lambda_{test}}{y_{T^p}^*} = 4 \times 10^{-4}
+  \label{p_test_eq}
+\end{equation}
+\begin{table}[t]
+  \centering
+  \begin{tabular}{|l|p{5cm}|c|l|}
+    \hline
+    \textbf{Parameter}  & \textbf{Description} & \textbf{Value(s)} & \textbf{Source(s)} \\ \hline
+    $y_i$ & No. of cells of cell type $i$ & N/A & N/A  \\ \hline
+    $r_i$ & Population growth rate of cell type i  &
+    \begin{tabular}{l|l}
+      $T^+$ & $2.84 \times 10^{-3}$ min$^{-1}$\\
+      $T^p$ & $2.79 \times 10^{-3}$ min$^{-1}$\\
+      $T^-$ & $6.23 \times 10^{-4}$ min$^{-1}$\\
+    \end{tabular}
+    & Eq \ref{r_eq} \\ \hline
+    $\delta_i$  & Population death rate of cell type i &
+    \begin{tabular}{l|l}
+      $T^+$ & $2.5 \times 10^{-3}$ min$^{-1}$\\
+      $T^p$ & $2.5 \times 10^{-3}$ min$^{-1}$\\
+      $T^-$ & $1.6 \times 10^{-4}$ min$^{-1}$\\
+    \end{tabular}
+    & \cite{Jain}  \\ \hline
+    $K_{min}$ & Carrying capacity in the absence of resources & 1 & Constitutive  \\ \hline
+    $\rho_i$ & Carrying capacity coming up through the environment/resources &
+    \begin{tabular}{l|l}
+      $T^+$ & $8.35 \times 10^4$ \\
+      $T^p$ & $9.62 \times 10^4$ \\
+      $T^-$ & $1.34 \times 10^4$ \\
+    \end{tabular}
+    & Eq \ref{rho_eq} \\ \hline
+    $f_{i,res}$ & Functional dependence of cell type $i$ on resource $res$, normalised to 1 & $f_{T^-,test}=1$ & N/A \\ \hline
+    $p_{res}$ & Production rate of resource, either as bulk or by cells &
+    \begin{tabular}{l|l}
+      $O_2$ & 0.11 min$^{-1}$\\
+      $test$ & $5 \times 10^{-7}$ min$^{-1}$cell$^{-1}$\\
+    \end{tabular}
+    & Eqs \ref{p_o2_eq},\ref{p_test_eq}\\ \hline
+    $\mu_{res,i}$ & Uptake of resource $res$ by cell type $i$ &
+    \begin{tabular}{l|l|l}
+      $O_2$ & $T^+$ & $1.63 \times 10^{-6}$ min$^{-1}$cell$^{-1}$\\
+      & $T^p$ & $1.63 \times 10^{-6}$ min$^{-1}$cell$^{-1}$\\
+      & $T^-$ & $1.04 \times 10^{-6}$ min$^{-1}$cell$^{-1}$\\ \hline
+      $test$ & $T^+$ & $2.34 \times 10^{-8}$ min$^{-1}$cell$^{-1}$\\
+      & $T^p$ & $6.00 \times 10^{-8}$ min$^{-1}$cell$^{-1}$\\
+      & $T^-$ & 0 min$^{-1}$cell$^{-1}$\\
+    \end{tabular}
+    & \cite{HailJr}, Eq \ref{p_test_eq}\\ \hline
+    $\lambda_{res}$ & Decay rate of resource $res$ &
+    \begin{tabular}{l|l}
+      $O_2$ & 0.100 min$^{-1}$\\
+      $test$ & 0.004 min$^{-1}$\\
+    \end{tabular}
+    & \cite{Jain}\\ \hline
+    $ll_{res,i}$ & Lower limit/threshold level of resource $res$ for carrying capacity of cell type $i$ & $\in [0,1]$ & N/A \\ \hline
+    $ul_{res,i}$ & Upper limit/saturation level of resource $res$ for carrying capacity of cell type $i$ & $\in [0,1]$ & N/A \\ \hline
+    \multicolumn{4}{|c|}{Supplementary Parameters}\\ \hline
+    $\tau_d$  & Doubling time of cell type $i$ &
+    \begin{tabular}{l|l}
+      $T^+$ & $34$ hr \\
+      $T^p$ & $40$ hr \\
+      $T^-$ & $25$ hr \\
+    \end{tabular}
+    & \cite{atcc} \\ \hline
+    $y_i^*$ & Equilibrium value of cell number in absence of competition & 10000 & assumed \\ \hline
+    $res^*$ & Equilibrium/Tissue levels of resource with one cell type present &
+    \begin{tabular}{l|l}
+      $O_2$    & 2.5 mmHg          \\
+      $test$   & 3.74 pmol/g tissue\\
+    \end{tabular}
+    & \cite{Steward},\cite{Titus} \\ \hline
+
+  \end{tabular}
+  \caption{Table of all parameters}
+  \label{parmtable}
+\end{table}
 
 \subsection{Pairwise Competition}
 With the standardized model, runs with $T^p - T^-$, and $T^+ - T^p$ were done. Here, the parameters of limits were varied as combinations of:
