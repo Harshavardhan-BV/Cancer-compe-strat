@@ -6,9 +6,9 @@ t_max = 1000*24*60 #maximum (mins)
 dt = 60  #step (mins)
 #Initial Values
 ##cells
-y0_Tpos=0
-y0_Tpro=1800
-y0_Tneg=200
+y0_Tpos=1000
+y0_Tpro=1000
+y0_Tneg=0
 ##resource
 y0_o2=0.5 #(prop)
 y0_test=0 #(prop)
@@ -21,7 +21,7 @@ mu_o2Tpos=1.63E-6 #(prop/min/cell)
 mu_o2Tpro=1.63E-6 #(prop/min/cell)
 mu_o2Tneg=1.04E-6 #(prop/min/cell)
 ##testosterone
-mu_testTpos=6E-8 #(prop/min/cell)
+mu_testTpos=2.34E-8 #(prop/min/cell)
 mu_testTpro=6E-8 #(prop/min/cell)
 #Decay rates of resources
 lam_o2=0.1 #(1/min)
@@ -63,4 +63,4 @@ u_lim_testTpos=1 #(prop)
 l_lim_testTpro=0 #(prop)
 u_lim_testTpro=1 #(prop)
 #filename to save output in
-f_name='pairwise/Tneg-Tpro/u_lim_o2Tpro-u_lim_o2Tneg/cell_sum-0.9Tp-'
+f_name='pairwise/Tpos-Tpro/u_lim_testTpos-u_lim_testTpro/cell_sum-'

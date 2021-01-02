@@ -21,8 +21,8 @@ mu_o2Tpos=1.63E-6 #(prop/min/cell)
 mu_o2Tpro=1.63E-6 #(prop/min/cell)
 mu_o2Tneg=1.04E-6 #(prop/min/cell)
 ##testosterone
-mu_testTpos=6E-8 #(prop/min/cell)
-mu_testTpro=2.34E-8 #(prop/min/cell)
+mu_testTpos=2.34E-8 #(prop/min/cell)
+mu_testTpro=6E-8 #(prop/min/cell)
 #Decay rates of resources
 lam_o2=0.1 #(1/min)
 lam_test=0.004 #(1/min)
