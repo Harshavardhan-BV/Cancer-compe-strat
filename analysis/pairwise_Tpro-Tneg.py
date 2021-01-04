@@ -114,3 +114,26 @@ cf.heatmap_eqvparm(df,pre_path=pre_path,parm_name=parm_name,parm_name_array=parm
 df=cf.cell_eq_ratio(df,'Tneg','Tpro')
 cf.plot_2parm(df=df,pre_path=pre_path,parm_name=parm_name,post_path=post_path,pri_parm=parm_name_array[0],sec_parm=parm_name_array[1],plot_y='Tneg_ratio')
 
+# Changing u_lim_testTpro with others limits fixed
+## changed equation with sum over all cells for density dependence
+parm_name='u_lim_testTpro'
+test_lim_arr=np.arange(0.1,1,0.2)
+cf.timeseries(pre_path=pre_path,parm_name=parm_name,parm_array=test_lim_arr,parm_format=parm_format,plot_Tpos=False)
+df=cf.eq_values(pre_path=pre_path,parm_name=parm_name,parm_array=test_lim_arr,parm_format=parm_format)
+## The above with higher initial testosterone and Tp 
+post_path='0.9Tp-0.5test-'
+cf.timeseries(pre_path=pre_path,parm_name=parm_name,parm_array=test_lim_arr,parm_format=parm_format,plot_Tpos=False,post_path=post_path)
+df=cf.eq_values(pre_path=pre_path,parm_name=parm_name,parm_array=test_lim_arr,parm_format=parm_format,post_path=post_path)
+
+# Changing l_lim_testTpro with others limits fixed
+## changed equation with sum over all cells for density dependence
+parm_name='l_lim_testTpro'
+test_lim_arr=np.arange(0,1,0.2)
+cf.timeseries(pre_path=pre_path,parm_name=parm_name,parm_array=test_lim_arr,parm_format=parm_format,plot_Tpos=False)
+df=cf.eq_values(pre_path=pre_path,parm_name=parm_name,parm_array=test_lim_arr,parm_format=parm_format)
+
+# Changing l_lim_testTpro & u_lim_testTpro by same amount (fixed difference)
+## changed equation with sum over all cells for density dependence
+parm_name='cs_lim_testTpro'
+cf.timeseries(pre_path=pre_path,parm_name=parm_name,parm_array=test_lim_arr,parm_format=parm_format,plot_Tpos=False)
+df=cf.eq_values(pre_path=pre_path,parm_name=parm_name,parm_array=test_lim_arr,parm_format=parm_format)

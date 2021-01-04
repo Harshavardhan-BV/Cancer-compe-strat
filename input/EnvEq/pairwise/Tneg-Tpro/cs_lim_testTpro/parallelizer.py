@@ -23,11 +23,14 @@ except:
     pass
 
 #iterator over these 
-test_lim_arr=np.arange(0.1,1,0.2)
+test_lim_arr=np.arange(0,1,0.2)
+cs_diff=0.2
 
-def solve_parm(u_lim_test): #calls the solve_eq function with all default inputs other than test_lim
-    f_name_i=f_name+"{:.1f}".format(u_lim_test)
-    lim[0,1,1]=u_lim_test
+
+def solve_parm(l_lim_test): #calls the solve_eq function with all default inputs other than test_lim
+    f_name_i=f_name+"{:.1f}".format(l_lim_test)
+    lim[0,1,0]=l_lim_test
+    lim[0,1,1]=l_lim_test+cs_diff
     ee.solve_eq(t_max,dt,y0,p,mu,lam,r,K,delta,rho,lim,f_name_i)
 
 if __name__ == '__main__':
