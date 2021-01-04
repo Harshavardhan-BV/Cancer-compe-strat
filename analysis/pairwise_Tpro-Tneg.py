@@ -120,6 +120,10 @@ parm_name='u_lim_testTpro'
 test_lim_arr=np.arange(0.1,1,0.2)
 cf.timeseries(pre_path=pre_path,parm_name=parm_name,parm_array=test_lim_arr,parm_format=parm_format,plot_Tpos=False)
 df=cf.eq_values(pre_path=pre_path,parm_name=parm_name,parm_array=test_lim_arr,parm_format=parm_format)
+## The above with higher initial Tp 
+post_path='0.9Tp-'
+cf.timeseries(pre_path=pre_path,parm_name=parm_name,parm_array=test_lim_arr,parm_format=parm_format,plot_Tpos=False,post_path=post_path)
+df=cf.eq_values(pre_path=pre_path,parm_name=parm_name,parm_array=test_lim_arr,parm_format=parm_format,post_path=post_path)
 ## The above with higher initial testosterone and Tp 
 post_path='0.9Tp-0.5test-'
 cf.timeseries(pre_path=pre_path,parm_name=parm_name,parm_array=test_lim_arr,parm_format=parm_format,plot_Tpos=False,post_path=post_path)

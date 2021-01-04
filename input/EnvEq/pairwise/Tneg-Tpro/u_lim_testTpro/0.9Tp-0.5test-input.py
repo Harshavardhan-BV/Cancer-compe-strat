@@ -11,7 +11,7 @@ y0_Tpro=1800
 y0_Tneg=200
 ##resource
 y0_o2=0.5 #(prop)
-y0_test=0 #(prop)
+y0_test=0.5 #(prop)
 #Production rates of resources
 p_o2=0.11 #(prop/min)
 p_test=5E-7 #by Tp cells (prop/min/cell)
@@ -63,4 +63,4 @@ u_lim_testTpos=1 #(prop)
 l_lim_testTpro=0 #(prop)
 u_lim_testTpro=1 #(prop)
 #filename to save output in
-f_name='pairwise/Tneg-Tpro/u_lim_testTpro/0.9Tp-'
+f_name='pairwise/Tneg-Tpro/u_lim_testTpro/0.9Tp-0.5test-'
