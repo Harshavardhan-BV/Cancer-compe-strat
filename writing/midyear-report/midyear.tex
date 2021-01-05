@@ -44,7 +44,7 @@ To begin with, a simplistic Ordinary Differential Equation (ODE) model was used.
 
 The model we developed is based on a simple Logistic Model \cite{Logistic} but with an addition environmental dependence on carrying capacity. The ``environment" consists of the resources, oxygen and testosterone which have their own equations for production and consumption. Although a real cell would depend on a lot more resources, for simplicity they're all assumed to be in excess. The equations are given below:
 \begin{equation}
-  \frac{dy_i}{dt} = r_i y_i (1 - \frac{y_i}{K_{min} + \rho_i f_i(O_2) f_i(test)} )- \delta_i y_i
+  \frac{dy_i}{dt} = r_i y_i (1 - \frac{\sum_j y_j}{1 + K_{i,max} f_i(O_2) f_i(test)} )- \delta_i y_i
   \label{celleq}
 \end{equation}
 \begin{equation}
@@ -74,7 +74,7 @@ Some of the constraints are derived from the following equations.
   \label{r_eq}
 \end{equation}
 \begin{equation}
-  \rho_i=\frac{r_i}{r_i-\delta_i} y_i^*
+  K_{i,max}=\frac{r_i}{r_i-\delta_i} y_i^*
   \label{rho_eq}
 \end{equation}
 \begin{equation}
@@ -105,8 +105,7 @@ Some of the constraints are derived from the following equations.
       $T^-$ & $1.6 \times 10^{-4}$ min$^{-1}$\\
     \end{tabular}
     & \cite{Jain}  \\ \hline
-    $K_{min}$ & Carrying capacity in the absence of resources & 1 & essential  \\ \hline
-    $\rho_i$ & Carrying capacity coming up through the environment/resources &
+    $K_{i,max}$ & Maximum Carrying capacity, coming up through the environment/resources &
     \begin{tabular}{l|l}
       $T^+$ & $8.35 \times 10^4$ \\
       $T^p$ & $9.62 \times 10^4$ \\
@@ -160,33 +159,27 @@ Some of the constraints are derived from the following equations.
 \end{table}
 
 \subsection{Pairwise Competition}
-With the standardized model, runs with $T^p - T^-$, and $T^+ - T^p$ were done. Here, the parameters of limits were varied as combinations of:
-\begin{enumerate}
-  \item Varying $ul_{res,i}$ with other parameters fixed
-  \item Varying $ll_{res,i}$ with other parameters fixed
-  \item Changing $ll_{res,i}$ and $ul_{res,i}$ by the same amount
-  \item Changing $\mu_{test,T+}$ for $T^+ - T^p$ pair
-\end{enumerate}
-From the runs, the following observations were made:
+With the standardized model, runs with $T^p - T^-$, and $T^+ - T^p$ were done over some combinations of parameters. From the runs, the following observations were made:
 \begin{itemize}
   \item In the $T^p - T^-$ pair:
   \begin{enumerate}
-    \item $T^p$ goes extinct most of the time. This is because $T^p$ is highly limited by testosterone and $T^-$ manages to outcompete it as it only depends on oxygen.
-    \item Even when $T^-$ is highly oxygen limited (high $ll_{O_2,T^-}$), there is a initial dip but $T^-$ wins out as oxygen levels rise faster than testosterone.
-    \item Only at low $ul_{test,T^p}$ can $T^p$ be sustainable or outcompete $T^-$ as low levels of testosterone is enough to give enough growth in this case. $T^p$ becomes oxygen limited and competes with $T^-$ for oxygen.
-    \item The outcomes of which cell type comes out on top depends on the initial condition as well. The
+    \item $T^p$ is limited by both testosterone and oxygen, whereas, $T^-$ is only limited by oxygen. The testosterone limitation is contolled through $ll_{test,T^p}$ and $ul_{test,T^p}$.
+    \item Only when $T^p$ is not severely testosterone limited, through lower $ul_{test,T^p}$, can $T^p$ coexist with or outcompete $T^-$. In every other case, $T^-$ drives $T^p$ to extinction.
+    \item  Even when $T^-$ is highly oxygen limited, through high $ll_{O2,T-}$, and $T^p$ limited by testosterone, $T^-$ wins out eventually as oxygen levels rise faster than testosterone.
+    \item The outcomes on which cell comes out on top also depends on the initial proportion of $T^p$ for the other parameters being the same.
   \end{enumerate}
   \item In the $T^+ - T^p$ pair:
   \begin{enumerate}
-    \item Due to the severe testosterone and density dependence, $T^+$ can pull down $T^p$ levels and both go extinct as a result, most of the time.
-    \item When $T^+$ is highly oxygen limited (high $ll_{O_2,T^+}$), $T^p$ is able to grow initially and secrete enough testosterone in the environment to sustain a small portion of $T^+$ if they're not extinct already.
-    \item There is coexistence of both cell types when $ul_{test,T^+} \geq ul_{test,T^p}$. By this, $T^p$ is able to grow faster initially to provide enough testosterone to support $T^+$.
-    \item As $ul_{test,T^+}$ increases in the above case, $T^p$ proportion increases in the final population.
+    \item Both $T^+$ and $T^p$ are limited by both oxygen and testosterone and compete for these resources.
+    \item When both are severly limited by testosterone, $T^+$ can consume and grow through the limited testosterone present and this is enough for the density dependent competition to drive $T^p$ to extinction. Without $T^p$ to provide testosterone $T^+$ also goes extinct.
+    \item When $T^+$ is severly limited by oxygen and $T^p$ not, $T^p$ is able to utilise the initial period to grow and secrete testosterone in the environment to sustain a small $T^+$ population if they are not extinct.
+    \item When $T^p$ is limited less by testosterone than $T^+$, through $ul_{test,Tp} \leq ul_{test,T+}$, can both cells coexist. Through the lower testosterone limitation, $T^p$ can grow faster initially and secrete enough testosterone for $T^+$ without being negatively affected by $T^+$.
+    \item In the above case, the proportion of $T^+$ in the final population decreases as $T^+$ becomes more testosterone limited.
   \end{enumerate}
 \end{itemize}
 
 \section{Future Plans}
-For the pairwise runs, more combinations of parameters have to be explored. $O_2$ limits have to be explored with low $ul_{test,T^p}$ to have oxygen limited case for $T^p$. A situation where $p_{O_2}$ is lower could as be tried to have oxygen limitations. Different initial conditions have to be tried to check if the outcome changes on doing the same.
+From the observations, it is clear that testosterone is limiting a lot. More runs have to be done where the testosterone limitation is relaxed. The oxygen limit needs exploration with lower $ul_{test,i}$ than currently done. Alternatively, oxygen can be made more limiting than testosterone by changing the production rates of these resources.
 
 After this, we plan to move onto competitive runs between all three cell types and then towards simulating different regimens of adaptive therapy. Therapy in this model would involve a $p_{test} = f(dose)$.
 
