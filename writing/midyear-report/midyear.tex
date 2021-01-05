@@ -1,8 +1,8 @@
-\documentclass[11pt,a4paper]{article}
+\documentclass[a4paper]{article}
 \usepackage{graphicx}
 %\usepackage{subcaption}
 \usepackage[margin=2cm]{geometry}
-\usepackage[maxbibnames=9,citestyle=nature]{biblatex}
+\usepackage[maxbibnames=9,citestyle=nature,doi=false,isbn=false,url=false,eprint=false]{biblatex}
 \usepackage{hyperref}
 \hypersetup{
     colorlinks=true,
@@ -23,7 +23,7 @@
 Under the guidance of Prof. Sutirth Dey, IISER Pune}
 \date{January 2021}
 \bibliography{References}
-\graphicspath{ {./images/} }
+\graphicspath{ {./figures/} }
 
 \begin{document}
 \maketitle
@@ -42,7 +42,7 @@ The success of adaptive therapy in containing the tumour depends on the effectiv
 \subsection{ODE Model}
 To begin with, a simplistic Ordinary Differential Equation (ODE) model was used. This would help us with forming expectations of the system and parameterization for the upcoming Agent Based Model (ABM). The ODE model is less computationally costly at the tradeoff of not being able to capture complex behaviour when compared to ABM.
 
-We developed a logistic framework \cite{Logistic} modified with a dynamic carrying capacity that depended on environmental conditions. The ``environment" consists of the resources, oxygen and testosterone which have their own equations for production and consumption. We make the simplifying assumption that every other resource required by cells are present in non-limiting concentrations. The equations are given below:
+We developed a logistic framework modified with a dynamic carrying capacity that depended on environmental conditions. The ``environment" consists of the resources, oxygen and testosterone which have their own equations for production and consumption. We make the simplifying assumption that every other resource required by cells are present in non-limiting concentrations. The equations are given below:
 \begin{equation}
   \frac{dy_i}{dt} = r_i y_i (1 - \frac{\sum_j y_j}{1 + K_{i,max} f_i(O_2) f_i(test)} )- \delta_i y_i
   \label{celleq}
@@ -164,21 +164,37 @@ With the standardized model, runs with $T^p - T^-$, and $T^+ - T^p$ were done ov
   \item In the $T^p - T^-$ pair:
   \begin{enumerate}
     \item $T^p$ is limited by both testosterone and oxygen, whereas $T^-$ is only limited by oxygen. The testosterone limitation is controlled through the two thresholds, $ll_{test,T^p}$ and $ul_{test,T^p}$ as shown in equation \ref{freseq}.
-    \item Only when $ul_{test,T^p}$ is low signifying that $T^p$ is not severely testosterone limited, $T^p$ can coexist with or outcompete $T^-$. In every other case, $T^-$ drives $T^p$ to extinction.
-    \item  When $ll_{O2,T-}$ is large and $T^p$ limited by testosterone, $T^-$ is strongly oxygen-limited but $T^p$ is also limited by testosterone. In this case, $T^-$ wins out eventually as oxygen levels rise faster than testosterone through the external supply term, p_{O_2}.
-    \item These competitive outcomes are also dependent on the initial proportion of $T^p$, all the other parameters being the same.
+    \item Only when $ul_{test,T^p}$ is low signifying that $T^p$ is not severely testosterone limited, $T^p$ can coexist with or outcompete $T^-$ as shown in Figure \ref{fig_Tpro-Tneg}. In every other case, $T^-$ drives $T^p$ to extinction.
+    \item  When $ll_{O2,T-}$ is large , $T^-$ is strongly oxygen-limited but $T^p$ is also limited by testosterone. In this case, $T^-$ wins out eventually as oxygen levels rise faster than testosterone through the external supply term, $p_{O_2}$.
+    \item These competitive outcomes are also dependent on the initial proportion of $T^p$, all the other parameters being the same as shown in Figure \ref{fig_Tpro-Tneg}.
   \end{enumerate}
   \item In the $T^+ - T^p$ pair:
   \begin{enumerate}
     \item Both $T^+$ and $T^p$ are limited by both oxygen and testosterone, and compete for both resources. As with the other pair, strength of limitation for any particular resource can be modulated through the corresponding upper and lower thresholds.
     \item When both are severly limited by testosterone, $T^+$ can consume and grow on the limited testosterone present, and this is enough for the density-dependent competition to drive $T^p$ to extinction. Without $T^p$ to provide testosterone, $T^+$ subsequently goes extinct.
-    \item When only $T^+$ is severly limited by oxygen and $T^p$ is not, $T^p$ is able to utilise the initial period to grow and secrete enough testosterone to sustain a small $T^+$ population provided the latter do not extinct before then.
-    \item When $T^p$ is weakly limited by testosterone relative to $T^+$ ($ul_{test,Tp} \leq ul_{test,T+}$), both cells coexist. Due to weaker testosterone limitation, $T^p$ can grow faster initially and secrete enough testosterone for $T^+$ without being negatively affected by $T^+$.
+    \item When only $T^+$ is severly limited by oxygen and $T^p$ is not, $T^p$ is able to utilise the initial period to grow and secrete enough testosterone to sustain a small $T^+$ population provided the latter do not extinct before then as shown in Figure \ref{fig_Tpos-Tpro_o2lims}.
+    \item When $T^p$ is weakly limited by testosterone relative to $T^+$ ($ul_{test,Tp} \leq ul_{test,T+}$), both cells coexist. Due to weaker testosterone limitation, $T^p$ can grow faster initially and secrete enough testosterone for $T^+$ without being negatively affected by $T^+$ as shown in Figure \ref{fig_Tpos-Tpro_testlims}.
     \item In the above case, the proportion of $T^+$ in the final population decreases as $T^+$ becomes more testosterone limited.
   \end{enumerate}
-  \item Resource substitutability
-  
 \end{itemize}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\textwidth]{Tpro-Tneg}
+  \caption{Pairwise $T^p - T^-$ timeseries, when $T^p$ is testosterone limited and not testosterone limited (colums) and at different initial proportions of $T^p$(rows). $T^p$ is testosterone limited at $ul_{test,T^p}=0.5$ and not testosterone limited at $ul_{test,T^p}=0.1$.}
+  \label{fig_Tpro-Tneg}
+\end{figure}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=\textwidth]{Tpos-Tpro_o2lims}
+  \caption{Pairwise $T^+ - T^p$ timeseries, when both cell types are testosterone limited and not oxygen limited and when $T^+$ is limited more than $T^p$. Both are not oxygen limited at $ul_{O_2,T^+}=0.4,ul_{O_2,T^p}=0.4$ and $T^+$ is severly oxygen limited at $ul_{O_2,T^+}=0.6,ul_{O_2,T^p}=0.4$.}
+  \label{fig_Tpos-Tpro_o2lims}
+\end{figure}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=\textwidth]{Tpos-Tpro_testlims}
+  \caption{Pairwise $T^+ - T^p$ timeseries, when both cell types are testosterone limited and when $T^+$ is limited more than $T^p$. Both are testosterone limited at $ul_{test,T^+}=0.7,ul_{test,T^p}=0.9$ and $T^+$ is limited more at $ul_{test,T^+}=0.5,ul_{test,T^p}=0.3$.}
+  \label{fig_Tpos-Tpro_testlims}
+\end{figure}
 
 \section{Future Plans}
 From these observations, it is clear that strength of resource limitation affects competitive outcomes. More runs have to be done where the testosterone limitation is relaxed. The oxygen limit needs exploration with lower $ul_{test,i}$ than currently done. Alternatively, oxygen can be made more limiting than testosterone by changing the production rates of these resources.

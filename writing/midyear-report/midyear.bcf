@@ -2356,13 +2356,12 @@
     <bcf:citekey order="1">Scott</bcf:citekey>
     <bcf:citekey order="2">Cunningham</bcf:citekey>
     <bcf:citekey order="3">Hanahan</bcf:citekey>
-    <bcf:citekey order="4">Logistic</bcf:citekey>
-    <bcf:citekey order="5">Jain</bcf:citekey>
-    <bcf:citekey order="6">HailJr</bcf:citekey>
-    <bcf:citekey order="7">Jain</bcf:citekey>
-    <bcf:citekey order="8">atcc</bcf:citekey>
-    <bcf:citekey order="9">Steward</bcf:citekey>
-    <bcf:citekey order="10">Titus</bcf:citekey>
+    <bcf:citekey order="4">Jain</bcf:citekey>
+    <bcf:citekey order="5">HailJr</bcf:citekey>
+    <bcf:citekey order="6">Jain</bcf:citekey>
+    <bcf:citekey order="7">atcc</bcf:citekey>
+    <bcf:citekey order="8">Steward</bcf:citekey>
+    <bcf:citekey order="9">Titus</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
