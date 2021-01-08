@@ -39,33 +39,33 @@
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {7}{7}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {2}{0}{4}{8/8}{}{0}}
+\headcommand {\beamer@subsubsectionentry {0}{2}{0}{1}{8}{Pairwise Competition}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {8}{8}}
+\headcommand {\slideentry {2}{0}{4}{8/11}{}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsubsectionentry {0}{2}{0}{1}{9}{Pairwise Competition}}
+\headcommand {\beamer@framepages {8}{11}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {2}{0}{5}{9/12}{}{0}}
+\headcommand {\slideentry {2}{0}{5}{12/15}{}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {9}{12}}
+\headcommand {\beamer@framepages {12}{15}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {2}{0}{6}{13/16}{}{0}}
+\headcommand {\beamer@sectionpages {5}{15}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {13}{16}}
+\headcommand {\beamer@subsectionpages {5}{15}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@sectionpages {5}{16}}
+\headcommand {\sectionentry {3}{Future Plans}{16}{Future Plans}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionpages {5}{16}}
+\headcommand {\slideentry {3}{0}{1}{16/16}{}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\sectionentry {3}{Future Plans}{17}{Future Plans}{0}}
+\headcommand {\beamer@framepages {16}{16}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {3}{0}{1}{17/17}{}{0}}
+\headcommand {\slideentry {3}{0}{2}{17/17}{}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {17}{17}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@sectionpages {17}{17}}
+\headcommand {\beamer@sectionpages {16}{17}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionpages {17}{17}}
+\headcommand {\beamer@subsectionpages {16}{17}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\sectionentry {4}{References}{18}{References}{0}}
 \defcounter {refsection}{0}\relax 
@@ -77,7 +77,7 @@
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {18}{19}}
 \headcommand {\beamer@partpages {1}{19}}
-\headcommand {\beamer@subsectionpages {17}{19}}
-\headcommand {\beamer@sectionpages {17}{19}}
+\headcommand {\beamer@subsectionpages {16}{19}}
+\headcommand {\beamer@sectionpages {16}{19}}
 \headcommand {\beamer@documentpages {19}}
 \headcommand {\gdef \inserttotalframenumber {13}}

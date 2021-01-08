@@ -30,6 +30,7 @@
     \insertframenumber/\inserttotalframenumber
 }
 
+\setbeamertemplate{caption}[numbered]
 
 %Information to be included in the title page:
 \title{Studying the effects of competition on adaptive therapy}
@@ -47,9 +48,10 @@
 \section{Introduction}
 \begin{frame}{Adaptive Therapy}
   \begin{itemize}
-    \item Conventional therapy @ MTD $\rightarrow$ min tumour burden
+    \item Conventional therapy @ MTD $\rightarrow$ min tumour burden (\cite{Frei})
     \item Heterogenous sensitivity $\rightarrow$ sensitive eliminated $\rightarrow$ resistant population (\cite{Scott})
     \item AT = lower, fluctuating dose $\rightarrow$ sensitive preserved
+    \item AT dose = $f(tumour\ size)$ (\cite{Gatenby})
   \end{itemize}
 \end{frame}
 
@@ -57,17 +59,17 @@
   \begin{itemize}
     \item System of study: Metastatic Castration-Resistant Prostate Cancer
     \item History of Adaptive therapy work (\cite{Cunningham})
-    \item Therapy: ADT + abiraterone
+    \item Therapy: ADT + Abiraterone
   \end{itemize}
   \begin{table}
     \centering
-    \begin{tabular}{|l|c|c|c|}
+    \begin{tabular}{|l|c|c|c|c|}
     \hline
-    Cell type & Test. dependent & Test. Producing & Mechanism \\
+    Cell type & Test. dependent & Test. Producing & Ab. sensitive & Mechanism \\
     \hline
-    $T^+$ & Yes & No & N/A \\
-    $T^p$ & Yes & Yes & Cholestrol $\xrightarrow{CYP17\alpha}$ Testosterone\\
-    $T^-$ & No & No & Androgen receptor mutations\\
+    $T^+$ & Yes & No & Yes & N/A \\
+    $T^p$ & Yes & Yes & Yes & Cholestrol $\xrightarrow{CYP17\alpha}$ Testosterone\\
+    $T^-$ & No & No & No & Androgen receptor mutations\\
     \hline
     \end{tabular}
   \end{table}
@@ -76,6 +78,8 @@
 \begin{frame}{Competition between cells}
   \begin{itemize}
     \item AT outcome $\sim$ competition b/w sensitive and resistant
+    \item sensitive keeps resistant in check
+    \item sensitive killed by drug dose
     \item Competitive strategies through traits from cancer progression (\cite{Hanahan})
     \begin{itemize}
       \item Higher proliferation rate
@@ -90,11 +94,14 @@
   \begin{columns}
     \begin{column}{0.4\textwidth}
       \begin{itemize}
-        \item Starting point: forming expectations, parameterization for ABM
-        \item Computationally cheap but can't capture complex behaviour
+        \item Starting point: forming expectations, parameterization
         \item Logistic framework with dynamic carrying capacity $\sim$ environmental conditions
         \item Environment = resource = \{oxygen, testosterone\}
       \end{itemize}
+      \begin{figure}
+        \includegraphics[width=\textwidth]{f_res}
+        \caption{$f_i(res)$}
+      \end{figure}
     \end{column}
     \begin{column}{0.6\textwidth}
       \begin{equation}
@@ -144,24 +151,7 @@
     \end{tabular}
   \end{itemize}
 \end{frame}
-\begin{frame}{Parameters \& Standardization}
-  Some additional supplementary parameters
-  \begin{itemize}
-    \item $\tau_d$: Doubling time (\cite{atcc})\\
-    \begin{tabular}{ll}
-      $T^+$ & $34$ hr \\
-      $T^p$ & $40$ hr \\
-      $T^-$ & $25$ hr \\
-    \end{tabular}
-    \item $y_i^*$: Equilibrium cell number (assumed)\\
-    10000
-    \item $res^*$: Equilibrium/Tissue resource levels (\cite{Steward},\cite{Titus})\\
-    \begin{tabular}{ll}
-      $O_2$    & 2.5 mmHg          \\
-      $test$   & 3.74 pmol/g tissue\\
-    \end{tabular}
-  \end{itemize}
-\end{frame}
+
 \begin{frame}{Parameters \& Standardization}
   Some parameters from assumptions \& constraints
   \begin{columns}
@@ -223,75 +213,73 @@
     \begin{column}{0.5\textwidth}
       \begin{enumerate}
         \item<1-> $T^p$ $test$ \& $O_2$ limited. $T^-$ only $O_2$ limited
-          \begin{itemize}
-            \item Testosterone limitation $\sim$ $ll_{test,T^p}$ and $ul_{test,T^p}$
-          \end{itemize}
-        \item<2-> $ul_{test,T^p}$ low
+        \item<2-> $T^p$ not severely testosterone limited
         \begin{itemize}
-          \item $T^p$ not severely testosterone limited
           \item $T^p$ coexist or outcompete $T^-$
-          \item $T^-$ Outcompetes in other cases
+          \item $T^-$ outcompetes in other cases
         \end{itemize}
-        \item<3-> $ll_{O_2,T^-}$ large
+        \item<3-> Outcomes dependent on the initial proportion of $T^p$
+        \item<4-> $T^-$ strongly oxygen limited
         \begin{itemize}
-          \item $T^-$ strongly oxygen limited
           \item $T^p$ still testosterone limited
           \item $T^-$ wins eventually
           \item Oxygen levels rise faster than testosterone
         \end{itemize}
-        \item<4-> Outcomes dependent on the initial proportion of $T^p$
       \end{enumerate}
     \end{column}
     \begin{column}{0.5\textwidth}
       \begin{figure}[h]
         \centering
-        \includegraphics[width=\textwidth]{Tpro-Tneg}
+        \includegraphics[width=\textwidth]{Tpro-Tneg_testlim}
         \caption{Pairwise $T^p - T^-$ timeseries, when $T^p$ is testosterone limited and not testosterone limited (colums) and at different initial proportions of $T^p$(rows)}
         \label{fig_Tpro-Tneg}
       \end{figure}
+      \uncover<4->{\begin{figure}[h]
+        \centering
+        \includegraphics[width=0.5\textwidth]{Tpro-Tneg_o2lim}
+        \caption{Pairwise $T^p - T^-$ timeseries, when $T^-$ is severly oxygen limited}
+        \label{fig_Tpro-Tneg}
+      \end{figure}}
     \end{column}
   \end{columns}
 \end{frame}
 
 \begin{frame}{Pairwise Competition: $T^+ - T^p$}
   \begin{columns}
-    \begin{column}{0.6\textwidth}
+    \begin{column}{0.5\textwidth}
       \begin{enumerate}
         \item<1-> Both cell type limited by both resource
-        \& strength of limitation of resource through limits
         \item<2-> Both severly testosterone limited
         \begin{itemize}
           \item $T^+$ consume \& grows on limited testosterone
           \item Density-dependent competition drive $T^p$ extinct
           \item No $T^p$ = No testosterone $\rightarrow$ $T^+$ extinct
         \end{itemize}
-        \item<3-> $ll_{O_2,T^p}$ large
+        \item<3-> $T^p$ is weakly limited by testosterone relative to $T^+$
         \begin{itemize}
-          \item $T^+$ severly oxygen limited
-          \item $T^p$ grow initially \& secrete testosterone
-          \item Sustain small $T^+$ if not extinct
-        \end{itemize}
-        \item<4-> $ul_{test,T^p} \leq ul_{test,T^+}$
-        \begin{itemize}
-          \item $T^p$ is weakly limited by testosterone relative to $T^+$
           \item Both coexist
           \item $T^p$ grow initially \& not affected by $T^+$
         \end{itemize}
+        \item<4-> $T^+$ severly oxygen limited
+        \begin{itemize}
+          \item $T^p$ grow initially \& secrete testosterone
+          \item Sustain small $T^+$ if not extinct
+        \end{itemize}
       \end{enumerate}
     \end{column}
-    \begin{column}{0.4\textwidth}
+    \begin{column}{0.5\textwidth}
       \begin{figure}[h]
+      \centering
+      \includegraphics[width=\textwidth]{Tpos-Tpro_testlims}
+      \caption{Pairwise $T^+ - T^p$ timeseries, when both cell types are testosterone limited and when $T^+$ is limited more than $T^p$}
+      \label{fig_Tpos-Tpro_testlims}
+      \end{figure}
+      \uncover<4->{\begin{figure}[h]
         \centering
         \includegraphics[width=\textwidth]{Tpos-Tpro_o2lims}
         \caption{Pairwise $T^+ - T^p$ timeseries, when both cell types are testosterone limited and not oxygen limited and when $T^+$ is severly oxygen limited}
         \label{fig_Tpos-Tpro_o2lims}
-      \end{figure}
-      \begin{figure}[h]
-        \centering
-        \includegraphics[width=\textwidth]{Tpos-Tpro_testlims}
-        \caption{Pairwise $T^+ - T^p$ timeseries, when both cell types are testosterone limited and when $T^+$ is limited more than $T^p$}
-        \label{fig_Tpos-Tpro_testlims}
-      \end{figure}
+      \end{figure}}
     \end{column}
   \end{columns}
 \end{frame}
@@ -308,7 +296,19 @@
   \end{itemize}
 \end{frame}
 
+\begin{frame}{Thank You}
+  \begin{figure}
+    \includegraphics[width=0.5\textwidth]{honestwork}
+    \caption{Meme, Original Image by USDA}
+  \end{figure}
+\end{frame}
+
 \begin{frame}[allowframebreaks]{References}
+  \nocite{atcc}
+  \nocite{Steward}
+  \nocite{Titus}
+  \nocite{Stamey}
+  \nocite{Strobl}
   \printbibliography
 \end{frame}
 
