@@ -23,15 +23,27 @@ except:
     pass
 
 #iterator over these 
-test_lim_arr=np.arange(0.1,1,0.2)
+lim_arr=np.empty([0,3,2])
+for llim_o2Tneg in np.arange(0,1,0.2):
+    for ulim_o2Tneg in np.arange(llim_o2Tneg+0.1,1,0.2):
+        for llim_o2Tpro in np.arange(0,1,0.2):
+            for ulim_o2Tpro in np.arange(llim_o2Tpro+0.1,1,0.2):
+                for llim_testTpro in np.arange(0,0.3,0.2):
+                    for ulim_testTpro in np.arange(llim_testTpro+0.1,0.6,0.2):
+                        lim_arr=np.append(lim_arr,[[[llim_o2Tneg,ulim_o2Tneg],[llim_o2Tpro,ulim_o2Tpro],[llim_testTpro,ulim_testTpro]]],axis=0)
 
-def solve_parm(u_lim_test): #calls the solve_eq function with all default inputs other than test_lim
-    f_name_i=f_name+"{:.1f}".format(u_lim_test)
-    lim[1,1,1]=u_lim_test
+def solve_parm(lims): #calls the solve_eq function with all default inputs other than lims
+    
+    f_name_i=f_name+"{:.1f}".format(lims[0,0])
+    for limeet in lims.flatten()[1:]:
+        f_name_i+="-{:.1f}".format(limeet)
+    lim[0,2]=lims[0]
+    lim[0,1]=lims[1]
+    lim[1,1]=lims[2]
     ee.solve_eq(t_max,dt,y0,p,mu,lam,r,K,delta,rho,lim,f_name_i)
 
 if __name__ == '__main__':
     pool = Pool(4)
-    pool.map(solve_parm,test_lim_arr) #iterate over the test_lims
+    pool.map(solve_parm,lim_arr) #iterate over the lims
     pool.close()
     pool.join()
