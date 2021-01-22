@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+import os
 plt.rcParams["svg.hashsalt"]=0
 
 def timeseries(pre_path,parm_name,parm_array,parm_format='{:.2E}',post_path='',plot_Tpos=True,plot_Tpro=True,plot_Tneg=True,plot_o2=True,plot_test=True,save=True):
@@ -41,6 +42,15 @@ def timeseries(pre_path,parm_name,parm_array,parm_format='{:.2E}',post_path='',p
     if save:
         fig.savefig('../figures/'+pre_path+parm_name+'/'+post_path+'timeseries.svg')
     return fig,ax
+
+def timeseries_split(no_fig,sub_arr_len,pre_path,parm_name,parm_array,parm_format='{:.2E}',post_path='',plot_Tpos=True,plot_Tpro=True,plot_Tneg=True,plot_o2=True,plot_test=True,save=True):
+    if (sub_arr_len*no_fig!=len(parm_array)):
+        print("Wrong Array Length")
+        return
+    for i in range(no_fig):
+        timeseries(pre_path=pre_path,parm_name=parm_name,parm_array=parm_array[i*sub_arr_len:(i+1)*sub_arr_len],parm_format=parm_format,plot_Tpos=False)
+        os.rename('../figures/'+pre_path+parm_name+'/'+post_path+'timeseries.svg','../figures/'+pre_path+parm_name+'/'+post_path+'timeseries-'+str(i)+'.svg')
+
 
 def eq_values(pre_path,parm_name,parm_array,parm_format='{:.2E}',post_path='',save=True,parm_name_array=None):
     lis=[]
