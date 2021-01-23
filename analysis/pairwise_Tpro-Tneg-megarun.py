@@ -26,6 +26,7 @@ if firsttime:
 
 df=pd.read_csv('../analysed_data/'+pre_path+parm_name+'/eq_values.csv')
 
+#to find correlation bw equilibrium values and parameters
 corr_df=df.corr()
 corr_df.to_csv('../analysed_data/'+pre_path+parm_name+'/corr.csv')
 
@@ -38,3 +39,15 @@ plt.tight_layout()
 plt.savefig('../figures/'+pre_path+parm_name+'/eq-vs-l_lim_o2Tneg.svg')
 plt.close()
 
+#Find parameters where Tp doesnt go extinct
+df_nonTpextinct=df[df['Tpro_eq']>=1]
+df_nonTpextinct.to_csv('../analysed_data/'+pre_path+parm_name+'/eq_values-nonTpextinct.csv',index=False)
+
+#When ulim_testTpro=0.1, looking at the oxygen limits 
+df_ultTp=df[df['u_lim_testTpro']==0.1]
+df_ultTp.to_csv('../analysed_data/'+pre_path+parm_name+'/eq_values-u_lim_testTpro=0.1.csv',index=False)
+sns.relplot(data=df_ultTp,x='l_lim_o2Tpro',y='Tneg_ratio',hue='u_lim_o2Tpro',row='l_lim_o2Tneg',col='u_lim_o2Tneg',kind='line',marker='o')
+plt.ylim(0,1.1)
+plt.tight_layout()
+plt.savefig('../figures/'+pre_path+parm_name+'/eq-vs-l_lim_o2Tneg-u_lim_testTpro=0.1.svg')
+plt.close()
