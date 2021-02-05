@@ -14,7 +14,7 @@ y0_o2=0.5 #(prop)
 y0_test=0 #(prop)
 #Production rates of resources
 p_o2=0.11 #(prop/min)
-p_test=1E-6 #by Tp cells (prop/min/cell)
+p_test=5E-7 #by Tp cells (prop/min/cell)
 #Uptake rate of resources by cells
 ##oxygen
 mu_o2Tpos=1.63E-6 #(prop/min/cell)
@@ -53,7 +53,7 @@ u_lim_o2Tpos=1 #upper-saturation(prop)
 l_lim_o2Tpro=0 #(prop)
 u_lim_o2Tpro=1 #(prop)
 ###T-
-l_lim_o2Tneg=0.6 #(prop)
+l_lim_o2Tneg=0 #(prop)
 u_lim_o2Tneg=1 #(prop)
 ##Testosterone
 ###T+
@@ -63,4 +63,4 @@ u_lim_testTpos=1 #(prop)
 l_lim_testTpro=0 #(prop)
 u_lim_testTpro=1 #(prop)
 #filename to save output in
-f_name='pairwise/Tneg-Tpro/p_o2/Tneg-o2limited_'
+f_name='pairwise/Tneg-Tpro/l_lim_o2Tneg-u_lim_o2Tneg-l_lim_o2Tpro-u_lim_o2Tpro-l_lim_testTpro-u_lim_testTpro/'

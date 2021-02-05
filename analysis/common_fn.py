@@ -148,7 +148,7 @@ def plot_2parm(df,parm_name,pri_parm,sec_parm,plot_y,pre_path='',post_path='',sa
     fig,ax=plt.subplots()
     sns.lineplot(data=df,x=pri_parm,y=plot_y,hue=sec_parm,marker='o',ax=ax)
     if axis_lim:
-        ax.set_ylim(0,1)
+        ax.set_ylim(0,1.1)
     if save:
         fig.savefig('../figures/'+pre_path+parm_name+'/'+post_path+'eq-vs-'+pri_parm+'.svg')
 

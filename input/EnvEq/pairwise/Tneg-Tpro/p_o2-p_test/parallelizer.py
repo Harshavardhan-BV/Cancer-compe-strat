@@ -23,11 +23,14 @@ except:
     pass
 
 #iterator over these 
-p_arr=np.linspace(0.0675,0.085,10)
+p_arr=np.empty([0,2])
+for po2 in np.linspace(0.05,0.12,5):
+    for ptest in np.linspace(1E-7,1E-6,5):
+        p_arr=np.append(p_arr,[[po2,ptest]],axis=0)
 
-def solve_parm(p_o2): #calls the solve_eq function with all default inputs other than lims
-    f_name_i=f_name+"{:.2e}".format(p_o2)
-    p[0]=p_o2
+def solve_parm(p_res): #calls the solve_eq function with all default inputs other than lims
+    f_name_i=f_name+"{:.2e}-{:.2e}".format(p_res[0],p_res[1])
+    p=p_res
     ee.solve_eq(t_max,dt,y0,p,mu,lam,r,K,delta,rho,lim,f_name_i)
 
 if __name__ == '__main__':
