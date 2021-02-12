@@ -29,7 +29,7 @@ def timeseries(pre_path,parm_name,parm_array,parm_format='{:.2E}',post_path='',p
             ax[i,0].plot(df.t/24/60,df.Tpos,color="tab:green",label='T+')
         if plot_Tpro:
             ax[i,0].plot(df.t/24/60,df.Tpro,color="tab:blue",label='Tp')
-        if plot_Tneg:    
+        if plot_Tneg:
             ax[i,0].plot(df.t/24/60,df.Tneg,color="tab:red",label='T-')
         ax[i,0].set_ylabel("No of Cells")
         ax[i,0].legend()
@@ -41,7 +41,8 @@ def timeseries(pre_path,parm_name,parm_array,parm_format='{:.2E}',post_path='',p
     fig.tight_layout()
     if save:
         fig.savefig('../figures/'+pre_path+parm_name+'/'+post_path+'timeseries.svg')
-    return fig,ax
+    fig.clf()
+    plt.close(fig)
 
 def timeseries_split(no_fig,sub_arr_len,pre_path,parm_name,parm_array,parm_format='{:.2E}',post_path='',plot_Tpos=True,plot_Tpro=True,plot_Tneg=True,plot_o2=True,plot_test=True,save=True):
     if (sub_arr_len*no_fig!=len(parm_array)):
@@ -96,9 +97,11 @@ def eqvparm(df,pre_path,parm_name,post_path='',parm_unit='',plot_Tpos=True,plot_
     ax1.tick_params(axis='y', labelcolor='tab:red')
     ax1.legend()
     ax1.set_xlabel(parm_name+parm_unit)
-    fig.tight_layout()    
+    fig.tight_layout()
     if save:
         fig.savefig('../figures/'+pre_path+parm_name+'/'+post_path+'eq-vs-'+parm_name+'.svg')
+    fig.clf()
+    plt.close(fig)
 
 def heatmap_eqvparm(df,pre_path,parm_name,parm_name_array,post_path='',parm_unit='',plot_Tpos=True,plot_Tpro=True,plot_Tneg=True,plot_o2=True,plot_test=True,save=True,shareaxis=True):
     sp_size=plot_Tpos+plot_Tpro+plot_Tneg+plot_o2+plot_test
@@ -143,6 +146,9 @@ def heatmap_eqvparm(df,pre_path,parm_name,parm_name_array,post_path='',parm_unit
     fig.tight_layout()
     if save:
         fig.savefig('../figures/'+pre_path+parm_name+'/'+post_path+'eq-vs-'+parm_name+'.svg')
+    fig.clf()
+    plt.close(fig)
+
 
 def plot_2parm(df,parm_name,pri_parm,sec_parm,plot_y,pre_path='',post_path='',save=True,axis_lim=True):
     fig,ax=plt.subplots()
@@ -151,13 +157,44 @@ def plot_2parm(df,parm_name,pri_parm,sec_parm,plot_y,pre_path='',post_path='',sa
         ax.set_ylim(0,1.1)
     if save:
         fig.savefig('../figures/'+pre_path+parm_name+'/'+post_path+'eq-vs-'+pri_parm+'.svg')
+    fig.clf()
+    plt.close(fig)
+
 
 def cell_eq_ratio(df,pri_cell,sec_cell):
     df[pri_cell+'_ratio']=df[pri_cell+'_eq']/(df[pri_cell+'_eq']+df[sec_cell+'_eq'])
     df[pri_cell+'_ratio'][(df[pri_cell+'_eq']<1) & (df[sec_cell+'_eq']<1)]=np.nan # set to nan if both cells are extinct (ratio makes no sense)
     return df
 
+def allcell_eq_ratio(df):
+    df['Tpos_ratio']=df['Tpos_eq']/(df['Tpos_eq']+df['Tpro_eq']+df['Tneg_eq'])
+    df['Tpro_ratio']=df['Tpro_eq']/(df['Tpos_eq']+df['Tpro_eq']+df['Tneg_eq'])
+    df['Tneg_ratio']=df['Tneg_eq']/(df['Tpos_eq']+df['Tpro_eq']+df['Tneg_eq'])
+    df['Tpos_ratio'][(df['Tpos_eq']<1) & (df['Tpro_eq']<1) & (df['Tneg_eq']<1)]=np.nan # set to nan if all cells are extinct (ratio makes no sense)
+    df['Tpro_ratio'][(df['Tpos_eq']<1) & (df['Tpro_eq']<1) & (df['Tneg_eq']<1)]=np.nan # set to nan if all cells are extinct (ratio makes no sense)
+    df['Tneg_ratio'][(df['Tpos_eq']<1) & (df['Tpro_eq']<1) & (df['Tneg_eq']<1)]=np.nan # set to nan if all cells are extinct (ratio makes no sense)
+    return df
+
 def round_df(df,parm_name_array,decimals=1):
     for parm in parm_name_array:
         df[parm]=df[parm].round(decimals)
     return df
+
+def eqratio_v_parm(df,plot_parm,pre_path,parm_name,post_path='',plot_Tpos=True,plot_Tpro=True,plot_Tneg=True,save=True):
+    # Plotting the equilibrium values vs Initial Tp numbers
+    allcell_eq_ratio(df)
+    fig,ax1=plt.subplots()
+    if plot_Tpos:
+        sns.lineplot(data=df,x=plot_parm,y='Tpos_ratio',color='tab:green',label="T+",ax=ax1)
+    if plot_Tpro:
+        sns.lineplot(data=df,x=plot_parm,y='Tpro_ratio',color='tab:blue',label="Tp",ax=ax1)
+    if plot_Tneg:
+        sns.lineplot(data=df,x=plot_parm,y='Tneg_ratio',color='tab:red',label="T-",ax=ax1)
+    ax1.set_ylim(0,1.1)
+    ax1.legend()
+    ax1.set_ylabel('Final ratio')
+    ax1.set_xlabel(plot_parm)
+    if save:
+        fig.savefig('../figures/'+pre_path+parm_name+'/'+post_path+'finratio-vs-'+plot_parm+'.svg')
+    fig.clf()
+    plt.close(fig)

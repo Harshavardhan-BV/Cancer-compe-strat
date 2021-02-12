@@ -1,0 +1,44 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import common_fn as cf
+import seaborn as sns
+plt.rcParams["svg.hashsalt"]=0
+
+pre_path='EnvEq/pairwise/Tpos-Tpro/'
+parm_format='{:.1f}'
+parm_name='Case-Tp_initratio-Totcell'
+parm_name_array=['Tp_initratio','Totcell']
+
+#iterator over these
+initial_ratio_arr=np.arange(0.1,1,0.2)
+tot_cell_arr=np.array([1000,2000,4000])
+cases=np.arange(1,5)
+
+parms_array=np.empty([0,2])
+for ir in initial_ratio_arr:
+    for tc in tot_cell_arr:
+        parms_array=np.append(parms_array,[[ir,tc]],axis=0)
+
+for case in cases:
+    post_path='Case{:.1f}-'.format(case)
+    cf.timeseries(pre_path=pre_path,parm_name=parm_name,parm_array=parms_array,parm_format=parm_format,plot_Tneg=False,post_path=post_path)
+    df=cf.eq_values(pre_path=pre_path,parm_name=parm_name,parm_array=parms_array,parm_format=parm_format,parm_name_array=parm_name_array,post_path=post_path)
+    df['Tpro_0']=df['Tp_initratio']*df['Totcell']
+    cf.eqratio_v_parm(df=df,plot_parm='Tpro_0',pre_path=pre_path,parm_name=parm_name,post_path=post_path,plot_Tneg=False)
+    cf.eqratio_v_parm(df=df,plot_parm='Tp_initratio',pre_path=pre_path,parm_name=parm_name,post_path=post_path,plot_Tneg=False)
+
+#v1.1
+cases=np.empty(0)
+for i in range(1,5):
+    for j in range(1,6):
+        cases=np.append(cases,i+0.1*j)
+parms_array=np.empty([0,2])
+for ir in initial_ratio_arr:
+    for tc in tot_cell_arr:
+        parms_array=np.append(parms_array,[[ir,tc]],axis=0)
+
+for case in cases:
+    post_path='Case{:.1f}-'.format(case)
+    cf.timeseries(pre_path=pre_path,parm_name=parm_name,parm_array=parms_array,parm_format=parm_format,plot_Tneg=False,post_path=post_path)
+    df=cf.eq_values(pre_path=pre_path,parm_name=parm_name,parm_array=parms_array,parm_format=parm_format,parm_name_array=parm_name_array,post_path=post_path)

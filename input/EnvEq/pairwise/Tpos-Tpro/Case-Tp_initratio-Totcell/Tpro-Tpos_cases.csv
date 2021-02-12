@@ -1,0 +1,5 @@
+Case,lltestTpro,ultestTpro,llo2Tpro,ulo2Tpro,lltestTpos,ultestTpos,llo2Tpos,ulo2Tpos,Remarks
+1,0,0.3,0,1,0,0.1,0,1,Both extinct
+2,0,0.1,0,1,0,0.3,0,1,Coexist
+3,0,1,0.4,1,0,1,0.6,1,Coexist
+4,0,1,0,1,0,1,0.6,1,Tpos extinct
