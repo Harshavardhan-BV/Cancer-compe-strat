@@ -1,7 +1,11 @@
 #Ignore files created by vscode
 .vscode
+#Ignore files created by dolphin
+.directory
 #Ignore pycache
 **/__pycache__/*
+#Ignore archives of old code
+**/archive/*
 #Ignore folders/files explicitly said so
 **/*-ignore/
 **/*-ignore.*

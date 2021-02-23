@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import common_fn as cf
 import seaborn as sns
 plt.rcParams["svg.hashsalt"]=0
- 
+
 pre_path='EnvEq/pairwise/Tneg-Tpro/'
 parm_format='{:.1f}'
 
@@ -43,7 +43,7 @@ plt.close()
 df_nonTpextinct=df[df['Tpro_eq']>=1]
 df_nonTpextinct.to_csv('../analysed_data/'+pre_path+parm_name+'/eq_values-nonTpextinct.csv',index=False)
 
-#When ulim_testTpro=0.1, looking at the oxygen limits 
+#When ulim_testTpro=0.1, looking at the oxygen limits
 df_ultTp=df[df['u_lim_testTpro']==0.1]
 df_ultTp.to_csv('../analysed_data/'+pre_path+parm_name+'/eq_values-u_lim_testTpro=0.1.csv',index=False)
 sns.relplot(data=df_ultTp,x='l_lim_o2Tpro',y='Tneg_ratio',hue='u_lim_o2Tpro',row='l_lim_o2Tneg',col='u_lim_o2Tneg',kind='line',marker='o')
@@ -51,3 +51,8 @@ plt.ylim(0,1.1)
 plt.tight_layout()
 plt.savefig('../figures/'+pre_path+parm_name+'/eq-vs-l_lim_o2Tneg-u_lim_testTpro=0.1.svg')
 plt.close()
+
+## Eq ratio vs different parms to illustrate their effect
+cf.eqratio_v_parm(df,plot_parm='l_lim_o2Tpro',pre_path=pre_path,parm_name=parm_name,plot_Tpos=False,plot_Tneg=False)
+cf.eqratio_v_parm(df,plot_parm='l_lim_testTpro',pre_path=pre_path,parm_name=parm_name,plot_Tpos=False,plot_Tneg=False)
+cf.eqratio_v_parm(df,plot_parm='u_lim_testTpro',pre_path=pre_path,parm_name=parm_name,plot_Tpos=False,plot_Tneg=False,style_parm='l_lim_o2Tneg')

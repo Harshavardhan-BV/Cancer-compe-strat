@@ -1,7 +1,6 @@
 from multiprocessing import Pool
 import EnvEq as ee
 import numpy as np
-import pandas as pd
 import itertools as it
 import os
 
@@ -23,46 +22,18 @@ try:
 except:
     pass
 
-#iterator over these
-initial_ratios=np.array([0.11,0.33,0.56,0.78])
-ir_arr=np.empty([0,3])
-for i in initial_ratios:
-    for j in initial_ratios:
-        k=1-(i+j)
-        if (k<0):
-            break
-        else:
-            ir_arr=np.append(ir_arr,[[i,j,k]],axis=0)
+#iterator over these 
+p_test_arr=np.logspace(-6.35,0,10)
 
-parms_array=[]
-tot_cell_arr=np.array([1000,2000,4000])
-cases=pd.read_csv('./All3_cases.csv')
-for i in range(len(cases)):
-    for ir in ir_arr:
-        for tc in tot_cell_arr:
-            parms_array.append([cases.loc[i],ir,tc])
-
-def solve_parm(parms): #calls the solve_eq function with all default inputs other than lims
-    f_name_i=f_name+"Case"+"{:.1f}".format(parms[0]['Case'])
-    for ir_i in parms[1]:
-        f_name_i=f_name_i+'-'+"{:.1f}".format(ir_i)
-    f_name_i=f_name_i+'-'+"{:.1f}".format(parms[2])
-    lim[0,0,0]=parms[0]['llo2Tpos']
-    lim[0,0,1]=parms[0]['ulo2Tpos']
-    lim[0,1,0]=parms[0]['llo2Tpro']
-    lim[0,1,1]=parms[0]['ulo2Tpro']
-    lim[0,2,0]=parms[0]['llo2Tneg']
-    lim[0,2,1]=parms[0]['ulo2Tneg']
-    lim[1,0,0]=parms[0]['lltestTpos']
-    lim[1,0,1]=parms[0]['ultestTpos']
-    lim[1,1,0]=parms[0]['lltestTpro']
-    lim[1,1,1]=parms[0]['ultestTpro']
-    p[0]=parms[0]['p_o2']
-    y0[0:3]=parms[1]*parms[2]
+def solve_parm(p_test):
+    mu_test=p_test-4.4E-7
+    f_name_i=f_name+"{:.2E}".format(p_test)
+    p[1]=p_test
+    mu[1,1]=mu_test
     ee.solve_eq(t_max,dt,y0,p,mu,lam,r,K,delta,rho,lim,f_name_i)
 
 if __name__ == '__main__':
     pool = Pool(4)
-    pool.map(solve_parm,parms_array) #iterate over the lims
+    pool.map(solve_parm,p_test_arr) 
     pool.close()
     pool.join()

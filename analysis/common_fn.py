@@ -5,6 +5,16 @@ import seaborn as sns
 import os
 plt.rcParams["svg.hashsalt"]=0
 
+def mkdirs(pre_path,parm_name):
+    try:
+        os.makedirs("../figures/"+pre_path+parm_name)
+    except:
+        pass
+    try:
+        os.makedirs("../analysed_data/"+pre_path+parm_name)
+    except:
+        pass
+
 def timeseries(pre_path,parm_name,parm_array,parm_format='{:.2E}',post_path='',plot_Tpos=True,plot_Tpro=True,plot_Tneg=True,plot_o2=True,plot_test=True,save=True):
     fig,ax=plt.subplots(len(parm_array),2,sharex=True,figsize=(10,3*len(parm_array)))
     i=0
@@ -180,16 +190,16 @@ def round_df(df,parm_name_array,decimals=1):
         df[parm]=df[parm].round(decimals)
     return df
 
-def eqratio_v_parm(df,plot_parm,pre_path,parm_name,post_path='',plot_Tpos=True,plot_Tpro=True,plot_Tneg=True,save=True):
+def eqratio_v_parm(df,plot_parm,pre_path,parm_name,post_path='',plot_Tpos=True,plot_Tpro=True,plot_Tneg=True,save=True,style_parm=None):
     # Plotting the equilibrium values vs Initial Tp numbers
     allcell_eq_ratio(df)
     fig,ax1=plt.subplots()
     if plot_Tpos:
-        sns.lineplot(data=df,x=plot_parm,y='Tpos_ratio',color='tab:green',label="T+",ax=ax1)
+        sns.lineplot(data=df,x=plot_parm,y='Tpos_ratio',color='tab:green',style=style_parm,label="T+",ax=ax1)
     if plot_Tpro:
-        sns.lineplot(data=df,x=plot_parm,y='Tpro_ratio',color='tab:blue',label="Tp",ax=ax1)
+        sns.lineplot(data=df,x=plot_parm,y='Tpro_ratio',color='tab:blue',style=style_parm,label="Tp",ax=ax1)
     if plot_Tneg:
-        sns.lineplot(data=df,x=plot_parm,y='Tneg_ratio',color='tab:red',label="T-",ax=ax1)
+        sns.lineplot(data=df,x=plot_parm,y='Tneg_ratio',color='tab:red',style=style_parm,label="T-",ax=ax1)
     ax1.set_ylim(0,1.1)
     ax1.legend()
     ax1.set_ylabel('Final ratio')

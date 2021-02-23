@@ -8,24 +8,24 @@ dt = 60  #step (mins)
 ##cells
 y0_Tpos=0
 y0_Tpro=0
-y0_Tneg=10
+y0_Tneg=1000
 ##resource
 y0_o2=0.5 #(prop)
 y0_test=0 #(prop)
 #Production rates of resources
-p_o2=0.5 #(prop/min)
-p_test=0.5 #by Tp cells (prop/min/cell)
+p_o2=0.4 #(prop/min)
+p_test=1.08E-9 #by Tp cells (prop/min/cell)
 #Uptake rate of resources by cells
 ##oxygen
-mu_o2Tpos=4.86E-5 #(prop/min/cell)
-mu_o2Tpro=4.86E-5 #(prop/min/cell)
-mu_o2Tneg=3.10E-5 #(prop/min/cell)
+mu_o2Tpos=1.63E-6 #(prop/min/cell)
+mu_o2Tpro=1.63E-6 #(prop/min/cell)
+mu_o2Tneg=1.04E-6 #(prop/min/cell)
 ##testosterone
-mu_testTpos=0.2 #(prop/min/cell)
-mu_testTpro=0.2 #(prop/min/cell)
+mu_testTpos=0 #(prop/min/cell)
+mu_testTpro=0 #(prop/min/cell)
 #Decay rates of resources
 lam_o2=0.1 #(1/min)
-lam_test=0.1 #(1/min)
+lam_test=0.004 #(1/min)
 #Doubling time
 t_DTpos=34*60 #(min)
 t_DTpro=40*60 #(min)
@@ -41,9 +41,9 @@ delta_Tneg= 1.6E-4 #(/min)
 #Min Carrying capacity
 K=1
 #Environmental Carrying capacity (Scaling Factor)
-rho_Tpos=2000
-rho_Tpro=2000
-rho_Tneg=2000
+rho_Tpos=8.35E4
+rho_Tpro=9.62E4
+rho_Tneg=1.34E4
 #Resource limits
 ##Oxygen
 ###T+

@@ -3,12 +3,16 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import common_fn as cf
 import seaborn as sns
+import os
 plt.rcParams["svg.hashsalt"]=0
 
 pre_path='EnvEq/All3/'
 parm_format='{:.1f}'
 parm_name='Case-Tpos-Tpro-Tneg_initratio-Totcell'
 parm_name_array=['Tpos_ir','Tpro_ir','Tneg_ir','Totcell']
+plot_parm='Tpro_0'
+style_parm='Totcell'
+cf.mkdirs(pre_path=pre_path,parm_name=parm_name)
 
 tot_cell_arr=np.array([1000,2000,4000])
 cases=pd.read_csv('../input/EnvEq/All3/Case-Tpos-Tpro-Tneg_initratio-Totcell/All3_cases.csv')
@@ -37,4 +41,9 @@ for case in cases:
     corr_df=df.corr()
     corr_df.to_csv('../analysed_data/'+pre_path+parm_name+'/'+post_path+'corr.csv')
 
-    cf.eqratio_v_parm(df=df,plot_parm='Tpro_0',pre_path=pre_path,parm_name=parm_name,post_path=post_path)
+    cf.eqratio_v_parm(df=df,plot_parm=plot_parm,pre_path=pre_path,parm_name=parm_name,post_path=post_path,plot_Tpro=False,plot_Tneg=False,style_parm=style_parm)
+    os.rename('../figures/'+pre_path+parm_name+'/'+post_path+'finratio-vs-'+plot_parm+'.svg','../figures/'+pre_path+parm_name+'/'+post_path+'finratio-vs-'+plot_parm+'-Tpos.svg')
+    cf.eqratio_v_parm(df=df,plot_parm=plot_parm,pre_path=pre_path,parm_name=parm_name,post_path=post_path,plot_Tpos=False,plot_Tneg=False,style_parm=style_parm)
+    os.rename('../figures/'+pre_path+parm_name+'/'+post_path+'finratio-vs-'+plot_parm+'.svg','../figures/'+pre_path+parm_name+'/'+post_path+'finratio-vs-'+plot_parm+'-Tpro.svg')
+    cf.eqratio_v_parm(df=df,plot_parm=plot_parm,pre_path=pre_path,parm_name=parm_name,post_path=post_path,plot_Tpro=False,plot_Tpos=False,style_parm=style_parm)
+    os.rename('../figures/'+pre_path+parm_name+'/'+post_path+'finratio-vs-'+plot_parm+'.svg','../figures/'+pre_path+parm_name+'/'+post_path+'finratio-vs-'+plot_parm+'-Tneg.svg')

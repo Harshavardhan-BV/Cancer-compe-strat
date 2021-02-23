@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import common_fn as cf
 plt.rcParams["svg.hashsalt"]=0
- 
+
 pre_path='EnvEq/pairwise/Tneg-Tpro/'
 parm_format='{:.1f}'
 
@@ -15,33 +15,17 @@ for ulim_Tpro in np.arange(0.1,1,0.2):
 
 parm_name='u_lim_o2Tpro-u_lim_o2Tneg'
 parm_name_array=['u_lim_o2Tpro','u_lim_o2Tneg']
-## testindep - Testosterone independent
-post_path='testindep-'
-cf.timeseries(pre_path=pre_path,parm_name=parm_name,parm_array=o2_lim_arr,parm_format=parm_format,plot_Tpos=False,plot_test=False,post_path=post_path)
-df=cf.eq_values(pre_path=pre_path,parm_name=parm_name,parm_array=o2_lim_arr,parm_format=parm_format,parm_name_array=parm_name_array,post_path=post_path)
-df=cf.round_df(df,parm_name_array)
-cf.heatmap_eqvparm(df,pre_path=pre_path,parm_name=parm_name,parm_name_array=parm_name_array,plot_Tpos=False,plot_test=False,post_path=post_path,shareaxis=True)
-## rho s.t T- at equilibrium is 10^4
+cf.mkdirs(pre_path=pre_path,parm_name=parm_name)
+
+## changed equation with sum over all cells for density dependence
 cf.timeseries(pre_path=pre_path,parm_name=parm_name,parm_array=o2_lim_arr,parm_format=parm_format,plot_Tpos=False)
 df=cf.eq_values(pre_path=pre_path,parm_name=parm_name,parm_array=o2_lim_arr,parm_format=parm_format,parm_name_array=parm_name_array)
 df=cf.round_df(df,parm_name_array)
 cf.heatmap_eqvparm(df,pre_path=pre_path,parm_name=parm_name,parm_name_array=parm_name_array,plot_Tpos=False,shareaxis=True)
-## the above but with odeint, dt=60 for solving as well (to check for inconsistencies with solve_ivp)
-post_path='odeint-'
-cf.timeseries(pre_path=pre_path,parm_name=parm_name,parm_array=o2_lim_arr,parm_format=parm_format,plot_Tpos=False,post_path=post_path)
-df=cf.eq_values(pre_path=pre_path,parm_name=parm_name,parm_array=o2_lim_arr,parm_format=parm_format,parm_name_array=parm_name_array,post_path=post_path)
-df=cf.round_df(df,parm_name_array)
-cf.heatmap_eqvparm(df,pre_path=pre_path,parm_name=parm_name,parm_name_array=parm_name_array,plot_Tpos=False,post_path=post_path,shareaxis=True)
-## changed equation with sum over all cells for density dependence
-post_path='cell_sum-'
-cf.timeseries(pre_path=pre_path,parm_name=parm_name,parm_array=o2_lim_arr,parm_format=parm_format,plot_Tpos=False,post_path=post_path)
-df=cf.eq_values(pre_path=pre_path,parm_name=parm_name,parm_array=o2_lim_arr,parm_format=parm_format,parm_name_array=parm_name_array,post_path=post_path)
-df=cf.round_df(df,parm_name_array)
-cf.heatmap_eqvparm(df,pre_path=pre_path,parm_name=parm_name,parm_name_array=parm_name_array,plot_Tpos=False,post_path=post_path,shareaxis=True)
 df=cf.cell_eq_ratio(df,'Tneg','Tpro')
-cf.plot_2parm(df=df,pre_path=pre_path,parm_name=parm_name,post_path=post_path,pri_parm=parm_name_array[0],sec_parm=parm_name_array[1],plot_y='Tneg_ratio')
+cf.plot_2parm(df=df,pre_path=pre_path,parm_name=parm_name,pri_parm=parm_name_array[0],sec_parm=parm_name_array[1],plot_y='Tneg_ratio')
 ## the above with 0.9Tp y0
-post_path='cell_sum-0.9Tp-'
+post_path='0.9Tp-'
 cf.timeseries(pre_path=pre_path,parm_name=parm_name,parm_array=o2_lim_arr,parm_format=parm_format,plot_Tpos=False,post_path=post_path)
 df=cf.eq_values(pre_path=pre_path,parm_name=parm_name,parm_array=o2_lim_arr,parm_format=parm_format,parm_name_array=parm_name_array,post_path=post_path)
 df=cf.round_df(df,parm_name_array)
@@ -57,27 +41,17 @@ for llim_Tpro in np.arange(0,1,0.2):
 
 parm_name='l_lim_o2Tpro-l_lim_o2Tneg'
 parm_name_array=['l_lim_o2Tpro','l_lim_o2Tneg']
-## testindep - Testosterone independent
-post_path='testindep-'
-cf.timeseries(pre_path=pre_path,parm_name=parm_name,parm_array=o2_lim_arr,parm_format=parm_format,plot_Tpos=False,plot_test=False,post_path=post_path)
-df=cf.eq_values(pre_path=pre_path,parm_name=parm_name,parm_array=o2_lim_arr,parm_format=parm_format,parm_name_array=parm_name_array,post_path=post_path)
-df=cf.round_df(df,parm_name_array)
-cf.heatmap_eqvparm(df,pre_path=pre_path,parm_name=parm_name,parm_name_array=parm_name_array,plot_Tpos=False,plot_test=False,post_path=post_path,shareaxis=True)
-## rho s.t T- at equilibrium is 10^4
+cf.mkdirs(pre_path=pre_path,parm_name=parm_name)
+
+## changed equation with sum over all cells for density dependence
 cf.timeseries(pre_path=pre_path,parm_name=parm_name,parm_array=o2_lim_arr,parm_format=parm_format,plot_Tpos=False)
 df=cf.eq_values(pre_path=pre_path,parm_name=parm_name,parm_array=o2_lim_arr,parm_format=parm_format,parm_name_array=parm_name_array)
 df=cf.round_df(df,parm_name_array)
 cf.heatmap_eqvparm(df,pre_path=pre_path,parm_name=parm_name,parm_name_array=parm_name_array,plot_Tpos=False,shareaxis=True)
-## changed equation with sum over all cells for density dependence
-post_path='cell_sum-'
-cf.timeseries(pre_path=pre_path,parm_name=parm_name,parm_array=o2_lim_arr,parm_format=parm_format,plot_Tpos=False,post_path=post_path)
-df=cf.eq_values(pre_path=pre_path,parm_name=parm_name,parm_array=o2_lim_arr,parm_format=parm_format,parm_name_array=parm_name_array,post_path=post_path)
-df=cf.round_df(df,parm_name_array)
-cf.heatmap_eqvparm(df,pre_path=pre_path,parm_name=parm_name,parm_name_array=parm_name_array,plot_Tpos=False,post_path=post_path,shareaxis=True)
 df=cf.cell_eq_ratio(df,'Tneg','Tpro')
-cf.plot_2parm(df=df,pre_path=pre_path,parm_name=parm_name,post_path=post_path,pri_parm=parm_name_array[0],sec_parm=parm_name_array[1],plot_y='Tneg_ratio')
+cf.plot_2parm(df=df,pre_path=pre_path,parm_name=parm_name,pri_parm=parm_name_array[0],sec_parm=parm_name_array[1],plot_y='Tneg_ratio')
 ## the above with 0.9Tp y0
-post_path='cell_sum-0.9Tp-'
+post_path='0.9Tp-'
 cf.timeseries(pre_path=pre_path,parm_name=parm_name,parm_array=o2_lim_arr,parm_format=parm_format,plot_Tpos=False,post_path=post_path)
 df=cf.eq_values(pre_path=pre_path,parm_name=parm_name,parm_array=o2_lim_arr,parm_format=parm_format,parm_name_array=parm_name_array,post_path=post_path)
 df=cf.round_df(df,parm_name_array)
@@ -87,26 +61,17 @@ cf.plot_2parm(df=df,pre_path=pre_path,parm_name=parm_name,post_path=post_path,pr
 
 # Changing l_lim_o2 & u_lim_o2 by same amount (fixed difference)
 parm_name='cs_lim_o2Tpro-cs_lim_o2Tneg'
-## testindep - Testosterone independent
-cf.timeseries(pre_path=pre_path,parm_name=parm_name,parm_array=o2_lim_arr,parm_format=parm_format,plot_Tpos=False,plot_test=False,post_path=post_path)
-df=cf.eq_values(pre_path=pre_path,parm_name=parm_name,parm_array=o2_lim_arr,parm_format=parm_format,parm_name_array=parm_name_array,post_path=post_path)
-df=cf.round_df(df,parm_name_array)
-cf.heatmap_eqvparm(df,pre_path=pre_path,parm_name=parm_name,parm_name_array=parm_name_array,plot_Tpos=False,plot_test=False,post_path=post_path,shareaxis=True)
-## rho s.t T- at equilibrium is 10^4
+cf.mkdirs(pre_path=pre_path,parm_name=parm_name)
+
+## changed equation with sum over all cells for density dependence
 cf.timeseries(pre_path=pre_path,parm_name=parm_name,parm_array=o2_lim_arr,parm_format=parm_format,plot_Tpos=False)
 df=cf.eq_values(pre_path=pre_path,parm_name=parm_name,parm_array=o2_lim_arr,parm_format=parm_format,parm_name_array=parm_name_array)
 df=cf.round_df(df,parm_name_array)
 cf.heatmap_eqvparm(df,pre_path=pre_path,parm_name=parm_name,parm_name_array=parm_name_array,plot_Tpos=False,shareaxis=True)
-## changed equation with sum over all cells for density dependence
-post_path='cell_sum-'
-cf.timeseries(pre_path=pre_path,parm_name=parm_name,parm_array=o2_lim_arr,parm_format=parm_format,plot_Tpos=False,post_path=post_path)
-df=cf.eq_values(pre_path=pre_path,parm_name=parm_name,parm_array=o2_lim_arr,parm_format=parm_format,parm_name_array=parm_name_array,post_path=post_path)
-df=cf.round_df(df,parm_name_array)
-cf.heatmap_eqvparm(df,pre_path=pre_path,parm_name=parm_name,parm_name_array=parm_name_array,plot_Tpos=False,post_path=post_path,shareaxis=True)
 df=cf.cell_eq_ratio(df,'Tneg','Tpro')
-cf.plot_2parm(df=df,pre_path=pre_path,parm_name=parm_name,post_path=post_path,pri_parm=parm_name_array[0],sec_parm=parm_name_array[1],plot_y='Tneg_ratio')
+cf.plot_2parm(df=df,pre_path=pre_path,parm_name=parm_name,pri_parm=parm_name_array[0],sec_parm=parm_name_array[1],plot_y='Tneg_ratio')
 ## the above with 0.9Tp y0
-post_path='cell_sum-0.9Tp-'
+post_path='0.9Tp-'
 cf.timeseries(pre_path=pre_path,parm_name=parm_name,parm_array=o2_lim_arr,parm_format=parm_format,plot_Tpos=False,post_path=post_path)
 df=cf.eq_values(pre_path=pre_path,parm_name=parm_name,parm_array=o2_lim_arr,parm_format=parm_format,parm_name_array=parm_name_array,post_path=post_path)
 df=cf.round_df(df,parm_name_array)
@@ -115,29 +80,35 @@ df=cf.cell_eq_ratio(df,'Tneg','Tpro')
 cf.plot_2parm(df=df,pre_path=pre_path,parm_name=parm_name,post_path=post_path,pri_parm=parm_name_array[0],sec_parm=parm_name_array[1],plot_y='Tneg_ratio')
 
 # Changing u_lim_testTpro with others limits fixed
-## changed equation with sum over all cells for density dependence
 parm_name='u_lim_testTpro'
+cf.mkdirs(pre_path=pre_path,parm_name=parm_name)
 test_lim_arr=np.arange(0.1,1,0.2)
+
+## changed equation with sum over all cells for density dependence
 cf.timeseries(pre_path=pre_path,parm_name=parm_name,parm_array=test_lim_arr,parm_format=parm_format,plot_Tpos=False)
 df=cf.eq_values(pre_path=pre_path,parm_name=parm_name,parm_array=test_lim_arr,parm_format=parm_format)
-## The above with higher initial Tp 
+## The above with higher initial Tp
 post_path='0.9Tp-'
 cf.timeseries(pre_path=pre_path,parm_name=parm_name,parm_array=test_lim_arr,parm_format=parm_format,plot_Tpos=False,post_path=post_path)
 df=cf.eq_values(pre_path=pre_path,parm_name=parm_name,parm_array=test_lim_arr,parm_format=parm_format,post_path=post_path)
-## The above with higher initial testosterone and Tp 
+## The above with higher initial testosterone and Tp
 post_path='0.9Tp-0.5test-'
 cf.timeseries(pre_path=pre_path,parm_name=parm_name,parm_array=test_lim_arr,parm_format=parm_format,plot_Tpos=False,post_path=post_path)
 df=cf.eq_values(pre_path=pre_path,parm_name=parm_name,parm_array=test_lim_arr,parm_format=parm_format,post_path=post_path)
 
 # Changing l_lim_testTpro with others limits fixed
-## changed equation with sum over all cells for density dependence
 parm_name='l_lim_testTpro'
+cf.mkdirs(pre_path=pre_path,parm_name=parm_name)
 test_lim_arr=np.arange(0,1,0.2)
+
+## changed equation with sum over all cells for density dependence
 cf.timeseries(pre_path=pre_path,parm_name=parm_name,parm_array=test_lim_arr,parm_format=parm_format,plot_Tpos=False)
 df=cf.eq_values(pre_path=pre_path,parm_name=parm_name,parm_array=test_lim_arr,parm_format=parm_format)
 
 # Changing l_lim_testTpro & u_lim_testTpro by same amount (fixed difference)
-## changed equation with sum over all cells for density dependence
 parm_name='cs_lim_testTpro'
+cf.mkdirs(pre_path=pre_path,parm_name=parm_name)
+
+## changed equation with sum over all cells for density dependence
 cf.timeseries(pre_path=pre_path,parm_name=parm_name,parm_array=test_lim_arr,parm_format=parm_format,plot_Tpos=False)
 df=cf.eq_values(pre_path=pre_path,parm_name=parm_name,parm_array=test_lim_arr,parm_format=parm_format)

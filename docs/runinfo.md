@@ -1,85 +1,167 @@
 # Run info
 Documentation of what each run means and what parameters are changed
 
-## Lot Vol
-deprecated model
-### r
-- only 1 celltype considered
-- growth and death rate pair varied with values from Berges _et al_ @ https://clincancerres.aacrjournals.org/content/1/5/473 (6 pairs)
-- to see how equilibrium and dynamics changes
+## Archived models
+Details of these runs not provided here
+- LotVol
+- EnvEq_Alt
+- EnvEq (without sum over all cells)
+- EnvEq_Sum with alternate parameters
 
-### mu-sig
-- only 1 celltype considered
-- mean and standard deviation varied from 0.25 to 0.75 (3x3 combinations)
-- to see how the equilibrium value and oscillations near equilibrium changes
+## singlecelltype
+### T-
+#### Oxygen Limits (l_lim_o2Tneg-u_lim_o2Tneg)
+- Combinations of varying the lower limit and upper limit of oxygen for T-
+- analysis: [o2_lim.py](../analysis/o2_lim.py)
 
-### mu-sig-eps
-- only 1 celltype considered
-- mean and standard deviation varied from 0.25 to 0.75 (3x3 combinations)
-- environmental sensitivity varied from 0.25 to 1 (4 values)
-- to see how the equilibrium value and oscillations near equilibrium changes
-- eps < 1 took too long to compute, run canceled
+#### Oxygen Production (p_o2)
+- Varying the production rate of oxygen close to the values estimated from equilibrium and constraints
+- analysis: [p_o2.py](../analysis/p_o2.py)
 
-## EnvEq and EnvEq_Alt
-### old
-deprecated bcos of issues with other parameter
-#### p_o2
-- only T- cell types present
-- changed the production rate of oxygen from 10^0 to 10^5 (40 logspaced values)
-- to see how it affects the equilibrium values of T_neg and o2
+### Tp
+#### Oxygen Limits (l_lim_o2Tpro-u_lim_o2Tpro)
+- Combinations of varying the lower limit and upper limit of oxygen for T-
+- analysis: [o2_lim.py](../analysis/o2_lim.py)
 
-#### p_o2-mu_o2
-- only T- cell types present
-- changed the production rate of oxygen from 10^0 to 10^3 (10 logspaced values)
-- changed the uptake rate of oxygen from 10^-1 to 10^1 (10 logspaced values)
-- to see how it affects the equilibrium values of T_neg and o2
+#### Oxygen Limits (l_lim_o2Tpro-u_lim_o2Tpro)
+- Combinations of varying the lower limit and upper limit of oxygen for T-
+- analysis: [test_lim.py](../analysis/test_lim.py)
 
-#### p_o2-r_Tneg
-- only T- cell types present
-- to see how it affects the equilibrium values of T_neg and o2
-- og
-    - changed the production rate of oxygen from 10^0 to 10^3 (10 logspaced values)
-    - changed the growth rate from 10^-3 to 10^1 (death rate change constrained to doubling time)
-- ext
-    - equilibrium values of o2 didnt lie within thresholds so re ran
-    - changed the production rate of oxygen from 10^3 to 10^6 (10 logspaced values)
-    - changed the growth rate from 10^-3 to 10^1 (death rate change constrained to doubling time)
-- lin
-    - some linear space exploration to find more suitable values that give o2 eq between thresholds and the behaviour of these eq when the parameters are changed
-    - EnvEq
-        - changed the growth rate from 4.62E-4 to 1E-3 (10 linspaced values)
-        - production rate of oxygen fixed at 10^3
-    - EnvEq_Alt
-        - changed the production rate of oxygen from 2500 to 4500 (10 linspaced values)
-        - changed the growth rate from 0.001 to 0.02 (5 linspaced values)
+## Testosterone Production (p_test)
+- No uptake of testosterone by Tp
+- Varying the production rate of testosterone close to the values estimated from equilibrium and constraints
+- analysis: [p_test.py](../analysis/p_test.py)
 
-### p_o2
-- only T- cell type present
-- changed the production rate of oxygen from 10^-4 to 10^0 (10 logspaced values)
-- lower limit chosen bcos uptake rate in orders of 10^-5
-- to see how it affects the equilibrium values of T_neg and o2
+## Testosterone Production and Uptake (p_test-mu_test)
+- Varying the production rate and uptake rate of testosterone subject to constraints
+- Constraint slightly higher than theoretically estimated as got from p_test
+- analysis: [p_test-mu_test.py](../analysis/p_test-mu_test.py)
 
-### l_lim_o2Tneg x u_lim_o2Tneg
-- chose p_o2=8.86E-2 (proportion/min) for both OG & Alt Eq with an additional p_o2=3.36E-2 (proportion/min) for Alt Eq
-- changed (l_lim_o2Tneg,u_lim_o2Tneg) as (0,0.1),(0,0.3),...(0.2,0.3)(0.2,0.5)...(0.8,0.9)
-- to see how the limits affect the equilibrium values of Tneg and o2
+## pairwise
+### Tp - T-
+#### Oxygen Lower Limit (l_lim_o2Tpro-l_lim_o2Tneg)
+- Combinations of varying the lower limit of oxygen while keeping upper limit fixed over both the cells
+- Testosterone limits at (0,1) (llim,ulim)
+- analysis: [pairwise_Tpro-Tneg.py](../analysis/pairwise_Tpro-Tneg.py)
 
-### r_Tneg
-- Taking mean of delta from Jain _et al_
-    - delta_avg = 1.72E-3 /min
-- r_i = ln(2)/t_D,i + delta_avg, t_D from ATCC for each cell type
-    - r_1= 2.06E-3 /min
-    - r_2= 2.01E-3 /min
-    - r_3= 2.18E-3 /min
-- Only T- cell type present
-- Simulation run with fixed delta and changing r
+#### Oxygen Upper Limit (u_lim_o2Tpro-u_lim_o2Tneg)
+- Combinations of varying the upper limit of oxygen while keeping lower limit fixed  over both cells
+- Testosterone limits at (0,1)
+- analysis: [pairwise_Tpro-Tneg.py](../analysis/pairwise_Tpro-Tneg.py)
 
-### delta_Tneg
-- Taking mean r from previous calculation
-    -  r_avg = 2.08E-3 /min
-- delta_i = r_avg -ln(2)/t_D,i, t_D from ATCC for each cell type
-    - delta_1= 1.74E-3 /min
-    - delta_2= 1.79E-3 /min
-    - delta_3= 1.62E-3 /min
-- Only T- cell type present
-- Simulation run with fixed r and changing delta
+#### Oxygen Constant Slope Limit (cs_lim_o2Tpro-cs_lim_o2Tneg)
+- Combinations of varying both the lower limit and upper limit by the same amount to maintain the same slope over both the cells
+- Testosterone limits at (0,1)
+- analysis: [pairwise_Tpro-Tneg.py](../analysis/pairwise_Tpro-Tneg.py)
+
+#### Testosterone Lower Limit (l_lim_testTpro)
+- Varying the lower limit of testosterone while keeping upper limit fixed for Tp
+- Oxygen limits at (0,1) (llim,ulim)
+- analysis: [pairwise_Tpro-Tneg.py](../analysis/pairwise_Tpro-Tneg.py)
+
+#### Testosterone Upper Limit (u_lim_testTpro)
+- Varying the upper limit of testosterone while keeping lower limit fixed for Tp
+- Oxygen limits at (0,1)
+- analysis: [pairwise_Tpro-Tneg.py](../analysis/pairwise_Tpro-Tneg.py)
+
+#### Testosterone Constant Slope Limit (cs_lim_testTpro)
+- Varying the  both the lower limit and upper limit by the same amount to maintain the same slope for Tp
+- Oxygen limits at (0,1)
+- analysis: [pairwise_Tpro-Tneg.py](../analysis/pairwise_Tpro-Tneg.py)
+
+#### Oxygen and Testosterone Production (p_o2-p_test)
+- T- is oxygen limited (in base case still took over the population)
+- Combinations of varying the production rate of oxygen and testosterone to give a better chance for Tp in the initial period
+- analysis: [pairwise_Tpro-Tneg_p_o2-p_test.py](../analysis/pairwise_Tpro-Tneg_p_o2-p_test.py)
+pairwise_Tpro-Tneg_p_o2-p_test
+
+#### Oxygen Production (p_o2)
+- T- is oxygen limited (in base case still took over the population)
+- p_test = 1E-6 /cell/min
+- Looking closely at the region where there is a phase transition in the above case (p_o2-p_test) to look for possibility of coexistence
+- analysis: [pairwise_Tpro-Tneg_p_o2-p_test.py](../analysis/pairwise_Tpro-Tneg_p_o2-p_test.py)
+pairwise_Tpro-Tneg_p_o2-p_test
+
+#### Oxygen Production and Testosterone Upper Limit (p_o2-u_lim_testTpro)
+- T- is oxygen limited (in base case still took over the population)
+- Combinations of varying the production rate of oxygen and upper limit of testosterone for Tp
+- Lowered testosterone limitation for Tp
+- analysis: [pairwise_Tpro-Tneg_p_o2-p_test.py](../analysis/pairwise_Tpro-Tneg_p_o2-p_test.py)
+
+
+#### Megarun (l_lim_o2Tneg-u_lim_o2Tneg-l_lim_o2Tpro-u_lim_o2Tpro-l_lim_testTpro-u_lim_testTpro)
+- Brute force method of exploring over (almost) the entire parameter space of
+- All combinations of lower limit and upper limit for all the resources across both the cell types done
+- lower limit of testosterone limited to 0.0 - 0.2 and upper limit to (lowerlimit+0.1) - 0.5
+- analysis: [pairwise_Tpro-Tneg-megarun.py](../analysis/pairwise_Tpro-Tneg-megarun.py)
+
+#### Cases (Case-Tp_initratio-Totcell)
+- Different cases based on previous pairwise run outcomes as given in [All3_Cases](../input/EnvEq/pairwise/Tneg-Tpro/Case-Tp_initratio-Totcell/Tpro-Tneg_cases.csv)
+  - Case1: T- not o2 limited, Tp not test limited
+  - Case2: T- o2 limited, Tp moderately test limited
+  - Case3: T- not o2 limited, Tp severly test limited
+  - Case4: T- not o2 limited, Tp moderately test limited
+  - Case5: Not enought o2 production & T- o2 limited, Tp moderately test limited
+  - Case6: T- severly o2 limited,  Tp not test limited
+  - Case7: Not enought o2 production & T- o2 limited,  Tp not test limited
+  - Case8: T- severly o2 limited, Tp severly test limited
+  - Case9: Not enought o2 production & T- o2 limited, Tp severly test limited
+- Cases_v1.1 are variants of the original cases but attemted at extending parameters for All3 (not utilised anymore)
+- Varied over different initial conditions of Tp cell ratio and Total cells
+- analysis: [pairwise_Tpro-Tneg_initratio.py](../analysis/pairwise_Tpro-Tneg_initratio.py)
+
+### Tp - T+
+#### Testosterone uptake (mu_testTpos)
+- Varying uptake rate of testosterone by T+
+- Oxygen and Testosterone limits of both cells at (0,1)
+- analysis: [pairwise_Tpos-Tpro.py](../analysis/pairwise_Tpos-Tpro.py)
+- mu_testTpos value obtained from older run (older model and code) which gave stable population... not the case anymore
+
+#### Oxygen Lower Limit (l_lim_o2Tpro-l_lim_o2Tpos)
+- Combinations of varying the lower limit of oxygen while keeping upper limit fixed over both the cells
+- Testosterone limits at (0,1) (llim,ulim)
+- analysis: [pairwise_Tpos-Tpro.py](../analysis/pairwise_Tpos-Tpro.py)
+
+#### Oxygen Upper Limit (u_lim_o2Tpro-u_lim_o2Tpos)
+- Combinations of varying the upper limit of oxygen while keeping lower limit fixed over both cells
+- Testosterone limits at (0,1)
+- analysis: [pairwise_Tpos-Tpro.py](../analysis/pairwise_Tpos-Tpro.py)
+
+#### Oxygen Constant Slope Limit (cs_lim_o2Tpro-cs_lim_o2Tpos)
+- Combinations of varying both the lower limit and upper limit by the same amount to maintain the same slope over both the cells
+- Testosterone limits at (0,1)
+- analysis: [pairwise_Tpos-Tpro.py](../analysis/pairwise_Tpos-Tpro.py)
+
+#### Testosterone Lower Limit (l_lim_testTpro-l_lim_testTpos)
+- Combinations of varying the lower limit of testosterone while keeping upper limit fixed over both the cells
+- Oxygen limits at (0,1)
+- analysis: [pairwise_Tpos-Tpro.py](../analysis/pairwise_Tpos-Tpro.py)
+
+#### Testosterone Upper Limit (u_lim_testTpro-u_lim_testTpos)
+- Combinations of varying the upper limit of testosterone while keeping lower limit fixed over both cells
+- Oxygen limits at (0,1)
+- analysis: [pairwise_Tpos-Tpro.py](../analysis/pairwise_Tpos-Tpro.py)
+
+#### Testosterone Constant Slope Limit (cs_lim_testTpro-cs_lim_testTpos)
+- Combinations of varying both the lower limit and upper limit by the same amount to maintain the same slope over both the cells
+- Oxygen limits at (0,1)
+- analysis: [pairwise_Tpos-Tpro.py](../analysis/pairwise_Tpos-Tpro.py)
+
+#### Cases (Case-Tp_initratio-Totcell)
+- Different cases as given in [Tpro-Tneg_cases](../input/EnvEq/pairwise/Tneg-Tpro/Case-Tp_initratio-Totcell/Tpro-Tneg_cases.csv)
+- Case1: Tp more testosterone limited than T+
+- Case2: T+ more testosterone limited than Tp
+- Case3: T+ oxygen limited, Tp moderately oxygen limited
+- Case4: T+ oxygen limited, Tp not oxygen limited
+- Cases_v1.1 are variants of the original cases but attemted at extending parameters for All3 (not utilised anymore)
+- Varied over different initial conditions of Tp cell ratio and Total cells
+- analysis: [pairwise_Tpos-Tpro_initratio.py](../analysis/pairwise_Tpos-Tpro_initratio.py)
+
+## All3
+### Cases (Case-Tpos-Tpro-Tneg_initratio-Totcell)
+- Different cases as given in [All3_cases](../input/EnvEq/All3/Case-Tpos-Tpro-Tneg_initratio-Totcell/All3_cases.csv)
+  - Casex.y
+  - x: They follow the same pattern as pairwise Tp - T-
+  - y: They follow the same pattern as pairwise Tp - T+ (upto 2)
+- Varied over different initial conditions of cell ratio and Total cells
+- analysis: [All3.py](../analysis/All3.py)

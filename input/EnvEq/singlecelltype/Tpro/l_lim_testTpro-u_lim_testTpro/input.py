@@ -63,4 +63,4 @@ u_lim_testTpos=1 #(prop)
 l_lim_testTpro=0 #(prop)
 u_lim_testTpro=1 #(prop)
 #filename to save output in
-f_name='singlecelltype/Tpro/l_lim_testTpro-u_lim_testTpro/celleq=1E4-'
+f_name='singlecelltype/Tpro/l_lim_testTpro-u_lim_testTpro/'

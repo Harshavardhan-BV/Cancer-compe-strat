@@ -14,7 +14,7 @@ t_D=np.array([t_DTpos,t_DTpro,t_DTneg])
 r=np.array([r_Tpos,r_Tpro,r_Tneg])
 delta=np.array([delta_Tpos,delta_Tpro,delta_Tneg])
 rho=np.array([rho_Tpos,rho_Tpro,rho_Tneg])
-lim=np.array([[[l_lim_o2Tpos,u_lim_o2Tpos],[l_lim_o2Tpro,u_lim_o2Tpro],[l_lim_o2Tneg,u_lim_o2Tneg]],[[l_lim_testTpos,u_lim_testTpos],[l_lim_testTpro,u_lim_testTpro],[0,0]]])
+lim=np.array([[[l_lim_o2Tpos,u_lim_o2Tpos],[l_lim_o2Tpro,u_lim_o2Tpro],[l_lim_o2Tneg,u_lim_o2Tneg]],[[l_lim_testTpos,u_lim_testTpos],[l_lim_testTpro,u_lim_testTpro],[0,0]]],dtype=np.float64)
 
 #make directories for saving raw_outputs
 try:
@@ -23,16 +23,15 @@ except:
     pass
 
 #iterator over these 
-p_o2_arr=np.logspace(-4,0,20) #10^-4 to 1
+p_o2_arr=np.linspace(0.1,0.2,20)
 
-
-def solve_parm(p_o2): #calls the solve_eq function with all default inputs other than p_o2
+def solve_parm(p_o2):
     f_name_i=f_name+"{:.2E}".format(p_o2)
     p[0]=p_o2
     ee.solve_eq(t_max,dt,y0,p,mu,lam,r,K,delta,rho,lim,f_name_i)
 
 if __name__ == '__main__':
-    pool = Pool(10)
-    pool.map(solve_parm,p_o2_arr) #iterate over the p_o2
+    pool = Pool(4)
+    pool.map(solve_parm,p_o2_arr) 
     pool.close()
     pool.join()

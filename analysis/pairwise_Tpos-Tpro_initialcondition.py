@@ -9,6 +9,9 @@ pre_path='EnvEq/pairwise/Tpos-Tpro/'
 parm_format='{:.1f}'
 parm_name='Case-Tp_initratio-Totcell'
 parm_name_array=['Tp_initratio','Totcell']
+plot_parm='Tpro_0'
+style_parm='Totcell'
+cf.mkdirs(pre_path=pre_path,parm_name=parm_name)
 
 #iterator over these
 initial_ratio_arr=np.arange(0.1,1,0.2)
@@ -25,8 +28,7 @@ for case in cases:
     cf.timeseries(pre_path=pre_path,parm_name=parm_name,parm_array=parms_array,parm_format=parm_format,plot_Tneg=False,post_path=post_path)
     df=cf.eq_values(pre_path=pre_path,parm_name=parm_name,parm_array=parms_array,parm_format=parm_format,parm_name_array=parm_name_array,post_path=post_path)
     df['Tpro_0']=df['Tp_initratio']*df['Totcell']
-    cf.eqratio_v_parm(df=df,plot_parm='Tpro_0',pre_path=pre_path,parm_name=parm_name,post_path=post_path,plot_Tneg=False)
-    cf.eqratio_v_parm(df=df,plot_parm='Tp_initratio',pre_path=pre_path,parm_name=parm_name,post_path=post_path,plot_Tneg=False)
+    cf.eqratio_v_parm(df=df,plot_parm=plot_parm,pre_path=pre_path,parm_name=parm_name,post_path=post_path,plot_Tpos=False,plot_Tneg=False,style_parm=style_parm)
 
 #v1.1
 cases=np.empty(0)
