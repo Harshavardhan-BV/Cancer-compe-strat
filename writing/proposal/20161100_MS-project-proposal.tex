@@ -1,0 +1,65 @@
+%Template for generating the MS Project Proposal
+% run using "pdflatex filename.tex" to generate a pdf file for submission
+
+\documentclass[12pt]{article}
+
+\usepackage[a4paper,margin=20mm]{geometry}
+
+\newcommand\dunderline[3][-1pt]{{%
+  \setbox0=\hbox{#3}
+  \ooalign{\copy0\cr\rule[\dimexpr#1-#2\relax]{\wd0}{#2}}}}
+\usepackage{graphicx}
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\parindent}{0em}
+\setlength{\parskip}{0.5em}
+\renewcommand{\baselinestretch}{0.9}
+
+\usepackage[maxbibnames=10,citestyle=nature,backend=bibtex,isbn=false,url=false,eprint=false,doi=false]{biblatex}
+\bibliography{proposal}
+
+\begin{document}
+
+\vspace*{-25mm}
+\hspace*{-20mm}
+
+\includegraphics{internal-lhead.png}
+
+\begin{center}
+{\bfseries\large MS Project Proposal}
+\end{center}
+
+\begin{tabbing}
+xxxxxxxxxxxxxxxxxxxxxx\=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\=xxxxxxxxxxxxxx\=xxxxxxxxxxxxxxxxx\= \kill
+\\
+\emph{Name of the Student:} \> \dunderline{1pt}{\rule{1cm}{0pt}Harshavardhan BV\rule{1cm}{0pt}} \>
+\emph{Roll Number:} \> \dunderline{1pt}{\rule{1cm}{0pt}20161100\rule{1cm}{0pt}}
+\end{tabbing}
+
+\subsubsection*{Studying effects of competition on adaptive therapy through agent-based modelling}
+
+     Conventional therapy against cancer focusses on minimising tumour burden by administering cytotoxic drugs at the maximum tolerated dosage (MTD). However, most tumours are heterogenous in their sensitivity to these drugs, and such MTD regimens eliminate the most sensitive cells, allowing the resistant cells to re-establish a resistant population \cite{Gatenby}. Adaptive therapy aims to reduce such competitive release by administering the drug at a dosage less than the MTD in a fluctuating manner. This allows for some proportion of sensitive cells to survive in the tumour population while reducing the net tumour burden, thus preventing a complete takeover by the resistant phenotype.
+
+     The success of adaptive therapy in containing the tumour depends on the effectiveness of competition between sensitive and resistant cells. Cells can use different strategies such as higher proliferation rate, better survival at sub-optimal conditions or lower death rate to compete with each other, and several such strategies are seen to be acquired over the course of cancer progression, as shown by the ``hallmarks of cancer" framework \cite{Hanahan}. Existing theoretical models have studied the effect of factors like the strength of competition and extent of cell turnover on adaptive therapy \cite{Viossat,Strobl}. However, the role of the choice of strategy on the final outcomes of cell competition and eventually, the efficacy of adaptive therapy, has not yet been studied closely.
+
+     Previous work done by us suggests that, in the absence of therapy, cells that compete by employing higher proliferation rate result in different competitive outcomes compared to cells that compete by better survival in sub-optimal conditions. This project therefore aims to build on these rudimentary findings and explore the importance of competitive strategies employed by cells in adaptive therapy more completely.
+
+
+\subsubsection*{References}
+\printbibliography[heading=none]
+
+\begin{tabbing}
+xxxxxxxxxxxxxx\=xxxxxxxxxxxxxxxxxxxxxxxx\=xxxxxxxxxxxxxxxxxxxxxxxx\=xxxxxxxxxxxxxxxxxxxxxxxx\kill
+\\
+{\bfseries Signature of}  \> \rule{4cm}{1pt} \> \rule{4.3cm}{1pt}\>\rule{4.3cm}{1pt} \\
+\> {\small (Supervisor)} \>	{\small (Co-Supervisor, if any)} \> {\small (Expert/TAC Member)} \\
+\> \emph{At least one of the above must be from IISER Pune}
+\end{tabbing}
+
+\end{document}
+
+
+\begin{tabbing}
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\=\=xxxxxxxxxxxxxxxxxxxxxxxx\=xxxxxxxxxxxxxxxxxxxxxxxx\= \kill
+\\[8mm]
+Signature of Departmental Member \> \rule{4cm}{1pt}\>Date of submission \> \rule{4cm}{1pt}\\
+\end{tabbing}

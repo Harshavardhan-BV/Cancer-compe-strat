@@ -691,25 +691,37 @@ z
    </g>
    <g id="line2d_15">
     <path clip-path="url(#p1f7506bd22)" d="M 73.832727 307.584 
+L 83.108571 65.664 
 L 92.384416 65.664 
+L 101.66026 65.664 
 L 110.936104 65.664 
+L 120.211948 65.664 
 L 129.487792 65.664 
+L 138.763636 65.664 
 L 148.039481 65.664 
 " style="fill:none;stroke:#1f77b4;stroke-linecap:square;stroke-width:1.5;"/>
    </g>
    <g id="line2d_16">
     <path clip-path="url(#p1f7506bd22)" d="M 83.108571 65.664 
+L 101.66026 65.664 
 L 120.211948 65.664 
+L 138.763636 65.664 
 L 157.315325 65.664 
+L 175.867013 65.664 
 L 194.418701 65.664 
+L 212.97039 65.664 
 L 231.522078 65.664 
 " style="fill:none;stroke:#1f77b4;stroke-dasharray:6,2.25;stroke-dashoffset:0;stroke-width:1.5;"/>
    </g>
    <g id="line2d_17">
     <path clip-path="url(#p1f7506bd22)" d="M 101.66026 65.664 
+L 138.763636 65.664 
 L 175.867013 65.664 
+L 212.97039 65.664 
 L 250.073766 65.664 
+L 287.177143 65.664 
 L 324.280519 65.664 
+L 361.383896 65.664 
 L 398.487273 65.664 
 " style="fill:none;stroke:#1f77b4;stroke-dasharray:1.5,1.5;stroke-dashoffset:0;stroke-width:1.5;"/>
    </g>

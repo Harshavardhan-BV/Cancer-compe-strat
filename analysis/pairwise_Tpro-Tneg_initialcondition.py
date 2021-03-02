@@ -14,9 +14,9 @@ style_parm='Totcell'
 cf.mkdirs(pre_path=pre_path,parm_name=parm_name)
 
 #iterator over these
-initial_ratio_arr=np.arange(0.1,1,0.2)
+initial_ratio_arr=np.arange(0.1,1,0.1)
 tot_cell_arr=np.array([1000,2000,4000])
-cases=np.arange(1,10)
+cases=np.arange(1,19)
 
 parms_array=np.empty([0,2])
 for ir in initial_ratio_arr:
@@ -31,6 +31,7 @@ for case in cases:
     cf.eqratio_v_parm(df=df,plot_parm=plot_parm,pre_path=pre_path,parm_name=parm_name,post_path=post_path,plot_Tpos=False,plot_Tneg=False,style_parm=style_parm)
 
 #v1.1
+initial_ratio_arr=np.arange(0.1,1,0.2)
 cases=np.array([1.1,1.2,2.1,2.2,3.1,3.2,4.1,4.2,6.1,6.2])
 parms_array=np.empty([0,2])
 for ir in initial_ratio_arr:

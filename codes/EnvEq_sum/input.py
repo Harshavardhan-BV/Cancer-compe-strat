@@ -7,22 +7,22 @@ dt = 60  #step (mins)
 #Initial Values
 ##cells
 y0_Tpos=0
-y0_Tpro=1000
+y0_Tpro=0
 y0_Tneg=0
 ##resource
 y0_o2=0.5 #(prop)
 y0_test=0 #(prop)
 #Production rates of resources
 p_o2=0.11 #(prop/min)
-p_test=1.08E-9 #by Tp cells (prop/min/cell)
+p_test=5E-7 #by Tp cells (prop/min/cell)
 #Uptake rate of resources by cells
 ##oxygen
 mu_o2Tpos=1.63E-6 #(prop/min/cell)
 mu_o2Tpro=1.63E-6 #(prop/min/cell)
 mu_o2Tneg=1.04E-6 #(prop/min/cell)
 ##testosterone
-mu_testTpos=0 #(prop/min/cell)
-mu_testTpro=0 #(prop/min/cell)
+mu_testTpos=6E-8 #(prop/min/cell)
+mu_testTpro=6E-8 #(prop/min/cell)
 #Decay rates of resources
 lam_o2=0.1 #(1/min)
 lam_test=0.004 #(1/min)
@@ -63,4 +63,4 @@ u_lim_testTpos=1 #(prop)
 l_lim_testTpro=0 #(prop)
 u_lim_testTpro=1 #(prop)
 #filename to save output in
-f_name='singlecelltype/Tpro/p_test-mu_test/constrain-'
+f_name='pairwise/Tneg-Tpro/Case-Tp_initratio-Totcell/'
