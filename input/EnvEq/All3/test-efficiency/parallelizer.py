@@ -25,7 +25,7 @@ except:
 
 #iterator over these
 parms_array=[]
-cases=pd.read_csv('./All3_o2-eff_cases.csv')
+cases=pd.read_csv('./All3_test-eff_cases.csv')
 for i in range(len(cases)):
     parms_array.append([cases.loc[i]])
 
