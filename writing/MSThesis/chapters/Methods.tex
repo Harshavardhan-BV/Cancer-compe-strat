@@ -1,0 +1,195 @@
+\chapter{Methods}
+
+\section{System of Equations}
+The system of study was modelled using coupled Ordinary Differential Equations (ODEs). The model is based on a logistic framework modified with a dynamic carrying capacity that depends on the environmental conditions. The ``environment" consists of the resources, oxygen and testosterone which have their own equations for production and consumption. We make the simplifying assumption that every other resource required by cells are present in non-limiting concentrations. Additionally, the cell types were assumed to not mutate and hence cannot change their types. No spatial structure is considered and the system is assumed to be well mixed and the resource available in bulk for all the cells. The ODEs are given below:
+
+For $i \in \{T^+,T^p,T^-\}$ and $res \in \{O_2,test\}$
+
+\begin{equation}
+  \frac{dy_i}{dt} = r_i y_i (1 - \frac{\sum_j y_j}{1 + K_{i,max} f_i(O_2) f_i(test)} )- \delta_i y_i
+  \label{celleq}
+\end{equation}
+\begin{equation}
+  \frac{dO_2}{dt} = p_{O_2} - \sum_i \mu_{O_2,i} y_i - \lambda_{O_2} O_2
+  \label{o2eq}
+\end{equation}
+\begin{equation}
+  \frac{dtest}{dt} = p_{test} y_{T^p} - \sum_i \mu_{test,i} y_i - \lambda_{test} test
+  \label{testeq}
+\end{equation}
+\begin{equation}
+  f_i(res) = \begin{cases}
+    1 &\text{if } ul_{res,i} \leq res\\
+    \frac{res-ll_{res,i}}{ul_{res,i}-ll_{res,i}} &\text{if } ll_{res,i} < res < ul_{res,i}\\
+    0 &\text{if } res \leq ll_{res,i}\\
+  \end{cases}
+  \label{freseq}
+\end{equation}
+
+The cell count equation involves growth and death terms. The effective growth rate decreases as the overall tumour size approaches the carrying capacity, while the effective death rate remains constant. Competition between the cell types happens in two ways, one through the density dependence over all the cell types, and the other through the implicit dependence and consumption of resources.
+
+The equation for oxygen involves terms for external production, uptake by all the cells and decay. Similarly, the equation for testosterone involves terms for production by $T^p$ cells, uptake by $T^+$ and $T^p$, and decay.
+
+The functional dependence $f_i(res) \in [0,1]$. Below the lower limit, $ll_{res,i}$ the function is 0,representative of no growth, and increases linearly above it upto the upper limit, $ul_{res,i}$ and the function saturates to 1, representative of the maximum growth, for any resource levels above that.
+
+Note that these equations are defined only for positive values of cell count and resource level to be biologically relevant. To mitigate the problem of having a continuous variable for  cell count, $y_i < 1$ is defined as extinction of the cell type $i$ and $\frac{dy_i}{dt}=0$ in such a case.
+
+\section{Parameters Used}
+\autoref{parmtable} gives a brief description of the parameters from the above equations, the values used, and the sources for these values where applicable. Note that all the resource parameters are normalised to tissue levels of that resource. For the literature values, the following cell lines were considered to correspond to the cell types assumed in the model.
+\begin{itemize}
+  \item $T^+$ = LNCaP
+  \item $T^p$ = 22Rv1
+  \item $T^-$ = PC3
+\end{itemize}
+
+Constraint equations given below were used to determine the values of some parameters for which direct sources were not available.
+\begin{equation}
+  r_i = \frac{ln(2)}{\tau_{d,i}} + \delta_i
+  \label{r_eq}
+\end{equation}
+\begin{equation}
+  K_{i,max}=\frac{r_i}{r_i-\delta_i} y_i^*
+  \label{rho_eq}
+\end{equation}
+\begin{equation}
+  p_{O_2} = \lambda_{O_2} O_2^* + y_i^* \mu_i
+  \label{p_o2_eq}
+\end{equation}
+\begin{equation}
+  p_{test} - \mu_{test,T^p} = \frac{test^* \lambda_{test}}{y_{T^p}^*} = 4 \times 10^{-4}
+  \label{p_test_eq}
+\end{equation}
+
+\section{Code Implemetation}
+The code is written in Python 3 and with dependencies of numpy, scipy, pandas, matplotlib and seaborn libraries. The system of equations were solved numerically by the LSODA algorithm provided by the \texttt{scipy.integrate.ode} function. The code is designed to run the different parameters of a set parallely over multiple threads, however, the actual solver is sequential and single threaded.
+
+The code, at each time step checks if the values are non-negative and sets them to 0 if it be the case. This is since the equations are not defined in these range of values and numerical errors can give rise to negative values. A similar implementation is done for $y_i < 1$.
+
+The source code along with the data is available at the following Github repository: \url{https://www.github.com/harshavardhan-bv/cancer-compe-strat}.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.25\textwidth]{github}
+  \caption{QR code for the Github repository}
+  \label{github}
+\end{figure}
+
+\section{Simulations Done}
+With the above described model, the following simulations were done:
+\begin{enumerate}
+  \item Absence of therapy
+  \begin{enumerate}
+    \item Pairwise $T^p$ - $T^-$:
+    \begin{enumerate}
+      \item changing lower limits of oxygen for $T^p$ and $T^-$, while keeping others limits fixed
+      \item changing upper limits of oxygen for $T^p$ and $T^-$, while keeping other limits fixed
+      \item changing both lower limits and upper limits of oxygen for $T^p$ and $T^-$, while keeping others limits fixed
+      \item changing lower limit of testosterone for $T^p$, while keeping other limits fixed
+      \item changing upper limit of testosterone for $T^p$, while keeping other limits fixed
+      \item changing both lower and upper limit of testosterone for $T^p$, while keeping other limits fixed
+      \item Brute force parameter search over all the limits
+      \item changing the initial conditions for interesting cases found from the above simulations
+    \end{enumerate}
+    \item Pairwise $T^+$ - $T^p$:
+    \begin{enumerate}
+      \item changing lower limits of oxygen for $T^+$ and $T^p$, while keeping others fixed
+      \item changing upper limits of oxygen for $T^+$ and $T^p$, while keeping other limts fixed
+      \item changing both lower limits and upper limits of oxygen for $T^+$ and $T^p$, while keeping others limits fixed
+      \item changing lower limits of testosterone for $T^+$ and $T^p$, while keeping others fixed
+      \item changing upper limits of testosterone for $T^+$ and $T^p$, while keeping other limts fixed
+      \item changing both lower limits and upper limits of testosterone for $T^+$ and $T^p$, while keeping others limits fixed
+      \item changing the initial conditions for interesting cases found from the above simulations
+    \end{enumerate}
+    \item All three $T^+$ - $T^p$ - $T^-$
+    \begin{itemize}
+      \item changing the initial conditions for interesting cases that are some combinations of the pairwise cases
+      \item different cases of efficiency of oxygen use for $T^+$, $T^p$ and $T^-$
+      \item different cases of efficiency of testosterone use for $T^+$, $T^p$ and $T^-$
+    \end{itemize}
+  \end{enumerate}
+  \item With Therapy
+  \begin{itemize}
+    \item All three $T^+$ - $T^p$ - $T^-$
+    \begin{enumerate}
+      \item TBD
+    \end{enumerate}
+  \end{itemize}
+\end{enumerate}
+
+
+\newpage
+\begin{longtable}[c]{|l|p{4.3cm}|c|p{2.3cm}|}
+
+  \hline \multicolumn{1}{|c|}{\textbf{Parameter}} & \multicolumn{1}{c|}{\textbf{Description}} & \multicolumn{1}{c|}{\textbf{Value(s)}} & \multicolumn{1}{c|}{\textbf{Source(s)}}\\ \hline
+  \endhead
+
+  \hline \multicolumn{4}{|r|}{{Continued on next page}} \\ \hline
+  \endfoot
+
+  \endlastfoot
+
+  $y_i$ & No. of cells of cell type $i$ & N/A & N/A  \\ \hline
+  $r_i$ & Population growth rate of cell type i  &
+  \begin{tabular}{l|l}
+    $T^+$ & $2.84 \times 10^{-3}$ \tiny{min$^{-1}$}\\
+    $T^p$ & $2.79 \times 10^{-3}$ \tiny{min$^{-1}$}\\
+    $T^-$ & $6.23 \times 10^{-4}$ \tiny{min$^{-1}$}\\
+  \end{tabular}
+  & \autoref{r_eq} \\ \hline
+  $\delta_i$  & Population death rate of cell type i &
+  \begin{tabular}{l|l}
+    $T^+$ & $2.5 \times 10^{-3}$ \tiny{min$^{-1}$}\\
+    $T^p$ & $2.5 \times 10^{-3}$ \tiny{min$^{-1}$}\\
+    $T^-$ & $1.6 \times 10^{-4}$ \tiny{min$^{-1}$}\\
+  \end{tabular}
+  & \cite{Jain}  \\ \hline
+  $K_{i,max}$ & Maximum Carrying capacity, coming up through the environment/resources &
+  \begin{tabular}{l|l}
+    $T^+$ & $8.35 \times 10^4$ \\
+    $T^p$ & $9.62 \times 10^4$ \\
+    $T^-$ & $1.34 \times 10^4$ \\
+  \end{tabular}
+  & \autoref{rho_eq} \\ \hline
+  $f_{i,res}$ & Functional dependence of cell type $i$ on resource $res$, normalised to 1 & $f_{T^-,test}=1$ & N/A \\ \hline
+  $p_{res}$ & Production rate of resource, either as bulk or by cells &
+  \begin{tabular}{l|l}
+    $O_2$ & 0.11 \tiny{min$^{-1}$}\\
+    $test$ & $5 \times 10^{-7}$ \tiny{min$^{-1}$cell$^{-1}$}\\
+  \end{tabular}
+  & \autoref{p_o2_eq}, \autoref{p_test_eq}\\ \hline
+  $\mu_{res,i}$ & Uptake of resource $res$ by cell type $i$ &
+  \begin{tabular}{l|l|l}
+    $O_2$ & $T^+$ & $1.63 \times 10^{-6}$ \tiny{min$^{-1}$cell$^{-1}$}\\
+    & $T^p$ & $1.63 \times 10^{-6}$ \tiny{min$^{-1}$cell$^{-1}$}\\
+    & $T^-$ & $1.04 \times 10^{-6}$ \tiny{min$^{-1}$cell$^{-1}$}\\ \hline
+    $test$ & $T^+$ & $2.34 \times 10^{-8}$ \tiny{min$^{-1}$cell$^{-1}$}\\
+    & $T^p$ & $6.00 \times 10^{-8}$ \tiny{min$^{-1}$cell$^{-1}$}\\
+    & $T^-$ & 0 \tiny{min$^{-1}$cell$^{-1}$}\\
+  \end{tabular}
+  & \cite{HailJr}, \autoref{p_test_eq}\\ \hline
+  $\lambda_{res}$ & Decay rate of resource $res$ &
+  \begin{tabular}{l|l}
+    $O_2$ & 0.100 \tiny{min$^{-1}$}\\
+    $test$ & 0.004 \tiny{min$^{-1}$}\\
+  \end{tabular}
+  & \cite{Jain}\\ \hline
+  $ll_{res,i}$ & Lower limit/threshold level of resource $res$ for carrying capacity of cell type $i$ & $\in [0,1]$ & N/A \\ \hline
+  $ul_{res,i}$ & Upper limit/saturation level of resource $res$ for carrying capacity of cell type $i$ & $\in [0,1]$ & N/A \\ \hline
+  \multicolumn{4}{|c|}{Supplementary Parameters}\\ \hline
+  $\tau_d$  & Doubling time of cell type $i$ &
+  \begin{tabular}{l|l}
+    $T^+$ & $34$ \tiny{hr} \\
+    $T^p$ & $40$ \tiny{hr} \\
+    $T^-$ & $25$ \tiny{hr} \\
+  \end{tabular}
+  & \cite{atcc} \\ \hline
+  $y_i^*$ & Equilibrium value of cell number in absence of competition & 10000 & assumed \\ \hline
+  $res^*$ & Equilibrium/Tissue levels of resource with one cell type present &
+  \begin{tabular}{l|l}
+    $O_2$    & 2.5 \tiny{mmHg}          \\
+    $test$   & 3.74 \tiny{pmol/g tissue}\\
+  \end{tabular}
+  & \cite{Steward},\cite{Titus} \\ \hline
+
+  \caption{Table of all parameters}
+  \label{parmtable}\\
+\end{longtable}

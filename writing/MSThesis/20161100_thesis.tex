@@ -1,0 +1,111 @@
+\documentclass[twoside, 12pt]{iiser-thesis}
+
+%%%%%%%%%%%%%%%%%%%
+% Packages/Macros %
+%%%%%%%%%%%%%%%%%%%
+\usepackage{fullpage}
+\usepackage{amssymb,latexsym,amsmath}     % Standard packages
+\usepackage{graphicx}
+\graphicspath{ {./figures/} }
+\usepackage{authblk}
+\usepackage{dsfont}
+\usepackage{amsthm}
+\usepackage{color}
+\usepackage{float}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage[style=apa,
+			sorting=nyt,
+			date=year,
+			bibencoding=utf8,
+			isbn=false,
+			eprint=false,
+			dashed=false,
+			uniquelist=false,
+			maxbibnames=10,
+			maxcitenames=2,
+			uniquename=init,
+			giveninits=true,
+			useprefix=false]{biblatex}
+\renewcommand{\cite}{\parencite}
+\bibliography{References}
+\setlength{\parskip}{1em}
+\usepackage{xurl}
+\usepackage{longtable}
+%
+% please place your own definitions here and don't use \def but
+% THEOREM Environments ---------------------------------------------------
+
+\newtheorem{theo}{{\bf{Theorem}}}[section]
+\newtheorem{prop}[theo]{{\bf Proposition}}
+\newtheorem{lem}[theo]{{\bf Lemma}}
+\newtheorem{coro}[theo]{{\bf Corollary}}
+\newtheorem{ex}{{\bf Example}}
+\newtheorem{exer}{{\bf Exercise}}
+\newtheorem{rem}{{\bf Remark}}[section]
+\newtheorem{rems}[rem]{{\bf Remarks}}
+\newtheorem{remark}[rem]{Remark}
+\newtheorem{defi}{{\bf Definition}}[section]
+\newtheorem{defn1}[defi]{Definition}
+\newtheorem{defs}[defi]{{\bf Definitions}}
+\newtheorem{notation}{{\bf Notation}}[section]
+%\newtheorem{mypar}{{\bf }}[section]
+%\newcommand{\skp}{\vspace{\baselineskip}}
+%%\newcommand{\qed}{\hfill\rule{1.6mm}{1.6mm}}
+%\renewcommand{\proof}{\noindent{\bf Proof.\ }}
+%\newcommand{\no}{\nonumber}
+%\newcommand{\noi}{\noindent}
+%\newcommand{\txt}{\textrm}
+%\newcommand{\pa}{\partial}
+%\newcommand{\ds}{\displaystyle}
+%\newcommand{\RR}{\mathbb{R}}
+%\newcommand{\si}{\sigma}
+%\newcommand{\al}{\alpha}
+%\newcommand{\la}{\lambda}
+%\newcommand{\La}{\Lambda}
+%\newcommand{\calF}{\mathcal{F}}
+%\newcommand{\eps}{\varepsilon}
+%\newcommand{\ph}{\varphi}
+%\newcommand{\sig}{\sigma}
+%\newcommand{\tab}{\hspace*{0.3in}}
+%\newcommand{\Tab}{\hspace*{1.0in}}
+%\newcommand{\vf}{\varphi}
+%\newcommand{\del}{\frac{\partial}{\partial t}}
+%\newcommand{\vp}{\varepsilon}
+
+
+\catcode`\@=11
+\catcode`\@=12
+
+
+%%%%%%%%%%%%
+% Document %
+%%%%%%%%%%%%
+%\setcounter{chapter}{-1}
+
+\title{Studying effects of competition on adaptive therapy}
+
+
+\author{Harshavardhan BV }
+\coordinator{Coordinator} \supervisor{Prof. Sutirth Dey} \sdesignation{Professor}
+\department{Department of Biology} \reader{Dr. M.S. Madhusudhan}
+%\reader{Reader 2}
+\dedication{This thesis is dedicated to ?}
+\graduationyear{2021}
+\academicyear{2020-2021}
+\graduationmonth{July}
+\def \@bd@lot{0}
+
+\thesisabstract{ Write your  abstract here
+}
+\acknowledgments{Not more than 250 words}
+
+\begin{document}
+	\thesisfront
+
+\include{chapters/Intro}
+
+\include{chapters/Methods}
+
+%% Reference styles of Books and research articles are different. Some examples are given below.
+\printbibliography
+\end{document}
