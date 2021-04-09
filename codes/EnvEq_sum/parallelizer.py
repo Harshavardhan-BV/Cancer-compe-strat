@@ -25,23 +25,13 @@ except:
 
 #iterator over these
 parms_array=[]
-cases=pd.read_csv('./All3_o2-eff_cases.csv')
+cases=pd.read_csv('./therapy_parms.csv')
 for i in range(len(cases)):
-    parms_array.append([cases.loc[i]])
+    parms_array.append(cases.loc[i])
 
 def solve_parm(parms): #calls the solve_eq function with all default inputs other than lims
-    f_name_i=f_name+"Case"+parms[0]['Case']
-    lim[0,0,0]=parms[0]['llo2Tpos']
-    lim[0,0,1]=parms[0]['ulo2Tpos']
-    lim[0,1,0]=parms[0]['llo2Tpro']
-    lim[0,1,1]=parms[0]['ulo2Tpro']
-    lim[0,2,0]=parms[0]['llo2Tneg']
-    lim[0,2,1]=parms[0]['ulo2Tneg']
-    lim[1,0,0]=parms[0]['lltestTpos']
-    lim[1,0,1]=parms[0]['ultestTpos']
-    lim[1,1,0]=parms[0]['lltestTpro']
-    lim[1,1,1]=parms[0]['ultestTpro']
-    ee.solve_eq(t_max,dt,y0,p,mu,lam,r,K,delta,rho,lim,f_name_i)
+    f_name_i=f_name+parms['Name']
+    ee.solve_eq(t_max,dt,y0,p,mu,lam,r,K,delta,rho,lim,f_name_i,therapy=True,therapy_parms=parms)
 
 if __name__ == '__main__':
     pool = Pool(20)

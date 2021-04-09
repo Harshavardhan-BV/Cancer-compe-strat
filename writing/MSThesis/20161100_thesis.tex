@@ -22,15 +22,20 @@
 			dashed=false,
 			uniquelist=false,
 			maxbibnames=10,
+			minbibnames=1,
 			maxcitenames=2,
 			uniquename=init,
 			giveninits=true,
-			useprefix=false]{biblatex}
+			useprefix=false,
+			minsortnames=1,
+			maxsortnames=2]{biblatex}
 \renewcommand{\cite}{\parencite}
 \bibliography{References}
 \setlength{\parskip}{1em}
 \usepackage{xurl}
 \usepackage{longtable}
+\usepackage{caption}
+\usepackage{subcaption}
 %
 % please place your own definitions here and don't use \def but
 % THEOREM Environments ---------------------------------------------------
@@ -105,6 +110,10 @@
 \include{chapters/Intro}
 
 \include{chapters/Methods}
+
+\include{chapters/Results}
+
+%\include{chapters/Discussion}
 
 %% Reference styles of Books and research articles are different. Some examples are given below.
 \printbibliography

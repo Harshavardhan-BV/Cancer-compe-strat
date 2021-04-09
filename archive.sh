@@ -1,4 +1,4 @@
-# !bin/bash
+#!/bin/bash
 
 # A script to check for directories named archive and convert it to a tar.xz archive.
 if test -f archive.tar.xz; then

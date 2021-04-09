@@ -15,7 +15,7 @@ def mkdirs(pre_path,parm_name):
     except:
         pass
 
-def timeseries(pre_path,parm_name,parm_array,parm_format='{:.2E}',post_path='',plot_Tpos=True,plot_Tpro=True,plot_Tneg=True,plot_o2=True,plot_test=True,save=True):
+def timeseries(pre_path,parm_name,parm_array,parm_format='{:.2E}',post_path='',plot_Tpos=True,plot_Tpro=True,plot_Tneg=True,plot_o2=True,plot_test=True,plot_tot=False,save=True):
     fig,ax=plt.subplots(len(parm_array),2,sharex=True,figsize=(10,3*len(parm_array)))
     i=0
     for parm in parm_array:
@@ -41,6 +41,8 @@ def timeseries(pre_path,parm_name,parm_array,parm_format='{:.2E}',post_path='',p
             ax[i,0].plot(df.t/24/60,df.Tpro,color="tab:blue",label='Tp')
         if plot_Tneg:
             ax[i,0].plot(df.t/24/60,df.Tneg,color="tab:red",label='T-')
+        if plot_tot:
+            ax[i,0].plot(df.t/24/60,df.Tpos+df.Tpro+df.Tneg,color="tab:grey",label='Total')
         ax[i,0].set_ylabel("No of Cells")
         ax[i,0].legend()
         ax[i,0].set_title(parm_name+'='+string)
@@ -59,7 +61,7 @@ def timeseries_split(no_fig,sub_arr_len,pre_path,parm_name,parm_array,parm_forma
         print("Wrong Array Length")
         return
     for i in range(no_fig):
-        timeseries(pre_path=pre_path,parm_name=parm_name,parm_array=parm_array[i*sub_arr_len:(i+1)*sub_arr_len],parm_format=parm_format,plot_Tpos=False)
+        timeseries(pre_path=pre_path,parm_name=parm_name,parm_array=parm_array[i*sub_arr_len:(i+1)*sub_arr_len],parm_format=parm_format,post_path=post_path)
         os.rename('../figures/'+pre_path+parm_name+'/'+post_path+'timeseries.svg','../figures/'+pre_path+parm_name+'/'+post_path+'timeseries-'+str(i)+'.svg')
 
 
@@ -176,13 +178,13 @@ def cell_eq_ratio(df,pri_cell,sec_cell):
     df[pri_cell+'_ratio'][(df[pri_cell+'_eq']<1) & (df[sec_cell+'_eq']<1)]=np.nan # set to nan if both cells are extinct (ratio makes no sense)
     return df
 
-def allcell_eq_ratio(df):
+def allcell_eq_ratio(df,nan=np.nan):
     df['Tpos_ratio']=df['Tpos_eq']/(df['Tpos_eq']+df['Tpro_eq']+df['Tneg_eq'])
     df['Tpro_ratio']=df['Tpro_eq']/(df['Tpos_eq']+df['Tpro_eq']+df['Tneg_eq'])
     df['Tneg_ratio']=df['Tneg_eq']/(df['Tpos_eq']+df['Tpro_eq']+df['Tneg_eq'])
-    df['Tpos_ratio'][(df['Tpos_eq']<1) & (df['Tpro_eq']<1) & (df['Tneg_eq']<1)]=np.nan # set to nan if all cells are extinct (ratio makes no sense)
-    df['Tpro_ratio'][(df['Tpos_eq']<1) & (df['Tpro_eq']<1) & (df['Tneg_eq']<1)]=np.nan # set to nan if all cells are extinct (ratio makes no sense)
-    df['Tneg_ratio'][(df['Tpos_eq']<1) & (df['Tpro_eq']<1) & (df['Tneg_eq']<1)]=np.nan # set to nan if all cells are extinct (ratio makes no sense)
+    df['Tpos_ratio'][(df['Tpos_eq']<1) & (df['Tpro_eq']<1) & (df['Tneg_eq']<1)]=nan # set to nan if all cells are extinct (ratio makes no sense)
+    df['Tpro_ratio'][(df['Tpos_eq']<1) & (df['Tpro_eq']<1) & (df['Tneg_eq']<1)]=nan # set to nan if all cells are extinct (ratio makes no sense)
+    df['Tneg_ratio'][(df['Tpos_eq']<1) & (df['Tpro_eq']<1) & (df['Tneg_eq']<1)]=nan # set to nan if all cells are extinct (ratio makes no sense)
     return df
 
 def round_df(df,parm_name_array,decimals=1):
