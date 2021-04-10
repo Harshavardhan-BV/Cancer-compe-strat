@@ -243,7 +243,6 @@ pairwise_Tpro-Tneg_p_o2-p_test
   - AT: Adaptive Therapy -> Sum over all three cells control on/off
   - AT_nn: Adaptive Therapy non negative -> Sum over only T+ and Tp cell types control on/off (only for abi)
   - MT: Metronomic Therapy -> Therapy changes based on time
-- Error in how therapy works in combination
 - prefixes=
   - none: 1:1:1 Tp:T+:T- initial seeding (not for test-LE)
   - 0.8Tp-: 8:1:1 Tp:T+:T- initial seeding

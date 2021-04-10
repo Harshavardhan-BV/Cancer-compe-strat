@@ -6,9 +6,9 @@ t_max = 1000*24*60 #maximum (mins)
 dt = 60  #step (mins)
 #Initial Values
 ##cells
-y0_Tpos=666
-y0_Tpro=666
-y0_Tneg=666
+y0_Tpos=200
+y0_Tpro=1600
+y0_Tneg=200
 ##resource
 y0_o2=0.5 #(prop)
 y0_test=0 #(prop)
@@ -48,19 +48,19 @@ rho_Tneg=1.34E4
 ##Oxygen
 ###T+
 l_lim_o2Tpos=0 #lower-threshold(prop)
-u_lim_o2Tpos=0.1 #upper-saturation(prop)
+u_lim_o2Tpos=1 #upper-saturation(prop)
 ###Tp
 l_lim_o2Tpro=0 #(prop)
-u_lim_o2Tpro=0.1 #(prop)
+u_lim_o2Tpro=1 #(prop)
 ###T-
 l_lim_o2Tneg=0 #(prop)
-u_lim_o2Tneg=0.1 #(prop)
+u_lim_o2Tneg=1 #(prop)
 ##Testosterone
 ###T+
 l_lim_testTpos=0 #(prop)
-u_lim_testTpos=0.1 #(prop)
+u_lim_testTpos=0.3 #(prop)
 ###Tp
 l_lim_testTpro=0 #(prop)
-u_lim_testTpro=0.1 #(prop)
+u_lim_testTpro=0.3 #(prop)
 #filename to save output in
-f_name='All3/therapy/o2-HE_test-HE/'
+f_name='All3/therapy/o2-Null_test-LE/0.8Tp-'
