@@ -44,7 +44,7 @@ def solve_parm(parms): #calls the solve_eq function with all default inputs othe
     ee.solve_eq(t_max,dt,y0,p,mu,lam,r,K,delta,rho,lim,f_name_i)
 
 if __name__ == '__main__':
-    pool = Pool(4)
+    pool = Pool(20)
     pool.map(solve_parm,parms_array) #iterate over the lims
     pool.close()
     pool.join()

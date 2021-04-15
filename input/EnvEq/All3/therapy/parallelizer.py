@@ -30,7 +30,7 @@ for i in range(len(cases)):
     parms_array.append(cases.loc[i])
 
 def solve_parm(parms): #calls the solve_eq function with all default inputs other than lims
-    f_name_i=f_name+'p={:.1e}-'.format(parms['p_min'])+parms['Name']
+    f_name_i=f_name+parms['Name']
     ee.solve_eq(t_max,dt,y0,p,mu,lam,r,K,delta,rho,lim,f_name_i,therapy=True,therapy_parms=parms)
 
 if __name__ == '__main__':

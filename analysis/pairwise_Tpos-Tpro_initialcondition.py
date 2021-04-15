@@ -16,7 +16,7 @@ cf.mkdirs(pre_path=pre_path,parm_name=parm_name)
 #iterator over these
 initial_ratio_arr=np.arange(0.1,1,0.2)
 tot_cell_arr=np.array([1000,2000,4000])
-cases=np.arange(1,5)
+cases=np.arange(1,31)
 
 parms_array=np.empty([0,2])
 for ir in initial_ratio_arr:

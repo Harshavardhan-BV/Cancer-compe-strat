@@ -143,46 +143,135 @@ From the initial runs where two parameters were changed at a time, the following
 \end{figure}
 
 \begin{figure}[h!]
-\centering
-\includegraphics[width=\textwidth]{Tpos-Tpro_o2lims}
-\caption[Pairwise $T^+ - T^p$ timeseries, oxygen limitation]{Pairwise $T^+ - T^p$ timeseries, when both cell types are testosterone limited and not oxygen limited at $ll_{O_2,T^+}=0.0, ll_{O_2,T^p}=0.0$ and $T^+$ is oxygen limited and $T^p$ moderately at $ll_{O_2,T^+}=0.6, ll_{O_2,T^p}=0.4$.}
-\label{fig_Tpos-Tpro_o2lims}
+  \centering
+  \includegraphics[width=\textwidth]{Tpos-Tpro_o2lims}
+  \caption[Pairwise $T^+ - T^p$ timeseries, oxygen limitation]{Pairwise $T^+ - T^p$ timeseries, when both cell types are testosterone limited and not oxygen limited at $ll_{O_2,T^+}=0.0, ll_{O_2,T^p}=0.0$ and $T^+$ is oxygen limited and $T^p$ moderately at $ll_{O_2,T^+}=0.6, ll_{O_2,T^p}=0.4$.}
+  \label{fig_Tpos-Tpro_o2lims}
 \end{figure}
+
+\newpage
 
 From the above observations, the following cases were formulated as representative and pairwise competitive runs were done over varying initial cell seeding.
 
 \begin{longtable}[c]{|l|l|l|l|l|}
 
-  \hline \multicolumn{1}{|c|}{\textbf{Case}} & \multicolumn{1}{c|}{\textbf{$T^+\ test$ limitation}} & \multicolumn{1}{c|}{\textbf{$T^+\ O_2$ limitation}} & \multicolumn{1}{c|}{\textbf{$T^p\ test$ limitation}} & \multicolumn{1}{c|}{\textbf{$T^p\ O_2$ limitation}} \\ \hline
+  \hline \multicolumn{1}{|c|}{\textbf{Case}} & \multicolumn{1}{c|}{\textbf{$T^+\ O_2$ limitation}} & \multicolumn{1}{c|}{\textbf{$T^p\ O_2$ limitation}} & \multicolumn{1}{c|}{\textbf{$T^+\ test$ limitation}} & \multicolumn{1}{c|}{\textbf{$T^p\ test$ limitation}}  \\ \hline
   \endhead
 
-  \hline \multicolumn{3}{|r|}{{Continued on next page}} \\ \hline
+  \hline \multicolumn{5}{|r|}{{Continued on next page}} \\ \hline
   \endfoot
 
   \endlastfoot
-  1 & no & no & moderate & no \\ \hline
-  2 & moderate & no & no & no \\ \hline
-  3 & severe & high & severe & moderate \\ \hline
-  4 & severe & high & severe & no \\ \hline
+  AAAA & no & no & no & no \\ \hline
+  AAAB & no & no & no & moderate \\ \hline
+  AAAC & no & no & no & severe \\ \hline
+  AABA & no & no & moderate & no \\ \hline
+  AABB & no & no & moderate & moderate \\ \hline
+  AABC & no & no & moderate & severe \\ \hline
+  AACA & no & no & severe & no \\ \hline
+  AACB & no & no & severe & moderate \\ \hline
+  AACC & no & no & severe & severe \\ \hline
+  ABAA & no & moderate & no & no \\ \hline
+  ABAB & no & moderate & no & moderate \\ \hline
+  ABBA & no & moderate & moderate & no \\ \hline
+  ABBB & no & moderate & moderate & moderate \\ \hline
+  ACAA & no & severe & no & no \\ \hline
+  BAAA & moderate & no & no & no \\ \hline
+  BAAB & moderate & no & no & moderate \\ \hline
+  BABA & moderate & no & moderate & no \\ \hline
+  BABB & moderate & no & moderate & moderate \\ \hline
+  BBAA & moderate & moderate & no & no \\ \hline
+  BBAB & moderate & moderate & no & moderate \\ \hline
+  BBBA & moderate & moderate & moderate & no \\ \hline
+  BBBB & moderate & moderate & moderate & moderate \\ \hline
+  BCAA & moderate & severe & no & no \\ \hline
+  CAAA & severe & no & no & no \\ \hline
+  CBAA & severe & moderate & no & no \\ \hline
+  CCAA & severe & severe & no & no \\ \hline
+
   \caption{Table of cases for $T^+$ - $T^p$ pairwise}
   \label{tab_Tpro-Tneg_cases}
 
 \end{longtable}
 
-Here, for $T^+/T^p\ test$ limitation: no and moderate correspond to $ll_{O_2,T^i}=0.1, 0.3$ respectively.
+Here,
+\begin{itemize}
+  \item For $T^+/T^p\ O_2$ limitation: no, moderate and severe correspond to $ll_{O_2,T^i}=0, 0.4, 0.8$ respectively.
+  \item For $T^+/T^p\ test$ limitation: no, moderate and severe correspond to $ul_{test,T^i}=0.1, 0.3, 1$ respectively.
+\end{itemize}
+
+The following were observed from the different cases. For better visualization, the figures are divided into testosterone limitations in \autoref{fig_Tpos-Tpro_cases_test}, oxygen limitations in \autoref{fig_Tpos-Tpro_cases_o2} and combinations of the limitiations in \autoref{fig_Tpos-Tpro_cases_combi}.
+\begin{enumerate}
+  \item $T^p$ causes $T^+$ to go extinct for all initial seedings in cases CAAA and CBAA. $T^+$ is severely oxygen limited and $T^p$ quickly utilized the intial period to grow to a large population and suppress $T^+$ from further growth.
+  \item A similar situation to above happens for cases AACA and AACB, but for high initial seeding of $T^p$, a very small population of $T^+$ is able to survive due to the excess testosterone produced by $T^p$.
+  \item Both the cell types go extinct for cases AAAC and AABC. $T^p$ is severly limited by testosterone and $T^+$ consumes the limited amount produced by $T^p$ and denies it of growth. $T^p$ goes exctinct and soon followed by $T^+$ due to non availability of testosterone.
+  \item A similar behaviour to above happens for cases ACAA and BCAA, but for high initial seeding of $T^p$ with low total population, there is coexistence. Both the cells manage to survive until the oxygen levels reach above the levels required for growth and they can recover from it. For higher total populations, the density-dependent suppression is too high and they go extinct before oxygen levels can reach it.
+  \item In case AACC, at low initial $T^p$ seeding, it follows a similar behaviour to cases AAAC and AABC and both go extinct while at high initial $T^p$ seeding, it follows a similar behaviour to cases AACA and AACB, where there is extinction of $T^+$ at medium $T^p$ seeding and coexistence at high $T^p$ seeding.
+  \item Both coexist for all initial seeding in cases AAAA and AABA. Here, $T^p$ can grow unhindered by $T^+$, secrete testosterone, which $T^+$ can grow on. Case AABB is similar, but both go extinct at low initial seeding as $T^+$ dominates over $T^p$ through number and prevents it from growing due to the higher testosterone limitation.
+  \item Case AAAB is the opposite of the above as only at high $T^p$ initial seeding can both coexist. $T^+$ can grow better than $T^p$ for the same amount of testosterone present and can outnumber and cause $T^p$ to go extinct. At higher $T^p$ seeding, $T^p$ has a numbers advantage from the begining and can produce enough testosterone to sustain both.
+  \item Case BBAA is exactly the same as Case AAAA as both are limtied by the same amount.
+  \item $T^+$ is driven to extinction in all but the low initial $T^p$ seeding in Case BAAA. At low $T^p$ seeding, $T^+$ can use the number advantage to stay alive and then use the testosterone produced by $T^p$ to grow but at higher seedings, $T^+$ is limited by oxygen.
+  \item In case ABAA, at low initial $T^p$ seeding, the higher $T^+$ number can cause $T^p$ to go extinct and eventually both the cell types. Whereas at higher initial $T^p$ seeding, despite $T^+$ growing faster than $T^p$ due to lowered oxygen limitation, stops at a point due to requirement of testosterone produced by $T^p$ and this maintains a balance between the two cells.
+  \item Cases BBAA, BBAB, BBBA and BBBB were exactly the same as cases AAAA, AAAB, AABA and AABB respectively as the two corresponding cases are limtied by oxygen by the same amount with all else being the same.
+  \item In a similar manner cases ABBB and BABB are similar to cases ABAA and BAAA. Due to the higher testosterone limitations of $T^p$, a higher $T^p$ initial seeding is required have $T^p$ overcome suppression by $T^+$. Additionally in case ABBB, the higher testosterone limitation of $T^+$ leads to higher $T^p$ required for testosterone and a higher final $T^p$ population.
+  \item Case ABAB gives a double disadvantage to $T^p$ due to both testosterone and oxygen limitiation and it goes extinct along with $T^+$ in all seedings. Similarly, case BABA gives a double disadvantage to $T^+$ and $T^+$ goes extinct for all seedings.
+  \item Case ABBA is similar to case ABBB, but can coexist at lower initial seeding as well since $T^p$ is not testosterone limited.
+  \item At low initial $T^p$ seeding, both cells go extinct due to higher testosterone limitation of $T^p$. However at higher initial $T^p$ seeding, $T^p$ is able to push $T^+$ to extinction due to the higher oxygen limitation of $T^+$.
+\end{enumerate}
 
 \begin{figure}[h!]
   \centering
-  \includegraphics[width=\textwidth]{Tpos-Tpro_cases}
-  \caption[Final $T^p$ ratio of pairwise $T^+ - T^p$ runs under different cases]{Final $T^p$ ratio of pairwise $T^+ - T^p$ runs under different cases. Case 1: $T^+$ is not testosterone limited and $T^p$ is moderately testosterone limited, Case 2: $T^+$ is moderately testosterone limited and $T^p$ is not testosterone limited. Note: Ratio = -0.1 is used when both cell types go extinct.}
+  \begin{subfigure}[b]{\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{Tpos-Tpro_cases_test}
+    \caption{$test$ limitations. Columns: $T^p\ test$ limitation, Rows: $T^+\ test$ limitation.}
+    \label{fig_Tpos-Tpro_cases_test}
+  \end{subfigure}
+  \begin{subfigure}[b]{\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{Tpos-Tpro_cases_o2}
+    \caption{$O_2$ limitations. Columns: $T^p\ O_2$ limitation, Rows: $T^+\ O_2$ limitation.}
+    \label{fig_Tpos-Tpro_cases_o2}
+  \end{subfigure}
+  \caption[Final $T^p$ ratio of pairwise $T^+ - T^p$ runs under different cases]{Final $T^p$ ratio of pairwise $T^+ - T^p$ runs under different cases. Note: Ratio = -0.1 is used when both cell types go extinct.}
+\end{figure}
+\begin{figure}[h!]\ContinuedFloat
+  \begin{subfigure}[b]{\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{Tpos-Tpro_cases}
+    \caption{$test \& O_2$ limitations. Columns: $T^+,T^p\ test$ limitations, Rows: Columns: $T^+,T^p\ O_2$ limitations.}
+    \label{fig_Tpos-Tpro_cases_combi}
+  \end{subfigure}
+  \caption[]{Final $T^p$ ratio of pairwise $T^+ - T^p$ runs under different cases. Note: Ratio = -0.1 is used when both cell types go extinct. (cont.)}
   \label{fig_Tpos-Tpro_cases}
 \end{figure}
 
 \newpage
-The following were observed from the cases as visualised in \autoref{fig_Tpro-Tneg_cases}:
+
+\section{All 3 celltypes}
+\subsection{Efficiency}
+To simplify things, the resource limitations as described in the previous sections can instead be considered as efficiencies of the cell types in utilization of a particular resource.
+Although many possible combinations are there, all the cell types are assumed to have the same efficiencies for the respective resources.
+
 \begin{enumerate}
-  \item  In case 1, both the cell types go extinct when $T^p$ has low initial seeding as seen previously, whereas at high $T^p$ initial seeding, both are able to coexist. At high $T^p$ initial seeding, $T^p$ is able to grow without density-dependent suppression by $T^+$ and secrete more testosterone from their higher overall number despite being disadvantaged in their growth compared to $T^+$.
-  \item In case 2, both cells are able to coexist at all $T^p$ initial seeding. However, there exists a sweet spot for $T^+$ where it has the maximum final ratio. At high $T^p$ initial seeding, $T^p$ suppresses $T^+$ from growing through its large number, whereas, at very low $T^p$ initial seeding, $T^+$ needs $T^p$ to grow for its testosterone.
-  \item In case 3, at low $T^p$ initial seeding, both cell types go extinct as $T^+$ due to it’s higher number consumes the testosterone produced by $T^p$ and doesn’t let it grow. However, at higher $T^p$ seeding, $T^+$ goes extinct as $T^+$ cannot grow due to oxygen limitation before being suppressed by $T^p$. Only at intermediate $T^p$ seeding do both coexist as both of them inhibit each other for oxygen.
-  \item Case 4 is very similar to Case 3, however, the intermediate $T^p$ seeding at which they coexist is lower.  Since, $T^p$ is not oxygen limited, it can grow more easily compared to Case 3 for the same initial $T^p$ seeding and can outcompete $T^+$ more easily.
+  \item When the testosterone efficiency is high, all the three cell types can coexist in all the oxygen efficiency cases as shown in \autoref{fig_all3_o2eff}.
+  \item At lower oxygen efficiency, $T^-$ is able to have a larger final population as the turn over is slower in the case of $T^-$.
+  \item The difference between null oxygen efficiency and high oxygen efficiency is small, where high oxygen efficiency has a slightly higher $T^+$ and $T^p$ and a lower $T^-$ final population.
+  \item The same holds when the initial seeding is at $8:1:1\ T^p:T^+:T^-$ ratio but the final population of $T^p$ is much higher in this case.
+  \item At null oxygen efficiency, all three cell types can coexist in all the testosterone efficiency cases only when the initial seeding is at $8:1:1\ T^p:T^+:T^-$ ratio as shown in \autoref{fig_all3_testeff}.
+  \item At lower testosterone efficiency, $T^-$ is able to have a larger final population due to no effect of the efficiency changes on $T^-$.
 \end{enumerate}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\textwidth]{All3_efficiency_o2}
+\caption[All 3 cell types timeseries, oxygen efficiency]{All 3 cell types timeseries, at different oxygen efficiency (columns) and at different initial proportions of $T^p:T^+:T^-$ (rows).}
+\label{fig_all3_o2eff}
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=\textwidth]{All3_efficiency_test}
+  \caption[All 3 cell types timeseries, testosterone efficiency]{All 3 cell types timeseries, at different testosterone efficiency.}
+  \label{fig_all3_testeff}
+\end{figure}

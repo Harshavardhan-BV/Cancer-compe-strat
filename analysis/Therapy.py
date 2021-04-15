@@ -18,8 +18,9 @@ cases=pd.read_csv('../input/EnvEq/All3/therapy/therapy_parms.csv')
 parms_array=cases.Name.unique()
 
 scenarios=np.array([
-    '', ### Tp:T+:T- 1:1:1 x 666 (total ~2000)
-    '0.8Tp-', ### Tp:T+:T- 8:1:1 x 200 (total 2000)
+    '', ### Tp:T+:T- 1:1:1 x 666 (total ~2000), threshold at 1*y0 - 0.5*y0
+    '0.8Tp-', ### Tp:T+:T- 8:1:1 x 200 (total 2000), threshold at 1*y0 - 0.5*y0
+    'ATThresh=4000-3500_', ### Tp:T+:T- 1:1:1 x 666 (total ~2000), threshold at 4000 - 3500
     ])
 
 for scenario in scenarios:
@@ -30,6 +31,11 @@ for scenario in scenarios:
 ## Low o2 efficiency, High test efficiency
 parm_name='o2-LE_test-HE'
 cf.mkdirs(pre_path=pre_path,parm_name=parm_name)
+
+scenarios=np.array([
+    '', ### Tp:T+:T- 1:1:1 x 666 (total ~2000), threshold at 1*y0 - 0.5*y0
+    '0.8Tp-', ### Tp:T+:T- 8:1:1 x 200 (total 2000), threshold at 1*y0 - 0.5*y0
+    ])
 
 for scenario in scenarios:
     post_path=scenario
@@ -44,6 +50,8 @@ for scenario in scenarios:
     post_path=scenario
     cf.timeseries(pre_path=pre_path,parm_name=parm_name,parm_array=parms_array,parm_format=parm_format,post_path=post_path,plot_tot=True)
     df=cf.eq_values(pre_path=pre_path,parm_name=parm_name,parm_array=parms_array,parm_format=parm_format,post_path=post_path)
+    
+# Test efficiency
     
 ## Null o2 efficiency, Low test efficiency
 parm_name='o2-Null_test-LE'
