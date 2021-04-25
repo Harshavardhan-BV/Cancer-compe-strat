@@ -231,13 +231,25 @@ With all three cell types, the number of combinations and permutations increase 
 The following were observed from the different cases as visualised is \autoref{fig_all3}.
 \begin{enumerate}
   \item Barring the case with high efficiencies for both testosterone and oxygen, $T^p$ and $T^+$ goes extinct for the lowest equal seeding densities with the total amounting to 1000.
-  \item With low testosterone efficiency, $T^p$ and $T^+$ go extinct at all the equal seeding densities regardless of their oxygen efficiencies. $T^-$ isn't affected by the testosterone limitation and can outcompete the other cells. However, when $T^p$ is seeded at 8 times the density of the other cell types, co-existence is achieved.
+  \item With low testosterone efficiency, $T^p$ and $T^+$ go extinct at all the equal seeding densities regardless of their oxygen efficiencies. $T^-$ isn't affected by the testosterone limitation and can outcompete the other cells. However, when $T^p$ is seeded at 8 times the density of the other cell types, co-existence is achieved  other than with low oxygen efficiency.
   \item $T^-$ seems to have an advantage when the oxygen efficiencies are lower. While this difference can be seen clearly with the reduction in final $T^-$ ratio from low to null oxygen efficiency, the difference between null and high oxygen efficiency is minor.
+  \item Higher initial total seeding favours $T^p$ and $T^+$ as the higher $T^p$ numbers lead to more testosterone secreted in the environment, and $T^p$ and $T^+$ can outcompete $T^-$. However, when $T^p$ is seeded at 8 times the density of the other cell types with high testosterone efficiency, they have reached their saturation levels and the difference between the total seedings are minor.
 \end{enumerate}
 
 \begin{figure}[h!]
-\centering
-\includegraphics[width=\textwidth]{All3_efficiency}
-\caption[Final ratio of all 3 cell types runs under different efficiencies]{Final ratio of all 3 cell types runs under different oxygen efficiency (columns) and testosterone efficiency (rows).}
-\label{fig_all3}
+  \centering
+  \begin{subfigure}[b]{\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{All3_efficiency_1:1:1}
+    \caption{1:1:1 - $T^p:T^+:T^-$}
+    \label{fig_all3_1:1:1}
+  \end{subfigure}
+  \begin{subfigure}[b]{\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{All3_efficiency_8:1:1}
+    \caption{8:1:1 - $T^p:T^+:T^-$}
+    \label{fig_all3_8:1:1}
+  \end{subfigure}
+  \caption[Final ratio of all 3 cell types runs under different efficiencies]{Final ratio of all 3 cell types runs under different oxygen efficiency (columns), testosterone efficiency (rows) and initial seeding proportions (subfigures).}
+  \label{fig_all3}
 \end{figure}

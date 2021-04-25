@@ -319,78 +319,71 @@ plt.close(fig)
 
 # All3
 ## Efficiency
-
+### proportions 1:1:1 Tp:T+:T-
 row_effs=['HE','LE']
 rows=['High Efficiency','Low Efficiency']
 col_effs=['LE','Null','HE']
 cols=['Low Efficiency','Null Efficiency','High Efficiency']
 path='../analysed_data/EnvEq/All3/efficiency/'
-#proportions=['Case-','Case-0.8Tp-']
-#initial_conditions=['1000','2000','4000']
 df1=pd.read_csv(path+'Case-eq_values.csv')
-df1['Tp_initratio']=0.3
-df2=pd.read_csv(path+'0.8Tp-Case-eq_values.csv')
-df2['Tp_initratio']=0.8
-df1=df1.append(df2,ignore_index=True)
 cf.allcell_eq_ratio(df1,-0.1)
-df1['Tpro_0']=df1['Tp_initratio']*df1['TotCell']
-custom_lines = [Line2D([0], [0], color='tab:green', lw=1),
-                Line2D([0], [0], color='tab:blue', lw=1),
-                Line2D([0], [0], color='tab:red', lw=1)]
-cell_lines = ['T+','Tp','T-']
+df1['TotCell']=df1['TotCell'].astype(str)
+colors=['tab:green','tab:blue','tab:red']
+labels=['T+','Tp','T-']
 fig,axes=plt.subplots(2,3,sharex=True,sharey=True,figsize=(15,8))
 for i in range(2):
     testeff='test_'+row_effs[i]
     for j in range(3):
         o2eff='o2_'+col_effs[j]
         df=df1[(df1['Test_Eff']==testeff) & (df1['O2_Eff']==o2eff)]
-        leg1=axes[i,j].legend(custom_lines, cell_lines,loc='center right',title='CellLine')
-        sns.lineplot(data=df,x='Tpro_0',y='Tpro_ratio',color='tab:blue',style='TotCell',markers=True,ax=axes[i,j])
-        sns.lineplot(data=df,x='Tpro_0',y='Tpos_ratio',color='tab:green',style='TotCell',markers=True,ax=axes[i,j],legend=False)
-        sns.lineplot(data=df,x='Tpro_0',y='Tneg_ratio',color='tab:red',style='TotCell',markers=True,ax=axes[i,j],legend=False)
-        axes[i,j].legend(loc='upper right',title='TotCell')
-        axes[i,j].set_ylim(-0.2,1.3)
-        axes[i,j].add_artist(leg1)
+        df.plot.bar(x='TotCell',y=['Tpos_ratio','Tpro_ratio','Tneg_ratio'],color=colors,stacked=True,ax=axes[i,j])
+        axes[i,j].legend(labels)
 pad = 5 # in points
 for ax, ax2, col in zip(axes[0], axes[1], cols):
     ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
                 xycoords='axes fraction', textcoords='offset points',
                 size='large', ha='center', va='baseline')
-    ax2.set_xlabel('Initial Tp seeding')
+    ax2.set_xlabel('Initial Total seeding')
 for ax, row in zip(axes[:,0], rows):
     ax.annotate(row, xy=(0, 0.5), xytext=(-ax.yaxis.labelpad - pad, 0),
                 xycoords=ax.yaxis.label, textcoords='offset points',
                 size='large', ha='right', va='center')
     ax.set_ylabel('Final ratio')
 fig.tight_layout()
-fig.savefig('../writing/MSThesis/figures/All3_efficiency.pdf')
+fig.savefig('../writing/MSThesis/figures/All3_efficiency_1:1:1.pdf')
 fig.clf()
 plt.close(fig)
 
-#for ic in initial_conditions:
-    #for prop in proportions:
-        #fig,axes=plt.subplots(2,3,sharex=True,sharey=True,figsize=(15,5))
-        #for i in range(2):
-            #testeff=row_effs[i]
-            #for j in range(3):
-                #o2eff=col_effs[j]
-                #df=pd.read_csv(path+prop+'Case-o2_'+o2eff+'-test_'+testeff+'-'+ic+'.csv')
-                #axes[i,j].plot(df.t/24/60,df.Tpos,color="tab:green",label='T+')
-                #axes[i,j].plot(df.t/24/60,df.Tpro,color="tab:blue",label='Tp')
-                #axes[i,j].plot(df.t/24/60,df.Tneg,color="tab:red",label='T-')
-        #pad = 5 # in points
-        #for ax, ax2, col in zip(axes[0], axes[1], cols):
-            #ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
-                        #xycoords='axes fraction', textcoords='offset points',
-                        #size='large', ha='center', va='baseline')
-            #ax2.set_xlabel('Time (days)')
-        #for ax, row in zip(axes[:,0], rows):
-            #ax.annotate(row, xy=(0, 0.5), xytext=(-ax.yaxis.labelpad - pad, 0),
-                        #xycoords=ax.yaxis.label, textcoords='offset points',
-                        #size='large', ha='right', va='center')
-            #ax.set_ylabel('No of Cells')
-        #axes[0,0].legend()
-        #fig.tight_layout()
-        #fig.savefig('../writing/MSThesis/figures/All3_efficiency_'+prop+ic+'.pdf')
-        #fig.clf()
-        #plt.close(fig)
+### proportions 8:1:1 Tp:T+:T-
+row_effs=['HE','LE']
+rows=['High Efficiency','Low Efficiency']
+col_effs=['LE','Null','HE']
+cols=['Low Efficiency','Null Efficiency','High Efficiency']
+path='../analysed_data/EnvEq/All3/efficiency/'
+df1=pd.read_csv(path+'0.8Tp-Case-eq_values.csv')
+cf.allcell_eq_ratio(df1,-0.1)
+colors=['tab:green','tab:blue','tab:red']
+labels=['T+','Tp','T-']
+fig,axes=plt.subplots(2,3,sharex=True,sharey=True,figsize=(15,8))
+for i in range(2):
+    testeff='test_'+row_effs[i]
+    for j in range(3):
+        o2eff='o2_'+col_effs[j]
+        df=df1[(df1['Test_Eff']==testeff) & (df1['O2_Eff']==o2eff)]
+        df.plot.bar(x='TotCell',y=['Tpos_ratio','Tpro_ratio','Tneg_ratio'],color=colors,stacked=True,ax=axes[i,j])
+        axes[i,j].legend(labels)
+pad = 5 # in points
+for ax, ax2, col in zip(axes[0], axes[1], cols):
+    ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
+                xycoords='axes fraction', textcoords='offset points',
+                size='large', ha='center', va='baseline')
+    ax2.set_xlabel('Initial Total seeding')
+for ax, row in zip(axes[:,0], rows):
+    ax.annotate(row, xy=(0, 0.5), xytext=(-ax.yaxis.labelpad - pad, 0),
+                xycoords=ax.yaxis.label, textcoords='offset points',
+                size='large', ha='right', va='center')
+    ax.set_ylabel('Final ratio')
+fig.tight_layout()
+fig.savefig('../writing/MSThesis/figures/All3_efficiency_8:1:1.pdf')
+fig.clf()
+plt.close(fig)
