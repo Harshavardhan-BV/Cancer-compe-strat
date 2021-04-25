@@ -6,9 +6,9 @@ t_max = 1000*24*60 #maximum (mins)
 dt = 60  #step (mins)
 #Initial Values
 ##cells
-y0_Tpos=200
-y0_Tpro=1600
-y0_Tneg=200
+y0_Tpos=666
+y0_Tpro=666
+y0_Tneg=666
 ##resource
 y0_o2=0.5 #(prop)
 y0_test=0 #(prop)
@@ -63,4 +63,4 @@ u_lim_testTpos=1 #(prop)
 l_lim_testTpro=0 #(prop)
 u_lim_testTpro=1 #(prop)
 #filename to save output in
-f_name='All3/o2-test-efficiency-0.8Tp/'
+f_name='All3/o2-test-efficiency/'

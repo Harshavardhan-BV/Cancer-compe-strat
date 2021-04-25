@@ -63,4 +63,4 @@ u_lim_testTpos=1 #(prop)
 l_lim_testTpro=0 #(prop)
 u_lim_testTpro=1 #(prop)
 #filename to save output in
-f_name='All3/o2-test-efficiency-0.8Tp/'
+f_name='All3/test-efficiency/0.8Tp-'
