@@ -25,23 +25,33 @@ except:
 
 #iterator over these
 parms_array=[]
-ir_arr=np.logspace(-1,-3,5)
-tot_cell_arr=np.array([1000,2000,4000])
-cases=pd.read_csv('./therapy_parms.csv')
-
+cases=pd.read_csv('./All3-eff_cases.csv')
+ratios=np.array([[1,1,1],[1,8,1]])
+rat=['','0.8Tp-']
+totcell=np.array([1000,2000,4000])
 for i in range(len(cases)):
-    for ir in ir_arr:
-        for tc in tot_cell_arr:
-            parms_array.append([cases.loc[i],ir,tc])
+    for j in range(len(ratios)):
+        for tc in totcell:
+            parms_array.append([cases.loc[i],rat[j],ratios[j],tc])
 
 def solve_parm(parms): #calls the solve_eq function with all default inputs other than lims
-    f_name_i=f_name+parms[0]['Name']+'-{:.2e}-{:.2e}'.format(parms[1],parms[2])
-    y0[0:3]=(np.array([(1-parms[1])/2,(1-parms[1])/2,parms[1]])*parms[2])
-    therapy_parms=parms[0]
-    ee.solve_eq(t_max,dt,y0,p,mu,lam,r,K,delta,rho,lim,f_name_i,therapy=True,therapy_parms=therapy_parms)
+    f_name_i=f_name+parms[1]+"Case-"+parms[0]['Case']+"-{}".format(parms[3])
+    lim[0,0,0]=parms[0]['llo2Tpos']
+    lim[0,0,1]=parms[0]['ulo2Tpos']
+    lim[0,1,0]=parms[0]['llo2Tpro']
+    lim[0,1,1]=parms[0]['ulo2Tpro']
+    lim[0,2,0]=parms[0]['llo2Tneg']
+    lim[0,2,1]=parms[0]['ulo2Tneg']
+    lim[1,0,0]=parms[0]['lltestTpos']
+    lim[1,0,1]=parms[0]['ultestTpos']
+    lim[1,1,0]=parms[0]['lltestTpro']
+    lim[1,1,1]=parms[0]['ultestTpro']
+    ic=(parms[2]/parms[2].sum()*parms[3]).astype(np.int)
+    y0[0:3]=ic
+    ee.solve_eq(t_max,dt,y0,p,mu,lam,r,K,delta,rho,lim,f_name_i)
 
 if __name__ == '__main__':
-    pool = Pool(20)
+    pool = Pool(8)
     pool.map(solve_parm,parms_array) #iterate over the lims
     pool.close()
     pool.join()

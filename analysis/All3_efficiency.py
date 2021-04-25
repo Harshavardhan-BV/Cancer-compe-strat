@@ -61,3 +61,23 @@ cf.timeseries(pre_path=pre_path,parm_name=parm_name,parm_array=parms_array,parm_
 df=cf.eq_values(pre_path=pre_path,parm_name=parm_name,parm_array=parms_array,parm_format=parm_format,post_path=post_path)
 os.rename('../figures/'+pre_path+parm_name+'/'+post_path+'timeseries.svg','../figures/'+pre_path+parm_name+'/'+post_path+'o2-HE_timeseries.svg')
 os.rename('../analysed_data/'+pre_path+parm_name+'/'+post_path+'eq_values.csv','../analysed_data/'+pre_path+parm_name+'/'+post_path+'o2-HE_eq_values.csv')
+
+# Combination of o2 and test efficieny
+parm_name='efficiency'
+parm_name_array=['O2_Eff','Test_Eff','TotCell']
+cf.mkdirs(pre_path=pre_path,parm_name=parm_name)
+
+ratios=['','0.8Tp-']
+totcell=['1000','2000','4000']
+o2_cases=['o2_Null','o2_HE','o2_LE']
+test_cases=['test_HE','test_LE']
+parms_array=[]
+for o2case in o2_cases:
+    for testcase in test_cases:
+        for tc in totcell:
+            parms_array.append([o2case,testcase,tc])
+            
+for ratio in ratios:
+    post_path=ratio+'Case-'
+    cf.timeseries(pre_path=pre_path,parm_name=parm_name,parm_array=parms_array,parm_format=parm_format,post_path=post_path)
+    df=cf.eq_values(pre_path=pre_path,parm_name=parm_name,parm_name_array=parm_name_array,parm_array=parms_array,parm_format=parm_format,post_path=post_path)

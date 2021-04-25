@@ -1,6 +1,0 @@
-Name,abi_mode,abi_therapy_on,abi_change_time,abi_at_x_off,abi_at_x_on,abi_mt_t_on,abi_mt_t_off,p_min,dtx_mode,dtx_therapy_on
-No,NA,False,0,0,0,0,0,1E-07,NA,False
-AT,AT,False,0,3500,4000,0,0,1E-07,NA,False
-AT_nn,AT_nn,False,0,3500,4000,0,0,1E-07,NA,False
-MT,MT,False,0,0,0,1440,10080,1E-07,NA,False
-SOC,SOC,False,0,0,0,0,0,1E-07,NA,False
