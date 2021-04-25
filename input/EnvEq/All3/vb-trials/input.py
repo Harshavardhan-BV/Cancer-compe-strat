@@ -63,4 +63,8 @@ u_lim_testTpos=1 #(prop)
 l_lim_testTpro=0 #(prop)
 u_lim_testTpro=1 #(prop)
 #filename to save output in
+<<<<<<< HEAD:input/EnvEq/All3/vb-trials/input.py
 f_name='All3/o2-test-efficiency/'
+=======
+f_name='All3/efficiency/'
+>>>>>>> b4111a92b4f2fbdca359bdef3f13bfe117b48b84:codes/EnvEq_sum/input.py

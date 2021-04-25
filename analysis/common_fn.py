@@ -175,16 +175,16 @@ def plot_2parm(df,parm_name,pri_parm,sec_parm,plot_y,pre_path='',post_path='',sa
 
 def cell_eq_ratio(df,pri_cell,sec_cell):
     df[pri_cell+'_ratio']=df[pri_cell+'_eq']/(df[pri_cell+'_eq']+df[sec_cell+'_eq'])
-    df[pri_cell+'_ratio'][(df[pri_cell+'_eq']<1) & (df[sec_cell+'_eq']<1)]=np.nan # set to nan if both cells are extinct (ratio makes no sense)
+    df.loc[:,pri_cell+'_ratio'][(df[pri_cell+'_eq']<1) & (df[sec_cell+'_eq']<1)]=np.nan # set to nan if both cells are extinct (ratio makes no sense)
     return df
 
 def allcell_eq_ratio(df,nan=np.nan):
     df['Tpos_ratio']=df['Tpos_eq']/(df['Tpos_eq']+df['Tpro_eq']+df['Tneg_eq'])
     df['Tpro_ratio']=df['Tpro_eq']/(df['Tpos_eq']+df['Tpro_eq']+df['Tneg_eq'])
     df['Tneg_ratio']=df['Tneg_eq']/(df['Tpos_eq']+df['Tpro_eq']+df['Tneg_eq'])
-    df['Tpos_ratio'][(df['Tpos_eq']<1) & (df['Tpro_eq']<1) & (df['Tneg_eq']<1)]=nan # set to nan if all cells are extinct (ratio makes no sense)
-    df['Tpro_ratio'][(df['Tpos_eq']<1) & (df['Tpro_eq']<1) & (df['Tneg_eq']<1)]=nan # set to nan if all cells are extinct (ratio makes no sense)
-    df['Tneg_ratio'][(df['Tpos_eq']<1) & (df['Tpro_eq']<1) & (df['Tneg_eq']<1)]=nan # set to nan if all cells are extinct (ratio makes no sense)
+    df.loc[(df['Tpos_eq']<1) & (df['Tpro_eq']<1) & (df['Tneg_eq']<1),'Tpos_ratio']=nan # set to nan if all cells are extinct (ratio makes no sense)
+    df.loc[(df['Tpos_eq']<1) & (df['Tpro_eq']<1) & (df['Tneg_eq']<1),'Tpro_ratio']=nan # set to nan if all cells are extinct (ratio makes no sense)
+    df.loc[(df['Tpos_eq']<1) & (df['Tpro_eq']<1) & (df['Tneg_eq']<1),'Tneg_ratio']=nan # set to nan if all cells are extinct (ratio makes no sense)
     return df
 
 def round_df(df,parm_name_array,decimals=1):

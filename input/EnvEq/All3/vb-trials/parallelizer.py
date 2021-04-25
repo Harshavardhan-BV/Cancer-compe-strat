@@ -25,12 +25,26 @@ except:
 
 #iterator over these
 parms_array=[]
+<<<<<<< HEAD:input/EnvEq/All3/vb-trials/parallelizer.py
 cases=pd.read_csv('./All3_o2-test-eff_cases.csv')
 for i in range(len(cases)):
     parms_array.append([cases.loc[i]])
 
 def solve_parm(parms): #calls the solve_eq function with all default inputs other than lims
     f_name_i=f_name+"Case"+parms[0]['Case']
+=======
+cases=pd.read_csv('./All3-eff_cases.csv')
+ratios=np.array([[1,1,1],[1,8,1]])
+rat=['','0.8Tp-']
+totcell=np.array([1000,2000,4000])
+for i in range(len(cases)):
+    for j in range(len(ratios)):
+        for tc in totcell:
+            parms_array.append([cases.loc[i],rat[j],ratios[j],tc])
+
+def solve_parm(parms): #calls the solve_eq function with all default inputs other than lims
+    f_name_i=f_name+parms[1]+"Case-"+parms[0]['Case']+"-{}".format(parms[3])
+>>>>>>> b4111a92b4f2fbdca359bdef3f13bfe117b48b84:codes/EnvEq_sum/parallelizer.py
     lim[0,0,0]=parms[0]['llo2Tpos']
     lim[0,0,1]=parms[0]['ulo2Tpos']
     lim[0,1,0]=parms[0]['llo2Tpro']
@@ -41,10 +55,15 @@ def solve_parm(parms): #calls the solve_eq function with all default inputs othe
     lim[1,0,1]=parms[0]['ultestTpos']
     lim[1,1,0]=parms[0]['lltestTpro']
     lim[1,1,1]=parms[0]['ultestTpro']
+<<<<<<< HEAD:input/EnvEq/All3/vb-trials/parallelizer.py
+=======
+    ic=(parms[2]/parms[2].sum()*parms[3]).astype(np.int)
+    y0[0:3]=ic
+>>>>>>> b4111a92b4f2fbdca359bdef3f13bfe117b48b84:codes/EnvEq_sum/parallelizer.py
     ee.solve_eq(t_max,dt,y0,p,mu,lam,r,K,delta,rho,lim,f_name_i)
 
 if __name__ == '__main__':
-    pool = Pool(20)
+    pool = Pool(8)
     pool.map(solve_parm,parms_array) #iterate over the lims
     pool.close()
     pool.join()

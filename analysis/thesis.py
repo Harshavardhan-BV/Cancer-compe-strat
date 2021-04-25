@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+from matplotlib.lines import Line2D
 import seaborn as sns
 import common_fn as cf
 plt.rcParams["svg.hashsalt"]=0
@@ -126,7 +127,6 @@ plt.close(fig)
 ## Cases
 ### normal o2 production
 cases=np.array([[1,4,3],[10,11,12],[6,2,8]])
-caseA=np.array([['AAA','AAB','AAC'],['ABA','ABB','ABC'],['ACA','ACB','ACC']])
 path='../analysed_data/EnvEq/pairwise/Tneg-Tpro/Case-Tp_initratio-Totcell/'
 cols=['no','moderate','severe']
 rows=['no','high','severe']
@@ -138,7 +138,6 @@ for i in range(3):
         df['Tpro_0']=df['Tp_initratio']*df['Totcell']
         sns.lineplot(data=df,x='Tpro_0',y='Tpro_ratio',color='tab:blue',style='Totcell',markers=True,ax=axes[i,j])
         axes[i,j].set_ylim(-0.2,1.1)
-        axes[i,j].set_title('Case '+caseA[i,j],y=0)
 pad = 5 # in points
 for ax, ax2, col in zip(axes[0], axes[2], cols):
     ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
@@ -158,7 +157,6 @@ plt.close(fig)
 
 ### low o2 production
 cases=np.array([[13,14,15],[7,5,9],[16,17,18]])
-caseA=np.array([['BAA','BAB','BAC'],['BBA','BBB','BBC'],['BCA','BCB','BCC']])
 path='../analysed_data/EnvEq/pairwise/Tneg-Tpro/Case-Tp_initratio-Totcell/'
 cols=['no','moderate','severe']
 rows=['no','high','severe']
@@ -170,7 +168,6 @@ for i in range(3):
         df['Tpro_0']=df['Tp_initratio']*df['Totcell']
         sns.lineplot(data=df,x='Tpro_0',y='Tpro_ratio',color='tab:blue',style='Totcell',markers=True,ax=axes[i,j])
         axes[i,j].set_ylim(-0.2,1.1)
-        axes[i,j].set_title('Case '+caseA[i,j],y=0)
 pad = 5 # in points
 for ax, ax2, col in zip(axes[0], axes[2], cols):
     ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
@@ -235,10 +232,9 @@ plt.close(fig)
 ## Cases
 ### test limits
 cases=np.array([[7,1,8],[2,9,10],[11,12,13]])
-caseA=np.array([['AAAA','AAAB','AAAC'],['AABA','AABB','AABC'],['AACA','AACB','AACC']])
 path='../analysed_data/EnvEq/pairwise/Tpos-Tpro/Case-Tp_initratio-Totcell/'
-cols=['no','moderate','high']
-rows=['no','moderate','high']
+cols=['no','moderate','severe']
+rows=['no','moderate','severe']
 fig,axes=plt.subplots(3,3,sharex=True,sharey=True,figsize=(15,8))
 for i in range(3):
     for j in range(3):
@@ -247,7 +243,6 @@ for i in range(3):
         df['Tpro_0']=df['Tp_initratio']*df['Totcell']
         sns.lineplot(data=df,x='Tpro_0',y='Tpro_ratio',color='tab:blue',style='Totcell',markers=True,ax=axes[i,j])
         axes[i,j].set_ylim(-0.2,1.1)
-        axes[i,j].set_title('Case '+caseA[i,j],y=0)
 pad = 5 # in points
 for ax, ax2, col in zip(axes[0], axes[2], cols):
     ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
@@ -266,10 +261,9 @@ plt.close(fig)
 
 ### oxygen limits
 cases=np.array([[7,14,15],[16,17,18],[19,20,21]])
-caseA=np.array([['AAAA','ABAA','ACAA'],['BAAA','BBAA','BCAA'],['CAAA','CBAA','CCAA']])
 path='../analysed_data/EnvEq/pairwise/Tpos-Tpro/Case-Tp_initratio-Totcell/'
-cols=['no','moderate','high']
-rows=['no','moderate','high']
+cols=['no','moderate','severe']
+rows=['no','moderate','severe']
 fig,axes=plt.subplots(3,3,sharex=True,sharey=True,figsize=(15,8))
 for i in range(3):
     for j in range(3):
@@ -278,7 +272,6 @@ for i in range(3):
         df['Tpro_0']=df['Tp_initratio']*df['Totcell']
         sns.lineplot(data=df,x='Tpro_0',y='Tpro_ratio',color='tab:blue',style='Totcell',markers=True,ax=axes[i,j])
         axes[i,j].set_ylim(-0.2,1.1)
-        axes[i,j].set_title('Case '+caseA[i,j],y=0)
 pad = 5 # in points
 for ax, ax2, col in zip(axes[0], axes[2], cols):
     ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
@@ -297,7 +290,6 @@ plt.close(fig)
 
 ### combination
 cases=np.array([[7,1,2,9],[14,22,23,24],[16,25,26,27],[17,28,29,30]])
-caseA=np.array([['AAAA','AAAB','AABA','AABB'],['ABAA','ABAB','ABBA','ABBB'],['BAAA','BAAB','BABA','BABB'],['BBAA','BBAB','BBBA','BBBB']])
 path='../analysed_data/EnvEq/pairwise/Tpos-Tpro/Case-Tp_initratio-Totcell/'
 cols=['no,no','no,moderate','moderate,no','moderate,moderate']
 rows=['no,no','no,moderate','moderate,no','moderate,moderate']
@@ -309,7 +301,6 @@ for i in range(4):
         df['Tpro_0']=df['Tp_initratio']*df['Totcell']
         sns.lineplot(data=df,x='Tpro_0',y='Tpro_ratio',color='tab:blue',style='Totcell',markers=True,ax=axes[i,j])
         axes[i,j].set_ylim(-0.2,1.1)
-        axes[i,j].set_title('Case '+caseA[i,j],y=0)
 pad = 5 # in points
 for ax, ax2, col in zip(axes[0], axes[3], cols):
     ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
@@ -327,59 +318,79 @@ fig.clf()
 plt.close(fig)
 
 # All3
-## o2 Efficiency
-fig,axes=plt.subplots(2,3,sharex=True,sharey=True,figsize=(15,5))
-props=['','0.8Tp-']
-rows=['1:1:1','8:1:1']
-effs=['LE','Null','HE']
+## Efficiency
+
+row_effs=['HE','LE']
+rows=['High Efficiency','Low Efficiency']
+col_effs=['LE','Null','HE']
 cols=['Low Efficiency','Null Efficiency','High Efficiency']
-path='../raw_output/EnvEq/All3/o2-efficiency/'
+path='../analysed_data/EnvEq/All3/efficiency/'
+#proportions=['Case-','Case-0.8Tp-']
+#initial_conditions=['1000','2000','4000']
+df1=pd.read_csv(path+'Case-eq_values.csv')
+df1['Tp_initratio']=0.3
+df2=pd.read_csv(path+'0.8Tp-Case-eq_values.csv')
+df2['Tp_initratio']=0.8
+df1=df1.append(df2,ignore_index=True)
+cf.allcell_eq_ratio(df1,-0.1)
+df1['Tpro_0']=df1['Tp_initratio']*df1['TotCell']
+custom_lines = [Line2D([0], [0], color='tab:green', lw=1),
+                Line2D([0], [0], color='tab:blue', lw=1),
+                Line2D([0], [0], color='tab:red', lw=1)]
+cell_lines = ['T+','Tp','T-']
+fig,axes=plt.subplots(2,3,sharex=True,sharey=True,figsize=(15,8))
 for i in range(2):
-    prop=props[i]
+    testeff='test_'+row_effs[i]
     for j in range(3):
-        eff=effs[j]
-        df=pd.read_csv(path+prop+'Caseo2-'+eff+'_test-HE'+'.csv')
-        axes[i,j].plot(df.t/24/60,df.Tpos,color="tab:green",label='T+')
-        axes[i,j].plot(df.t/24/60,df.Tpro,color="tab:blue",label='Tp')
-        axes[i,j].plot(df.t/24/60,df.Tneg,color="tab:red",label='T-')
+        o2eff='o2_'+col_effs[j]
+        df=df1[(df1['Test_Eff']==testeff) & (df1['O2_Eff']==o2eff)]
+        leg1=axes[i,j].legend(custom_lines, cell_lines,loc='center right',title='CellLine')
+        sns.lineplot(data=df,x='Tpro_0',y='Tpro_ratio',color='tab:blue',style='TotCell',markers=True,ax=axes[i,j])
+        sns.lineplot(data=df,x='Tpro_0',y='Tpos_ratio',color='tab:green',style='TotCell',markers=True,ax=axes[i,j],legend=False)
+        sns.lineplot(data=df,x='Tpro_0',y='Tneg_ratio',color='tab:red',style='TotCell',markers=True,ax=axes[i,j],legend=False)
+        axes[i,j].legend(loc='upper right',title='TotCell')
+        axes[i,j].set_ylim(-0.2,1.3)
+        axes[i,j].add_artist(leg1)
 pad = 5 # in points
 for ax, ax2, col in zip(axes[0], axes[1], cols):
     ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
                 xycoords='axes fraction', textcoords='offset points',
                 size='large', ha='center', va='baseline')
-    ax2.set_xlabel('Time (days)')
+    ax2.set_xlabel('Initial Tp seeding')
 for ax, row in zip(axes[:,0], rows):
     ax.annotate(row, xy=(0, 0.5), xytext=(-ax.yaxis.labelpad - pad, 0),
                 xycoords=ax.yaxis.label, textcoords='offset points',
                 size='large', ha='right', va='center')
-    ax.set_ylabel('No of Cells')
-axes[0,0].legend()
+    ax.set_ylabel('Final ratio')
 fig.tight_layout()
-fig.savefig('../writing/MSThesis/figures/All3_efficiency_o2.pdf')
+fig.savefig('../writing/MSThesis/figures/All3_efficiency.pdf')
 fig.clf()
 plt.close(fig)
 
-## test Efficiency
-fig,axes=plt.subplots(1,2,sharey=True,figsize=(10,3))
-effs=['0.1','0.3']
-cols=['Low Efficiency','High Efficiency']
-path='../raw_output/EnvEq/All3/test-efficiency/'
-prop='0.8Tp-'
-for i in range(2):
-    eff=effs[i]
-    df=pd.read_csv(path+prop+'Caseo2-Null_test-'+eff+'.csv')
-    axes[i].plot(df.t/24/60,df.Tpos,color="tab:green",label='T+')
-    axes[i].plot(df.t/24/60,df.Tpro,color="tab:blue",label='Tp')
-    axes[i].plot(df.t/24/60,df.Tneg,color="tab:red",label='T-')
-    axes[i].set_xlabel('Time (days)')
-pad = 5 # in points
-for ax, col in zip(axes, cols):
-    ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
-                xycoords='axes fraction', textcoords='offset points',
-                size='large', ha='center', va='baseline')
-axes[0].set_ylabel('No of Cells')
-axes[0].legend()
-fig.tight_layout()
-fig.savefig('../writing/MSThesis/figures/All3_efficiency_test.pdf')
-fig.clf()
-plt.close(fig)
+#for ic in initial_conditions:
+    #for prop in proportions:
+        #fig,axes=plt.subplots(2,3,sharex=True,sharey=True,figsize=(15,5))
+        #for i in range(2):
+            #testeff=row_effs[i]
+            #for j in range(3):
+                #o2eff=col_effs[j]
+                #df=pd.read_csv(path+prop+'Case-o2_'+o2eff+'-test_'+testeff+'-'+ic+'.csv')
+                #axes[i,j].plot(df.t/24/60,df.Tpos,color="tab:green",label='T+')
+                #axes[i,j].plot(df.t/24/60,df.Tpro,color="tab:blue",label='Tp')
+                #axes[i,j].plot(df.t/24/60,df.Tneg,color="tab:red",label='T-')
+        #pad = 5 # in points
+        #for ax, ax2, col in zip(axes[0], axes[1], cols):
+            #ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
+                        #xycoords='axes fraction', textcoords='offset points',
+                        #size='large', ha='center', va='baseline')
+            #ax2.set_xlabel('Time (days)')
+        #for ax, row in zip(axes[:,0], rows):
+            #ax.annotate(row, xy=(0, 0.5), xytext=(-ax.yaxis.labelpad - pad, 0),
+                        #xycoords=ax.yaxis.label, textcoords='offset points',
+                        #size='large', ha='right', va='center')
+            #ax.set_ylabel('No of Cells')
+        #axes[0,0].legend()
+        #fig.tight_layout()
+        #fig.savefig('../writing/MSThesis/figures/All3_efficiency_'+prop+ic+'.pdf')
+        #fig.clf()
+        #plt.close(fig)
