@@ -64,9 +64,9 @@ os.rename('../analysed_data/'+pre_path+parm_name+'/'+post_path+'eq_values.csv','
 
 # Combination of o2 and test efficieny
 parm_name='efficiency'
-parm_name_array=['O2_Eff','Test_Eff','TotCell']
 cf.mkdirs(pre_path=pre_path,parm_name=parm_name)
 
+parm_name_array=['O2_Eff','Test_Eff','TotCell']
 ratios=['','0.8Tp-']
 totcell=['1000','2000','4000']
 o2_cases=['o2_Null','o2_HE','o2_LE']
@@ -77,6 +77,27 @@ for o2case in o2_cases:
         for tc in totcell:
             parms_array.append([o2case,testcase,tc])
             
+for ratio in ratios:
+    post_path=ratio+'Case-'
+    cf.timeseries(pre_path=pre_path,parm_name=parm_name,parm_array=parms_array,parm_format=parm_format,post_path=post_path)
+    df=cf.eq_values(pre_path=pre_path,parm_name=parm_name,parm_name_array=parm_name_array,parm_array=parms_array,parm_format=parm_format,post_path=post_path)
+    
+# Efficiency of o2 and test different for different cell types (now only considering if T- can rescue where Tp is suppressed by T+)
+parm_name='efficiency-mixed'
+cf.mkdirs(pre_path=pre_path,parm_name=parm_name)
+
+parm_name_array=['Tpos_o2_Eff','Tpos_test_Eff','Tpro_o2_Eff','Tpro_test_Eff','Tneg_o2_Eff','TotCell']
+Tpos_o2_cases=['Tpos_o2_Null','Tpos_o2_LE']
+Tpostestcase='Tpos_test_HE'
+Tproo2case='Tpro_o2_Null'
+Tprotestcase='Tpro_test_LE'
+Tneg_o2_cases=['Tneg_o2_Null','Tneg_o2_HE','Tneg_o2_LE']
+parms_array=[]
+for Tposo2case in Tpos_o2_cases:
+    for Tnego2case in Tneg_o2_cases:
+        for tc in totcell:
+                parms_array.append([Tposo2case,Tpostestcase,Tproo2case,Tprotestcase,Tnego2case,tc])
+
 for ratio in ratios:
     post_path=ratio+'Case-'
     cf.timeseries(pre_path=pre_path,parm_name=parm_name,parm_array=parms_array,parm_format=parm_format,post_path=post_path)

@@ -1,7 +1,7 @@
 Case,lltestTpro,ultestTpro,llo2Tpro,ulo2Tpro,lltestTpos,ultestTpos,llo2Tpos,ulo2Tpos,llo2Tneg,ulo2Tneg
-o2-Null_test-HE,0,0.1,0,1,0,0.1,0,1,0,1
-o2-HE_test-HE,0,0.1,0,0.1,0,0.1,0,0.1,0,0.1
-o2-LE_test-HE,0,0.1,0.4,1,0,0.1,0.4,1,0.4,1
-o2-Null_test-LE,0,0.3,0,1,0,0.3,0,1,0,1
-o2-HE_test-LE,0,0.3,0,0.1,0,0.3,0,0.1,0,0.1
-o2-LE_test-LE,0,0.3,0.4,1,0,0.3,0.4,1,0.4,1
+o2_Null-test_HE,0,0.1,0,1,0,0.1,0,1,0,1
+o2_HE-test_HE,0,0.1,0,0.1,0,0.1,0,0.1,0,0.1
+o2_LE-test_HE,0,0.1,0.4,1,0,0.1,0.4,1,0.4,1
+o2_Null-test_LE,0,0.3,0,1,0,0.3,0,1,0,1
+o2_HE-test_LE,0,0.3,0,0.1,0,0.3,0,0.1,0,0.1
+o2_LE-test_LE,0,0.3,0.4,1,0,0.3,0.4,1,0.4,1
