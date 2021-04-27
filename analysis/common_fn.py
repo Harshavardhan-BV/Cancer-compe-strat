@@ -15,7 +15,7 @@ def mkdirs(pre_path,parm_name):
     except:
         pass
 
-def timeseries(pre_path,parm_name,parm_array,parm_format='{:.2E}',post_path='',plot_Tpos=True,plot_Tpro=True,plot_Tneg=True,plot_o2=True,plot_test=True,plot_tot=False,save=True):
+def timeseries(pre_path,parm_name,parm_array,parm_format='{:.2E}',post_path='',plot_Tpos=True,plot_Tpro=True,plot_Tneg=True,plot_o2=True,plot_test=True,plot_tot=False,custom_title=None,save=True):
     fig,ax=plt.subplots(len(parm_array),2,sharex=True,figsize=(10,3*len(parm_array)))
     i=0
     for parm in parm_array:
@@ -45,7 +45,10 @@ def timeseries(pre_path,parm_name,parm_array,parm_format='{:.2E}',post_path='',p
             ax[i,0].plot(df.t/24/60,df.Tpos+df.Tpro+df.Tneg,color="tab:grey",label='Total')
         ax[i,0].set_ylabel("No of Cells")
         ax[i,0].legend()
-        ax[i,0].set_title(parm_name+'='+string)
+        if custom_title==None:
+            ax[i,0].set_title(parm_name+'='+string)
+        else:
+            ax[i,0].set_title(custom_title[i])
         i+=1
     ## Add Xaxis label for the last row only
     ax[i-1,0].set_xlabel('Time (days)')
@@ -208,5 +211,22 @@ def eqratio_v_parm(df,plot_parm,pre_path,parm_name,post_path='',plot_Tpos=True,p
     ax1.set_xlabel(plot_parm)
     if save:
         fig.savefig('../figures/'+pre_path+parm_name+'/'+post_path+'finratio-vs-'+plot_parm+'.svg')
+    fig.clf()
+    plt.close(fig)
+
+def eqratio_v_parm_bar(df,plot_parm,pre_path,parm_name,post_path='',save=True):
+    allcell_eq_ratio(df)
+    fig,ax1=plt.subplots()
+    cell_ratios=['Tpos_ratio','Tpro_ratio','Tneg_ratio']
+    cell_colors=['tab:green','tab:blue','tab:red']
+    cell_labels=['T+','Tp','T-']
+    df.plot.bar(x=plot_parm,y=cell_ratios,color=cell_colors,stacked=True,ax=ax1)
+    ax1.set_ylim(0,1.1)
+    ax1.legend()
+    ax1.set_ylabel('Final ratio')
+    ax1.set_xlabel(plot_parm)
+    ax1.legend(cell_labels)
+    if save:
+        fig.savefig('../figures/'+pre_path+parm_name+'/'+post_path+'bar_finratio-vs-'+plot_parm+'.svg')
     fig.clf()
     plt.close(fig)
