@@ -2,6 +2,9 @@ Case,lltestTpro,ultestTpro,llo2Tpro,ulo2Tpro,lltestTpos,ultestTpos,llo2Tpos,ulo2
 Tpos_o2_Null-Tpos_test_HE-Tpro_o2_Null-Tpro_test_LE-Tneg_o2_Null,0,0.3,0,1,0,0.1,0,1,0,1
 Tpos_o2_Null-Tpos_test_HE-Tpro_o2_Null-Tpro_test_LE-Tneg_o2_LE,0,0.3,0,1,0,0.1,0,1,0.4,1
 Tpos_o2_Null-Tpos_test_HE-Tpro_o2_Null-Tpro_test_LE-Tneg_o2_HE,0,0.3,0,1,0,0.1,0,1,0,0.1
+Tpos_o2_Null-Tpos_test_HE-Tpro_o2_LE-Tpro_test_LE-Tneg_o2_Null,0,0.3,0.4,1,0,0.1,0,1,0,1
+Tpos_o2_Null-Tpos_test_HE-Tpro_o2_LE-Tpro_test_LE-Tneg_o2_LE,0,0.3,0.4,1,0,0.1,0,1,0.4,1
+Tpos_o2_Null-Tpos_test_HE-Tpro_o2_LE-Tpro_test_LE-Tneg_o2_HE,0,0.3,0.4,1,0,0.1,0,1,0,0.1
 Tpos_o2_LE-Tpos_test_HE-Tpro_o2_Null-Tpro_test_LE-Tneg_o2_Null,0,0.3,0,1,0,0.1,0.4,1,0,1
 Tpos_o2_LE-Tpos_test_HE-Tpro_o2_Null-Tpro_test_LE-Tneg_o2_LE,0,0.3,0,1,0,0.1,0.4,1,0.4,1
 Tpos_o2_LE-Tpos_test_HE-Tpro_o2_Null-Tpro_test_LE-Tneg_o2_HE,0,0.3,0,1,0,0.1,0.4,1,0,0.1

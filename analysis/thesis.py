@@ -349,21 +349,23 @@ plt.close(fig)
 
 ## Efficiency-mixed
 ### proportions 1:1:1 Tp:T+:T-
-row_effs=['Null','LE']
-rows=['Null Efficiency','Low Efficiency']
-col_effs=['LE','Null','HE']
-cols=['Low Efficiency','Null Efficiency','High Efficiency']
+Tpos_effs=['Null','Null','LE']
+Tpro_effs=['Null','LE','Null']
+rows=['Null,Null','Null,Low','Low,Null']
+Tneg_effs=['LE','Null','HE']
+cols=['Low','Null','High']
 path='../analysed_data/EnvEq/All3/efficiency-mixed/'
 df1=pd.read_csv(path+'Case-eq_values.csv')
 cf.allcell_eq_ratio(df1,-0.1)
 colors=['tab:green','tab:blue','tab:red']
 labels=['T+','Tp','T-']
-fig,axes=plt.subplots(2,3,sharex=True,sharey=True,figsize=(15,8))
-for i in range(2):
-    Tposo2eff='Tpos_o2_'+row_effs[i]
+fig,axes=plt.subplots(3,3,sharex=True,sharey=True,figsize=(15,8))
+for i in range(3):
+    Tposo2eff='Tpos_o2_'+Tpos_effs[i]
+    Tproo2eff='Tpro_o2_'+Tpro_effs[i]
     for j in range(3):
-        Tnego2eff='Tneg_o2_'+col_effs[j]
-        df=df1[(df1['Tpos_o2_Eff']==Tposo2eff) & (df1['Tneg_o2_Eff']==Tnego2eff)]
+        Tnego2eff='Tneg_o2_'+Tneg_effs[j]
+        df=df1[(df1['Tpos_o2_Eff']==Tposo2eff) & (df1['Tpro_o2_Eff']==Tproo2eff) & (df1['Tneg_o2_Eff']==Tnego2eff)]
         df.plot.bar(x='TotCell',y=['Tpos_ratio','Tpro_ratio','Tneg_ratio'],color=colors,stacked=True,ax=axes[i,j])
         axes[i,j].legend(labels)
 pad = 5 # in points
@@ -383,21 +385,23 @@ fig.clf()
 plt.close(fig)
 
 ### proportions 8:1:1 Tp:T+:T-
-row_effs=['Null','LE']
-rows=['Null Efficiency','Low Efficiency']
-col_effs=['LE','Null','HE']
-cols=['Low Efficiency','Null Efficiency','High Efficiency']
+Tpos_effs=['Null','Null','LE']
+Tpro_effs=['Null','LE','Null']
+rows=['Null,Null','Null,Low','Low,Null']
+Tneg_effs=['LE','Null','HE']
+cols=['Low','Null','High']
 path='../analysed_data/EnvEq/All3/efficiency-mixed/'
 df1=pd.read_csv(path+'0.8Tp-Case-eq_values.csv')
 cf.allcell_eq_ratio(df1,-0.1)
 colors=['tab:green','tab:blue','tab:red']
 labels=['T+','Tp','T-']
-fig,axes=plt.subplots(2,3,sharex=True,sharey=True,figsize=(15,8))
-for i in range(2):
-    Tposo2eff='Tpos_o2_'+row_effs[i]
+fig,axes=plt.subplots(3,3,sharex=True,sharey=True,figsize=(15,8))
+for i in range(3):
+    Tposo2eff='Tpos_o2_'+Tpos_effs[i]
+    Tproo2eff='Tpro_o2_'+Tpro_effs[i]
     for j in range(3):
-        Tnego2eff='Tneg_o2_'+col_effs[j]
-        df=df1[(df1['Tpos_o2_Eff']==Tposo2eff) & (df1['Tneg_o2_Eff']==Tnego2eff)]
+        Tnego2eff='Tneg_o2_'+Tneg_effs[j]
+        df=df1[(df1['Tpos_o2_Eff']==Tposo2eff) & (df1['Tpro_o2_Eff']==Tproo2eff) & (df1['Tneg_o2_Eff']==Tnego2eff)]
         df.plot.bar(x='TotCell',y=['Tpos_ratio','Tpro_ratio','Tneg_ratio'],color=colors,stacked=True,ax=axes[i,j])
         axes[i,j].legend(labels)
 pad = 5 # in points

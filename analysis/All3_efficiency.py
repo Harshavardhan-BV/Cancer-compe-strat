@@ -97,14 +97,17 @@ cf.mkdirs(pre_path=pre_path,parm_name=parm_name)
 parm_name_array=['Tpos_o2_Eff','Tpos_test_Eff','Tpro_o2_Eff','Tpro_test_Eff','Tneg_o2_Eff','TotCell']
 Tpos_o2_cases=['Tpos_o2_Null','Tpos_o2_LE']
 Tpostestcase='Tpos_test_HE'
-Tproo2case='Tpro_o2_Null'
+Tpro_o2_cases=['Tpro_o2_Null','Tpro_o2_LE']
 Tprotestcase='Tpro_test_LE'
 Tneg_o2_cases=['Tneg_o2_Null','Tneg_o2_HE','Tneg_o2_LE']
 parms_array=[]
 custom_title=[]
 for Tposo2case in Tpos_o2_cases:
-    for Tnego2case in Tneg_o2_cases:
-        for tc in totcell:
+    for Tproo2case in Tpro_o2_cases:
+        for Tnego2case in Tneg_o2_cases:
+            for tc in totcell:
+                if((Tposo2case=='Tpos_o2_LE') and (Tproo2case=='Tpro_o2_LE')):
+                    continue
                 parms_array.append([Tposo2case,Tpostestcase,Tproo2case,Tprotestcase,Tnego2case,tc])
                 custom_title.append(Tposo2case+'-'+Tnego2case+'-'+tc)
 
@@ -114,7 +117,10 @@ for ratio in ratios:
     df=cf.eq_values(pre_path=pre_path,parm_name=parm_name,parm_name_array=parm_name_array,parm_array=parms_array,parm_format=parm_format,post_path=post_path)
     df = df.astype({'Tpos_eq': float,'Tpro_eq': float,'Tneg_eq': float}) #i dont understand y the eq values are being objects, hacky fix
     for Tposo2case in Tpos_o2_cases:
-        for Tnego2case in Tneg_o2_cases:
-            df1=df.loc[(df['Tpos_o2_Eff']==Tposo2case) & (df['Tneg_o2_Eff']==Tnego2case),:].copy()
-            cf.eqratio_v_parm_bar(df=df1,plot_parm=plot_parm,pre_path=pre_path,parm_name=parm_name,post_path=post_path)
-            os.rename('../figures/'+pre_path+parm_name+'/'+post_path+'bar_finratio-vs-'+plot_parm+'.svg','../figures/'+pre_path+parm_name+'/'+post_path+Tposo2case+'-'+Tnego2case+'-bar_finratio-vs-'+plot_parm+'.svg')
+        for Tproo2case in Tpro_o2_cases:
+            for Tnego2case in Tneg_o2_cases:
+                if((Tposo2case=='Tpos_o2_LE') and (Tproo2case=='Tpro_o2_LE')):
+                    continue
+                df1=df.loc[(df['Tpos_o2_Eff']==Tposo2case) & (df['Tpro_o2_Eff']==Tproo2case) & (df['Tneg_o2_Eff']==Tnego2case),:].copy()
+                cf.eqratio_v_parm_bar(df=df1,plot_parm=plot_parm,pre_path=pre_path,parm_name=parm_name,post_path=post_path)
+                os.rename('../figures/'+pre_path+parm_name+'/'+post_path+'bar_finratio-vs-'+plot_parm+'.svg','../figures/'+pre_path+parm_name+'/'+post_path+Tposo2case+'-'+Tproo2case+'-'+Tnego2case+'-bar_finratio-vs-'+plot_parm+'.svg')
