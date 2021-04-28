@@ -93,12 +93,14 @@ Tproo2case='Tpro_o2_Null'
 Tprotestcase='Tpro_test_LE'
 Tneg_o2_cases=['Tneg_o2_Null','Tneg_o2_HE','Tneg_o2_LE']
 parms_array=[]
+custom_title=[]
 for Tposo2case in Tpos_o2_cases:
     for Tnego2case in Tneg_o2_cases:
         for tc in totcell:
                 parms_array.append([Tposo2case,Tpostestcase,Tproo2case,Tprotestcase,Tnego2case,tc])
+                custom_title.append(Tposo2case+'-'+Tnego2case+'-'+tc)
 
 for ratio in ratios:
     post_path=ratio+'Case-'
-    cf.timeseries(pre_path=pre_path,parm_name=parm_name,parm_array=parms_array,parm_format=parm_format,post_path=post_path)
+    cf.timeseries(pre_path=pre_path,parm_name=parm_name,parm_array=parms_array,parm_format=parm_format,post_path=post_path,custom_title=custom_title)
     df=cf.eq_values(pre_path=pre_path,parm_name=parm_name,parm_name_array=parm_name_array,parm_array=parms_array,parm_format=parm_format,post_path=post_path)

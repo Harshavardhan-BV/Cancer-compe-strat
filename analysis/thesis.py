@@ -387,3 +387,72 @@ fig.tight_layout()
 fig.savefig('../writing/MSThesis/figures/All3_efficiency_8:1:1.pdf')
 fig.clf()
 plt.close(fig)
+
+## Efficiency-mixed
+### proportions 1:1:1 Tp:T+:T-
+row_effs=['Null','LE']
+rows=['Null Efficiency','Low Efficiency']
+col_effs=['LE','Null','HE']
+cols=['Low Efficiency','Null Efficiency','High Efficiency']
+path='../analysed_data/EnvEq/All3/efficiency-mixed/'
+df1=pd.read_csv(path+'Case-eq_values.csv')
+cf.allcell_eq_ratio(df1,-0.1)
+colors=['tab:green','tab:blue','tab:red']
+labels=['T+','Tp','T-']
+fig,axes=plt.subplots(2,3,sharex=True,sharey=True,figsize=(15,8))
+for i in range(2):
+    Tposo2eff='Tpos_o2_'+row_effs[i]
+    for j in range(3):
+        Tnego2eff='Tneg_o2_'+col_effs[j]
+        df=df1[(df1['Tpos_o2_Eff']==Tposo2eff) & (df1['Tneg_o2_Eff']==Tnego2eff)]
+        df.plot.bar(x='TotCell',y=['Tpos_ratio','Tpro_ratio','Tneg_ratio'],color=colors,stacked=True,ax=axes[i,j])
+        axes[i,j].legend(labels)
+pad = 5 # in points
+for ax, ax2, col in zip(axes[0], axes[1], cols):
+    ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
+                xycoords='axes fraction', textcoords='offset points',
+                size='large', ha='center', va='baseline')
+    ax2.set_xlabel('Initial Total seeding')
+for ax, row in zip(axes[:,0], rows):
+    ax.annotate(row, xy=(0, 0.5), xytext=(-ax.yaxis.labelpad - pad, 0),
+                xycoords=ax.yaxis.label, textcoords='offset points',
+                size='large', ha='right', va='center')
+    ax.set_ylabel('Final ratio')
+fig.tight_layout()
+fig.savefig('../writing/MSThesis/figures/All3_efficiency-mixed_1:1:1.pdf')
+fig.clf()
+plt.close(fig)
+
+### proportions 8:1:1 Tp:T+:T-
+row_effs=['Null','LE']
+rows=['Null Efficiency','Low Efficiency']
+col_effs=['LE','Null','HE']
+cols=['Low Efficiency','Null Efficiency','High Efficiency']
+path='../analysed_data/EnvEq/All3/efficiency-mixed/'
+df1=pd.read_csv(path+'0.8Tp-Case-eq_values.csv')
+cf.allcell_eq_ratio(df1,-0.1)
+colors=['tab:green','tab:blue','tab:red']
+labels=['T+','Tp','T-']
+fig,axes=plt.subplots(2,3,sharex=True,sharey=True,figsize=(15,8))
+for i in range(2):
+    Tposo2eff='Tpos_o2_'+row_effs[i]
+    for j in range(3):
+        Tnego2eff='Tneg_o2_'+col_effs[j]
+        df=df1[(df1['Tpos_o2_Eff']==Tposo2eff) & (df1['Tneg_o2_Eff']==Tnego2eff)]
+        df.plot.bar(x='TotCell',y=['Tpos_ratio','Tpro_ratio','Tneg_ratio'],color=colors,stacked=True,ax=axes[i,j])
+        axes[i,j].legend(labels)
+pad = 5 # in points
+for ax, ax2, col in zip(axes[0], axes[1], cols):
+    ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
+                xycoords='axes fraction', textcoords='offset points',
+                size='large', ha='center', va='baseline')
+    ax2.set_xlabel('Initial Total seeding')
+for ax, row in zip(axes[:,0], rows):
+    ax.annotate(row, xy=(0, 0.5), xytext=(-ax.yaxis.labelpad - pad, 0),
+                xycoords=ax.yaxis.label, textcoords='offset points',
+                size='large', ha='right', va='center')
+    ax.set_ylabel('Final ratio')
+fig.tight_layout()
+fig.savefig('../writing/MSThesis/figures/All3_efficiency-mixed_8:1:1.pdf')
+fig.clf()
+plt.close(fig)

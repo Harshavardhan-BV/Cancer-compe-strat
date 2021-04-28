@@ -15,7 +15,7 @@ def mkdirs(pre_path,parm_name):
     except:
         pass
 
-def timeseries(pre_path,parm_name,parm_array,parm_format='{:.2E}',post_path='',plot_Tpos=True,plot_Tpro=True,plot_Tneg=True,plot_o2=True,plot_test=True,plot_tot=False,save=True):
+def timeseries(pre_path,parm_name,parm_array,parm_format='{:.2E}',post_path='',plot_Tpos=True,plot_Tpro=True,plot_Tneg=True,plot_o2=True,plot_test=True,plot_tot=False,custom_title=None,save=True):
     fig,ax=plt.subplots(len(parm_array),2,sharex=True,figsize=(10,3*len(parm_array)))
     i=0
     for parm in parm_array:
@@ -45,7 +45,10 @@ def timeseries(pre_path,parm_name,parm_array,parm_format='{:.2E}',post_path='',p
             ax[i,0].plot(df.t/24/60,df.Tpos+df.Tpro+df.Tneg,color="tab:grey",label='Total')
         ax[i,0].set_ylabel("No of Cells")
         ax[i,0].legend()
-        ax[i,0].set_title(parm_name+'='+string)
+        if custom_title==None:
+            ax[i,0].set_title(parm_name+'='+string)
+        else:
+            ax[i,0].set_title(custom_title[i])
         i+=1
     ## Add Xaxis label for the last row only
     ax[i-1,0].set_xlabel('Time (days)')
@@ -210,3 +213,7 @@ def eqratio_v_parm(df,plot_parm,pre_path,parm_name,post_path='',plot_Tpos=True,p
         fig.savefig('../figures/'+pre_path+parm_name+'/'+post_path+'finratio-vs-'+plot_parm+'.svg')
     fig.clf()
     plt.close(fig)
+
+def TTE_Tpro(df):
+    tte=int(df[df['Tpro']<1].head(1)['t'])/24/60
+    return tte
