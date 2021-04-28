@@ -83,47 +83,6 @@ fig.savefig('../writing/MSThesis/figures/Tpro-Tneg_o2lims.pdf')
 fig.clf()
 plt.close(fig)
 
-## Megarun
-path='../analysed_data/EnvEq/pairwise/Tneg-Tpro/l_lim_o2Tneg-u_lim_o2Tneg-l_lim_o2Tpro-u_lim_o2Tpro-l_lim_testTpro-u_lim_testTpro/eq_values.csv'
-df=pd.read_csv(path)
-cf.allcell_eq_ratio(df)
-parm_name_array=['l_lim_o2Tneg','u_lim_o2Tneg','l_lim_o2Tpro','u_lim_o2Tpro','l_lim_testTpro','u_lim_testTpro']
-cf.round_df(df,parm_name_array)
-### o2 lower limit Tp
-fig,ax1=plt.subplots()
-sns.scatterplot(data=df,x='l_lim_o2Tpro',y='Tpro_ratio',color='tab:blue',label="Tp",ax=ax1,alpha=0.5)
-#sns.stripplot(data=df,x='l_lim_o2Tpro',y='Tpro_ratio',color='tab:blue',label="Tp",ax=ax1,jitter=True)
-ax1.set_ylim(-0.1,1.1)
-ax1.set_ylabel('Tp Final ratio')
-ax1.set_xlabel('Tp oxygen lower limit')
-fig.tight_layout()
-fig.savefig('../writing/MSThesis/figures/Tpro-Tneg_llo2Tp.pdf')
-fig.clf()
-plt.close(fig)
-### test lower limit Tp
-fig,ax1=plt.subplots()
-sns.scatterplot(data=df,x='l_lim_testTpro',y='Tpro_ratio',color='tab:blue',label="Tp",ax=ax1,alpha=0.5)
-#sns.stripplot(data=df,x='l_lim_testTpro',y='Tpro_ratio',color='tab:blue',label="Tp",ax=ax1,jitter=True)
-ax1.set_ylim(-0.1,1.1)
-ax1.set_ylabel('Tp Final ratio')
-ax1.set_xlabel('Tp testosterone lower limit')
-fig.tight_layout()
-fig.savefig('../writing/MSThesis/figures/Tpro-Tneg_lltestTp.pdf')
-fig.clf()
-plt.close(fig)
-### test upper limit Tp
-fig,ax1=plt.subplots()
-df['llo2Tneg']=np.where(df['l_lim_o2Tneg']<=0.4,'≤0.4',df['l_lim_o2Tneg'])
-sns.scatterplot(data=df,x='u_lim_testTpro',y='Tpro_ratio',color='tab:blue',style='llo2Tneg',label="Tp",ax=ax1,alpha=0.5)
-#sns.stripplot(data=df,x='u_lim_testTpro',y='Tpro_ratio',color='tab:blue',style='l_lim_o2Tneg',label="Tp",ax=ax1,jitter=0.05)
-ax1.set_ylim(-0.1,1.1)
-ax1.set_ylabel('Tp Final ratio')
-ax1.set_xlabel('Tp testosterone upper limit')
-fig.tight_layout()
-fig.savefig('../writing/MSThesis/figures/Tpro-Tneg_ultestTp.pdf')
-fig.clf()
-plt.close(fig)
-
 ## Cases
 ### normal o2 production
 cases=np.array([[1,4,3],[10,11,12],[6,2,8]])
