@@ -42,7 +42,7 @@ for scenario in scenarios:
     for p_min in p_min_arr:
         post_path=scenario+'p={:.1e}-'.format(p_min)
         cf.timeseries(pre_path=pre_path,parm_name=parm_name,parm_array=parms_array,parm_format=parm_format,post_path=post_path,plot_tot=True)
-        df=cf.eq_values(pre_path=pre_path,parm_name=parm_name,parm_array=parms_array,parm_format=parm_format,post_path=post_path)
+        df=cf.eq_values(pre_path=pre_path,parm_name=parm_name,parm_array=parms_array,parm_format=parm_format,post_path=post_path,ttp=True,limit=9000)
 
 ## High o2 efficiency, High test efficiency
 parm_name='o2-HE_test-HE'
@@ -56,7 +56,7 @@ for scenario in scenarios:
     for p_min in p_min_arr:
         post_path=scenario+'p={:.1e}-'.format(p_min)
         cf.timeseries(pre_path=pre_path,parm_name=parm_name,parm_array=parms_array,parm_format=parm_format,post_path=post_path,plot_tot=True)
-        df=cf.eq_values(pre_path=pre_path,parm_name=parm_name,parm_array=parms_array,parm_format=parm_format,post_path=post_path)
+        df=cf.eq_values(pre_path=pre_path,parm_name=parm_name,parm_array=parms_array,parm_format=parm_format,post_path=post_path,ttp=True,limit=9000)
 
 ## Low o2 efficiency, High test efficiency
 parm_name='o2-LE_test-HE'
@@ -71,7 +71,7 @@ for scenario in scenarios:
     for p_min in p_min_arr:
         post_path=scenario+'p={:.1e}-'.format(p_min)
         cf.timeseries(pre_path=pre_path,parm_name=parm_name,parm_array=parms_array,parm_format=parm_format,post_path=post_path,plot_tot=True)
-        df=cf.eq_values(pre_path=pre_path,parm_name=parm_name,parm_array=parms_array,parm_format=parm_format,post_path=post_path)
+        df=cf.eq_values(pre_path=pre_path,parm_name=parm_name,parm_array=parms_array,parm_format=parm_format,post_path=post_path,ttp=True,limit=9000)
 
 ## Null o2 efficiency, Low test efficiency
 parm_name='o2-Null_test-LE'
@@ -81,7 +81,7 @@ cf.mkdirs(pre_path=pre_path,parm_name=parm_name)
 for p_min in p_min_arr:
     post_path='0.8Tp-p={:.1e}-'.format(p_min)
     cf.timeseries(pre_path=pre_path,parm_name=parm_name,parm_array=parms_array,parm_format=parm_format,post_path=post_path,plot_tot=True)
-    df=cf.eq_values(pre_path=pre_path,parm_name=parm_name,parm_array=parms_array,parm_format=parm_format,post_path=post_path)
+    df=cf.eq_values(pre_path=pre_path,parm_name=parm_name,parm_array=parms_array,parm_format=parm_format,post_path=post_path,ttp=True,limit=9000)
 
 
 

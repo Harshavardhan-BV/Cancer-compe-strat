@@ -68,8 +68,10 @@ def timeseries_split(no_fig,sub_arr_len,pre_path,parm_name,parm_array,parm_forma
         os.rename('../figures/'+pre_path+parm_name+'/'+post_path+'timeseries.svg','../figures/'+pre_path+parm_name+'/'+post_path+'timeseries-'+str(i)+'.svg')
 
 
-def eq_values(pre_path,parm_name,parm_array,parm_format='{:.2E}',post_path='',save=True,parm_name_array=None):
+def eq_values(pre_path,parm_name,parm_array,parm_format='{:.2E}',post_path='',save=True,parm_name_array=None,ttp=False,limit=None):
     lis=[]
+    eq_col=['o2_eq','test_eq','Tpos_eq','Tpro_eq','Tneg_eq']
+    ttp_col=['TTE_Tpro','TTP_{}'.format(limit)]
     if isinstance(parm_array[0],(list,pd.core.series.Series,np.ndarray)): #If the parameter explored is multidimensional
         for parm in parm_array:
             string=parm_format.format(parm[0])
@@ -77,15 +79,23 @@ def eq_values(pre_path,parm_name,parm_array,parm_format='{:.2E}',post_path='',sa
                 string+='-'+parm_format.format(pp)
             #print('../raw_output/'+pre_path+parm_name+'/'+post_path+string+'.csv')
             df=pd.read_csv('../raw_output/'+pre_path+parm_name+'/'+post_path+string+'.csv')
-            lis.append(np.append(parm,[df.o2.iloc[-1],df.test.iloc[-1],df.Tpos.iloc[-1],df.Tpro.iloc[-1],df.Tneg.iloc[-1]]))
-        df=pd.DataFrame(lis,columns=np.append(parm_name_array,['o2_eq','test_eq','Tpos_eq','Tpro_eq','Tneg_eq']))
+            ttp_arr=[]
+            if ttp:
+                ttp_arr=[TTE_Tpro(df),TTP(df,limit)]
+            lis.append(np.concatenate((parm,df.o2.iloc[-1],df.test.iloc[-1],df.Tpos.iloc[-1],df.Tpro.iloc[-1],df.Tneg.iloc[-1],ttp*ttp_arr),axis=None))
+        columns=np.concatenate((parm_name_array,eq_col,ttp*ttp_col),axis=None)
+        df=pd.DataFrame(lis,columns=columns)
     else:
         for parm in parm_array:
             string=parm_format.format(parm)
             #print('../raw_output/'+pre_path+parm_name+'/'+post_path+string+'.csv')
             df=pd.read_csv('../raw_output/'+pre_path+parm_name+'/'+post_path+string+'.csv')
-            lis.append([parm,df.o2.iloc[-1],df.test.iloc[-1],df.Tpos.iloc[-1],df.Tpro.iloc[-1],df.Tneg.iloc[-1]])
-        df=pd.DataFrame(lis,columns=[parm_name,'o2_eq','test_eq','Tpos_eq','Tpro_eq','Tneg_eq'])
+            ttp_arr=[]
+            if ttp:
+                ttp_arr=[TTE_Tpro(df),TTP(df,limit)]
+            lis.append(np.concatenate((parm,df.o2.iloc[-1],df.test.iloc[-1],df.Tpos.iloc[-1],df.Tpro.iloc[-1],df.Tneg.iloc[-1],ttp*ttp_arr),axis=None))
+        columns=np.concatenate((parm_name,eq_col,ttp*ttp_col),axis=None)
+        df=pd.DataFrame(lis,columns=columns)
     if save:
         df.to_csv('../analysed_data/'+pre_path+parm_name+'/'+post_path+'eq_values.csv',index=False)
     return df
@@ -230,3 +240,19 @@ def eqratio_v_parm_bar(df,plot_parm,pre_path,parm_name,post_path='',save=True):
         fig.savefig('../figures/'+pre_path+parm_name+'/'+post_path+'bar_finratio-vs-'+plot_parm+'.svg')
     fig.clf()
     plt.close(fig)
+
+def TTE_Tpro(df):
+    tte=df[df['Tpro']<1].head(1)['t'] #returns the first time point (in pandas format) where Tp goes extinct
+    if tte.empty: # if empty set to infinite time
+        tte=np.inf
+    else:
+        tte=int(tte)/24/60 #format conversion
+    return tte
+
+def TTP(df,limit):
+    ttp=df[(df['Tpro']+df['Tneg']+df['Tpos'])>=limit].head(1)['t'] #returns the first time point (in pandas format) where Total cell exceeds the specified limit
+    if ttp.empty: # if empty set to infinite time
+        ttp=np.inf
+    else:
+        ttp=int(ttp)/24/60 #format conversion
+    return ttp

@@ -13,6 +13,24 @@ def f_res(res,lim):
     else:
         return 0
 
+def check_therapy_keys(therapy_parms): #set default parameters if keys dont exist
+    if not ('abi_mode' in therapy_parms.index):
+        therapy_parms['abi_mode']='NA' #if no mode specified assume no therapy
+    if not ('dtx_mode' in therapy_parms.index):
+        therapy_parms['dtx_mode']='NA' #if no mode specified assume no therapy
+    if not ('abi_therapy_on' in therapy_parms.index):
+        therapy_parms['abi_therapy_on']=False #therapy off by default
+    if not ('dtx_therapy_on' in therapy_parms.index):
+        therapy_parms['dtx_therapy_on']=False #therapy off by default
+    if not ('abi_change_time' in therapy_parms.index):
+        therapy_parms['abi_change_time']=0
+    if not ('dtx_change_time' in therapy_parms.index):
+        therapy_parms['dtx_change_time']=0
+    if not ('abi_delay' in therapy_parms.index):
+        therapy_parms['abi_delay']=0 #no delay by default
+    if not ('dtx_delay' in therapy_parms.index):
+        therapy_parms['dtx_delay']=0 #no delay by default
+
 def abi_SOC(t,x,therapy_parms):
     if not therapy_parms['abi_therapy_on']: #check if therapy is on already
         therapy_parms['abi_therapy_on']=True #set therapy on
@@ -45,16 +63,19 @@ def abi_MT(t,x,therapy_parms):
             therapy_parms['abi_therapy_on']=True
 
 def abi_therapy(t,x,therapy_parms):
-    if therapy_parms['abi_mode']=='SOC':
-        abi_SOC(t,x,therapy_parms)
-    elif therapy_parms['abi_mode']=='AT':
-        abi_AT(t,x,therapy_parms)
-    elif therapy_parms['abi_mode']=='AT_nn':
-        abi_AT_nn(t,x,therapy_parms)
-    elif therapy_parms['abi_mode']=='MT':
-        abi_MT(t,x,therapy_parms)
+    if t >= therapy_parms['abi_delay']:
+        if therapy_parms['abi_mode']=='SOC':
+            abi_SOC(t,x,therapy_parms)
+        elif therapy_parms['abi_mode']=='AT':
+            abi_AT(t,x,therapy_parms)
+        elif therapy_parms['abi_mode']=='AT_nn':
+            abi_AT_nn(t,x,therapy_parms)
+        elif therapy_parms['abi_mode']=='MT':
+            abi_MT(t,x,therapy_parms)
+        else:
+            return None #do nothing if none of the above
     else:
-        return None #do nothing if none of the above
+        return None #do nothing if delay window not crossed
 
 def dtx_SOC(t,x,therapy_parms):
     if not therapy_parms['dtx_therapy_on']: #check if therapy is on already
@@ -80,16 +101,20 @@ def dtx_MT(t,x,therapy_parms):
             therapy_parms['dtx_therapy_on']=True
 
 def dtx_therapy(t,x,therapy_parms):
-    if therapy_parms['dtx_mode']=='SOC':
-        dtx_SOC(t,x,therapy_parms)
-    elif therapy_parms['dtx_mode']=='AT':
-        dtx_AT(t,x,therapy_parms)
-    elif therapy_parms['dtx_mode']=='MT':
-        dtx_MT(t,x,therapy_parms)
+    if t >= therapy_parms['dtx_delay']:
+        if therapy_parms['dtx_mode']=='SOC':
+            dtx_SOC(t,x,therapy_parms)
+        elif therapy_parms['dtx_mode']=='AT':
+            dtx_AT(t,x,therapy_parms)
+        elif therapy_parms['dtx_mode']=='MT':
+            dtx_MT(t,x,therapy_parms)
+        else:
+            return None #do nothing if none of the above
     else:
-        return None #do nothing if none of the above
+        return None #do nothing if delay window not crossed
 
 def f_therapy(f_ode,t,x,p,mu,lam,r,K,delta,rho,lim,therapy_parms):
+    check_therapy_keys(therapy_parms)
     abi_therapy(t,x,therapy_parms)
     p_therapy=p.copy()
     if therapy_parms['abi_therapy_on']: #check if abiraterone therapy is set to on

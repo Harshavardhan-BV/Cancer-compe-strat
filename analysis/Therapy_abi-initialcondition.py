@@ -26,4 +26,4 @@ for ir in ir_arr:
 for case in cases:
     post_path=post_path1+case+'-'
     cf.timeseries(pre_path=pre_path,parm_name=parm_name,parm_array=parms_array,parm_format=parm_format,post_path=post_path)
-    df=cf.eq_values(pre_path=pre_path,parm_name=parm_name,parm_array=parms_array,parm_format=parm_format,parm_name_array=parm_name_array,post_path=post_path)
+    df=cf.eq_values(pre_path=pre_path,parm_name=parm_name,parm_array=parms_array,parm_format=parm_format,parm_name_array=parm_name_array,post_path=post_path,ttp=True,limit=9000)
