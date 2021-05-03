@@ -103,4 +103,26 @@ for parm_name in efficiencies:
         cf.timeseries(pre_path=pre_path,parm_name=parm_name,parm_array=parms_array,parm_format=parm_format,post_path=post_path,plot_tot=True)
         df=cf.eq_values(pre_path=pre_path,parm_name=parm_name,parm_array=parms_array,parm_name_array=parm_name_array,parm_format=parm_format,post_path=post_path,ttp=True,limit=9000)
 
+# abi only with delay
+pre_path='EnvEq/All3/therapy-abi-w-delay/'
+parm_format='{}'
+parm_name_array=['abi_mode','abi_delay','Totcell']
 
+efficiencies=pd.read_csv('../input/EnvEq/All3/therapy-abi-w-delay/All3-eff_cases.csv')
+efficiencies=efficiencies.Case
+totcell=['1000','2000','4000']
+delay=['0','100','200']
+abi_mode='AT_nn'
+
+parms_array=[]
+
+for abi_delay in delay:
+        for tc in totcell:
+            parms_array.append([abi_mode,abi_delay,tc])
+
+for parm_name in efficiencies:
+    cf.mkdirs(pre_path=pre_path,parm_name=parm_name)
+    for scenario in scenarios:
+        post_path=scenario 
+        cf.timeseries(pre_path=pre_path,parm_name=parm_name,parm_array=parms_array,parm_format=parm_format,post_path=post_path,plot_tot=True)
+        df=cf.eq_values(pre_path=pre_path,parm_name=parm_name,parm_array=parms_array,parm_name_array=parm_name_array,parm_format=parm_format,post_path=post_path,ttp=True,limit=9000)

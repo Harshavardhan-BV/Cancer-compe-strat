@@ -419,3 +419,214 @@ fig.tight_layout()
 fig.savefig('../writing/MSThesis/figures/All3_efficiency-mixed_8:1:1.pdf')
 fig.clf()
 plt.close(fig)
+
+## Therapy-standardization
+###TBD
+
+## Therapy-abi
+### No delay
+#### proportions 1:1:1 Tp:T+:T-
+row_effs=['HE','LE']
+rows=['High','Low']
+col_effs=['LE','Null','HE']
+cols=['Low','Null','High']
+path='../raw_output/EnvEq/All3/therapy-abi-w-delay/'
+fig,axes=plt.subplots(2,3,sharex=True,sharey=True,figsize=(15,8))
+for i in range(2):
+    testeff='test_'+row_effs[i]
+    for j in range(3):
+        o2eff='o2_'+col_effs[j]
+        df=pd.read_csv(path+o2eff+'-'+testeff+'/AT_nn-0-2000.csv')
+        axes[i,j].plot(df.t/24/60,df.Tpos,color="tab:green",label='T+')
+        axes[i,j].plot(df.t/24/60,df.Tpro,color="tab:blue",label='Tp')
+        axes[i,j].plot(df.t/24/60,df.Tneg,color="tab:red",label='T-')
+        axes[i,j].plot(df.t/24/60,df.Tpos+df.Tpro+df.Tneg,color="tab:grey",label='Total')
+        # axes[i,j].bar(df.t/24/60,10000*df.abi_therapy,1/24/60,align='edge',color='tab:pink',alpha=0.3,label='ABI_Therapy')
+        axes[i,j].legend()
+pad = 5 # in points
+for ax, ax2, col in zip(axes[0], axes[1], cols):
+    ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
+                xycoords='axes fraction', textcoords='offset points',
+                size='large', ha='center', va='baseline')
+    ax2.set_xlabel('Time (days)')
+for ax, row in zip(axes[:,0], rows):
+    ax.annotate(row, xy=(0, 0.5), xytext=(-ax.yaxis.labelpad - pad, 0),
+                xycoords=ax.yaxis.label, textcoords='offset points',
+                size='large', ha='right', va='center')
+    ax.set_ylabel('No of Cells')
+fig.tight_layout()
+fig.savefig('../writing/MSThesis/figures/All3_therapy_1:1:1.pdf')
+fig.clf()
+plt.close(fig)
+
+#### proportions 8:1:1 Tp:T+:T-
+row_effs=['HE','LE']
+rows=['High','Low']
+col_effs=['LE','Null','HE']
+cols=['Low','Null','High']
+path='../raw_output/EnvEq/All3/therapy-abi-w-delay/'
+fig,axes=plt.subplots(2,3,sharex=True,sharey=True,figsize=(15,8))
+for i in range(2):
+    testeff='test_'+row_effs[i]
+    for j in range(3):
+        o2eff='o2_'+col_effs[j]
+        df=pd.read_csv(path+o2eff+'-'+testeff+'/0.8Tp-AT_nn-0-2000.csv')
+        axes[i,j].plot(df.t/24/60,df.Tpos,color="tab:green",label='T+')
+        axes[i,j].plot(df.t/24/60,df.Tpro,color="tab:blue",label='Tp')
+        axes[i,j].plot(df.t/24/60,df.Tneg,color="tab:red",label='T-')
+        axes[i,j].plot(df.t/24/60,df.Tpos+df.Tpro+df.Tneg,color="tab:grey",label='Total')
+        # axes[i,j].bar(df.t/24/60,10000*df.abi_therapy,1/24/60,align='edge',color='tab:pink',alpha=0.3,label='ABI_Therapy')
+        axes[i,j].legend()
+pad = 5 # in points
+for ax, ax2, col in zip(axes[0], axes[1], cols):
+    ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
+                xycoords='axes fraction', textcoords='offset points',
+                size='large', ha='center', va='baseline')
+    ax2.set_xlabel('Time (days)')
+for ax, row in zip(axes[:,0], rows):
+    ax.annotate(row, xy=(0, 0.5), xytext=(-ax.yaxis.labelpad - pad, 0),
+                xycoords=ax.yaxis.label, textcoords='offset points',
+                size='large', ha='right', va='center')
+    ax.set_ylabel('No of Cells')
+fig.tight_layout()
+fig.savefig('../writing/MSThesis/figures/All3_therapy_8:1:1.pdf')
+fig.clf()
+plt.close(fig)
+
+### 100day delay
+#### proportions 1:1:1 Tp:T+:T-
+row_effs=['HE','LE']
+rows=['High','Low']
+col_effs=['LE','Null','HE']
+cols=['Low','Null','High']
+path='../raw_output/EnvEq/All3/therapy-abi-w-delay/'
+fig,axes=plt.subplots(2,3,sharex=True,sharey=True,figsize=(15,8))
+for i in range(2):
+    testeff='test_'+row_effs[i]
+    for j in range(3):
+        o2eff='o2_'+col_effs[j]
+        df=pd.read_csv(path+o2eff+'-'+testeff+'/AT_nn-100-2000.csv')
+        axes[i,j].plot(df.t/24/60,df.Tpos,color="tab:green",label='T+')
+        axes[i,j].plot(df.t/24/60,df.Tpro,color="tab:blue",label='Tp')
+        axes[i,j].plot(df.t/24/60,df.Tneg,color="tab:red",label='T-')
+        axes[i,j].plot(df.t/24/60,df.Tpos+df.Tpro+df.Tneg,color="tab:grey",label='Total')
+        # axes[i,j].bar(df.t/24/60,10000*df.abi_therapy,1/24/60,align='edge',color='tab:pink',alpha=0.3,label='ABI_Therapy')
+        axes[i,j].legend()
+pad = 5 # in points
+for ax, ax2, col in zip(axes[0], axes[1], cols):
+    ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
+                xycoords='axes fraction', textcoords='offset points',
+                size='large', ha='center', va='baseline')
+    ax2.set_xlabel('Time (days)')
+for ax, row in zip(axes[:,0], rows):
+    ax.annotate(row, xy=(0, 0.5), xytext=(-ax.yaxis.labelpad - pad, 0),
+                xycoords=ax.yaxis.label, textcoords='offset points',
+                size='large', ha='right', va='center')
+    ax.set_ylabel('No of Cells')
+fig.tight_layout()
+fig.savefig('../writing/MSThesis/figures/All3_therapy_100day_1:1:1.pdf')
+fig.clf()
+plt.close(fig)
+
+#### proportions 8:1:1 Tp:T+:T-
+row_effs=['HE','LE']
+rows=['High','Low']
+col_effs=['LE','Null','HE']
+cols=['Low','Null','High']
+path='../raw_output/EnvEq/All3/therapy-abi-w-delay/'
+fig,axes=plt.subplots(2,3,sharex=True,sharey=True,figsize=(15,8))
+for i in range(2):
+    testeff='test_'+row_effs[i]
+    for j in range(3):
+        o2eff='o2_'+col_effs[j]
+        df=pd.read_csv(path+o2eff+'-'+testeff+'/0.8Tp-AT_nn-100-2000.csv')
+        axes[i,j].plot(df.t/24/60,df.Tpos,color="tab:green",label='T+')
+        axes[i,j].plot(df.t/24/60,df.Tpro,color="tab:blue",label='Tp')
+        axes[i,j].plot(df.t/24/60,df.Tneg,color="tab:red",label='T-')
+        axes[i,j].plot(df.t/24/60,df.Tpos+df.Tpro+df.Tneg,color="tab:grey",label='Total')
+        # axes[i,j].bar(df.t/24/60,10000*df.abi_therapy,1/24/60,align='edge',color='tab:pink',alpha=0.3,label='ABI_Therapy')
+        axes[i,j].legend()
+pad = 5 # in points
+for ax, ax2, col in zip(axes[0], axes[1], cols):
+    ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
+                xycoords='axes fraction', textcoords='offset points',
+                size='large', ha='center', va='baseline')
+    ax2.set_xlabel('Time (days)')
+for ax, row in zip(axes[:,0], rows):
+    ax.annotate(row, xy=(0, 0.5), xytext=(-ax.yaxis.labelpad - pad, 0),
+                xycoords=ax.yaxis.label, textcoords='offset points',
+                size='large', ha='right', va='center')
+    ax.set_ylabel('No of Cells')
+fig.tight_layout()
+fig.savefig('../writing/MSThesis/figures/All3_therapy_100day_8:1:1.pdf')
+fig.clf()
+plt.close(fig)
+
+### 200day delay
+#### proportions 1:1:1 Tp:T+:T-
+row_effs=['HE','LE']
+rows=['High','Low']
+col_effs=['LE','Null','HE']
+cols=['Low','Null','High']
+path='../raw_output/EnvEq/All3/therapy-abi-w-delay/'
+fig,axes=plt.subplots(2,3,sharex=True,sharey=True,figsize=(15,8))
+for i in range(2):
+    testeff='test_'+row_effs[i]
+    for j in range(3):
+        o2eff='o2_'+col_effs[j]
+        df=pd.read_csv(path+o2eff+'-'+testeff+'/AT_nn-200-2000.csv')
+        axes[i,j].plot(df.t/24/60,df.Tpos,color="tab:green",label='T+')
+        axes[i,j].plot(df.t/24/60,df.Tpro,color="tab:blue",label='Tp')
+        axes[i,j].plot(df.t/24/60,df.Tneg,color="tab:red",label='T-')
+        axes[i,j].plot(df.t/24/60,df.Tpos+df.Tpro+df.Tneg,color="tab:grey",label='Total')
+        # axes[i,j].bar(df.t/24/60,10000*df.abi_therapy,1/24/60,align='edge',color='tab:pink',alpha=0.3,label='ABI_Therapy')
+        axes[i,j].legend()
+pad = 5 # in points
+for ax, ax2, col in zip(axes[0], axes[1], cols):
+    ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
+                xycoords='axes fraction', textcoords='offset points',
+                size='large', ha='center', va='baseline')
+    ax2.set_xlabel('Time (days)')
+for ax, row in zip(axes[:,0], rows):
+    ax.annotate(row, xy=(0, 0.5), xytext=(-ax.yaxis.labelpad - pad, 0),
+                xycoords=ax.yaxis.label, textcoords='offset points',
+                size='large', ha='right', va='center')
+    ax.set_ylabel('No of Cells')
+fig.tight_layout()
+fig.savefig('../writing/MSThesis/figures/All3_therapy_200day_1:1:1.pdf')
+fig.clf()
+plt.close(fig)
+
+#### proportions 8:1:1 Tp:T+:T-
+row_effs=['HE','LE']
+rows=['High','Low']
+col_effs=['LE','Null','HE']
+cols=['Low','Null','High']
+path='../raw_output/EnvEq/All3/therapy-abi-w-delay/'
+fig,axes=plt.subplots(2,3,sharex=True,sharey=True,figsize=(15,8))
+for i in range(2):
+    testeff='test_'+row_effs[i]
+    for j in range(3):
+        o2eff='o2_'+col_effs[j]
+        df=pd.read_csv(path+o2eff+'-'+testeff+'/0.8Tp-AT_nn-200-2000.csv')
+        axes[i,j].plot(df.t/24/60,df.Tpos,color="tab:green",label='T+')
+        axes[i,j].plot(df.t/24/60,df.Tpro,color="tab:blue",label='Tp')
+        axes[i,j].plot(df.t/24/60,df.Tneg,color="tab:red",label='T-')
+        axes[i,j].plot(df.t/24/60,df.Tpos+df.Tpro+df.Tneg,color="tab:grey",label='Total')
+        # axes[i,j].bar(df.t/24/60,10000*df.abi_therapy,1/24/60,align='edge',color='tab:pink',alpha=0.3,label='ABI_Therapy')
+        axes[i,j].legend()
+pad = 5 # in points
+for ax, ax2, col in zip(axes[0], axes[1], cols):
+    ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
+                xycoords='axes fraction', textcoords='offset points',
+                size='large', ha='center', va='baseline')
+    ax2.set_xlabel('Time (days)')
+for ax, row in zip(axes[:,0], rows):
+    ax.annotate(row, xy=(0, 0.5), xytext=(-ax.yaxis.labelpad - pad, 0),
+                xycoords=ax.yaxis.label, textcoords='offset points',
+                size='large', ha='right', va='center')
+    ax.set_ylabel('No of Cells')
+fig.tight_layout()
+fig.savefig('../writing/MSThesis/figures/All3_therapy_200day_8:1:1.pdf')
+fig.clf()
+plt.close(fig)
