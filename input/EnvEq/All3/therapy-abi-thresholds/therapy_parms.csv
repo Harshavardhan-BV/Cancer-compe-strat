@@ -1,0 +1,9 @@
+Name,abi_mode,abi_therapy_on,abi_change_time,abi_at_x_off,abi_at_x_on,p_min
+AT_nn-2000-1000,AT_nn,False,0,1000,2000,1E-07
+AT_nn-4000-2000,AT_nn,False,0,2000,4000,1E-07
+AT_nn-6000-4000,AT_nn,False,0,4000,6000,1E-07
+AT_nn-8000-6000,AT_nn,False,0,6000,8000,1E-07
+AT-2000-1000,AT,False,0,1000,2000,1E-07
+AT-4000-2000,AT,False,0,2000,4000,1E-07
+AT-6000-4000,AT,False,0,4000,6000,1E-07
+AT-8000-6000,AT,False,0,6000,8000,1E-07
