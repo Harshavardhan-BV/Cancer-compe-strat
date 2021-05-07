@@ -1,4 +1,7 @@
-Name,abi_mode,abi_therapy_on,abi_delay,abi_change_time,abi_at_x_off,abi_at_x_on,abi_mt_t_on,abi_mt_t_off,p_min
-AT_nn-0,AT_nn,False,0,0,4000,6000,0,0,1E-07
-AT_nn-100,AT_nn,False,144000,0,4000,6000,0,0,1E-07
-AT_nn-200,AT_nn,False,288000,0,4000,6000,0,0,1E-07
+Name,abi_mode,abi_therapy_on,abi_delay,abi_change_time,abi_at_x_off,abi_at_x_on,abi_mt_t_on,abi_mt_t_off,p_min,dtx_mode,dtx_therapy_on,dtx_delay,dtx_change_time,dtx_at_x_off,dtx_at_x_on,dtx_mt_t_on,dtx_mt_t_off,T_pos_r_mult,T_pro_r_mult,T_neg_r_mult
+AT_nn-0-NA-0,AT_nn,False,0,0,4000,6000,0,0,1E-07,NA,False,0,0,0,0,0,0,0.89,0.91,0.33
+AT_nn-100-NA-0,AT_nn,False,144000,0,4000,6000,0,0,1E-07,NA,False,0,0,0,0,0,0,0.89,0.91,0.33
+AT_nn-200-NA-0,AT_nn,False,288000,0,4000,6000,0,0,1E-07,NA,False,0,0,0,0,0,0,0.89,0.91,0.33
+AT_nn-0-AT-0,AT_nn,False,0,0,4000,6000,0,0,1E-07,AT,False,1440,0,4000,6000,0,0,0.89,0.91,0.33
+AT_nn-100-AT-100,AT_nn,False,144000,0,4000,6000,0,0,1E-07,AT,False,145440,0,4000,6000,0,0,0.89,0.91,0.33
+AT_nn-200-AT-200,AT_nn,False,288000,0,4000,6000,0,0,1E-07,AT,False,289440,0,4000,6000,0,0,0.89,0.91,0.33

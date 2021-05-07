@@ -10,4 +10,4 @@
 **/*-ignore/
 **/*-ignore.*
 #Ignore therapy with abiraterone alone -> large file size
-raw_output/EnvEq/All3/therapy-abi*
+raw_output/EnvEq/All3/therapy-abi/*

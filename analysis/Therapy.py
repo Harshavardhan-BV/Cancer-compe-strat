@@ -71,9 +71,8 @@ efficiencies=pd.read_csv('../input/EnvEq/All3/therapy-w-delay/All3-eff_cases.csv
 efficiencies=efficiencies.Case
 totcell=['1000','2000','4000']
 delay=['0','100','200']
-delay1=['1','101','201']
 abi_mode='AT_nn'
-dtx_modes=['NA','AT_DTX_delayed','AT_ABI_delayed']
+dtx_modes=['NA','AT']
 scenarios=np.array([
     '', ### Tp:T+:T- 1:1:1 x 666 (total ~2000)
     '0.8Tp-', ### Tp:T+:T- 8:1:1 x 200 (total 2000)
@@ -84,14 +83,9 @@ for dtx_mode in dtx_modes:
     if dtx_mode=='NA':
         dtx_delay=['0','0','0']
         abi_delay=delay
-    elif dtx_mode=='AT_DTX_delayed':
-        dtx_mode='AT'
-        dtx_delay=delay1
-        abi_delay=delay
-    elif dtx_mode=='AT_ABI_delayed':
-        dtx_mode='AT'
+    elif dtx_mode=='AT':
         dtx_delay=delay
-        abi_delay=delay1
+        abi_delay=delay
     for i in range(len(delay)):
         for tc in totcell:
             parms_array.append([abi_mode,abi_delay[i],dtx_mode,dtx_delay[i],tc])

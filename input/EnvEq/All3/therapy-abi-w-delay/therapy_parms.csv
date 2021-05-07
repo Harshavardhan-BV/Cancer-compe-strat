@@ -1,4 +1,4 @@
 Name,abi_mode,abi_therapy_on,abi_delay,abi_change_time,abi_at_x_off,abi_at_x_on,abi_mt_t_on,abi_mt_t_off,p_min
-AT_nn-0,AT_nn,False,0,0,6000,8000,0,0,1E-07
-AT_nn-100,AT_nn,False,144000,0,6000,8000,0,0,1E-07
-AT_nn-200,AT_nn,False,288000,0,6000,8000,0,0,1E-07
+AT_nn-0,AT_nn,False,0,0,4000,6000,0,0,1E-07
+AT_nn-100,AT_nn,False,144000,0,4000,6000,0,0,1E-07
+AT_nn-200,AT_nn,False,288000,0,4000,6000,0,0,1E-07

@@ -63,4 +63,4 @@ u_lim_testTpos=0.1 #(prop)
 l_lim_testTpro=0 #(prop)
 u_lim_testTpro=0.1 #(prop)
 #filename to save output in
-f_name='All3/therapy-abi-w-delay/'
+f_name='All3/therapy-w-delay/'
