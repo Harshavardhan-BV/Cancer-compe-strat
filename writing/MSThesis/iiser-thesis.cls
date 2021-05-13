@@ -111,6 +111,7 @@
 \else
   \geometry{margin=1.5in,marginparwidth=1in}
 \fi
+\RequirePackage{ccicons}
 \let\bd@ps@plain@saved\ps@plain
 \let\bd@ps@empty@saved\ps@empty
 \let\bd@ps@headings@saved\ps@headings
@@ -158,15 +159,20 @@ iiser-thesis class.}}%
   \egroup
   \bd@optpage*{Acknowledgments}{\@acknowledgments}%
   \cleardoublepage
+  \phantomsection
   \bd@abstract{\@thesisabstract}%
   \cleardoublepage
   \bd@optpage{Preface}{\@preface}%
   \cleardoublepage
+  \phantomsection
+  \addcontentsline{toc}{chapter}{\contentsname}
   \tableofcontents
   \cleardoublepage
+  \phantomsection
   \addcontentsline{toc}{chapter}{\listtablename}
   \listoftables
   \cleardoublepage
+  \phantomsection
   \addcontentsline{toc}{chapter}{\listfigurename}
   \listoffigures
   \cleardoublepage
@@ -233,7 +239,7 @@ iiser-thesis class.}}%
 \gdef\@committee{}
 
 \def\copyrightnotice{\gdef\@copyrightnotice{
-   \copyright\ \@author\ \@graduationyear\par  All rights reserved}}
+   \ccby\ \@author\ \@graduationyear\par  This work is licensed under a \url{https://creativecommons.org/licenses/by/4.0/}{CC BY 4.0} license}}
 
 
 \newcommand{\thesistitlepage}{
@@ -241,33 +247,32 @@ iiser-thesis class.}}%
   \begin{center}
     \vspace*{-1in}%
     {\Huge \bf\baselineskip=.8\baselineskip \@title\\}
-    \vskip 2em
+    \vskip 1em
          {\bf A Thesis}
-          \vskip 2em
+          \vskip 1em
    \large{submitted to\\
     Indian Institute of Science Education and Research Pune\\
     in partial fulfillment  of the requirements for the \\
     BS-MS Dual Degree Programme\\}
-      \vskip 1em
+      \vskip 0.5em
           {by \par}
-         \vskip 1.5em
+         \vskip 1em
          \begin{tabular}[t]{c}
             {\large {\bf \@author}}
          \end{tabular}
-    \vskip 2em
+    \vskip 1em
     \includegraphics{iiser-logo.png}
     \end{center}
     \begin{center}
     Indian Institute of Science Education and Research Pune\\
   Dr. Homi Bhabha Road,\\
            Pashan, Pune 411008, INDIA.
-           \vskip 1em
+           \vskip 0.5em
      {\@graduationmonth, \@graduationyear}
   \end{center}%
-  \vfil
 \begin{center}
 {Supervisor: \@supervisor }\\
-{\copyright\; \@author\; \@graduationyear\par All rights reserved}
+{\ccby\; \@author\; \@graduationyear\par This work is licensed under a \href{https://creativecommons.org/licenses/by/4.0/}{CC BY 4.0} license}
 \end{center}
   \clearpage}
 

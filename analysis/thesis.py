@@ -5,6 +5,7 @@ from matplotlib.lines import Line2D
 import seaborn as sns
 import common_fn as cf
 plt.rcParams["svg.hashsalt"]=0
+plt.rcParams["font.size"]=11
 
 # f_i(res)
 fig,axes=plt.subplots(figsize=(5,3))
@@ -54,7 +55,7 @@ for ax, row in zip(axes[:,0], rows):
                 xycoords=ax.yaxis.label, textcoords='offset points',
                 size='large', ha='right', va='center')
     ax.set_ylabel('No of Cells')
-axes[0,0].legend()
+axes[0,-1].legend(bbox_to_anchor=(1,1), loc="upper left",title='Cell Type')
 fig.tight_layout()
 fig.savefig('../writing/MSThesis/figures/Tpro-Tneg_testlims.pdf')
 fig.clf()
@@ -77,13 +78,14 @@ for ax, col in zip(axes, cols):
                 xycoords='axes fraction', textcoords='offset points',
                 size='large', ha='center', va='baseline')
 axes[0].set_ylabel('No of Cells')
-axes[0].legend()
+axes[1].legend(bbox_to_anchor=(1,1), loc="upper left",title='Cell Type')
 fig.tight_layout()
 fig.savefig('../writing/MSThesis/figures/Tpro-Tneg_o2lims.pdf')
 fig.clf()
 plt.close(fig)
 
 ## Cases
+plt.rcParams["font.size"]=16
 ### normal o2 production
 cases=np.array([[1,4,3],[10,11,12],[6,2,8]])
 path='../analysed_data/EnvEq/pairwise/Tneg-Tpro/Case-Tp_initratio-Totcell/'
@@ -95,7 +97,7 @@ for i in range(3):
         df=pd.read_csv(path+'Case{:.1f}-eq_values.csv'.format(cases[i,j]))
         cf.allcell_eq_ratio(df,-0.1)
         df['Tpro_0']=df['Tp_initratio']*df['Totcell']
-        sns.lineplot(data=df,x='Tpro_0',y='Tpro_ratio',color='tab:blue',style='Totcell',markers=True,ax=axes[i,j])
+        sns.lineplot(data=df,x='Tpro_0',y='Tpro_ratio',color='tab:blue',style='Totcell',markers=True,ax=axes[i,j],legend=(i==0 and j==2))
         axes[i,j].set_ylim(-0.2,1.1)
 pad = 5 # in points
 for ax, ax2, col in zip(axes[0], axes[2], cols):
@@ -108,7 +110,7 @@ for ax, row in zip(axes[:,0], rows):
                 xycoords=ax.yaxis.label, textcoords='offset points',
                 size='large', ha='right', va='center')
     ax.set_ylabel('Final Tp ratio')
-axes[0,0].legend()
+axes[0,-1].legend(bbox_to_anchor=(1,1), loc="upper left",title='Initial Total Seeding')
 fig.tight_layout()
 fig.savefig('../writing/MSThesis/figures/Tpro-Tneg_cases_normal.pdf')
 fig.clf()
@@ -125,7 +127,7 @@ for i in range(3):
         df=pd.read_csv(path+'Case{:.1f}-eq_values.csv'.format(cases[i,j]))
         cf.allcell_eq_ratio(df,-0.1)
         df['Tpro_0']=df['Tp_initratio']*df['Totcell']
-        sns.lineplot(data=df,x='Tpro_0',y='Tpro_ratio',color='tab:blue',style='Totcell',markers=True,ax=axes[i,j])
+        sns.lineplot(data=df,x='Tpro_0',y='Tpro_ratio',color='tab:blue',style='Totcell',markers=True,ax=axes[i,j],legend=(i==0 and j==2))
         axes[i,j].set_ylim(-0.2,1.1)
 pad = 5 # in points
 for ax, ax2, col in zip(axes[0], axes[2], cols):
@@ -138,12 +140,14 @@ for ax, row in zip(axes[:,0], rows):
                 xycoords=ax.yaxis.label, textcoords='offset points',
                 size='large', ha='right', va='center')
     ax.set_ylabel('Final Tp ratio')
+axes[0,-1].legend(bbox_to_anchor=(1,1), loc="upper left",title='Initial Total Seeding')
 fig.tight_layout()
 fig.savefig('../writing/MSThesis/figures/Tpro-Tneg_cases_poor.pdf')
 fig.clf()
 plt.close(fig)
 
 # T+ - Tp
+plt.rcParams["font.size"]=11
 ## When Tp test limited and T+ test limited
 fig,axes=plt.subplots(1,2,sharey=True,figsize=(10,3))
 path='../raw_output/EnvEq/pairwise/Tpos-Tpro/u_lim_testTpos-u_lim_testTpro/'
@@ -160,7 +164,7 @@ for ax, col in zip(axes, cols):
     ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
                 xycoords='axes fraction', textcoords='offset points',
                 size='large', ha='center', va='baseline')
-axes[0].legend()
+axes[1].legend(bbox_to_anchor=(1,1), loc="upper left",title='Cell Type')
 fig.tight_layout()
 fig.savefig('../writing/MSThesis/figures/Tpos-Tpro_testlims.pdf')
 fig.clf()
@@ -182,13 +186,14 @@ for ax, col in zip(axes, cols):
     ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
                 xycoords='axes fraction', textcoords='offset points',
                 size='large', ha='center', va='baseline')
-axes[0].legend()
+axes[1].legend(bbox_to_anchor=(1,1), loc="upper left",title='Cell Type')
 fig.tight_layout()
 fig.savefig('../writing/MSThesis/figures/Tpos-Tpro_o2lims.pdf')
 fig.clf()
 plt.close(fig)
 
 ## Cases
+plt.rcParams["font.size"]=16
 ### test limits
 cases=np.array([[7,1,8],[2,9,10],[11,12,13]])
 path='../analysed_data/EnvEq/pairwise/Tpos-Tpro/Case-Tp_initratio-Totcell/'
@@ -200,7 +205,7 @@ for i in range(3):
         df=pd.read_csv(path+'Case{:.1f}-eq_values.csv'.format(cases[i,j]))
         cf.allcell_eq_ratio(df,-0.1)
         df['Tpro_0']=df['Tp_initratio']*df['Totcell']
-        sns.lineplot(data=df,x='Tpro_0',y='Tpro_ratio',color='tab:blue',style='Totcell',markers=True,ax=axes[i,j])
+        sns.lineplot(data=df,x='Tpro_0',y='Tpro_ratio',color='tab:blue',style='Totcell',markers=True,ax=axes[i,j],legend=(i==0 and j==2))
         axes[i,j].set_ylim(-0.2,1.1)
 pad = 5 # in points
 for ax, ax2, col in zip(axes[0], axes[2], cols):
@@ -213,6 +218,7 @@ for ax, row in zip(axes[:,0], rows):
                 xycoords=ax.yaxis.label, textcoords='offset points',
                 size='large', ha='right', va='center')
     ax.set_ylabel('Final Tp ratio')
+axes[0,-1].legend(bbox_to_anchor=(1,1), loc="upper left",title='Initial Total Seeding')
 fig.tight_layout()
 fig.savefig('../writing/MSThesis/figures/Tpos-Tpro_cases_test.pdf')
 fig.clf()
@@ -229,7 +235,7 @@ for i in range(3):
         df=pd.read_csv(path+'Case{:.1f}-eq_values.csv'.format(cases[i,j]))
         cf.allcell_eq_ratio(df,-0.1)
         df['Tpro_0']=df['Tp_initratio']*df['Totcell']
-        sns.lineplot(data=df,x='Tpro_0',y='Tpro_ratio',color='tab:blue',style='Totcell',markers=True,ax=axes[i,j])
+        sns.lineplot(data=df,x='Tpro_0',y='Tpro_ratio',color='tab:blue',style='Totcell',markers=True,ax=axes[i,j],legend=(i==0 and j==2))
         axes[i,j].set_ylim(-0.2,1.1)
 pad = 5 # in points
 for ax, ax2, col in zip(axes[0], axes[2], cols):
@@ -242,12 +248,14 @@ for ax, row in zip(axes[:,0], rows):
                 xycoords=ax.yaxis.label, textcoords='offset points',
                 size='large', ha='right', va='center')
     ax.set_ylabel('Final Tp ratio')
+axes[0,-1].legend(bbox_to_anchor=(1,1), loc="upper left",title='Initial Total Seeding')
 fig.tight_layout()
 fig.savefig('../writing/MSThesis/figures/Tpos-Tpro_cases_o2.pdf')
 fig.clf()
 plt.close(fig)
 
 ### combination
+plt.rcParams["font.size"]=19
 cases=np.array([[7,1,2,9],[14,22,23,24],[16,25,26,27],[17,28,29,30]])
 path='../analysed_data/EnvEq/pairwise/Tpos-Tpro/Case-Tp_initratio-Totcell/'
 cols=['no,no','no,moderate','moderate,no','moderate,moderate']
@@ -258,7 +266,7 @@ for i in range(4):
         df=pd.read_csv(path+'Case{:.1f}-eq_values.csv'.format(cases[i,j]))
         cf.allcell_eq_ratio(df,-0.1)
         df['Tpro_0']=df['Tp_initratio']*df['Totcell']
-        sns.lineplot(data=df,x='Tpro_0',y='Tpro_ratio',color='tab:blue',style='Totcell',markers=True,ax=axes[i,j])
+        sns.lineplot(data=df,x='Tpro_0',y='Tpro_ratio',color='tab:blue',style='Totcell',markers=True,ax=axes[i,j],legend=(i==0 and j==3))
         axes[i,j].set_ylim(-0.2,1.1)
 pad = 5 # in points
 for ax, ax2, col in zip(axes[0], axes[3], cols):
@@ -271,6 +279,7 @@ for ax, row in zip(axes[:,0], rows):
                 xycoords=ax.yaxis.label, textcoords='offset points',
                 size='large', ha='right', va='center')
     ax.set_ylabel('Final Tp ratio')
+axes[0,-1].legend(bbox_to_anchor=(1,1), loc="upper left",title='Initial Total Seeding')
 fig.tight_layout()
 fig.savefig('../writing/MSThesis/figures/Tpos-Tpro_cases.pdf')
 fig.clf()
@@ -278,6 +287,7 @@ plt.close(fig)
 
 # All3
 ## Efficiency
+plt.rcParams["font.size"]=16
 ### proportions 1:1:1 Tp:T+:T-
 row_effs=['HE','LE']
 rows=['no','moderate']
@@ -295,8 +305,7 @@ for i in range(2):
     for j in range(3):
         o2eff='o2_'+col_effs[j]
         df=df1[(df1['Test_Eff']==testeff) & (df1['O2_Eff']==o2eff)]
-        df.plot.bar(x='TotCell',y=['Tpos_ratio','Tpro_ratio','Tneg_ratio'],color=colors,stacked=True,ax=axes[i,j])
-        axes[i,j].legend(labels)
+        df.plot.bar(x='TotCell',y=['Tpos_ratio','Tpro_ratio','Tneg_ratio'],color=colors,stacked=True,ax=axes[i,j],legend=None)
 pad = 5 # in points
 for ax, ax2, col in zip(axes[0], axes[1], cols):
     ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
@@ -308,6 +317,7 @@ for ax, row in zip(axes[:,0], rows):
                 xycoords=ax.yaxis.label, textcoords='offset points',
                 size='large', ha='right', va='center')
     ax.set_ylabel('Final ratio')
+axes[0,-1].legend(labels,bbox_to_anchor=(1,1), loc="upper left",title='Cell Type')
 fig.tight_layout()
 fig.savefig('../writing/MSThesis/figures/All3_efficiency_1:1:1.pdf')
 fig.clf()
@@ -329,8 +339,7 @@ for i in range(2):
     for j in range(3):
         o2eff='o2_'+col_effs[j]
         df=df1[(df1['Test_Eff']==testeff) & (df1['O2_Eff']==o2eff)]
-        df.plot.bar(x='TotCell',y=['Tpos_ratio','Tpro_ratio','Tneg_ratio'],color=colors,stacked=True,ax=axes[i,j])
-        axes[i,j].legend(labels)
+        df.plot.bar(x='TotCell',y=['Tpos_ratio','Tpro_ratio','Tneg_ratio'],color=colors,stacked=True,ax=axes[i,j],legend=None)
 pad = 5 # in points
 for ax, ax2, col in zip(axes[0], axes[1], cols):
     ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
@@ -342,6 +351,7 @@ for ax, row in zip(axes[:,0], rows):
                 xycoords=ax.yaxis.label, textcoords='offset points',
                 size='large', ha='right', va='center')
     ax.set_ylabel('Final ratio')
+axes[0,-1].legend(labels,bbox_to_anchor=(1,1), loc="upper left",title='Cell Type')
 fig.tight_layout()
 fig.savefig('../writing/MSThesis/figures/All3_efficiency_8:1:1.pdf')
 fig.clf()
@@ -363,18 +373,18 @@ for i in range(2):
         axes[i,j].plot(df.t/24/60,df.Tpro,color="tab:blue",label='Tp')
         axes[i,j].plot(df.t/24/60,df.Tneg,color="tab:red",label='T-')
         axes[i,j].plot(df.t/24/60,df.Tpos+df.Tpro+df.Tneg,color="tab:grey",label='Total')
-        axes[i,j].legend()
 pad = 5 # in points
 for ax, ax2, col in zip(axes[0], axes[1], cols):
     ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
                 xycoords='axes fraction', textcoords='offset points',
                 size='large', ha='center', va='baseline')
-    ax2.set_xlabel('Initial Total seeding')
+    ax2.set_xlabel('Time (days)')
 for ax, row in zip(axes[:,0], rows):
     ax.annotate(row, xy=(0, 0.5), xytext=(-ax.yaxis.labelpad - pad, 0),
                 xycoords=ax.yaxis.label, textcoords='offset points',
                 size='large', ha='right', va='center')
-    ax.set_ylabel('Final ratio')
+    ax.set_ylabel('No of Cells')
+axes[0,-1].legend(bbox_to_anchor=(1,1), loc="upper left",title='Cell Type')
 fig.tight_layout()
 fig.savefig('../writing/MSThesis/figures/All3_efficiency_1:1:1-1000.pdf')
 fig.clf()
@@ -396,18 +406,18 @@ for i in range(2):
         axes[i,j].plot(df.t/24/60,df.Tpro,color="tab:blue",label='Tp')
         axes[i,j].plot(df.t/24/60,df.Tneg,color="tab:red",label='T-')
         axes[i,j].plot(df.t/24/60,df.Tpos+df.Tpro+df.Tneg,color="tab:grey",label='Total')
-        axes[i,j].legend()
 pad = 5 # in points
 for ax, ax2, col in zip(axes[0], axes[1], cols):
     ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
                 xycoords='axes fraction', textcoords='offset points',
                 size='large', ha='center', va='baseline')
-    ax2.set_xlabel('Initial Total seeding')
+    ax2.set_xlabel('Time (days)')
 for ax, row in zip(axes[:,0], rows):
     ax.annotate(row, xy=(0, 0.5), xytext=(-ax.yaxis.labelpad - pad, 0),
                 xycoords=ax.yaxis.label, textcoords='offset points',
                 size='large', ha='right', va='center')
-    ax.set_ylabel('Final ratio')
+    ax.set_ylabel('No of Cells')
+axes[0,-1].legend(bbox_to_anchor=(1,1), loc="upper left",title='Cell Type')
 fig.tight_layout()
 fig.savefig('../writing/MSThesis/figures/All3_efficiency_1:1:1-2000.pdf')
 fig.clf()
@@ -429,18 +439,18 @@ for i in range(2):
         axes[i,j].plot(df.t/24/60,df.Tpro,color="tab:blue",label='Tp')
         axes[i,j].plot(df.t/24/60,df.Tneg,color="tab:red",label='T-')
         axes[i,j].plot(df.t/24/60,df.Tpos+df.Tpro+df.Tneg,color="tab:grey",label='Total')
-        axes[i,j].legend()
 pad = 5 # in points
 for ax, ax2, col in zip(axes[0], axes[1], cols):
     ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
                 xycoords='axes fraction', textcoords='offset points',
                 size='large', ha='center', va='baseline')
-    ax2.set_xlabel('Initial Total seeding')
+    ax2.set_xlabel('Time (days)')
 for ax, row in zip(axes[:,0], rows):
     ax.annotate(row, xy=(0, 0.5), xytext=(-ax.yaxis.labelpad - pad, 0),
                 xycoords=ax.yaxis.label, textcoords='offset points',
                 size='large', ha='right', va='center')
-    ax.set_ylabel('Final ratio')
+    ax.set_ylabel('No of Cells')
+axes[0,-1].legend(bbox_to_anchor=(1,1), loc="upper left",title='Cell Type')
 fig.tight_layout()
 fig.savefig('../writing/MSThesis/figures/All3_efficiency_1:1:1-4000.pdf')
 fig.clf()
@@ -462,18 +472,18 @@ for i in range(2):
         axes[i,j].plot(df.t/24/60,df.Tpro,color="tab:blue",label='Tp')
         axes[i,j].plot(df.t/24/60,df.Tneg,color="tab:red",label='T-')
         axes[i,j].plot(df.t/24/60,df.Tpos+df.Tpro+df.Tneg,color="tab:grey",label='Total')
-        axes[i,j].legend()
 pad = 5 # in points
 for ax, ax2, col in zip(axes[0], axes[1], cols):
     ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
                 xycoords='axes fraction', textcoords='offset points',
                 size='large', ha='center', va='baseline')
-    ax2.set_xlabel('Initial Total seeding')
+    ax2.set_xlabel('Time (days)')
 for ax, row in zip(axes[:,0], rows):
     ax.annotate(row, xy=(0, 0.5), xytext=(-ax.yaxis.labelpad - pad, 0),
                 xycoords=ax.yaxis.label, textcoords='offset points',
                 size='large', ha='right', va='center')
-    ax.set_ylabel('Final ratio')
+    ax.set_ylabel('No of Cells')
+axes[0,-1].legend(bbox_to_anchor=(1,1), loc="upper left",title='Cell Type')
 fig.tight_layout()
 fig.savefig('../writing/MSThesis/figures/All3_efficiency_8:1:1-1000.pdf')
 fig.clf()
@@ -495,18 +505,18 @@ for i in range(2):
         axes[i,j].plot(df.t/24/60,df.Tpro,color="tab:blue",label='Tp')
         axes[i,j].plot(df.t/24/60,df.Tneg,color="tab:red",label='T-')
         axes[i,j].plot(df.t/24/60,df.Tpos+df.Tpro+df.Tneg,color="tab:grey",label='Total')
-        axes[i,j].legend()
 pad = 5 # in points
 for ax, ax2, col in zip(axes[0], axes[1], cols):
     ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
                 xycoords='axes fraction', textcoords='offset points',
                 size='large', ha='center', va='baseline')
-    ax2.set_xlabel('Initial Total seeding')
+    ax2.set_xlabel('Time (days)')
 for ax, row in zip(axes[:,0], rows):
     ax.annotate(row, xy=(0, 0.5), xytext=(-ax.yaxis.labelpad - pad, 0),
                 xycoords=ax.yaxis.label, textcoords='offset points',
                 size='large', ha='right', va='center')
-    ax.set_ylabel('Final ratio')
+    ax.set_ylabel('No of Cells')
+axes[0,-1].legend(bbox_to_anchor=(1,1), loc="upper left",title='Cell Type')
 fig.tight_layout()
 fig.savefig('../writing/MSThesis/figures/All3_efficiency_8:1:1-2000.pdf')
 fig.clf()
@@ -528,18 +538,18 @@ for i in range(2):
         axes[i,j].plot(df.t/24/60,df.Tpro,color="tab:blue",label='Tp')
         axes[i,j].plot(df.t/24/60,df.Tneg,color="tab:red",label='T-')
         axes[i,j].plot(df.t/24/60,df.Tpos+df.Tpro+df.Tneg,color="tab:grey",label='Total')
-        axes[i,j].legend()
 pad = 5 # in points
 for ax, ax2, col in zip(axes[0], axes[1], cols):
     ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
                 xycoords='axes fraction', textcoords='offset points',
                 size='large', ha='center', va='baseline')
-    ax2.set_xlabel('Initial Total seeding')
+    ax2.set_xlabel('Time (days)')
 for ax, row in zip(axes[:,0], rows):
     ax.annotate(row, xy=(0, 0.5), xytext=(-ax.yaxis.labelpad - pad, 0),
                 xycoords=ax.yaxis.label, textcoords='offset points',
                 size='large', ha='right', va='center')
-    ax.set_ylabel('Final ratio')
+    ax.set_ylabel('No of Cells')
+axes[0,-1].legend(bbox_to_anchor=(1,1), loc="upper left",title='Cell Type')
 fig.tight_layout()
 fig.savefig('../writing/MSThesis/figures/All3_efficiency_8:1:1-4000.pdf')
 fig.clf()
@@ -564,10 +574,9 @@ for i in range(3):
     for j in range(3):
         Tnego2eff='Tneg_o2_'+Tneg_effs[j]
         df=df1[(df1['Tpos_o2_Eff']==Tposo2eff) & (df1['Tpro_o2_Eff']==Tproo2eff) & (df1['Tneg_o2_Eff']==Tnego2eff)]
-        df.plot.bar(x='TotCell',y=['Tpos_ratio','Tpro_ratio','Tneg_ratio'],color=colors,stacked=True,ax=axes[i,j])
-        axes[i,j].legend(labels)
+        df.plot.bar(x='TotCell',y=['Tpos_ratio','Tpro_ratio','Tneg_ratio'],color=colors,stacked=True,ax=axes[i,j],legend=None)
 pad = 5 # in points
-for ax, ax2, col in zip(axes[0], axes[1], cols):
+for ax, ax2, col in zip(axes[0], axes[-1], cols):
     ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
                 xycoords='axes fraction', textcoords='offset points',
                 size='large', ha='center', va='baseline')
@@ -577,6 +586,7 @@ for ax, row in zip(axes[:,0], rows):
                 xycoords=ax.yaxis.label, textcoords='offset points',
                 size='large', ha='right', va='center')
     ax.set_ylabel('Final ratio')
+axes[0,-1].legend(labels,bbox_to_anchor=(1,1), loc="upper left",title='Cell Type')
 fig.tight_layout()
 fig.savefig('../writing/MSThesis/figures/All3_efficiency-mixed_1:1:1.pdf')
 fig.clf()
@@ -600,10 +610,9 @@ for i in range(3):
     for j in range(3):
         Tnego2eff='Tneg_o2_'+Tneg_effs[j]
         df=df1[(df1['Tpos_o2_Eff']==Tposo2eff) & (df1['Tpro_o2_Eff']==Tproo2eff) & (df1['Tneg_o2_Eff']==Tnego2eff)]
-        df.plot.bar(x='TotCell',y=['Tpos_ratio','Tpro_ratio','Tneg_ratio'],color=colors,stacked=True,ax=axes[i,j])
-        axes[i,j].legend(labels)
+        df.plot.bar(x='TotCell',y=['Tpos_ratio','Tpro_ratio','Tneg_ratio'],color=colors,stacked=True,ax=axes[i,j],legend=None)
 pad = 5 # in points
-for ax, ax2, col in zip(axes[0], axes[1], cols):
+for ax, ax2, col in zip(axes[0], axes[-1], cols):
     ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
                 xycoords='axes fraction', textcoords='offset points',
                 size='large', ha='center', va='baseline')
@@ -613,12 +622,14 @@ for ax, row in zip(axes[:,0], rows):
                 xycoords=ax.yaxis.label, textcoords='offset points',
                 size='large', ha='right', va='center')
     ax.set_ylabel('Final ratio')
+axes[0,-1].legend(labels,bbox_to_anchor=(1,1), loc="upper left",title='Cell Type')
 fig.tight_layout()
 fig.savefig('../writing/MSThesis/figures/All3_efficiency-mixed_8:1:1.pdf')
 fig.clf()
 plt.close(fig)
 
 ## Therapy-standardization
+plt.rcParams["font.size"]=19
 ### Only Tp and T+ considered for threshold
 #### 2000 window
 props=['','0.8Tp-']
@@ -637,7 +648,6 @@ for i in range(2):
         axes[i,j].plot(df.t/24/60,df.Tneg,color="tab:red",label='T-')
         axes[i,j].plot(df.t/24/60,df.Tpos+df.Tpro+df.Tneg,color="tab:grey",label='Total')
         # axes[i,j].bar(df.t/24/60,10000*df.abi_therapy,1/24/60,align='edge',color='tab:pink',alpha=0.3,label='ABI_Therapy')
-        axes[i,j].legend()
 pad = 5 # in points
 for ax, ax2, col in zip(axes[0], axes[1], cols):
     ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
@@ -649,6 +659,7 @@ for ax, row in zip(axes[:,0], rows):
                 xycoords=ax.yaxis.label, textcoords='offset points',
                 size='large', ha='right', va='center')
     ax.set_ylabel('No of Cells')
+axes[0,-1].legend(bbox_to_anchor=(1,1), loc="upper left",title='Cell Type')
 fig.tight_layout()
 fig.savefig('../writing/MSThesis/figures/All3_therapy-standardization.pdf')
 fig.clf()
@@ -671,7 +682,6 @@ for i in range(2):
         axes[i,j].plot(df.t/24/60,df.Tneg,color="tab:red",label='T-')
         axes[i,j].plot(df.t/24/60,df.Tpos+df.Tpro+df.Tneg,color="tab:grey",label='Total')
         # axes[i,j].bar(df.t/24/60,10000*df.abi_therapy,1/24/60,align='edge',color='tab:pink',alpha=0.3,label='ABI_Therapy')
-        axes[i,j].legend()
 pad = 5 # in points
 for ax, ax2, col in zip(axes[0], axes[1], cols):
     ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
@@ -683,6 +693,7 @@ for ax, row in zip(axes[:,0], rows):
                 xycoords=ax.yaxis.label, textcoords='offset points',
                 size='large', ha='right', va='center')
     ax.set_ylabel('No of Cells')
+axes[0,-1].legend(bbox_to_anchor=(1,1), loc="upper left",title='Cell Type')
 fig.tight_layout()
 fig.savefig('../writing/MSThesis/figures/All3_therapy-standardization-sw.pdf')
 fig.clf()
@@ -706,7 +717,6 @@ for i in range(2):
         axes[i,j].plot(df.t/24/60,df.Tneg,color="tab:red",label='T-')
         axes[i,j].plot(df.t/24/60,df.Tpos+df.Tpro+df.Tneg,color="tab:grey",label='Total')
         # axes[i,j].bar(df.t/24/60,10000*df.abi_therapy,1/24/60,align='edge',color='tab:pink',alpha=0.3,label='ABI_Therapy')
-        axes[i,j].legend()
 pad = 5 # in points
 for ax, ax2, col in zip(axes[0], axes[1], cols):
     ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
@@ -718,6 +728,7 @@ for ax, row in zip(axes[:,0], rows):
                 xycoords=ax.yaxis.label, textcoords='offset points',
                 size='large', ha='right', va='center')
     ax.set_ylabel('No of Cells')
+axes[0,-1].legend(bbox_to_anchor=(1,1), loc="upper left",title='Cell Type')
 fig.tight_layout()
 fig.savefig('../writing/MSThesis/figures/All3_therapy-standardization-total.pdf')
 fig.clf()
@@ -740,7 +751,6 @@ for i in range(2):
         axes[i,j].plot(df.t/24/60,df.Tneg,color="tab:red",label='T-')
         axes[i,j].plot(df.t/24/60,df.Tpos+df.Tpro+df.Tneg,color="tab:grey",label='Total')
         # axes[i,j].bar(df.t/24/60,10000*df.abi_therapy,1/24/60,align='edge',color='tab:pink',alpha=0.3,label='ABI_Therapy')
-        axes[i,j].legend()
 pad = 5 # in points
 for ax, ax2, col in zip(axes[0], axes[1], cols):
     ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
@@ -752,12 +762,14 @@ for ax, row in zip(axes[:,0], rows):
                 xycoords=ax.yaxis.label, textcoords='offset points',
                 size='large', ha='right', va='center')
     ax.set_ylabel('No of Cells')
+axes[0,-1].legend(bbox_to_anchor=(1,1), loc="upper left",title='Cell Type')
 fig.tight_layout()
 fig.savefig('../writing/MSThesis/figures/All3_therapy-standardization-total-sw.pdf')
 fig.clf()
 plt.close(fig)
 
 ## Therapy-SOC
+plt.rcParams["font.size"]=16
 ### proportions 1:1:1 Tp:T+:T- 
 row_effs=['HE','LE']
 rows=['no','moderate']
@@ -773,8 +785,7 @@ for i in range(2):
         o2eff='o2_'+col_effs[j]
         df=pd.read_csv(path+o2eff+'-'+testeff+'/eq_values.csv')
         cf.allcell_eq_ratio(df,-0.1)
-        df.plot.bar(x='Totcell',y=['Tpos_ratio','Tpro_ratio','Tneg_ratio'],color=colors,stacked=True,ax=axes[i,j])
-        axes[i,j].legend(labels)
+        df.plot.bar(x='Totcell',y=['Tpos_ratio','Tpro_ratio','Tneg_ratio'],color=colors,stacked=True,ax=axes[i,j],legend=None)
 pad = 5 # in points
 for ax, ax2, col in zip(axes[0], axes[1], cols):
     ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
@@ -786,6 +797,7 @@ for ax, row in zip(axes[:,0], rows):
                 xycoords=ax.yaxis.label, textcoords='offset points',
                 size='large', ha='right', va='center')
     ax.set_ylabel('Final ratio')
+axes[0,-1].legend(labels,bbox_to_anchor=(1,1), loc="upper left",title='Cell Type')
 fig.tight_layout()
 fig.savefig('../writing/MSThesis/figures/All3_therapy-SOC_1:1:1.pdf')
 fig.clf()
@@ -806,8 +818,7 @@ for i in range(2):
         o2eff='o2_'+col_effs[j]
         df=pd.read_csv(path+o2eff+'-'+testeff+'/0.8Tp-eq_values.csv')
         cf.allcell_eq_ratio(df,-0.1)
-        df.plot.bar(x='Totcell',y=['Tpos_ratio','Tpro_ratio','Tneg_ratio'],color=colors,stacked=True,ax=axes[i,j])
-        axes[i,j].legend(labels)
+        df.plot.bar(x='Totcell',y=['Tpos_ratio','Tpro_ratio','Tneg_ratio'],color=colors,stacked=True,ax=axes[i,j],legend=None)
 pad = 5 # in points
 for ax, ax2, col in zip(axes[0], axes[1], cols):
     ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
@@ -819,6 +830,7 @@ for ax, row in zip(axes[:,0], rows):
                 xycoords=ax.yaxis.label, textcoords='offset points',
                 size='large', ha='right', va='center')
     ax.set_ylabel('Final ratio')
+axes[0,-1].legend(labels,bbox_to_anchor=(1,1), loc="upper left",title='Cell Type')
 fig.tight_layout()
 fig.savefig('../writing/MSThesis/figures/All3_therapy-SOC_8:1:1.pdf')
 fig.clf()
@@ -843,7 +855,6 @@ for i in range(2):
         axes[i,j].plot(df.t/24/60,df.Tneg,color="tab:red",label='T-')
         axes[i,j].plot(df.t/24/60,df.Tpos+df.Tpro+df.Tneg,color="tab:grey",label='Total')
         # axes[i,j].bar(df.t/24/60,10000*df.abi_therapy,1/24/60,align='edge',color='tab:pink',alpha=0.3,label='ABI_Therapy')
-        axes[i,j].legend()
 pad = 5 # in points
 for ax, ax2, col in zip(axes[0], axes[1], cols):
     ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
@@ -855,6 +866,7 @@ for ax, row in zip(axes[:,0], rows):
                 xycoords=ax.yaxis.label, textcoords='offset points',
                 size='large', ha='right', va='center')
     ax.set_ylabel('No of Cells')
+axes[0,-1].legend(bbox_to_anchor=(1,1), loc="upper left",title='Cell Type')
 fig.tight_layout()
 fig.savefig('../writing/MSThesis/figures/All3_therapy_1:1:1-2000.pdf')
 fig.clf()
@@ -877,7 +889,6 @@ for i in range(2):
         axes[i,j].plot(df.t/24/60,df.Tneg,color="tab:red",label='T-')
         axes[i,j].plot(df.t/24/60,df.Tpos+df.Tpro+df.Tneg,color="tab:grey",label='Total')
         # axes[i,j].bar(df.t/24/60,10000*df.abi_therapy,1/24/60,align='edge',color='tab:pink',alpha=0.3,label='ABI_Therapy')
-        axes[i,j].legend()
 pad = 5 # in points
 for ax, ax2, col in zip(axes[0], axes[1], cols):
     ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
@@ -889,6 +900,7 @@ for ax, row in zip(axes[:,0], rows):
                 xycoords=ax.yaxis.label, textcoords='offset points',
                 size='large', ha='right', va='center')
     ax.set_ylabel('No of Cells')
+axes[0,-1].legend(bbox_to_anchor=(1,1), loc="upper left",title='Cell Type')
 fig.tight_layout()
 fig.savefig('../writing/MSThesis/figures/All3_therapy_8:1:1-2000.pdf')
 fig.clf()
@@ -911,7 +923,6 @@ for i in range(2):
         axes[i,j].plot(df.t/24/60,df.Tneg,color="tab:red",label='T-')
         axes[i,j].plot(df.t/24/60,df.Tpos+df.Tpro+df.Tneg,color="tab:grey",label='Total')
         # axes[i,j].bar(df.t/24/60,10000*df.abi_therapy,1/24/60,align='edge',color='tab:pink',alpha=0.3,label='ABI_Therapy')
-        axes[i,j].legend()
 pad = 5 # in points
 for ax, ax2, col in zip(axes[0], axes[1], cols):
     ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
@@ -923,6 +934,7 @@ for ax, row in zip(axes[:,0], rows):
                 xycoords=ax.yaxis.label, textcoords='offset points',
                 size='large', ha='right', va='center')
     ax.set_ylabel('No of Cells')
+axes[0,-1].legend(bbox_to_anchor=(1,1), loc="upper left",title='Cell Type')
 fig.tight_layout()
 fig.savefig('../writing/MSThesis/figures/All3_therapy_1:1:1-1000.pdf')
 fig.clf()
@@ -945,7 +957,6 @@ for i in range(2):
         axes[i,j].plot(df.t/24/60,df.Tneg,color="tab:red",label='T-')
         axes[i,j].plot(df.t/24/60,df.Tpos+df.Tpro+df.Tneg,color="tab:grey",label='Total')
         # axes[i,j].bar(df.t/24/60,10000*df.abi_therapy,1/24/60,align='edge',color='tab:pink',alpha=0.3,label='ABI_Therapy')
-        axes[i,j].legend()
 pad = 5 # in points
 for ax, ax2, col in zip(axes[0], axes[1], cols):
     ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
@@ -957,6 +968,7 @@ for ax, row in zip(axes[:,0], rows):
                 xycoords=ax.yaxis.label, textcoords='offset points',
                 size='large', ha='right', va='center')
     ax.set_ylabel('No of Cells')
+axes[0,-1].legend(bbox_to_anchor=(1,1), loc="upper left",title='Cell Type')
 fig.tight_layout()
 fig.savefig('../writing/MSThesis/figures/All3_therapy_8:1:1-1000.pdf')
 fig.clf()
@@ -979,7 +991,6 @@ for i in range(2):
         axes[i,j].plot(df.t/24/60,df.Tneg,color="tab:red",label='T-')
         axes[i,j].plot(df.t/24/60,df.Tpos+df.Tpro+df.Tneg,color="tab:grey",label='Total')
         # axes[i,j].bar(df.t/24/60,10000*df.abi_therapy,1/24/60,align='edge',color='tab:pink',alpha=0.3,label='ABI_Therapy')
-        axes[i,j].legend()
 pad = 5 # in points
 for ax, ax2, col in zip(axes[0], axes[1], cols):
     ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
@@ -991,6 +1002,7 @@ for ax, row in zip(axes[:,0], rows):
                 xycoords=ax.yaxis.label, textcoords='offset points',
                 size='large', ha='right', va='center')
     ax.set_ylabel('No of Cells')
+axes[0,-1].legend(bbox_to_anchor=(1,1), loc="upper left",title='Cell Type')
 fig.tight_layout()
 fig.savefig('../writing/MSThesis/figures/All3_therapy_1:1:1-4000.pdf')
 fig.clf()
@@ -1013,7 +1025,6 @@ for i in range(2):
         axes[i,j].plot(df.t/24/60,df.Tneg,color="tab:red",label='T-')
         axes[i,j].plot(df.t/24/60,df.Tpos+df.Tpro+df.Tneg,color="tab:grey",label='Total')
         # axes[i,j].bar(df.t/24/60,10000*df.abi_therapy,1/24/60,align='edge',color='tab:pink',alpha=0.3,label='ABI_Therapy')
-        axes[i,j].legend()
 pad = 5 # in points
 for ax, ax2, col in zip(axes[0], axes[1], cols):
     ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
@@ -1025,82 +1036,14 @@ for ax, row in zip(axes[:,0], rows):
                 xycoords=ax.yaxis.label, textcoords='offset points',
                 size='large', ha='right', va='center')
     ax.set_ylabel('No of Cells')
+axes[0,-1].legend(bbox_to_anchor=(1,1), loc="upper left",title='Cell Type')
 fig.tight_layout()
 fig.savefig('../writing/MSThesis/figures/All3_therapy_8:1:1-4000.pdf')
 fig.clf()
 plt.close(fig)
 
-### 100day delay
-#### proportions 1:1:1 Tp:T+:T-
-row_effs=['HE','LE']
-rows=['no','moderate']
-col_effs=['HE','Null','LE']
-cols=['no','low','moderate']
-path='../raw_output/EnvEq/All3/therapy-abi-w-delay/'
-fig,axes=plt.subplots(2,3,sharex=True,sharey=True,figsize=(15,8))
-for i in range(2):
-    testeff='test_'+row_effs[i]
-    for j in range(3):
-        o2eff='o2_'+col_effs[j]
-        df=pd.read_csv(path+o2eff+'-'+testeff+'/AT_nn-100-2000.csv')
-        axes[i,j].plot(df.t/24/60,df.Tpos,color="tab:green",label='T+')
-        axes[i,j].plot(df.t/24/60,df.Tpro,color="tab:blue",label='Tp')
-        axes[i,j].plot(df.t/24/60,df.Tneg,color="tab:red",label='T-')
-        axes[i,j].plot(df.t/24/60,df.Tpos+df.Tpro+df.Tneg,color="tab:grey",label='Total')
-        # axes[i,j].bar(df.t/24/60,10000*df.abi_therapy,1/24/60,align='edge',color='tab:pink',alpha=0.3,label='ABI_Therapy')
-        axes[i,j].legend()
-pad = 5 # in points
-for ax, ax2, col in zip(axes[0], axes[1], cols):
-    ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
-                xycoords='axes fraction', textcoords='offset points',
-                size='large', ha='center', va='baseline')
-    ax2.set_xlabel('Time (days)')
-for ax, row in zip(axes[:,0], rows):
-    ax.annotate(row, xy=(0, 0.5), xytext=(-ax.yaxis.labelpad - pad, 0),
-                xycoords=ax.yaxis.label, textcoords='offset points',
-                size='large', ha='right', va='center')
-    ax.set_ylabel('No of Cells')
-fig.tight_layout()
-fig.savefig('../writing/MSThesis/figures/All3_therapy_100day_1:1:1.pdf')
-fig.clf()
-plt.close(fig)
-
-#### proportions 8:1:1 Tp:T+:T-
-row_effs=['HE','LE']
-rows=['no','moderate']
-col_effs=['HE','Null','LE']
-cols=['no','low','moderate']
-path='../raw_output/EnvEq/All3/therapy-abi-w-delay/'
-fig,axes=plt.subplots(2,3,sharex=True,sharey=True,figsize=(15,8))
-for i in range(2):
-    testeff='test_'+row_effs[i]
-    for j in range(3):
-        o2eff='o2_'+col_effs[j]
-        df=pd.read_csv(path+o2eff+'-'+testeff+'/0.8Tp-AT_nn-100-2000.csv')
-        axes[i,j].plot(df.t/24/60,df.Tpos,color="tab:green",label='T+')
-        axes[i,j].plot(df.t/24/60,df.Tpro,color="tab:blue",label='Tp')
-        axes[i,j].plot(df.t/24/60,df.Tneg,color="tab:red",label='T-')
-        axes[i,j].plot(df.t/24/60,df.Tpos+df.Tpro+df.Tneg,color="tab:grey",label='Total')
-        # axes[i,j].bar(df.t/24/60,10000*df.abi_therapy,1/24/60,align='edge',color='tab:pink',alpha=0.3,label='ABI_Therapy')
-        axes[i,j].legend()
-pad = 5 # in points
-for ax, ax2, col in zip(axes[0], axes[1], cols):
-    ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
-                xycoords='axes fraction', textcoords='offset points',
-                size='large', ha='center', va='baseline')
-    ax2.set_xlabel('Time (days)')
-for ax, row in zip(axes[:,0], rows):
-    ax.annotate(row, xy=(0, 0.5), xytext=(-ax.yaxis.labelpad - pad, 0),
-                xycoords=ax.yaxis.label, textcoords='offset points',
-                size='large', ha='right', va='center')
-    ax.set_ylabel('No of Cells')
-fig.tight_layout()
-fig.savefig('../writing/MSThesis/figures/All3_therapy_100day_8:1:1.pdf')
-fig.clf()
-plt.close(fig)
-
 ### 200day delay
-#### proportions 1:1:1 Tp:T+:T-
+#### proportions 1:1:1 Tp:T+:T- - total cell 2000
 row_effs=['HE','LE']
 rows=['no','moderate']
 col_effs=['HE','Null','LE']
@@ -1117,7 +1060,6 @@ for i in range(2):
         axes[i,j].plot(df.t/24/60,df.Tneg,color="tab:red",label='T-')
         axes[i,j].plot(df.t/24/60,df.Tpos+df.Tpro+df.Tneg,color="tab:grey",label='Total')
         # axes[i,j].bar(df.t/24/60,10000*df.abi_therapy,1/24/60,align='edge',color='tab:pink',alpha=0.3,label='ABI_Therapy')
-        axes[i,j].legend()
 pad = 5 # in points
 for ax, ax2, col in zip(axes[0], axes[1], cols):
     ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
@@ -1129,12 +1071,13 @@ for ax, row in zip(axes[:,0], rows):
                 xycoords=ax.yaxis.label, textcoords='offset points',
                 size='large', ha='right', va='center')
     ax.set_ylabel('No of Cells')
+axes[0,-1].legend(bbox_to_anchor=(1,1), loc="upper left",title='Cell Type')
 fig.tight_layout()
 fig.savefig('../writing/MSThesis/figures/All3_therapy_200day_1:1:1.pdf')
 fig.clf()
 plt.close(fig)
 
-#### proportions 8:1:1 Tp:T+:T-
+#### proportions 8:1:1 Tp:T+:T- - total cell 2000
 row_effs=['HE','LE']
 rows=['no','moderate']
 col_effs=['HE','Null','LE']
@@ -1151,7 +1094,6 @@ for i in range(2):
         axes[i,j].plot(df.t/24/60,df.Tneg,color="tab:red",label='T-')
         axes[i,j].plot(df.t/24/60,df.Tpos+df.Tpro+df.Tneg,color="tab:grey",label='Total')
         # axes[i,j].bar(df.t/24/60,10000*df.abi_therapy,1/24/60,align='edge',color='tab:pink',alpha=0.3,label='ABI_Therapy')
-        axes[i,j].legend()
 pad = 5 # in points
 for ax, ax2, col in zip(axes[0], axes[1], cols):
     ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
@@ -1163,13 +1105,14 @@ for ax, row in zip(axes[:,0], rows):
                 xycoords=ax.yaxis.label, textcoords='offset points',
                 size='large', ha='right', va='center')
     ax.set_ylabel('No of Cells')
+axes[0,-1].legend(bbox_to_anchor=(1,1), loc="upper left",title='Cell Type')
 fig.tight_layout()
 fig.savefig('../writing/MSThesis/figures/All3_therapy_200day_8:1:1.pdf')
 fig.clf()
 plt.close(fig)
 
 ## Therapy-combination
-#### proportions 1:1:1 Tp:T+:T-
+#### proportions 1:1:1 Tp:T+:T- - total cell 2000
 row_effs=['HE','LE']
 rows=['no','moderate']
 col_effs=['HE','Null','LE']
@@ -1186,7 +1129,6 @@ for i in range(2):
         axes[i,j].plot(df.t/24/60,df.Tneg,color="tab:red",label='T-')
         axes[i,j].plot(df.t/24/60,df.Tpos+df.Tpro+df.Tneg,color="tab:grey",label='Total')
         # axes[i,j].bar(df.t/24/60,10000*df.abi_therapy,1/24/60,align='edge',color='tab:pink',alpha=0.3,label='ABI_Therapy')
-        axes[i,j].legend()
 pad = 5 # in points
 for ax, ax2, col in zip(axes[0], axes[1], cols):
     ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
@@ -1198,12 +1140,13 @@ for ax, row in zip(axes[:,0], rows):
                 xycoords=ax.yaxis.label, textcoords='offset points',
                 size='large', ha='right', va='center')
     ax.set_ylabel('No of Cells')
+axes[0,-1].legend(bbox_to_anchor=(1,1), loc="upper left",title='Cell Type')
 fig.tight_layout()
 fig.savefig('../writing/MSThesis/figures/All3_therapy-combi_1:1:1.pdf')
 fig.clf()
 plt.close(fig)
 
-#### proportions 8:1:1 Tp:T+:T-
+#### proportions 8:1:1 Tp:T+:T- - total cell 2000
 row_effs=['HE','LE']
 rows=['no','moderate']
 col_effs=['HE','Null','LE']
@@ -1220,7 +1163,6 @@ for i in range(2):
         axes[i,j].plot(df.t/24/60,df.Tneg,color="tab:red",label='T-')
         axes[i,j].plot(df.t/24/60,df.Tpos+df.Tpro+df.Tneg,color="tab:grey",label='Total')
         # axes[i,j].bar(df.t/24/60,10000*df.abi_therapy,1/24/60,align='edge',color='tab:pink',alpha=0.3,label='ABI_Therapy')
-        axes[i,j].legend()
 pad = 5 # in points
 for ax, ax2, col in zip(axes[0], axes[1], cols):
     ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
@@ -1232,6 +1174,7 @@ for ax, row in zip(axes[:,0], rows):
                 xycoords=ax.yaxis.label, textcoords='offset points',
                 size='large', ha='right', va='center')
     ax.set_ylabel('No of Cells')
+axes[0,-1].legend(bbox_to_anchor=(1,1), loc="upper left",title='Cell Type')
 fig.tight_layout()
 fig.savefig('../writing/MSThesis/figures/All3_therapy-combi_8:1:1.pdf')
 fig.clf()
