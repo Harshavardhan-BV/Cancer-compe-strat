@@ -169,12 +169,12 @@ iiser-thesis class.}}%
   \tableofcontents
   \cleardoublepage
   \phantomsection
-  \addcontentsline{toc}{chapter}{\listtablename}
-  \listoftables
-  \cleardoublepage
-  \phantomsection
   \addcontentsline{toc}{chapter}{\listfigurename}
   \listoffigures
+  \cleardoublepage
+  \phantomsection
+  \addcontentsline{toc}{chapter}{\listtablename}
+  \listoftables
   \cleardoublepage
   \mainmatter}
 \let\if@bd@onlinesubmission\@firstoftwo
@@ -239,7 +239,7 @@ iiser-thesis class.}}%
 \gdef\@committee{}
 
 \def\copyrightnotice{\gdef\@copyrightnotice{
-   \ccby\ \@author\ \@graduationyear\par  This work is licensed under a \url{https://creativecommons.org/licenses/by/4.0/}{CC BY 4.0} license}}
+   \ccby\ \@author\ \@graduationyear\par  This work is licensed under a \href{https://creativecommons.org/licenses/by/4.0/}{CC BY 4.0} license}}
 
 
 \newcommand{\thesistitlepage}{

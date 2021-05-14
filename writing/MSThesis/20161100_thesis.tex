@@ -12,7 +12,13 @@
 \usepackage{amsthm}
 \usepackage{color}
 \usepackage{float}
-\usepackage[breaklinks=true]{hyperref}
+\usepackage[pdftex,
+            pdfauthor={Harshavardhan BV},
+            pdftitle={A theoretical study of the implications of resource competition for adaptive therapy of castration-resistant prostate cancer},
+            pdfsubject={Masters Thesis},
+            pdfkeywords={Cancer, Adaptive Therapy, Resource Competition},
+						breaklinks=true
+]{hyperref}
 \usepackage[style=apa,
 			sorting=nyt,
 			date=year,
@@ -97,17 +103,29 @@ A theoretical study of the implications of resource competition for adaptive the
 \coordinator{Coordinator} \supervisor{Prof. Sutirth Dey} \sdesignation{Professor}
 \department{Department of Biology} \reader{Dr. M.S. Madhusudhan}
 %\reader{Reader 2}
-\dedication{This thesis is dedicated to ?}
+\dedication{\href{https://en.wikipedia.org/wiki/Recursion}{This thesis is dedicated to this thesis}}
 \graduationyear{2021}
 \academicyear{2020-2021}
 \graduationmonth{July}
 \def \@bd@lot{0}
 
 \thesisabstract{
-Write your  abstract here
+The standard method for therapy against cancer is to administer cytotoxic drugs at the Maximum tolerated dose (MTD). This however, leads to competitive release of the drug-resistant cells and the tumour becomes unresponsive to further therapy. Adaptive therapy aims to maintain a steady population of drug-sensitive and prevent such competitive release by administering the drug at lower and fluctuating doses.
+
+The success and failure of this method wholly lies the competition between the sensitive and resistant cells and the efficacy of the sensitive cells to suppress the resistant cells as a result. This competition is driven primarily by their requirement for limited resources in a tumour micro-environment. We have developed a mathematical model of the castration-resistant prostate cancer (CRPC) which emphasises on the dynamics of the resources, oxygen and testosterone, and their effect on the competitive dynamics of the cells. This is then further extended to the impact they would have on the outcomes of adaptive therapy.
 }
 \acknowledgments{
-Not more than 250 words
+Firstly, I would like to express my sincere gratitude to my supervisor, Prof. Sutirth Dey, for giving me this opportunity to pursue my Masters under his supervision. He can be easily approached whenever faced with any work-related or personal problems. I'm lucky to have such a nice person as my supervisor.
+
+I also thank my TAC, Dr. M.S. Madhusudhan, who has given many valuable insight and suggestions during the mid-year evaluation. He has been my main inspiration in pursuing mathematical and computational biology.
+
+I want to express my heartfelt gratitude to my mentor, Vibishan B, who has been a vital part of my journey into research. His inputs and suggestions were invaluable in shaping this project, all the while tolerating my dumb ideas and doubts. He would always motivate me to try my best and help me whenever in need.
+
+My fellow PBL lab members should be duly mentioned for providing such an inclusive and fun environment to work in.
+
+This project wouldn't have been possible without the great infrastructure for research provided by IISER Pune and the financial support of KVPY.
+
+Finally, I must thank my friends and family for their unconditional love, care and support, especially during these trying times. 
 }
 
 \begin{document}
