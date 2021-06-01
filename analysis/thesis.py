@@ -647,7 +647,8 @@ for i in range(2):
         axes[i,j].plot(df.t/24/60,df.Tpro,color="tab:blue",label='Tp')
         axes[i,j].plot(df.t/24/60,df.Tneg,color="tab:red",label='T-')
         axes[i,j].plot(df.t/24/60,df.Tpos+df.Tpro+df.Tneg,color="tab:grey",label='Total')
-        # axes[i,j].bar(df.t/24/60,10000*df.abi_therapy,1/24/60,align='edge',color='tab:pink',alpha=0.3,label='ABI_Therapy')
+        df['abi_itherapy']=np.where((df['abi_therapy'])|(df['abi_therapy'].shift(1)),-200,np.nan)
+        axes[i,j].plot(df.t/24/60,df.abi_itherapy,color="tab:purple",linewidth=5,label='ABI')
 pad = 5 # in points
 for ax, ax2, col in zip(axes[0], axes[1], cols):
     ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
@@ -659,7 +660,9 @@ for ax, row in zip(axes[:,0], rows):
                 xycoords=ax.yaxis.label, textcoords='offset points',
                 size='large', ha='right', va='center')
     ax.set_ylabel('No of Cells')
-axes[0,-1].legend(bbox_to_anchor=(1,1), loc="upper left",title='Cell Type')
+handles, labels = ax.get_legend_handles_labels()
+axes[0,-1].legend(handles=handles[0:4], bbox_to_anchor=(1,1), loc="upper left",title='Cell Type')
+axes[1,-1].legend(handles=handles[4:], bbox_to_anchor=(1,1), loc="upper left",title='Therapy')
 fig.tight_layout()
 fig.savefig('../writing/MSThesis/figures/All3_therapy-standardization.pdf')
 fig.clf()
@@ -681,7 +684,8 @@ for i in range(2):
         axes[i,j].plot(df.t/24/60,df.Tpro,color="tab:blue",label='Tp')
         axes[i,j].plot(df.t/24/60,df.Tneg,color="tab:red",label='T-')
         axes[i,j].plot(df.t/24/60,df.Tpos+df.Tpro+df.Tneg,color="tab:grey",label='Total')
-        # axes[i,j].bar(df.t/24/60,10000*df.abi_therapy,1/24/60,align='edge',color='tab:pink',alpha=0.3,label='ABI_Therapy')
+        df['abi_itherapy']=np.where((df['abi_therapy'])|(df['abi_therapy'].shift(1)),-200,np.nan)
+        axes[i,j].plot(df.t/24/60,df.abi_itherapy,color="tab:purple",linewidth=5,label='ABI')
 pad = 5 # in points
 for ax, ax2, col in zip(axes[0], axes[1], cols):
     ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
@@ -693,7 +697,9 @@ for ax, row in zip(axes[:,0], rows):
                 xycoords=ax.yaxis.label, textcoords='offset points',
                 size='large', ha='right', va='center')
     ax.set_ylabel('No of Cells')
-axes[0,-1].legend(bbox_to_anchor=(1,1), loc="upper left",title='Cell Type')
+handles, labels = ax.get_legend_handles_labels()
+axes[0,-1].legend(handles=handles[0:4], bbox_to_anchor=(1,1), loc="upper left",title='Cell Type')
+axes[1,-1].legend(handles=handles[4:], bbox_to_anchor=(1,1), loc="upper left",title='Therapy')
 fig.tight_layout()
 fig.savefig('../writing/MSThesis/figures/All3_therapy-standardization-sw.pdf')
 fig.clf()
@@ -716,7 +722,8 @@ for i in range(2):
         axes[i,j].plot(df.t/24/60,df.Tpro,color="tab:blue",label='Tp')
         axes[i,j].plot(df.t/24/60,df.Tneg,color="tab:red",label='T-')
         axes[i,j].plot(df.t/24/60,df.Tpos+df.Tpro+df.Tneg,color="tab:grey",label='Total')
-        # axes[i,j].bar(df.t/24/60,10000*df.abi_therapy,1/24/60,align='edge',color='tab:pink',alpha=0.3,label='ABI_Therapy')
+        df['abi_itherapy']=np.where((df['abi_therapy'])|(df['abi_therapy'].shift(1)),-200,np.nan)
+        axes[i,j].plot(df.t/24/60,df.abi_itherapy,color="tab:purple",linewidth=5,label='ABI')
 pad = 5 # in points
 for ax, ax2, col in zip(axes[0], axes[1], cols):
     ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
@@ -728,7 +735,9 @@ for ax, row in zip(axes[:,0], rows):
                 xycoords=ax.yaxis.label, textcoords='offset points',
                 size='large', ha='right', va='center')
     ax.set_ylabel('No of Cells')
-axes[0,-1].legend(bbox_to_anchor=(1,1), loc="upper left",title='Cell Type')
+handles, labels = ax.get_legend_handles_labels()
+axes[0,-1].legend(handles=handles[0:4], bbox_to_anchor=(1,1), loc="upper left",title='Cell Type')
+axes[1,-1].legend(handles=handles[4:], bbox_to_anchor=(1,1), loc="upper left",title='Therapy')
 fig.tight_layout()
 fig.savefig('../writing/MSThesis/figures/All3_therapy-standardization-total.pdf')
 fig.clf()
@@ -750,7 +759,8 @@ for i in range(2):
         axes[i,j].plot(df.t/24/60,df.Tpro,color="tab:blue",label='Tp')
         axes[i,j].plot(df.t/24/60,df.Tneg,color="tab:red",label='T-')
         axes[i,j].plot(df.t/24/60,df.Tpos+df.Tpro+df.Tneg,color="tab:grey",label='Total')
-        # axes[i,j].bar(df.t/24/60,10000*df.abi_therapy,1/24/60,align='edge',color='tab:pink',alpha=0.3,label='ABI_Therapy')
+        df['abi_itherapy']=np.where((df['abi_therapy'])|(df['abi_therapy'].shift(1)),-200,np.nan)
+        axes[i,j].plot(df.t/24/60,df.abi_itherapy,color="tab:purple",linewidth=5,label='ABI')
 pad = 5 # in points
 for ax, ax2, col in zip(axes[0], axes[1], cols):
     ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
@@ -762,7 +772,9 @@ for ax, row in zip(axes[:,0], rows):
                 xycoords=ax.yaxis.label, textcoords='offset points',
                 size='large', ha='right', va='center')
     ax.set_ylabel('No of Cells')
-axes[0,-1].legend(bbox_to_anchor=(1,1), loc="upper left",title='Cell Type')
+handles, labels = ax.get_legend_handles_labels()
+axes[0,-1].legend(handles=handles[0:4], bbox_to_anchor=(1,1), loc="upper left",title='Cell Type')
+axes[1,-1].legend(handles=handles[4:], bbox_to_anchor=(1,1), loc="upper left",title='Therapy')
 fig.tight_layout()
 fig.savefig('../writing/MSThesis/figures/All3_therapy-standardization-total-sw.pdf')
 fig.clf()
@@ -854,7 +866,8 @@ for i in range(2):
         axes[i,j].plot(df.t/24/60,df.Tpro,color="tab:blue",label='Tp')
         axes[i,j].plot(df.t/24/60,df.Tneg,color="tab:red",label='T-')
         axes[i,j].plot(df.t/24/60,df.Tpos+df.Tpro+df.Tneg,color="tab:grey",label='Total')
-        # axes[i,j].bar(df.t/24/60,10000*df.abi_therapy,1/24/60,align='edge',color='tab:pink',alpha=0.3,label='ABI_Therapy')
+        df['abi_itherapy']=np.where((df['abi_therapy'])|(df['abi_therapy'].shift(1)),-200,np.nan)
+        axes[i,j].plot(df.t/24/60,df.abi_itherapy,color="tab:purple",linewidth=5,label='ABI')
 pad = 5 # in points
 for ax, ax2, col in zip(axes[0], axes[1], cols):
     ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
@@ -866,7 +879,9 @@ for ax, row in zip(axes[:,0], rows):
                 xycoords=ax.yaxis.label, textcoords='offset points',
                 size='large', ha='right', va='center')
     ax.set_ylabel('No of Cells')
-axes[0,-1].legend(bbox_to_anchor=(1,1), loc="upper left",title='Cell Type')
+handles, labels = ax.get_legend_handles_labels()
+axes[0,-1].legend(handles=handles[0:4], bbox_to_anchor=(1,1), loc="upper left",title='Cell Type')
+axes[1,-1].legend(handles=handles[4:], bbox_to_anchor=(1,1), loc="upper left",title='Therapy')
 fig.tight_layout()
 fig.savefig('../writing/MSThesis/figures/All3_therapy_1:1:1-2000.pdf')
 fig.clf()
@@ -888,7 +903,8 @@ for i in range(2):
         axes[i,j].plot(df.t/24/60,df.Tpro,color="tab:blue",label='Tp')
         axes[i,j].plot(df.t/24/60,df.Tneg,color="tab:red",label='T-')
         axes[i,j].plot(df.t/24/60,df.Tpos+df.Tpro+df.Tneg,color="tab:grey",label='Total')
-        # axes[i,j].bar(df.t/24/60,10000*df.abi_therapy,1/24/60,align='edge',color='tab:pink',alpha=0.3,label='ABI_Therapy')
+        df['abi_itherapy']=np.where((df['abi_therapy'])|(df['abi_therapy'].shift(1)),-200,np.nan)
+        axes[i,j].plot(df.t/24/60,df.abi_itherapy,color="tab:purple",linewidth=5,label='ABI')
 pad = 5 # in points
 for ax, ax2, col in zip(axes[0], axes[1], cols):
     ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
@@ -900,7 +916,9 @@ for ax, row in zip(axes[:,0], rows):
                 xycoords=ax.yaxis.label, textcoords='offset points',
                 size='large', ha='right', va='center')
     ax.set_ylabel('No of Cells')
-axes[0,-1].legend(bbox_to_anchor=(1,1), loc="upper left",title='Cell Type')
+handles, labels = ax.get_legend_handles_labels()
+axes[0,-1].legend(handles=handles[0:4], bbox_to_anchor=(1,1), loc="upper left",title='Cell Type')
+axes[1,-1].legend(handles=handles[4:], bbox_to_anchor=(1,1), loc="upper left",title='Therapy')
 fig.tight_layout()
 fig.savefig('../writing/MSThesis/figures/All3_therapy_8:1:1-2000.pdf')
 fig.clf()
@@ -922,7 +940,8 @@ for i in range(2):
         axes[i,j].plot(df.t/24/60,df.Tpro,color="tab:blue",label='Tp')
         axes[i,j].plot(df.t/24/60,df.Tneg,color="tab:red",label='T-')
         axes[i,j].plot(df.t/24/60,df.Tpos+df.Tpro+df.Tneg,color="tab:grey",label='Total')
-        # axes[i,j].bar(df.t/24/60,10000*df.abi_therapy,1/24/60,align='edge',color='tab:pink',alpha=0.3,label='ABI_Therapy')
+        df['abi_itherapy']=np.where((df['abi_therapy'])|(df['abi_therapy'].shift(1)),-200,np.nan)
+        axes[i,j].plot(df.t/24/60,df.abi_itherapy,color="tab:purple",linewidth=5,label='ABI')
 pad = 5 # in points
 for ax, ax2, col in zip(axes[0], axes[1], cols):
     ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
@@ -934,7 +953,9 @@ for ax, row in zip(axes[:,0], rows):
                 xycoords=ax.yaxis.label, textcoords='offset points',
                 size='large', ha='right', va='center')
     ax.set_ylabel('No of Cells')
-axes[0,-1].legend(bbox_to_anchor=(1,1), loc="upper left",title='Cell Type')
+handles, labels = ax.get_legend_handles_labels()
+axes[0,-1].legend(handles=handles[0:4], bbox_to_anchor=(1,1), loc="upper left",title='Cell Type')
+axes[1,-1].legend(handles=handles[4:], bbox_to_anchor=(1,1), loc="upper left",title='Therapy')
 fig.tight_layout()
 fig.savefig('../writing/MSThesis/figures/All3_therapy_1:1:1-1000.pdf')
 fig.clf()
@@ -956,7 +977,8 @@ for i in range(2):
         axes[i,j].plot(df.t/24/60,df.Tpro,color="tab:blue",label='Tp')
         axes[i,j].plot(df.t/24/60,df.Tneg,color="tab:red",label='T-')
         axes[i,j].plot(df.t/24/60,df.Tpos+df.Tpro+df.Tneg,color="tab:grey",label='Total')
-        # axes[i,j].bar(df.t/24/60,10000*df.abi_therapy,1/24/60,align='edge',color='tab:pink',alpha=0.3,label='ABI_Therapy')
+        df['abi_itherapy']=np.where((df['abi_therapy'])|(df['abi_therapy'].shift(1)),-200,np.nan)
+        axes[i,j].plot(df.t/24/60,df.abi_itherapy,color="tab:purple",linewidth=5,label='ABI')
 pad = 5 # in points
 for ax, ax2, col in zip(axes[0], axes[1], cols):
     ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
@@ -968,7 +990,9 @@ for ax, row in zip(axes[:,0], rows):
                 xycoords=ax.yaxis.label, textcoords='offset points',
                 size='large', ha='right', va='center')
     ax.set_ylabel('No of Cells')
-axes[0,-1].legend(bbox_to_anchor=(1,1), loc="upper left",title='Cell Type')
+handles, labels = ax.get_legend_handles_labels()
+axes[0,-1].legend(handles=handles[0:4], bbox_to_anchor=(1,1), loc="upper left",title='Cell Type')
+axes[1,-1].legend(handles=handles[4:], bbox_to_anchor=(1,1), loc="upper left",title='Therapy')
 fig.tight_layout()
 fig.savefig('../writing/MSThesis/figures/All3_therapy_8:1:1-1000.pdf')
 fig.clf()
@@ -990,7 +1014,8 @@ for i in range(2):
         axes[i,j].plot(df.t/24/60,df.Tpro,color="tab:blue",label='Tp')
         axes[i,j].plot(df.t/24/60,df.Tneg,color="tab:red",label='T-')
         axes[i,j].plot(df.t/24/60,df.Tpos+df.Tpro+df.Tneg,color="tab:grey",label='Total')
-        # axes[i,j].bar(df.t/24/60,10000*df.abi_therapy,1/24/60,align='edge',color='tab:pink',alpha=0.3,label='ABI_Therapy')
+        df['abi_itherapy']=np.where((df['abi_therapy'])|(df['abi_therapy'].shift(1)),-200,np.nan)
+        axes[i,j].plot(df.t/24/60,df.abi_itherapy,color="tab:purple",linewidth=5,label='ABI')
 pad = 5 # in points
 for ax, ax2, col in zip(axes[0], axes[1], cols):
     ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
@@ -1002,7 +1027,9 @@ for ax, row in zip(axes[:,0], rows):
                 xycoords=ax.yaxis.label, textcoords='offset points',
                 size='large', ha='right', va='center')
     ax.set_ylabel('No of Cells')
-axes[0,-1].legend(bbox_to_anchor=(1,1), loc="upper left",title='Cell Type')
+handles, labels = ax.get_legend_handles_labels()
+axes[0,-1].legend(handles=handles[0:4], bbox_to_anchor=(1,1), loc="upper left",title='Cell Type')
+axes[1,-1].legend(handles=handles[4:], bbox_to_anchor=(1,1), loc="upper left",title='Therapy')
 fig.tight_layout()
 fig.savefig('../writing/MSThesis/figures/All3_therapy_1:1:1-4000.pdf')
 fig.clf()
@@ -1024,7 +1051,8 @@ for i in range(2):
         axes[i,j].plot(df.t/24/60,df.Tpro,color="tab:blue",label='Tp')
         axes[i,j].plot(df.t/24/60,df.Tneg,color="tab:red",label='T-')
         axes[i,j].plot(df.t/24/60,df.Tpos+df.Tpro+df.Tneg,color="tab:grey",label='Total')
-        # axes[i,j].bar(df.t/24/60,10000*df.abi_therapy,1/24/60,align='edge',color='tab:pink',alpha=0.3,label='ABI_Therapy')
+        df['abi_itherapy']=np.where((df['abi_therapy'])|(df['abi_therapy'].shift(1)),-200,np.nan)
+        axes[i,j].plot(df.t/24/60,df.abi_itherapy,color="tab:purple",linewidth=5,label='ABI')
 pad = 5 # in points
 for ax, ax2, col in zip(axes[0], axes[1], cols):
     ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
@@ -1036,7 +1064,9 @@ for ax, row in zip(axes[:,0], rows):
                 xycoords=ax.yaxis.label, textcoords='offset points',
                 size='large', ha='right', va='center')
     ax.set_ylabel('No of Cells')
-axes[0,-1].legend(bbox_to_anchor=(1,1), loc="upper left",title='Cell Type')
+handles, labels = ax.get_legend_handles_labels()
+axes[0,-1].legend(handles=handles[0:4], bbox_to_anchor=(1,1), loc="upper left",title='Cell Type')
+axes[1,-1].legend(handles=handles[4:], bbox_to_anchor=(1,1), loc="upper left",title='Therapy')
 fig.tight_layout()
 fig.savefig('../writing/MSThesis/figures/All3_therapy_8:1:1-4000.pdf')
 fig.clf()
@@ -1059,7 +1089,8 @@ for i in range(2):
         axes[i,j].plot(df.t/24/60,df.Tpro,color="tab:blue",label='Tp')
         axes[i,j].plot(df.t/24/60,df.Tneg,color="tab:red",label='T-')
         axes[i,j].plot(df.t/24/60,df.Tpos+df.Tpro+df.Tneg,color="tab:grey",label='Total')
-        # axes[i,j].bar(df.t/24/60,10000*df.abi_therapy,1/24/60,align='edge',color='tab:pink',alpha=0.3,label='ABI_Therapy')
+        df['abi_itherapy']=np.where((df['abi_therapy'])|(df['abi_therapy'].shift(1)),-200,np.nan)
+        axes[i,j].plot(df.t/24/60,df.abi_itherapy,color="tab:purple",linewidth=5,label='ABI')
 pad = 5 # in points
 for ax, ax2, col in zip(axes[0], axes[1], cols):
     ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
@@ -1071,7 +1102,9 @@ for ax, row in zip(axes[:,0], rows):
                 xycoords=ax.yaxis.label, textcoords='offset points',
                 size='large', ha='right', va='center')
     ax.set_ylabel('No of Cells')
-axes[0,-1].legend(bbox_to_anchor=(1,1), loc="upper left",title='Cell Type')
+handles, labels = ax.get_legend_handles_labels()
+axes[0,-1].legend(handles=handles[0:4], bbox_to_anchor=(1,1), loc="upper left",title='Cell Type')
+axes[1,-1].legend(handles=handles[4:], bbox_to_anchor=(1,1), loc="upper left",title='Therapy')
 fig.tight_layout()
 fig.savefig('../writing/MSThesis/figures/All3_therapy_200day_1:1:1.pdf')
 fig.clf()
@@ -1093,7 +1126,8 @@ for i in range(2):
         axes[i,j].plot(df.t/24/60,df.Tpro,color="tab:blue",label='Tp')
         axes[i,j].plot(df.t/24/60,df.Tneg,color="tab:red",label='T-')
         axes[i,j].plot(df.t/24/60,df.Tpos+df.Tpro+df.Tneg,color="tab:grey",label='Total')
-        # axes[i,j].bar(df.t/24/60,10000*df.abi_therapy,1/24/60,align='edge',color='tab:pink',alpha=0.3,label='ABI_Therapy')
+        df['abi_itherapy']=np.where((df['abi_therapy'])|(df['abi_therapy'].shift(1)),-200,np.nan)
+        axes[i,j].plot(df.t/24/60,df.abi_itherapy,color="tab:purple",linewidth=5,label='ABI')
 pad = 5 # in points
 for ax, ax2, col in zip(axes[0], axes[1], cols):
     ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
@@ -1105,7 +1139,9 @@ for ax, row in zip(axes[:,0], rows):
                 xycoords=ax.yaxis.label, textcoords='offset points',
                 size='large', ha='right', va='center')
     ax.set_ylabel('No of Cells')
-axes[0,-1].legend(bbox_to_anchor=(1,1), loc="upper left",title='Cell Type')
+handles, labels = ax.get_legend_handles_labels()
+axes[0,-1].legend(handles=handles[0:4], bbox_to_anchor=(1,1), loc="upper left",title='Cell Type')
+axes[1,-1].legend(handles=handles[4:], bbox_to_anchor=(1,1), loc="upper left",title='Therapy')
 fig.tight_layout()
 fig.savefig('../writing/MSThesis/figures/All3_therapy_200day_8:1:1.pdf')
 fig.clf()
@@ -1128,7 +1164,11 @@ for i in range(2):
         axes[i,j].plot(df.t/24/60,df.Tpro,color="tab:blue",label='Tp')
         axes[i,j].plot(df.t/24/60,df.Tneg,color="tab:red",label='T-')
         axes[i,j].plot(df.t/24/60,df.Tpos+df.Tpro+df.Tneg,color="tab:grey",label='Total')
-        # axes[i,j].bar(df.t/24/60,10000*df.abi_therapy,1/24/60,align='edge',color='tab:pink',alpha=0.3,label='ABI_Therapy')
+        df['abi_itherapy']=np.where((df['abi_therapy'])|(df['abi_therapy'].shift(1)),-200,np.nan)
+        df['dtx_itherapy']=np.where((df['dtx_therapy'])|(df['dtx_therapy'].shift(1)),-200,np.nan)
+        axes[i,j].plot(df.t/24/60,df.abi_itherapy,color="tab:purple",linewidth=5,label='ABI')
+        axes[i,j].plot(df.t/24/60,df.dtx_itherapy,color="tab:orange",linewidth=5,label='DTX')
+
 pad = 5 # in points
 for ax, ax2, col in zip(axes[0], axes[1], cols):
     ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
@@ -1140,7 +1180,9 @@ for ax, row in zip(axes[:,0], rows):
                 xycoords=ax.yaxis.label, textcoords='offset points',
                 size='large', ha='right', va='center')
     ax.set_ylabel('No of Cells')
-axes[0,-1].legend(bbox_to_anchor=(1,1), loc="upper left",title='Cell Type')
+handles, labels = ax.get_legend_handles_labels()
+axes[0,-1].legend(handles=handles[0:4], bbox_to_anchor=(1,1), loc="upper left",title='Cell Type')
+axes[1,-1].legend(handles=handles[4:], bbox_to_anchor=(1,1), loc="upper left",title='Therapy')
 fig.tight_layout()
 fig.savefig('../writing/MSThesis/figures/All3_therapy-combi_1:1:1.pdf')
 fig.clf()
@@ -1162,7 +1204,11 @@ for i in range(2):
         axes[i,j].plot(df.t/24/60,df.Tpro,color="tab:blue",label='Tp')
         axes[i,j].plot(df.t/24/60,df.Tneg,color="tab:red",label='T-')
         axes[i,j].plot(df.t/24/60,df.Tpos+df.Tpro+df.Tneg,color="tab:grey",label='Total')
-        # axes[i,j].bar(df.t/24/60,10000*df.abi_therapy,1/24/60,align='edge',color='tab:pink',alpha=0.3,label='ABI_Therapy')
+        df['abi_itherapy']=np.where((df['abi_therapy'])|(df['abi_therapy'].shift(1)),-200,np.nan)
+        df['dtx_itherapy']=np.where((df['dtx_therapy'])|(df['dtx_therapy'].shift(1)),-200,np.nan)
+        axes[i,j].plot(df.t/24/60,df.abi_itherapy,color="tab:purple",linewidth=5,label='ABI')
+        axes[i,j].plot(df.t/24/60,df.dtx_itherapy,color="tab:orange",linewidth=5,label='DTX')
+
 pad = 5 # in points
 for ax, ax2, col in zip(axes[0], axes[1], cols):
     ax.annotate(col, xy=(0.5, 1), xytext=(0, pad),
@@ -1174,7 +1220,9 @@ for ax, row in zip(axes[:,0], rows):
                 xycoords=ax.yaxis.label, textcoords='offset points',
                 size='large', ha='right', va='center')
     ax.set_ylabel('No of Cells')
-axes[0,-1].legend(bbox_to_anchor=(1,1), loc="upper left",title='Cell Type')
+handles, labels = ax.get_legend_handles_labels()
+axes[0,-1].legend(handles=handles[0:4], bbox_to_anchor=(1,1), loc="upper left",title='Cell Type')
+axes[1,-1].legend(handles=handles[4:], bbox_to_anchor=(1,1), loc="upper left",title='Therapy')
 fig.tight_layout()
 fig.savefig('../writing/MSThesis/figures/All3_therapy-combi_8:1:1.pdf')
 fig.clf()

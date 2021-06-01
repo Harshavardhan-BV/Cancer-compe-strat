@@ -64,13 +64,13 @@ For $dose \in \{abi,dtx\}$
   \label{dose_soc_eq}
 \end{equation}
 
-The dosing scheme for adaptive therapy is given in \autoref{dose_at_eq}. A binary mode of adaptive therapy is considered here, where dose is applied at MTD when the population size exceeds the $on$ threshold and stays on until the population size falls below the $off$ threshold, after which it is turned off.
+The dosing scheme for adaptive therapy is given in \autoref{dose_at_eq}. A binary mode of adaptive therapy is considered here, where dose is applied at MTD when the population size exceeds the On threshold and stays on until the population size falls below the Off threshold, after which it is turned off.
 \begin{equation}
   dose(x,t) = \begin{cases}
-  0 &\text{if } dose(x,t-\Delta t) = 0 \text{ and } x < on\\
-  1 &\text{if } dose(x,t-\Delta t) = 0 \text{ and } x \geq on \\
-  1 &\text{if } dose(x,t-\Delta t) = 1 \text{ and } x > off \\
-  0 &\text{if } dose(x,t-\Delta t) = 1 \text{ and } x \leq off \\
+  0 &\text{if } dose(x,t-\Delta t) = 0 \text{ and } x < \text{On} \\
+  1 &\text{if } dose(x,t-\Delta t) = 0 \text{ and } x \geq \text{On} \\
+  1 &\text{if } dose(x,t-\Delta t) = 1 \text{ and } x > \text{Off} \\
+  0 &\text{if } dose(x,t-\Delta t) = 1 \text{ and } x \leq \text{Off} \\
   \end{cases}
   \label{dose_at_eq}
 \end{equation}

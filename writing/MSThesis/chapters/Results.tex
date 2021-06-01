@@ -1,7 +1,7 @@
 %\chapter{Results}
 
 \chapter{Pairwise Interactions and Competition outcomes}
-\section{$T^p$ - $T^-$}
+\section{$\boldsymbol{T^p}$ - $\boldsymbol{T^-}$}
 A set of initial runs was carried out to test the extent to which cell type-specific doubling times affected the competitive outcomes between $T^p$ and $T^-$, from which the following observations were made:
 \begin{enumerate}
   \item Only when $T^p$ is not severely testosterone limited ($ul_{test,T^p}$ is low), $T^p$ can coexist with or outcompete $T^-$ as shown in \autoref{fig_Tpro-Tneg_testlims}. In every other case, $T^-$ drives $T^p$ to extinction.
@@ -41,7 +41,7 @@ These observations allow us to then define levels of resource limitation for eac
   \centering
   \begin{tabular}{|l|l|l|}
     \hline
-    \textbf{$O_2$ production} & \textbf{$T^-\ O_2$ limitation} & \textbf{$T^p\ test$ limitation}\\ \hline
+    \textbf{$\boldsymbol{O_2}$ production} & \textbf{$\boldsymbol{T^-\ O_2}$ limitation} & \textbf{$\boldsymbol{T^p\ test}$ limitation}\\ \hline
     normal & low & no \\ \hline
     normal & low & moderate \\ \hline
     normal & low & severe \\ \hline
@@ -98,7 +98,7 @@ These observations expand and broaden the scope of the earlier finding that cell
 
 \clearpage
 
-\section{$T^+$ - $T^p$}
+\section{$\boldsymbol{T^+}$ - $\boldsymbol{T^p}$}
 The initial runs for this pair involved changing both the upper and lower limits of the resource response function together as a way of sampling resource limitation conditions coarsely before a more detailed exploration. The following observations were made based on these results, represented in \autoref{fig_Tpos-Tpro_o2lims} and \autoref{fig_Tpos-Tpro_testlims}:
 \begin{enumerate}
     \item Both $T^+$ and $T^p$ are limited by both oxygen and testosterone, and compete for both resources. As with the other pair, strength of limitation for any particular resource can be modulated through the corresponding upper and lower thresholds.
@@ -129,7 +129,7 @@ Only two levels of limitations were considered for each resource when combinatio
   \centering
   \begin{tabular}{|l|l|l|l|}
     \hline
-    \textbf{$T^+\ O_2$ limitation} & \textbf{$T^p\ O_2$ limitation} & \textbf{$T^+\ test$ limitation} & \textbf{$T^p\ test$ limitation}  \\ \hline
+    \textbf{$\boldsymbol{T^+\ O_2}$ limitation} & \textbf{$\boldsymbol{T^p\ O_2}$ limitation} & \textbf{$\boldsymbol{T^+\ test}$ limitation} & \textbf{$\boldsymbol{T^p\ test}$ limitation}  \\ \hline
     low & low & no & no \\ \hline
     low & low & no & moderate \\ \hline
     low & low & no & severe \\ \hline
@@ -211,7 +211,7 @@ With all three cell types, the number of combinations and permutations increase 
 \centering
   \begin{tabular}{|l|l|l|l|}
     \hline
-    \textbf{Resource} & \textbf{Limitation} & \textbf{$ll_{res,i}$} & \textbf{$ul_{res,i}$} \\ \hline
+    \textbf{Resource} & \textbf{Limitation} & \textbf{$\boldsymbol{ll_{res,i}}$} & \textbf{$\boldsymbol{ul_{res,i}}$} \\ \hline
     \multirow{3}{*}{Oxygen} & no & 0.0 & 1.1 \\ \cline{2-4}
     & low & 0.0 & 1.0 \\ \cline{2-4}
     & moderate & 0.4 & 0.1 \\ \hline
@@ -277,12 +277,12 @@ We observe from \autoref{fig_therapy-SOC} that $T^+$ and $T^p$ go extinct in all
 \newpage
 
 \section{Adaptive Therapy (AT)}
-Implementation of adaptive therapy (AT) is based on thresholds of population size; the $On$ threshold is the size above which therapy would be applied and the $Off$ threshold is the size below which therapy would be withdrawn. A range of such size thresholds were tried out for the case where testosterone is not limiting and oxygen has low limitation. For the purposes of this model, abiraterone therapy thresholds were defined in terms of the population sizes of the hormone-dependent subpopulations alone, $T^+$ and $T^p$. There are some indications from the literature that distinguishing between hormone-dependent and -independent fractions of prostate cancer cells may be possible clinically based on levels of specific prostate-specific antigen (PSA) types secreted by each \cite{Takahashi}.
+Implementation of adaptive therapy (AT) is based on thresholds of population size; the On threshold is the size above which therapy would be applied and the Off threshold is the size below which therapy would be withdrawn. A range of such size thresholds were tried out for the case where testosterone is not limiting and oxygen has low limitation. For the purposes of this model, abiraterone therapy thresholds were defined in terms of the population sizes of the hormone-dependent subpopulations alone, $T^+$ and $T^p$. There are some indications from the literature that distinguishing between hormone-dependent and -independent fractions of prostate cancer cells may be possible clinically based on levels of specific prostate-specific antigen (PSA) types secreted by each \cite{Takahashi}.
 
 The following general observations could be made based on our exploration of population size thresholds, some of which are visualised in \autoref{fig_therapy-AT_standardization}.
 \begin{enumerate}
   \item In the AT modelling literature, a $50\%$ rule is commonly-used where therapy is applied above the initial population and withdrawn below $50\%$ of that. In our exploration, we found that for low threshold sizes, the $T^p$ and $T^+$ populations are so low that competitive inhibition by $T^-$ drives them to extinction. This low threshold size was also found to include the population size range where the $50\%$ rule would operate, which casts some doubt on the effectiveness of this threshold.
-  \item It follows directly from above that a higher threshold would be better for $T^p$ and $T^+$ to survive the competition by $T^-$ as well as to suppress $T^-$, while increased effectiveness of a higher threshold has also been shown elsewhere \cite{Hansen}. However, increasing the threshold close to the effective carrying capacity eventually leads to no therapy being applied for the entire simulation duration as the population sizes never cross the $On$ threshold. While there may be some grounds for a clinical decision not to apply any treatment, such a situation is not suited for an exhaustive theoretical study of the factors affecting AT. The threshold of $On$:6000 and $Off$:4000 was therefore chosen for further exploration as a reasonable middle ground between competitive release and no therapy.
+  \item It follows directly from above that a higher threshold would be better for $T^p$ and $T^+$ to survive the competition by $T^-$ as well as to suppress $T^-$, while increased effectiveness of a higher threshold has also been shown elsewhere \cite{Hansen}. However, increasing the threshold close to the effective carrying capacity eventually leads to no therapy being applied for the entire simulation duration as the population sizes never cross the on threshold. While there may be some grounds for a clinical decision not to apply any treatment, such a situation is not suited for an exhaustive theoretical study of the factors affecting AT. The threshold of On:6000 and Off:4000 was therefore chosen for further exploration as a reasonable middle ground between competitive release and no therapy.
   \item As mentioned earlier, only $T^p$ and $T^+$ cell types were considered for the thresholds for therapy. For the sake of completeness, the case where all the three cell types are considered for the thresholds for therapy was also tried out as visualised in \autoref{fig_therapy-AT_standardization-Total}. However, all the cases led to competitive release in the initial few days, suggesting that total population size makes for a poorer cue for AT application and withdrawal.
 \end{enumerate}
 
@@ -296,18 +296,18 @@ The following general observations could be made based on our exploration of pop
     \centering
     \includegraphics[width=\textwidth]{All3_therapy-standardization-sw}
   \end{subfigure}
-  \caption[Standardisation of threshold for adaptive therapy]{Standardisation of threshold for adaptive therapy, Columns: $On-Off$ threshold, Rows: $T^p:T^+:T^-$ Seeding}
+  \caption[Standardisation of threshold for adaptive therapy]{Standardisation of threshold for adaptive therapy, Columns: On-Off threshold, Rows: $T^p:T^+:T^-$ Seeding}
   \label{fig_therapy-AT_standardization}
 \end{figure}
 
 \newpage
 
 \subsection{Without delay}
-With fixed $On$ and $Off$ thresholds of 6000 and 4000 respectively, AT was then applied systematically to every combination of resource limitation studied in the previous section. The results from these different cases are summarised below and visualised in \autoref{fig_therapy-AT}.
+With fixed On and Off thresholds of 6000 and 4000 respectively, AT was then applied systematically to every combination of resource limitation studied in the previous section. The results from these different cases are summarised below and visualised in \autoref{fig_therapy-AT}.
 \begin{enumerate}
   \item Tumours with higher numbers of $T^p$ and $T^+$ would be more responsive to abiraterone and hence more treatable. Coexistence is of importance here as extinction of $T^p$ and $T^+$ would lead to no response.
   \item For cases when testosterone is moderately limiting and testosterone levels below the requirement of $T^p$ and $T^+$, these two cell types go extinct just by the competition from $T^-$ and produce no response from abiraterone naturally. Therefore, abiraterone efficacy depends strongly on $T^p$ seeding densities and total population, as with coexistence.
-  \item In cases where coexistence is achieved, the $T^-$ cells quickly replace the space left by the dead $T^p$ and $T^+$ cells on applying therapy. In periods of no therapy, $T^p$ and $T^+$ cells compete with and replace the $T^-$ cells, but are soon met with therapy as they cross the $On$ threshold. The total population size therefore remains high for most of the simulation, except when abiraterone is being applied where the $T^p$ population falls sharply. Despite this dip, the total population size recovers rapidly once therapy is withdrawn although there is some indication that total population size subsequently declines gradually until the next application, as $T^-$ cells are driven down by competition. Net decrease in the total population size itself, across multiple oscillations, is only seen in some combinations of resource limitation. In particular, this happens when testosterone is limiting (moderate limitation case) and/or the tumour population is still highly responsive to abiraterone (an active and considerable proportion of $T^p$ in the population), raising the possibility that even though AT, with a fixed window of treatment, outperforms SOC across the board, its effectiveness is modified strongly by the ecological state of the tumour population, in terms of cell type proportions and resource limitations.
+  \item In cases where coexistence is achieved, the $T^-$ cells quickly replace the space left by the dead $T^p$ and $T^+$ cells on applying therapy. In periods of no therapy, $T^p$ and $T^+$ cells compete with and replace the $T^-$ cells, but are soon met with therapy as they cross the on threshold. The total population size therefore remains high for most of the simulation, except when abiraterone is being applied where the $T^p$ population falls sharply. Despite this dip, the total population size recovers rapidly once therapy is withdrawn although there is some indication that total population size subsequently declines gradually until the next application, as $T^-$ cells are driven down by competition. Net decrease in the total population size itself, across multiple oscillations, is only seen in some combinations of resource limitation. In particular, this happens when testosterone is limiting (moderate limitation case) and/or the tumour population is still highly responsive to abiraterone (an active and considerable proportion of $T^p$ in the population), raising the possibility that even though AT, with a fixed window of treatment, outperforms SOC across the board, its effectiveness is modified strongly by the ecological state of the tumour population, in terms of cell type proportions and resource limitations.
 \end{enumerate}
 
 \begin{figure}[h!]
@@ -356,7 +356,7 @@ With fixed $On$ and $Off$ thresholds of 6000 and 4000 respectively, AT was then 
     \caption{High $T^p$ seeding- $T^p:T^+:T^-$ :: 8:1:1, Initial Total seeding: 4000}
     \label{fig_therapy-AT_8:1:1-4000}
   \end{subfigure}
-  \caption[Time-series of all cell types with adaptive therapy]{Time-series of all cell types with adaptive therapy ($On:6000, Off:4000$) under different oxygen limitation (columns), testosterone limitation (rows) and initial seeding proportions, initial total seeding (subfigures).}
+  \caption[Time-series of all cell types with adaptive therapy]{Time-series of all cell types with adaptive therapy (On:6000, Off:4000) under different oxygen limitation (columns), testosterone limitation (rows) and initial seeding proportions, initial total seeding (subfigures).}
   \label{fig_therapy-AT}
 \end{figure}
 
@@ -379,7 +379,7 @@ As noted earlier, higher the amount of available testosterone, weaker the inters
     \caption{High $T^p$ seeding- $T^p:T^+:T^-$ :: 8:1:1, Initial Total seeding: 2000}
     \label{fig_therapy-AT-delay200_8:1:1-2000}
   \end{subfigure}
-  \caption[Time-series of all cell types with delayed adaptive therapy]{Time-series of all cell types with adaptive therapy ($On:6000, Off:4000$) delayed by 200 days under different oxygen limitation (columns), testosterone limitation (rows) and initial seeding proportions (subfigures).}
+  \caption[Time-series of all cell types with delayed adaptive therapy]{Time-series of all cell types with adaptive therapy (On:6000, Off:4000) delayed by 200 days under different oxygen limitation (columns), testosterone limitation (rows) and initial seeding proportions (subfigures).}
   \label{fig_therapy-AT-delay}
 \end{figure}
 
@@ -404,6 +404,6 @@ Earlier data from AT with abiraterone alone leads to the expectation that there 
     \caption{High $T^p$ seeding- $T^p:T^+:T^-$ :: 8:1:1, Initial Total seeding: 2000}
     \label{fig_therapy-AT_combi_8:1:1-2000}
   \end{subfigure}
-  \caption[Time-series of all cell types with combination adaptive therapy]{Time-series of all cell types with combination adaptive therapy of abiraterone ($On:6000, Off:4000$; $T^+ + T^p$) and docetaxel ($On:6000, Off:4000$; $T^+ + T^p + T^-$) under different oxygen limitation (columns), testosterone limitation (rows) and initial seeding proportions (subfigures).}
+  \caption[Time-series of all cell types with combination adaptive therapy]{Time-series of all cell types with combination adaptive therapy of abiraterone (On:6000, Off:4000; $T^+ + T^p$) and docetaxel (On:6000, Off:4000; $T^+ + T^p + T^-$) under different oxygen limitation (columns), testosterone limitation (rows) and initial seeding proportions (subfigures). Note: The timescale of drug holiday is too small to be visible in this resolution and hence, the dtx dosage appears as a continuum.}
   \label{fig_therapy-AT-combi}
 \end{figure}
