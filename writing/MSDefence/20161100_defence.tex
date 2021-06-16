@@ -1,0 +1,65 @@
+\documentclass[aspectratio=169,9pt]{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb,latexsym,amsmath}
+\usepackage{graphicx}
+\graphicspath{ {./figures/} }
+\usepackage{caption}
+\usepackage{subcaption}
+\captionsetup{font=tiny,labelfont=tiny}
+\usepackage[style=apa,
+			sorting=nyt,
+			date=year,
+			bibencoding=utf8,
+			isbn=false,
+			eprint=false,
+			dashed=false,
+			uniquelist=false,
+			maxbibnames=10,
+			minbibnames=1,
+			maxcitenames=2,
+			uniquename=init,
+			giveninits=true,
+			useprefix=false,
+			minsortnames=1,
+			maxsortnames=2]{biblatex}
+\renewcommand*{\bibfont}{\footnotesize}
+\renewcommand*{\citesetup}{\tiny}
+\renewcommand{\cite}{\parencite}
+\bibliography{References}
+
+% Beamer theme
+\usetheme[titleformat=smallcaps,
+			sectionpage=progressbar,
+			subsectionpage=progressbar,
+			progressbar=frametitle,
+			numbering=fraction]{metropolis}
+% FiraFonts if using pdflatex
+% \usepackage{FiraSans}
+% \usepackage{FiraMono}
+
+% Information to be included in the title page:
+\title[Thesis Defence]{A theoretical study of the implications of resource competition for adaptive therapy of castration-resistant prostate cancer}
+\subtitle{Thesis Defence}
+\author[Harshavardhan BV]{Harshavardhan BV\\
+Supervisor: Prof. Sutirth Dey}
+\date{July 2021}
+\institute{IISER Pune}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\include{chapters/Intro}
+
+\include{chapters/Competition}
+
+\include{chapters/Therapy}
+
+\include{chapters/Summary}
+
+\begin{frame}[allowframebreaks]
+  \printbibliography
+\end{frame}
+
+\end{document}
