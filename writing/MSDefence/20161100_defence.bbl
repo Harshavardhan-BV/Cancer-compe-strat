@@ -1,0 +1,651 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global}
+    \entry{atcc}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=3b4e01cb70c73a3b0eeb9b039d93a5fd}{%
+           family={ATCC},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{3b4e01cb70c73a3b0eeb9b039d93a5fd}
+      \strng{fullhash}{3b4e01cb70c73a3b0eeb9b039d93a5fd}
+      \strng{bibnamehash}{3b4e01cb70c73a3b0eeb9b039d93a5fd}
+      \strng{authorbibnamehash}{3b4e01cb70c73a3b0eeb9b039d93a5fd}
+      \strng{authornamehash}{3b4e01cb70c73a3b0eeb9b039d93a5fd}
+      \strng{authorfullhash}{3b4e01cb70c73a3b0eeb9b039d93a5fd}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{atcc.org}
+      \field{title}{ATCC: The Global Bioresource Center}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://www.atcc.org/
+      \endverb
+      \verb{url}
+      \verb https://www.atcc.org/
+      \endverb
+    \endentry
+    \entry{Frei}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=0c24818c104c45ac3655c1bb89850831}{%
+           family={Frei},
+           familyi={F\bibinitperiod},
+           given={Emil},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=910f990c1a6322bc077c243a0a2c1866}{%
+           family={Canellos},
+           familyi={C\bibinitperiod},
+           given={George\bibnamedelima P.},
+           giveni={G\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{3d191927784d80d594ee9be682bd5bde}
+      \strng{fullhash}{3d191927784d80d594ee9be682bd5bde}
+      \strng{bibnamehash}{3d191927784d80d594ee9be682bd5bde}
+      \strng{authorbibnamehash}{3d191927784d80d594ee9be682bd5bde}
+      \strng{authornamehash}{3d191927784d80d594ee9be682bd5bde}
+      \strng{authorfullhash}{3d191927784d80d594ee9be682bd5bde}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The effect of dose and dose rate of cancer chemotherapeutic agents in experimental in vivo systems and in various clinical situations has been reviewed. In experimental in vivo systems, the dose-response curve for most chemotherapeutic agents is steep. Although the dose response curve may be linear for cytokinetically homogeneous experimental tumors, it deviates from linearity as a result of tumor heterogeneity. The steepness of the dose-response curve is related to the sensitivity of the tumor to a given drug. Thus, for highly sensitive tumors, the curve is very steep and generally linear; whereas for relatively insensitive tumors, dose may have little effect on response. These observations in general apply to the clinic. When dose has been a randomized variable, a dose-response curve is generally evident in sensitive tumors, such as the leukemias, the lymphomas, testicular cancer and small cell lung cancer. In contrast, when the difference in dose is in the range of twofold, the evidence for superiority of the high dose in such situations as 5-fluorouracil for colorectal cancer and dimethyl-triazeno-imidazole-car☐amide (DTIC) for melanoma is less impressive. The use of relatively low dose maintenance treatment following four to six courses of intensive combination chemotherapy for such diseases as testicular cancer and lymphoma may prolong the duration of remission but probably will not increase the cure rate. In adjuvant chemotherapy situations, in which prolonged disease-free survival is improved, the dose-response curve would appear to be quite steep. Conservative dosing in this setting may compromise the cure rate, and the proposed approach is to maintain full dose therapy and consider reducing the total duration of treatment. When high doses or concentrations of antitumor therapy can be achieved, such as in the marrow transplant situation and in isolation perfusion or regional infusion studies, there is in general clear evidence that a substantial increase in response rate occurs.}
+      \field{issn}{0002-9343}
+      \field{journaltitle}{The American Journal of Medicine}
+      \field{number}{4}
+      \field{title}{Dose: A critical factor in cancer chemotherapy}
+      \field{volume}{69}
+      \field{year}{1980}
+      \field{pages}{585\bibrangedash 594}
+      \range{pages}{10}
+      \verb{doi}
+      \verb https://doi.org/10.1016/0002-9343(80)90472-6
+      \endverb
+      \verb{urlraw}
+      \verb http://www.sciencedirect.com/science/article/pii/0002934380904726
+      \endverb
+      \verb{url}
+      \verb http://www.sciencedirect.com/science/article/pii/0002934380904726
+      \endverb
+    \endentry
+    \entry{Gatenby}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=8af10caa96e694a1f978a72ae80f8b79}{%
+           family={Gatenby},
+           familyi={G\bibinitperiod},
+           given={Robert\bibnamedelima A.},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7e2acefe8b2ecef05cfbb8051cda7b35}{%
+           family={Silva},
+           familyi={S\bibinitperiod},
+           given={Ariosto\bibnamedelima S.},
+           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a1aceb55ae49c0434242c55dd7a60de5}{%
+           family={Gillies},
+           familyi={G\bibinitperiod},
+           given={Robert\bibnamedelima J.},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a7fbfe1ed423ba282b93933726ecf1e5}{%
+           family={Frieden},
+           familyi={F\bibinitperiod},
+           given={B.\bibnamedelimi Roy},
+           giveni={B\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {American Association for Cancer Research}%
+      }
+      \strng{namehash}{fdea5b1d00db84e2c46e716ab40c728e}
+      \strng{fullhash}{03157bedefe2195d14ce6cb7a6d03f3b}
+      \strng{bibnamehash}{03157bedefe2195d14ce6cb7a6d03f3b}
+      \strng{authorbibnamehash}{03157bedefe2195d14ce6cb7a6d03f3b}
+      \strng{authornamehash}{fdea5b1d00db84e2c46e716ab40c728e}
+      \strng{authorfullhash}{03157bedefe2195d14ce6cb7a6d03f3b}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A number of successful systemic therapies are available for treatment of disseminated cancers. However, tumor response is often transient, and therapy frequently fails due to emergence of resistant populations. The latter reflects the temporal and spatial heterogeneity of the tumor microenvironment as well as the evolutionary capacity of cancer phenotypes to adapt to therapeutic perturbations. Although cancers are highly dynamic systems, cancer therapy is typically administered according to a fixed, linear protocol. Here we examine an adaptive therapeutic approach that evolves in response to the temporal and spatial variability of tumor microenvironment and cellular phenotype as well as therapy-induced perturbations. Initial mathematical models find that when resistant phenotypes arise in the untreated tumor, they are typically present in small numbers because they are less fit than the sensitive population. This reflects the {“}cost{”} of phenotypic resistance such as additional substrate and energy used to up-regulate xenobiotic metabolism, and therefore not available for proliferation, or the growth inhibitory nature of environments (i.e., ischemia or hypoxia) that confer resistance on phenotypically sensitive cells. Thus, in the Darwinian environment of a cancer, the fitter chemosensitive cells will ordinarily proliferate at the expense of the less fit chemoresistant cells. The models show that, if resistant populations are present before administration of therapy, treatments designed to kill maximum numbers of cancer cells remove this inhibitory effect and actually promote more rapid growth of the resistant populations. We present an alternative approach in which treatment is continuously modulated to achieve a fixed tumor population. The goal of adaptive therapy is to enforce a stable tumor burden by permitting a significant population of chemosensitive cells to survive so that they, in turn, suppress proliferation of the less fit but chemoresistant subpopulations. Computer simulations show that this strategy can result in prolonged survival that is substantially greater than that of high dose density or metronomic therapies. The feasibility of adaptive therapy is supported by in vivo experiments. [Cancer Res 2009;69(11):4894{–}903] Major Findings We present mathematical analysis of the evolutionary dynamics of tumor populations with and without therapy. Analytic solutions and numerical simulations show that, with pretreatment, therapy-resistant cancer subpopulations are present due to phenotypic or microenvironmental factors; maximum dose density chemotherapy hastens rapid expansion of resistant populations. The models predict that host survival can be maximized if {“}treatment-for-cure strategy{”} is replaced by {“}treatment-for-stability.{”} Specifically, the models predict that an optimal treatment strategy will modulate therapy to maintain a stable population of chemosensitive cells that can, in turn, suppress the growth of resistant populations under normal tumor conditions (i.e., when therapy-induced toxicity is absent). In vivo experiments using OVCAR xenografts treated with carboplatin show that adaptive therapy is feasible and, in this system, can produce long-term survival. {©}2009 American Association for Cancer Research.}
+      \field{issn}{0008-5472}
+      \field{journaltitle}{Cancer Research}
+      \field{number}{11}
+      \field{title}{Adaptive Therapy}
+      \field{volume}{69}
+      \field{year}{2009}
+      \field{pages}{4894\bibrangedash 4903}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1158/0008-5472.CAN-08-3658
+      \endverb
+      \verb{eprint}
+      \verb https://cancerres.aacrjournals.org/content/69/11/4894.full.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://cancerres.aacrjournals.org/content/69/11/4894
+      \endverb
+      \verb{url}
+      \verb https://cancerres.aacrjournals.org/content/69/11/4894
+      \endverb
+    \endentry
+    \entry{HailJr}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=c3144a77b1d422bba9cbd621a0a63d26}{%
+           family={Hail},
+           familyi={H\bibinitperiod},
+           given={Numsen},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f9d052e32540c1d8008e05e55c129e63}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Ping},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8c14d40838bfda0ba812a3560177ce81}{%
+           family={Bushman},
+           familyi={B\bibinitperiod},
+           given={Lane\bibnamedelima R.},
+           giveni={L\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c6bbbdf377fc8c41c9b10e04414abc78}
+      \strng{fullhash}{8d3f206f5effa1083ae8d1dac3752572}
+      \strng{bibnamehash}{8d3f206f5effa1083ae8d1dac3752572}
+      \strng{authorbibnamehash}{8d3f206f5effa1083ae8d1dac3752572}
+      \strng{authornamehash}{c6bbbdf377fc8c41c9b10e04414abc78}
+      \strng{authorfullhash}{8d3f206f5effa1083ae8d1dac3752572}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Teriflunomide (TFN) is an inhibitor of de novo pyrimidine synthesis and the active metabolite of leflunomide. Leflunomide is prescribed to patients worldwide as an immunomodulatory and anti-inflammatory disease-modifying prodrug. Leflunomide inhibited the growth of human prostate cancer xenographs in mice, and leflunomide or TFN promoted cytostasis and/or apoptosis in cultured cells. These findings suggest that TFN could be useful in prostate cancer chemoprevention. We investigated the possible mechanistic aspects of this tenet by characterizing the effects of TFN using premalignant PWR-1E and malignant DU-145 human prostate epithelial cells. TFN promoted a dose- and time-dependent cytostasis or apoptosis induction in these cells. The cytostatic effects of TFN, which were reversible but not by the presence of excess uridine in the culture medium, included diminished cellular uridine levels, an inhibition in oxygen consumption, a suppression of reactive oxygen species (ROS) generation, S-phase cell cycle arrest, and a conspicuous reduction in the size and number of the nucleoli in the nuclei of these cells. Conversely, TFN's apoptogenic effects were characteristic of catastrophic mitochondrial disruption (i.e., a dissipation of mitochondrial inner transmembrane potential, enhanced ROS production, mitochondrial cytochrome c release, and cytoplasmic vacuolization) and followed by DNA fragmentation. The respiration-deficient derivatives of the DU-145 cells, which are also uridine auxotrophs, were markedly resistant to the cytostatic and apoptotic effects of TFN, implicating de novo pyrimidine synthesis and mitochondrial bioenergetics as the primary targets for TFN in the respiration competent cells. These mechanistic findings advocate a role for TFN and mitochondrial bioenergetics in prostate cancer chemoprevention.}
+      \field{issn}{1476-5586}
+      \field{journaltitle}{Neoplasia}
+      \field{number}{6}
+      \field{title}{Teriflunomide (Leflunomide) Promotes Cytostatic, Antioxidant, and Apoptotic Effects in Transformed Prostate Epithelial Cells: Evidence Supporting a Role for Teriflunomide in Prostate Cancer Chemoprevention}
+      \field{volume}{12}
+      \field{year}{2010}
+      \field{pages}{464\bibrangedash 475}
+      \range{pages}{12}
+      \verb{doi}
+      \verb https://doi.org/10.1593/neo.10168
+      \endverb
+      \verb{urlraw}
+      \verb http://www.sciencedirect.com/science/article/pii/S1476558610800041
+      \endverb
+      \verb{url}
+      \verb http://www.sciencedirect.com/science/article/pii/S1476558610800041
+      \endverb
+    \endentry
+    \entry{Hansen}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=aa540f961dd9a3521e72ca47b88160dd}{%
+           family={Hansen},
+           familyi={H\bibinitperiod},
+           given={Elsa},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b81f0a0e33e63f8373f8d55af6d56ee6}{%
+           family={Read},
+           familyi={R\bibinitperiod},
+           given={Andrew\bibnamedelima F.},
+           giveni={A\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{bf9b2ece8878c901f217c6075c99ffd9}
+      \strng{fullhash}{bf9b2ece8878c901f217c6075c99ffd9}
+      \strng{bibnamehash}{bf9b2ece8878c901f217c6075c99ffd9}
+      \strng{authorbibnamehash}{bf9b2ece8878c901f217c6075c99ffd9}
+      \strng{authornamehash}{bf9b2ece8878c901f217c6075c99ffd9}
+      \strng{authorfullhash}{bf9b2ece8878c901f217c6075c99ffd9}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Adaptive therapy is a promising new approach to cancer treatment. It is designed to leverage competition between drug-sensitive and drug-resistant cells in order to suppress resistance and maintain tumor control for longer. Prompted by encouraging results from a recent pilot clinical trial, we evaluate the design of this initial test of adaptive therapy and identify three simple modifications that should improve performance. These modifications are designed to increase competition and are easy to implement. Using the mathematical model that supported the recent adaptive therapy trial, we show that the suggested modifications further delay time to tumor progression and also increase the range of patients who can benefit from adaptive therapy.}
+      \field{issn}{2072-6694}
+      \field{journaltitle}{Cancers}
+      \field{number}{12}
+      \field{title}{Modifying Adaptive Therapy to Enhance Competitive Suppression}
+      \field{volume}{12}
+      \field{year}{2020}
+      \verb{doi}
+      \verb 10.3390/cancers12123556
+      \endverb
+      \verb{urlraw}
+      \verb https://www.mdpi.com/2072-6694/12/12/3556
+      \endverb
+      \verb{url}
+      \verb https://www.mdpi.com/2072-6694/12/12/3556
+      \endverb
+    \endentry
+    \entry{Heinlein}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=b17f81cfe11cb5f1bd8117eb5065f5a9}{%
+           family={Heinlein},
+           familyi={H\bibinitperiod},
+           given={Cynthia\bibnamedelima A.},
+           giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f6e3069a0a7caa0dbeb282055bc074b3}{%
+           family={Chang},
+           familyi={C\bibinitperiod},
+           given={Chawnshang},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{921c156ab95941a05d89df3a55eb7717}
+      \strng{fullhash}{921c156ab95941a05d89df3a55eb7717}
+      \strng{bibnamehash}{921c156ab95941a05d89df3a55eb7717}
+      \strng{authorbibnamehash}{921c156ab95941a05d89df3a55eb7717}
+      \strng{authornamehash}{921c156ab95941a05d89df3a55eb7717}
+      \strng{authorfullhash}{921c156ab95941a05d89df3a55eb7717}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{The normal development and maintenance of the prostate is dependent on androgen acting through the androgen receptor (AR). AR remains important in the development and progression of prostate cancer. AR expression is maintained throughout prostate cancer progression, and the majority of androgen-independent or hormone refractory prostate cancers express AR. Mutation of AR, especially mutations that result in a relaxation of AR ligand specificity, may contribute to the progression of prostate cancer and the failure of endocrine therapy by allowing AR transcriptional activation in response to antiandrogens or other endogenous hormones. Similarly, alterations in the relative expression of AR coregulators have been found to occur with prostate cancer progression and may contribute to differences in AR ligand specificity or transcriptional activity. Prostate cancer progression is also associated with increased growth factor production and an altered response to growth factors by prostate cancer cells. The kinase signal transduction cascades initiated by mitogenic growth factors modulate the transcriptional activity of AR and the interaction between AR and AR coactivators. The inhibition of AR activity through mechanisms in addition to androgen ablation, such as modulation of signal transduction pathways, may delay prostate cancer progression.}}
+      \field{issn}{0163-769X}
+      \field{journaltitle}{Endocrine Reviews}
+      \field{month}{04}
+      \field{number}{2}
+      \field{title}{{Androgen Receptor in Prostate Cancer}}
+      \field{volume}{25}
+      \field{year}{2004}
+      \field{pages}{276\bibrangedash 308}
+      \range{pages}{33}
+      \verb{doi}
+      \verb 10.1210/er.2002-0032
+      \endverb
+      \verb{eprint}
+      \verb https://academic.oup.com/edrv/article-pdf/25/2/276/8861726/edrv0276.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1210/er.2002-0032
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1210/er.2002-0032
+      \endverb
+    \endentry
+    \entry{Jain}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=838a7062125453918122ff0f85912769}{%
+           family={Jain},
+           familyi={J\bibinitperiod},
+           given={Harsh\bibnamedelima Vardhan},
+           giveni={H\bibinitperiod\bibinitdelim V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bcbc39525d7e31abdbbe70c3230ce859}{%
+           family={Clinton},
+           familyi={C\bibinitperiod},
+           given={Steven\bibnamedelima K.},
+           giveni={S\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5332880b2d6b53bac7ce0b3012af5891}{%
+           family={Bhinder},
+           familyi={B\bibinitperiod},
+           given={Arvinder},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=80588d7a0b759c79a5911fa7749ec68e}{%
+           family={Friedman},
+           familyi={F\bibinitperiod},
+           given={Avner},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {National Academy of Sciences}%
+      }
+      \strng{namehash}{d3ff8e1d3e8621d6ce0d96d6e9417228}
+      \strng{fullhash}{d265351c1958b4e7034560ba9b1b7ffc}
+      \strng{bibnamehash}{d265351c1958b4e7034560ba9b1b7ffc}
+      \strng{authorbibnamehash}{d265351c1958b4e7034560ba9b1b7ffc}
+      \strng{authornamehash}{d3ff8e1d3e8621d6ce0d96d6e9417228}
+      \strng{authorfullhash}{d265351c1958b4e7034560ba9b1b7ffc}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Prostate cancer progression depends in part on the complex interactions between testosterone, its active metabolite DHT, and androgen receptors. In a metastatic setting, the first line of treatment is the elimination of testosterone. However, such interventions are not curative because cancer cells evolve via multiple mechanisms to a castrate-resistant state, allowing progression to a lethal outcome. It is hypothesized that administration of antiandrogen therapy in an intermittent, as opposed to continuous, manner may bestow improved disease control with fewer treatment-related toxicities. The present study develops a biochemically motivated mathematical model of antiandrogen therapy that can be tested prospectively as a predictive tool. The model includes {“}personalized{”} parameters, which address the heterogeneity in the predicted course of the disease under various androgen-deprivation schedules. Model simulations are able to capture a variety of clinically observed outcomes for {“}average{”} patient data under different intermittent schedules. The model predicts that in the absence of a competitive advantage of androgen-dependent cancer cells over castration-resistant cancer cells, intermittent scheduling can lead to more rapid treatment failure as compared to continuous treatment. However, increasing a competitive advantage for hormone-sensitive cells swings the balance in favor of intermittent scheduling, delaying the acquisition of genetic or epigenetic alterations empowering androgen resistance. Given the near universal prevalence of antiandrogen treatment failure in the absence of competing mortality, such modeling has the potential of developing into a useful tool for incorporation into clinical research trials and ultimately as a prognostic tool for individual patients.}
+      \field{issn}{0027-8424}
+      \field{journaltitle}{Proceedings of the National Academy of Sciences}
+      \field{number}{49}
+      \field{title}{Mathematical modeling of prostate cancer progression in response to androgen ablation therapy}
+      \field{volume}{108}
+      \field{year}{2011}
+      \field{pages}{19701\bibrangedash 19706}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1073/pnas.1115750108
+      \endverb
+      \verb{eprint}
+      \verb https://www.pnas.org/content/108/49/19701.full.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.pnas.org/content/108/49/19701
+      \endverb
+      \verb{url}
+      \verb https://www.pnas.org/content/108/49/19701
+      \endverb
+    \endentry
+    \entry{Scott}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=79312663b6956f65878b849a1e169c4b}{%
+           family={Scott},
+           familyi={S\bibinitperiod},
+           given={Jacob},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6d372706ecb7a0d91eb981cb03f10baf}{%
+           family={Marusyk},
+           familyi={M\bibinitperiod},
+           given={Andriy},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{6686bd8e618e2fab81edd7be1af42348}
+      \strng{fullhash}{6686bd8e618e2fab81edd7be1af42348}
+      \strng{bibnamehash}{6686bd8e618e2fab81edd7be1af42348}
+      \strng{authorbibnamehash}{6686bd8e618e2fab81edd7be1af42348}
+      \strng{authornamehash}{6686bd8e618e2fab81edd7be1af42348}
+      \strng{authorfullhash}{6686bd8e618e2fab81edd7be1af42348}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{It is generally accepted that the initiation and progression of cancers is the result of somatic clonal evolution. Despite many peculiarities, evolution within populations of somatic cells should obey the same Darwinian principles as evolution within natural populations, i.e. variability of heritable phenotypes provides the substrate for context-specific selection forces leading to increased population frequencies of phenotypes, which are better adapted to their environment. Yet, within cancer biology, the more prevalent way to view evolution is as being entirely driven by the accumulation of “driver” mutations. Context-specific selection forces are either ignored, or viewed as constraints from which tumor cells liberate themselves during the course of malignant progression. In this review, we will argue that explicitly focusing on selection forces acting on the populations of neoplastic cells as the driving force of somatic clonal evolution might provide for a more accurate conceptual framework compared to the mutation-centric driver gene paradigm. Whereas little can be done to counteract the “bad luck” of stochastic occurrences of cancer-related mutations, changes in selective pressures and the phenotypic adaptations they induce can, in principle, be exploited to limit the incidence of cancers and to increase the efficiency of existing and future therapies. This article is part of a Special Issue entitled: Evolutionary principles - heterogeneity in cancer?, edited by Dr. Robert A. Gatenby.}
+      \field{issn}{0304-419X}
+      \field{journaltitle}{Biochimica et Biophysica Acta (BBA) - Reviews on Cancer}
+      \field{note}{Evolutionary principles - heterogeneity in cancer?}
+      \field{number}{2}
+      \field{title}{Somatic clonal evolution: A selection-centric perspective}
+      \field{volume}{1867}
+      \field{year}{2017}
+      \field{pages}{139\bibrangedash 150}
+      \range{pages}{12}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.bbcan.2017.01.006
+      \endverb
+      \verb{urlraw}
+      \verb http://www.sciencedirect.com/science/article/pii/S0304419X1730029X
+      \endverb
+      \verb{url}
+      \verb http://www.sciencedirect.com/science/article/pii/S0304419X1730029X
+      \endverb
+      \keyw{Cancer,Initiation,Progression,Natural selection,Selective pressures,Driver}
+    \endentry
+    \entry{Steward}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=52521c074dffb3ec99e19845cb5d4656}{%
+           family={Stewart},
+           familyi={S\bibinitperiod},
+           given={Grant\bibnamedelima D.},
+           giveni={G\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=504de8623c854c52ec39f1c1171fed12}{%
+           family={Ross},
+           familyi={R\bibinitperiod},
+           given={James\bibnamedelima A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=711c207157bc48fd167aad78cd0b48a8}{%
+           family={McLaren},
+           familyi={M\bibinitperiod},
+           given={Duncan\bibnamedelima B.},
+           giveni={D\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d381f9f619e39794cb21cb047ab7e874}{%
+           family={Parker},
+           familyi={P\bibinitperiod},
+           given={Christopher\bibnamedelima C.},
+           giveni={C\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=726a26ca56483b016b471dba505647be}{%
+           family={Habib},
+           familyi={H\bibinitperiod},
+           given={Fouad\bibnamedelima K.},
+           giveni={F\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=13d9be0d47913761788770195a439c25}{%
+           family={Riddick},
+           familyi={R\bibinitperiod},
+           given={Antony\bibnamedelima C.P.},
+           giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{16dbb942f758da4e96537a68d0cbe735}
+      \strng{fullhash}{35e405e42e6058c8da39238a9e291839}
+      \strng{bibnamehash}{35e405e42e6058c8da39238a9e291839}
+      \strng{authorbibnamehash}{35e405e42e6058c8da39238a9e291839}
+      \strng{authornamehash}{16dbb942f758da4e96537a68d0cbe735}
+      \strng{authorfullhash}{35e405e42e6058c8da39238a9e291839}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Research into the hypoxic tumour microenvironment is accelerating and the reversal of hypoxia is increasingly being suggested as a mechanism for improving cancer treatment. Recent studies have suggested that hypoxia is also a feature in prostate cancer and is associated with a poor prognosis. Hypoxia has been shown to cause radio-resistance and hence hamper one of the major treatments for prostate cancer. However, unlike other solid tumours, such as cervical and head-and-neck cancer, there are inconsistencies and unanswered questions about the relevance of hypoxia in prostate cancer. This review outlines the role of low-oxygen conditions in prostate cancer and the areas where further studies are required.}
+      \field{journaltitle}{BJU International}
+      \field{number}{1}
+      \field{title}{The relevance of a hypoxic tumour microenvironment in prostate cancer}
+      \field{volume}{105}
+      \field{year}{2010}
+      \field{pages}{8\bibrangedash 13}
+      \range{pages}{6}
+      \verb{doi}
+      \verb https://doi.org/10.1111/j.1464-410X.2009.08921.x
+      \endverb
+      \verb{eprint}
+      \verb https://bjui-journals.onlinelibrary.wiley.com/doi/pdf/10.1111/j.1464-410X.2009.08921.x
+      \endverb
+      \verb{urlraw}
+      \verb https://bjui-journals.onlinelibrary.wiley.com/doi/abs/10.1111/j.1464-410X.2009.08921.x
+      \endverb
+      \verb{url}
+      \verb https://bjui-journals.onlinelibrary.wiley.com/doi/abs/10.1111/j.1464-410X.2009.08921.x
+      \endverb
+      \keyw{prostate cancer,hypoxia,radiotherapy,hypoxia-inducible factor-1,vascular endothelial growth factor}
+    \endentry
+    \entry{Titus}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=48eb0c2ba17a4480ab65c41e8fd13a57}{%
+           family={Titus},
+           familyi={T\bibinitperiod},
+           given={Mark\bibnamedelima A.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=64be3df8f3ba4fc00d17f462ffecd5c3}{%
+           family={Schell},
+           familyi={S\bibinitperiod},
+           given={Michael\bibnamedelima J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=991330b318a417dc983183656730f63f}{%
+           family={Lih},
+           familyi={L\bibinitperiod},
+           given={Fred\bibnamedelima B.},
+           giveni={F\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4b980cb2e54e917adab84fcee8bcaaf7}{%
+           family={Tomer},
+           familyi={T\bibinitperiod},
+           given={Kenneth\bibnamedelima B.},
+           giveni={K\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5b76bcf1d91c0da2d60031ea29262b4f}{%
+           family={Mohler},
+           familyi={M\bibinitperiod},
+           given={James\bibnamedelima L.},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {American Association for Cancer Research}%
+      }
+      \strng{namehash}{b892a153c6da7ade1648019a9a30d810}
+      \strng{fullhash}{a5d6ef33f3496bbe9346a50eb63cd6b4}
+      \strng{bibnamehash}{a5d6ef33f3496bbe9346a50eb63cd6b4}
+      \strng{authorbibnamehash}{a5d6ef33f3496bbe9346a50eb63cd6b4}
+      \strng{authornamehash}{b892a153c6da7ade1648019a9a30d810}
+      \strng{authorfullhash}{a5d6ef33f3496bbe9346a50eb63cd6b4}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Purpose: Prostate cancer eventually recurs during androgen deprivation therapy despite castrate levels of serum androgens. Expression of androgen receptor and androgen receptor{–}regulated proteins suggests androgen receptor activation in recurrent prostate cancer. Many groups have pursued mechanisms of ligand-independent androgen receptor activation but we found high levels of testicular androgens in recurrent prostate cancer tissue using RIA. Experimental Designs: Prostate specimens from 36 men were procured preserving blood flow to prevent ischemia and cyropreserved immediately. Recurrent prostate cancer specimens from 18 men whose cancer recurred locally during androgen deprivation therapy and androgen-stimulated benign prostate specimens from 18 men receiving no hormonal treatments were studied. Tissue levels of testosterone and dihydrotestosterone were measured in each specimen using liquid chromatography/electrospray tandem mass spectrometry. Testosterone and dihydrotestosterone levels were compared with clinical variables and treatment received. Results: Testosterone levels were similar in recurrent prostate cancer (3.75 pmol/g tissue) and androgen-stimulated benign prostate (2.75 pmol/g tissue, Wilcoxon two-sided, P = 0.30). Dihydrotestosterone levels decreased 91\% in recurrent prostate cancer (1.25 pmol/g tissue) compared with androgen-stimulated benign prostate (13.7 pmol/g tissue; Wilcoxon two-sided, P \&lt; 0.0001) although dihydrotestosterone levels in most specimens of recurrent prostate cancer were sufficient for androgen receptor activation. Testosterone or dihydrotestosterone levels were not related to metastatic status, antiandrogen treatment, or survival (Wilcoxon rank sum, all P \&gt; 0.2). Conclusions: Recurrent prostate cancer may develop the capacity to biosynthesize testicular androgens from adrenal androgens or cholesterol. This surprising finding suggests intracrine production of dihydrotestosterone and should be exploited for novel treatment of recurrent prostate cancer.}
+      \field{issn}{1078-0432}
+      \field{journaltitle}{Clinical Cancer Research}
+      \field{number}{13}
+      \field{title}{Testosterone and Dihydrotestosterone Tissue Levels in Recurrent Prostate Cancer}
+      \field{volume}{11}
+      \field{year}{2005}
+      \field{pages}{4653\bibrangedash 4657}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1158/1078-0432.CCR-05-0525
+      \endverb
+      \verb{eprint}
+      \verb https://clincancerres.aacrjournals.org/content/11/13/4653.full.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://clincancerres.aacrjournals.org/content/11/13/4653
+      \endverb
+      \verb{url}
+      \verb https://clincancerres.aacrjournals.org/content/11/13/4653
+      \endverb
+    \endentry
+    \entry{West}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=7b9e4dde24d3c2b60ace549f16309c59}{%
+           family={West},
+           familyi={W\bibinitperiod},
+           given={Jeffrey\bibnamedelima B.},
+           giveni={J\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=83b0b99c277349296c2da4982a916e9e}{%
+           family={Dinh},
+           familyi={D\bibinitperiod},
+           given={Mina\bibnamedelima N.},
+           giveni={M\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1b317e78db63f2b75ea11a5f46762cb4}{%
+           family={Brown},
+           familyi={B\bibinitperiod},
+           given={Joel\bibnamedelima S.},
+           giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3eb1c07fdc70058c7605ad69ecff6f0f}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Jingsong},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c4606ebcf604380f2de56bc56df1ed2c}{%
+           family={Anderson},
+           familyi={A\bibinitperiod},
+           given={Alexander\bibnamedelima R.},
+           giveni={A\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8af10caa96e694a1f978a72ae80f8b79}{%
+           family={Gatenby},
+           familyi={G\bibinitperiod},
+           given={Robert\bibnamedelima A.},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {American Association for Cancer Research}%
+      }
+      \strng{namehash}{2a719931fea8c64bf026982b24925a6c}
+      \strng{fullhash}{f25baa7e3d3d9082c97b853bd9ed1e93}
+      \strng{bibnamehash}{f25baa7e3d3d9082c97b853bd9ed1e93}
+      \strng{authorbibnamehash}{f25baa7e3d3d9082c97b853bd9ed1e93}
+      \strng{authornamehash}{2a719931fea8c64bf026982b24925a6c}
+      \strng{authorfullhash}{f25baa7e3d3d9082c97b853bd9ed1e93}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Purpose: Integration of evolutionary dynamics into systemic therapy for metastatic cancers can prolong tumor control compared with standard maximum tolerated dose (MTD) strategies. Prior investigations have focused on monotherapy, but many clinical cancer treatments combine two or more drugs. Optimizing the evolutionary dynamics in multidrug therapy is challenging because of the complex cellular interactions and the large parameter space of potential variations in drugs, doses, and treatment schedules. However, multidrug therapy also represents an opportunity to further improve outcomes using evolution-based strategies.Experimental Design: We examine evolution-based strategies for two-drug therapy and identify an approach that divides the treatment drugs into primary and secondary roles. The primary drug has the greatest efficacy and/or lowest toxicity. The secondary drug is applied solely to reduce the resistant population to the primary drug.Results: Simulations from the mathematical model demonstrate that the primary{–}secondary approach increases time to progression (TTP) compared with conventional strategies in which drugs are administered without regard to evolutionary dynamics. We apply our model to an ongoing adaptive therapy clinical trial of evolution-based administration of abiraterone to treat metastatic castrate-resistant prostate cancer. Model simulations, parameterized with data from individual patients who progressed, demonstrate that strategic application of docetaxel during abiraterone therapy would have significantly increased their TTP.Conclusions: Mathematical models can integrate evolutionary dynamics into multidrug cancer clinical trials. This has the potential to improve outcomes and to develop clinical trials in which these mathematical models are also used to estimate the mechanism(s) of treatment failure and explore alternative strategies to improve outcomes in future trials.}
+      \field{issn}{1078-0432}
+      \field{journaltitle}{Clinical Cancer Research}
+      \field{number}{14}
+      \field{title}{Multidrug Cancer Therapy in Metastatic Castrate-Resistant Prostate Cancer: An Evolution-Based Strategy}
+      \field{volume}{25}
+      \field{year}{2019}
+      \field{pages}{4413\bibrangedash 4421}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1158/1078-0432.CCR-19-0006
+      \endverb
+      \verb{eprint}
+      \verb https://clincancerres.aacrjournals.org/content/25/14/4413.full.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://clincancerres.aacrjournals.org/content/25/14/4413
+      \endverb
+      \verb{url}
+      \verb https://clincancerres.aacrjournals.org/content/25/14/4413
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

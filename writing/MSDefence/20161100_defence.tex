@@ -27,6 +27,7 @@
 \renewcommand*{\citesetup}{\tiny}
 \renewcommand{\cite}{\parencite}
 \bibliography{References}
+\usepackage[strict]{changepage}
 
 % Beamer theme
 \usetheme[titleformat=smallcaps,
@@ -38,6 +39,12 @@
 % \usepackage{FiraSans}
 % \usepackage{FiraMono}
 
+\setbeamertemplate{footline}{}
+\setbeamertemplate{navigation symbols}{%
+    \ifnum\insertframenumber>0
+        \footnotesize\insertframenumber/\inserttotalframenumber%
+    \fi%
+}
 % Information to be included in the title page:
 \title[Thesis Defence]{A theoretical study of the implications of resource competition for adaptive therapy of castration-resistant prostate cancer}
 \subtitle{Thesis Defence}
@@ -52,9 +59,7 @@ Supervisor: Prof. Sutirth Dey}
 
 \include{chapters/Intro}
 
-\include{chapters/Competition}
-
-\include{chapters/Therapy}
+\include{chapters/Results}
 
 \include{chapters/Summary}
 
