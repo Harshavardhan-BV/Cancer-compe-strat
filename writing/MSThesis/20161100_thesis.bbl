@@ -1,0 +1,2826 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global}
+    \entry{Acharya}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=742c6ecbce3b3b4daa7a56c4f68aaa45}{%
+           family={Acharya},
+           familyi={A\bibinitperiod},
+           given={M},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=625d790ca89799c37ac43562bbe0e50c}{%
+           family={Bernard},
+           familyi={B\bibinitperiod},
+           given={A},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=020258438e05833d9366a822c4b94f42}{%
+           family={Gonzalez},
+           familyi={G\bibinitperiod},
+           given={M},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=90f26cc1138c55cdc56fbb82add2b28a}{%
+           family={Jiao},
+           familyi={J\bibinitperiod},
+           given={J},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=af086f96ccba8deb3378b2a93ffb2ef7}{%
+           family={De\bibnamedelima Vries},
+           familyi={D\bibinitperiod\bibinitdelim V\bibinitperiod},
+           given={R},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3dad2c31b936bbed7959ccad775ed40b}{%
+           family={Tran},
+           familyi={T\bibinitperiod},
+           given={N},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{ae1a9b0e3887f8ffaa05bbd79d4f4263}
+      \strng{fullhash}{ed1480969e52dbdefa428482a8107b98}
+      \strng{bibnamehash}{ed1480969e52dbdefa428482a8107b98}
+      \strng{authorbibnamehash}{ed1480969e52dbdefa428482a8107b98}
+      \strng{authornamehash}{ae1a9b0e3887f8ffaa05bbd79d4f4263}
+      \strng{authorfullhash}{ed1480969e52dbdefa428482a8107b98}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Cancer chemotherapy and pharmacology}
+      \field{number}{6}
+      \field{title}{Open-label, phase I, pharmacokinetic studies of abiraterone acetate in healthy men}
+      \field{volume}{69}
+      \field{year}{2012}
+      \field{pages}{1583\bibrangedash 1590}
+      \range{pages}{8}
+    \endentry
+    \entry{Ahmad}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=ef3baad1a2a8f0d5475bc8ee07bca051}{%
+           family={Ahmad},
+           familyi={A\bibinitperiod},
+           given={Saif\bibnamedelima S},
+           giveni={S\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=36f6e8b4ca32f87ea255a4942de0c62c}{%
+           family={Duke},
+           familyi={D\bibinitperiod},
+           given={Simon},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=223842f351259104f81dec6a6a200d63}{%
+           family={Jena},
+           familyi={J\bibinitperiod},
+           given={Rajesh},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=65f7e131a5b44a4929016cedeab1fd20}{%
+           family={Williams},
+           familyi={W\bibinitperiod},
+           given={Michael\bibnamedelima V},
+           giveni={M\bibinitperiod\bibinitdelim V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c0dc83b1bd281be1194b429090acc7dd}{%
+           family={Burnet},
+           familyi={B\bibinitperiod},
+           given={Neil\bibnamedelima G},
+           giveni={N\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {BMJ Publishing Group Ltd}%
+      }
+      \strng{namehash}{dce96381a4df49e403366fddc5b33784}
+      \strng{fullhash}{0fbe7e44fee0d7861a1aaaa07ebb6d30}
+      \strng{bibnamehash}{0fbe7e44fee0d7861a1aaaa07ebb6d30}
+      \strng{authorbibnamehash}{0fbe7e44fee0d7861a1aaaa07ebb6d30}
+      \strng{authornamehash}{dce96381a4df49e403366fddc5b33784}
+      \strng{authorfullhash}{0fbe7e44fee0d7861a1aaaa07ebb6d30}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{BMJ}
+      \field{title}{Advances in radiotherapy}
+      \field{volume}{345}
+      \field{year}{2012}
+      \verb{doi}
+      \verb 10.1136/bmj.e7765
+      \endverb
+      \verb{eprint}
+      \verb https://www.bmj.com/content/345/bmj.e7765.full.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.bmj.com/content/345/bmj.e7765
+      \endverb
+      \verb{url}
+      \verb https://www.bmj.com/content/345/bmj.e7765
+      \endverb
+    \endentry
+    \entry{atcc}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=3b4e01cb70c73a3b0eeb9b039d93a5fd}{%
+           family={ATCC},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{3b4e01cb70c73a3b0eeb9b039d93a5fd}
+      \strng{fullhash}{3b4e01cb70c73a3b0eeb9b039d93a5fd}
+      \strng{bibnamehash}{3b4e01cb70c73a3b0eeb9b039d93a5fd}
+      \strng{authorbibnamehash}{3b4e01cb70c73a3b0eeb9b039d93a5fd}
+      \strng{authornamehash}{3b4e01cb70c73a3b0eeb9b039d93a5fd}
+      \strng{authorfullhash}{3b4e01cb70c73a3b0eeb9b039d93a5fd}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{atcc.org}
+      \field{title}{ATCC: The Global Bioresource Center}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://www.atcc.org/
+      \endverb
+      \verb{url}
+      \verb https://www.atcc.org/
+      \endverb
+    \endentry
+    \entry{Bacevic}{article}{}
+      \name{author}{10}{}{%
+        {{un=0,uniquepart=base,hash=dfa90db537da4cb2f9a77e9338bbfcba}{%
+           family={Bacevic},
+           familyi={B\bibinitperiod},
+           given={Katarina},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4c3b34dab5a67abd0fa22b65554fde5e}{%
+           family={Noble},
+           familyi={N\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bb56be185082f58e3c1bf8620d2671dc}{%
+           family={Soffar},
+           familyi={S\bibinitperiod},
+           given={Ahmed},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=69e1acfaf8abf297391d1c12d2f39942}{%
+           family={Ammar},
+           familyi={A\bibinitperiod},
+           given={Orchid\bibnamedelima Wael},
+           giveni={O\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9c6bfc916ff88fa2c1047f1644da8a2e}{%
+           family={Boszonyik},
+           familyi={B\bibinitperiod},
+           given={Benjamin},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5d5febf865f5ae9f1aabfcc0a3acc811}{%
+           family={Prieto},
+           familyi={P\bibinitperiod},
+           given={Susana},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c27075093bd3ab4808235d76111e3cbd}{%
+           family={Vincent},
+           familyi={V\bibinitperiod},
+           given={Charles},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b13dad8c321e9b923c53a92451b81544}{%
+           family={Hochberg},
+           familyi={H\bibinitperiod},
+           given={Michael\bibnamedelima E},
+           giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=88b5ff68e51b62179c868cf8341a4a12}{%
+           family={Krasinska},
+           familyi={K\bibinitperiod},
+           given={Liliana},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dead274f275bfdcd79cdf93b868bdc63}{%
+           family={Fisher},
+           familyi={F\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group}%
+      }
+      \strng{namehash}{4438f708f0208dd8652e7819580db46e}
+      \strng{fullhash}{8ca353fe8d5424a6b8a2a82b146aa69a}
+      \strng{bibnamehash}{8ca353fe8d5424a6b8a2a82b146aa69a}
+      \strng{authorbibnamehash}{8ca353fe8d5424a6b8a2a82b146aa69a}
+      \strng{authornamehash}{4438f708f0208dd8652e7819580db46e}
+      \strng{authorfullhash}{8ca353fe8d5424a6b8a2a82b146aa69a}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature communications}
+      \field{number}{1}
+      \field{title}{Spatial competition constrains resistance to targeted cancer therapy}
+      \field{volume}{8}
+      \field{year}{2017}
+      \field{pages}{1\bibrangedash 15}
+      \range{pages}{15}
+    \endentry
+    \entry{Baniel}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=134e49ef3ebaa6d2f565a2166d812c22}{%
+           family={Baniel},
+           familyi={B\bibinitperiod},
+           given={J},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5694eb00cfb2712cbdafa0dddc81f9cc}{%
+           family={Foster},
+           familyi={F\bibinitperiod},
+           given={R\bibnamedelima S},
+           giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=811efc685e969b30db249d586f86d90e}{%
+           family={Gonin},
+           familyi={G\bibinitperiod},
+           given={R},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=374b8d412a08b99b969863c06715cff9}{%
+           family={Messemer},
+           familyi={M\bibinitperiod},
+           given={J\bibnamedelima E},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=329462dec8917e52f775d5d9e75f3210}{%
+           family={Donohue},
+           familyi={D\bibinitperiod},
+           given={J\bibnamedelima P},
+           giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7f149d1f4d67c38be9ca35b83e43cf18}{%
+           family={Einhorn},
+           familyi={E\bibinitperiod},
+           given={L\bibnamedelima H},
+           giveni={L\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b74d53db30e767665f805d867d18296a}
+      \strng{fullhash}{3678615f7e69a852f9eb1f28d9e8e48f}
+      \strng{bibnamehash}{3678615f7e69a852f9eb1f28d9e8e48f}
+      \strng{authorbibnamehash}{3678615f7e69a852f9eb1f28d9e8e48f}
+      \strng{authornamehash}{b74d53db30e767665f805d867d18296a}
+      \strng{authorfullhash}{3678615f7e69a852f9eb1f28d9e8e48f}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{PURPOSEThis study analyzed a large group of patients with testicular germ cell cancer in complete remission, who relapsed more than 2 years after completion of treatment.PATIENTS AND METHODSA review of all patients treated at Indiana University Medical Center from 1979 through 1992 for late relapse was conducted. Eighty-one patients were treated for late relapse of testicular cancer. Forty-seven patients relapsed more than 5 years after successful management of their initial disease.RESULTSAt initial diagnosis, 35 patients had clinical stage I, 18 stage II, and 28 stage III disease. Twenty-three of 35 stage I, all 18 stage II, and all 28 stage III patients were treated by chemotherapy before their late relapse. The median follow-up duration of patients post-management of late relapse was 4.8 years. Twenty-one patients (25.9\%) are continuously disease-free. Nineteen of these 21 patients had surgical resection of carcinoma or teratoma as a component of their therapy. Of sixty-five patients treated for late relapse by chemotherapy, 17 (26.2\%) had a complete response, but only two have been continuously disease-free with chemotherapy alone. These two never received prior chemotherapy.CONCLUSIONLate relapse of testis cancer is more common than previously thought. Surgery is the preferred mode of therapy. Chemotherapy has only modest success in this entity, in contrast to the excellent results in de novo germ cell tumors. Patients treated for testicular germ cell cancer need annual follow-up evaluations throughout their life due to the possibility of late relapse.}
+      \field{journaltitle}{Journal of Clinical Oncology}
+      \field{note}{PMID: 7537800}
+      \field{number}{5}
+      \field{title}{Late relapse of testicular cancer.}
+      \field{volume}{13}
+      \field{year}{1995}
+      \field{pages}{1170\bibrangedash 1176}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1200/JCO.1995.13.5.1170
+      \endverb
+      \verb{eprint}
+      \verb https://doi.org/10.1200/JCO.1995.13.5.1170
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1200/JCO.1995.13.5.1170
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1200/JCO.1995.13.5.1170
+      \endverb
+    \endentry
+    \entry{Box}{inbook}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=002f69bf140cceda97f81a168d86ceec}{%
+           family={Box},
+           familyi={B\bibinitperiod},
+           given={G.E.P.},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=3a8b2fbd64cff1dc67b10301291512aa}{%
+           family={LAUNER},
+           familyi={L\bibinitperiod},
+           given={ROBERT\bibnamedelima L.},
+           giveni={R\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=ec9deacd44470c6f0ddaf06eb28c9b9e}{%
+           family={WILKINSON},
+           familyi={W\bibinitperiod},
+           given={GRAHAM\bibnamedelima N.},
+           giveni={G\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Academic Press}%
+      }
+      \strng{namehash}{002f69bf140cceda97f81a168d86ceec}
+      \strng{fullhash}{002f69bf140cceda97f81a168d86ceec}
+      \strng{bibnamehash}{002f69bf140cceda97f81a168d86ceec}
+      \strng{authorbibnamehash}{002f69bf140cceda97f81a168d86ceec}
+      \strng{authornamehash}{002f69bf140cceda97f81a168d86ceec}
+      \strng{authorfullhash}{002f69bf140cceda97f81a168d86ceec}
+      \strng{editorbibnamehash}{12fa1e9342a8474cb99889b4341e3f5b}
+      \strng{editornamehash}{12fa1e9342a8474cb99889b4341e3f5b}
+      \strng{editorfullhash}{12fa1e9342a8474cb99889b4341e3f5b}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Publisher Summary Robustness may be defined as the property of a procedure which renders the answers it gives insensitive to departures, of a kind which occur in practice, from ideal assumptions. Since assumptions imply some kind of scientific model, I believe that it is necessary to look at the process of scientific modelling itself to understand the nature of and the need for robust procedures. Against such a view it might be urged that some useful robust procedures have been derived empirically without an explicitly stated model. However, an empirical procedure implies some unstated model and there is often great virtue in bringing into the open the kind of assumptions that lead to useful methods. The need for robust methods seems to be intimately mixed up with the need for simple models. This we now discuss.}
+      \field{booktitle}{Robustness in Statistics}
+      \field{isbn}{978-0-12-438150-6}
+      \field{title}{Robustness in the Strategy of Scientific Model Building}
+      \field{year}{1979}
+      \field{pages}{201\bibrangedash 236}
+      \range{pages}{36}
+      \verb{doi}
+      \verb https://doi.org/10.1016/B978-0-12-438150-6.50018-2
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/B9780124381506500182
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/B9780124381506500182
+      \endverb
+    \endentry
+    \entry{Fontaine}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=2df4c99e234b831344ed8e093cd29aed}{%
+           family={Carmona-Fontaine},
+           familyi={C\bibinithyphendelim F\bibinitperiod},
+           given={Carlos},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fb00f26234dbebea3ee9d0520b39e249}{%
+           family={Bucci},
+           familyi={B\bibinitperiod},
+           given={Vanni},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=84151742ff7992c06b3e315baf01d6f0}{%
+           family={Akkari},
+           familyi={A\bibinitperiod},
+           given={Leila},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7092d2e7876707579e8277934849e746}{%
+           family={Deforet},
+           familyi={D\bibinitperiod},
+           given={Maxime},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c9a73bece6e3f0c2d7f55daeef7c7062}{%
+           family={Joyce},
+           familyi={J\bibinitperiod},
+           given={Johanna\bibnamedelima A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=247470660dfc01a23162a2091a39af24}{%
+           family={Xavier},
+           familyi={X\bibinitperiod},
+           given={Joao\bibnamedelima B.},
+           giveni={J\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {National Academy of Sciences}%
+      }
+      \strng{namehash}{88c27f493be1c82623760359d87a48f9}
+      \strng{fullhash}{51da1eddfea58d55867b1712378ff368}
+      \strng{bibnamehash}{51da1eddfea58d55867b1712378ff368}
+      \strng{authorbibnamehash}{51da1eddfea58d55867b1712378ff368}
+      \strng{authornamehash}{88c27f493be1c82623760359d87a48f9}
+      \strng{authorfullhash}{51da1eddfea58d55867b1712378ff368}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Cancer cells undergo dramatic metabolic alterations, such as the Warburg effect where glucose is consumed independently of oxygen, leading to high lactic acid production. Although these alterations can give growth advantages to cancer cells, they have a profound effect in the extracellular environment, and thus it is not clear how they affect healthy cells. Here we show that lactic acid accumulation can impair the survival of tumor-associated macrophages. Using a multidisciplinary combination of computational and experimental methods, we show that this decreased survival can lead to spatial patterns of macrophage localization that resemble how tumor-associated macrophages distribute in real tumors. Spatial patterns can potentiate tumor growth, and thus understanding how they are formed may bring therapeutic insights.Drastic metabolic alterations, such as the Warburg effect, are found in most if not all types of malignant tumors. Emerging evidence shows that cancer cells benefit from these alterations, but little is known about how they affect noncancerous stromal cells within the tumor microenvironment. Here we show that cancer cells are better adapted to metabolic changes in the microenvironment, leading to the emergence of spatial structure. A clear example of tumor spatial structure is the localization of tumor-associated macrophages (TAMs), one of the most common stromal cell types found in tumors. TAMs are enriched in well-perfused areas, such as perivascular and cortical regions, where they are known to potentiate tumor growth and invasion. However, the mechanisms of TAM localization are not completely understood. Computational modeling predicts that gradients{—}of nutrients, gases, and metabolic by-products such as lactate{—}emerge due to altered cell metabolism within poorly perfused tumors, creating ischemic regions of the tumor microenvironment where TAMs struggle to survive. We tested our modeling prediction in a coculture system that mimics the tumor microenvironment. Using this experimental approach, we showed that a combination of metabolite gradients and differential sensitivity to lactic acid is sufficient for the emergence of macrophage localization patterns in vitro. This suggests that cancer metabolic changes create a microenvironment where tumor cells thrive over other cells. Understanding differences in tumor-stroma sensitivity to these alterations may open therapeutic avenues against cancer.}
+      \field{issn}{0027-8424}
+      \field{journaltitle}{Proceedings of the National Academy of Sciences}
+      \field{number}{48}
+      \field{title}{Emergence of spatial structure in the tumor microenvironment due to the Warburg effect}
+      \field{volume}{110}
+      \field{year}{2013}
+      \field{pages}{19402\bibrangedash 19407}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1073/pnas.1311939110
+      \endverb
+      \verb{eprint}
+      \verb https://www.pnas.org/content/110/48/19402.full.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.pnas.org/content/110/48/19402
+      \endverb
+      \verb{url}
+      \verb https://www.pnas.org/content/110/48/19402
+      \endverb
+    \endentry
+    \entry{Coussens}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=c7eb3e397d5c5d92f9a198b049d179b8}{%
+           family={Coussens},
+           familyi={C\bibinitperiod},
+           given={Lisa\bibnamedelima M},
+           giveni={L\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cfb77421e25ebd8de738c8b12f850fcf}{%
+           family={Werb},
+           familyi={W\bibinitperiod},
+           given={Zena},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group}%
+      }
+      \strng{namehash}{330ae72218d9256c00db0958b0bde273}
+      \strng{fullhash}{330ae72218d9256c00db0958b0bde273}
+      \strng{bibnamehash}{330ae72218d9256c00db0958b0bde273}
+      \strng{authorbibnamehash}{330ae72218d9256c00db0958b0bde273}
+      \strng{authornamehash}{330ae72218d9256c00db0958b0bde273}
+      \strng{authorfullhash}{330ae72218d9256c00db0958b0bde273}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature}
+      \field{number}{6917}
+      \field{title}{Inflammation and cancer}
+      \field{volume}{420}
+      \field{year}{2002}
+      \field{pages}{860\bibrangedash 867}
+      \range{pages}{8}
+    \endentry
+    \entry{Frankel}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=304da3c51f2764a79eba95f97e4885ab}{%
+           family={Couzin-Frankel},
+           familyi={C\bibinithyphendelim F\bibinitperiod},
+           given={Jennifer},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {American Association for the Advancement of Science}%
+      }
+      \strng{namehash}{304da3c51f2764a79eba95f97e4885ab}
+      \strng{fullhash}{304da3c51f2764a79eba95f97e4885ab}
+      \strng{bibnamehash}{304da3c51f2764a79eba95f97e4885ab}
+      \strng{authorbibnamehash}{304da3c51f2764a79eba95f97e4885ab}
+      \strng{authornamehash}{304da3c51f2764a79eba95f97e4885ab}
+      \strng{authorfullhash}{304da3c51f2764a79eba95f97e4885ab}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0036-8075}
+      \field{journaltitle}{Science}
+      \field{number}{6165}
+      \field{title}{Cancer Immunotherapy}
+      \field{volume}{342}
+      \field{year}{2013}
+      \field{pages}{1432\bibrangedash 1433}
+      \range{pages}{2}
+      \verb{doi}
+      \verb 10.1126/science.342.6165.1432
+      \endverb
+      \verb{eprint}
+      \verb https://science.sciencemag.org/content/342/6165/1432.full.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://science.sciencemag.org/content/342/6165/1432
+      \endverb
+      \verb{url}
+      \verb https://science.sciencemag.org/content/342/6165/1432
+      \endverb
+    \endentry
+    \entry{Cunningham}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=e05a48eef9ee8b223471f3aa23dc6882}{%
+           family={Cunningham},
+           familyi={C\bibinitperiod},
+           given={Jessica\bibnamedelima J.},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1b317e78db63f2b75ea11a5f46762cb4}{%
+           family={Brown},
+           familyi={B\bibinitperiod},
+           given={Joel\bibnamedelima S.},
+           giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8af10caa96e694a1f978a72ae80f8b79}{%
+           family={Gatenby},
+           familyi={G\bibinitperiod},
+           given={Robert\bibnamedelima A.},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=813c5345164d3bebe49a7bc7eced1600}{%
+           family={Staňková},
+           familyi={S\bibinitperiod},
+           given={Kateřina},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{8f0a47ef0116cf44079d95b954f2d719}
+      \strng{fullhash}{cb535b11f7777c8b3880ee5414743413}
+      \strng{bibnamehash}{cb535b11f7777c8b3880ee5414743413}
+      \strng{authorbibnamehash}{cb535b11f7777c8b3880ee5414743413}
+      \strng{authornamehash}{8f0a47ef0116cf44079d95b954f2d719}
+      \strng{authorfullhash}{cb535b11f7777c8b3880ee5414743413}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In metastatic castrate resistant prostate cancer (mCRPC), abiraterone is conventionally administered continuously at maximal tolerated dose until treatment failure. The majority of patients initially respond well to abiraterone but the cancer cells evolve resistance and the cancer progresses within a median time of 16 months. Incorporating techniques that attempt to delay or prevent the growth of the resistant cancer cell phenotype responsible for disease progression have only recently entered the clinical setting. Here we use evolutionary game theory to model the evolutionary dynamics of patients with mCRPC subject to abiraterone therapy. In evaluating therapy options, we adopt an optimal control theory approach and seek the best treatment schedule using nonlinear constrained optimization. We compare patient outcomes from standard clinical treatments to those with other treatment objectives, such as maintaining a constant total tumor volume or minimizing the fraction of resistant cancer cells within the tumor. Our model predicts that continuous high doses of abiraterone as well as other therapies aimed at curing the patient result in accelerated competitive release of the resistant phenotype and rapid subsequent tumor progression. We find that long term control is achievable using optimized therapy through the restrained and judicious application of abiraterone, maintaining its effectiveness while providing acceptable patient quality of life. Implementing this strategy will require overcoming psychological and emotional barriers in patients and physicians as well as acquisition of a new class of clinical data designed to accurately estimate intratumoral eco-evolutionary dynamics during therapy.}
+      \field{issn}{0022-5193}
+      \field{journaltitle}{Journal of Theoretical Biology}
+      \field{title}{Optimal control to develop therapeutic strategies for metastatic castrate resistant prostate cancer}
+      \field{volume}{459}
+      \field{year}{2018}
+      \field{pages}{67\bibrangedash 78}
+      \range{pages}{12}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.jtbi.2018.09.022
+      \endverb
+      \verb{urlraw}
+      \verb http://www.sciencedirect.com/science/article/pii/S0022519318304582
+      \endverb
+      \verb{url}
+      \verb http://www.sciencedirect.com/science/article/pii/S0022519318304582
+      \endverb
+      \keyw{Metastatic castrate-resistant prostate cancer,Optimal control,Evolutionary game theory,Competitive release,Eco-evolutionary dynamics,Adaptive therapy}
+    \endentry
+    \entry{Davies}{article}{}
+      \name{author}{2}{}{%
+        {{un=1,uniquepart=given,hash=b79c0a14aee2df1ad0cbb266680a1606}{%
+           family={Davies},
+           familyi={D\bibinitperiod},
+           given={Julian},
+           giveni={J\bibinitperiod},
+           givenun=1}}%
+        {{un=1,uniquepart=given,hash=057244cd8e3d31e8b6872c34007ba5b8}{%
+           family={Davies},
+           familyi={D\bibinitperiod},
+           given={Dorothy},
+           giveni={D\bibinitperiod},
+           givenun=1}}%
+      }
+      \list{publisher}{1}{%
+        {American Society for Microbiology Journals}%
+      }
+      \strng{namehash}{c9e157aa9ff97c6eae1585a1dcc06da8}
+      \strng{fullhash}{c9e157aa9ff97c6eae1585a1dcc06da8}
+      \strng{bibnamehash}{c9e157aa9ff97c6eae1585a1dcc06da8}
+      \strng{authorbibnamehash}{c9e157aa9ff97c6eae1585a1dcc06da8}
+      \strng{authornamehash}{c9e157aa9ff97c6eae1585a1dcc06da8}
+      \strng{authorfullhash}{c9e157aa9ff97c6eae1585a1dcc06da8}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{SUMMARY Antibiotics have always been considered one of the wonder discoveries of the 20th century. This is true, but the real wonder is the rise of antibiotic resistance in hospitals, communities, and the environment concomitant with their use. The extraordinary genetic capacities of microbes have benefitted from man{’}s overuse of antibiotics to exploit every source of resistance genes and every means of horizontal gene transmission to develop multiple mechanisms of resistance for each and every antibiotic introduced into practice clinically, agriculturally, or otherwise. This review presents the salient aspects of antibiotic resistance development over the past half-century, with the oft-restated conclusion that it is time to act. To achieve complete restitution of therapeutic applications of antibiotics, there is a need for more information on the role of environmental microbiomes in the rise of antibiotic resistance. In particular, creative approaches to the discovery of novel antibiotics and their expedited and controlled introduction to therapy are obligatory.}
+      \field{issn}{1092-2172}
+      \field{journaltitle}{Microbiology and Molecular Biology Reviews}
+      \field{number}{3}
+      \field{title}{Origins and Evolution of Antibiotic Resistance}
+      \field{volume}{74}
+      \field{year}{2010}
+      \field{pages}{417\bibrangedash 433}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1128/MMBR.00016-10
+      \endverb
+      \verb{eprint}
+      \verb https://mmbr.asm.org/content/74/3/417.full.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://mmbr.asm.org/content/74/3/417
+      \endverb
+      \verb{url}
+      \verb https://mmbr.asm.org/content/74/3/417
+      \endverb
+    \endentry
+    \entry{Deisboeck}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=6328037b0567786269bad381bdea38cd}{%
+           family={Deisboeck},
+           familyi={D\bibinitperiod},
+           given={Thomas\bibnamedelima S.},
+           giveni={T\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3775df02663a5557962d1c5e17cf4de8}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Zhihui},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{967496d922b07b426a9f8050e4079a7a}
+      \strng{fullhash}{967496d922b07b426a9f8050e4079a7a}
+      \strng{bibnamehash}{967496d922b07b426a9f8050e4079a7a}
+      \strng{authorbibnamehash}{967496d922b07b426a9f8050e4079a7a}
+      \strng{authornamehash}{967496d922b07b426a9f8050e4079a7a}
+      \strng{authorfullhash}{967496d922b07b426a9f8050e4079a7a}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Summary Assuming that there is feedback between an expanding cancer system and its organ-typical microenvironment, we argue here that such local tumor growth is initially guided by co-existence rather than competition with the surrounding tissue. We then present a novel concept that understands cancer dissemination as a biological mechanism to evade the specific carrying capacity limit of its host organ. This conceptual framework allows us to relate the tumor system’s volumetric growth rate to the host organ’s functionality-conveying composite infrastructure, and, intriguingly, already provides useful insights into several clinical findings.}
+      \field{issn}{0306-9877}
+      \field{journaltitle}{Medical Hypotheses}
+      \field{number}{1}
+      \field{title}{Cancer dissemination: A consequence of limited carrying capacity?}
+      \field{volume}{69}
+      \field{year}{2007}
+      \field{pages}{173\bibrangedash 177}
+      \range{pages}{5}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.mehy.2006.11.007
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0306987706008140
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0306987706008140
+      \endverb
+    \endentry
+    \entry{DeVita}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=92c59be04e8e58f13e6109658607be6c}{%
+           family={DeVita},
+           familyi={D\bibinitperiod},
+           given={Vincent\bibnamedelima T.},
+           giveni={V\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6fc07bbe9d23ae4ba30af7e728c829ca}{%
+           family={Chu},
+           familyi={C\bibinitperiod},
+           given={Edward},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {American Association for Cancer Research}%
+      }
+      \strng{namehash}{e77f0b59c2d32523a8f81be66f96eaca}
+      \strng{fullhash}{e77f0b59c2d32523a8f81be66f96eaca}
+      \strng{bibnamehash}{e77f0b59c2d32523a8f81be66f96eaca}
+      \strng{authorbibnamehash}{e77f0b59c2d32523a8f81be66f96eaca}
+      \strng{authornamehash}{e77f0b59c2d32523a8f81be66f96eaca}
+      \strng{authorfullhash}{e77f0b59c2d32523a8f81be66f96eaca}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The use of chemotherapy to treat cancer began at the start of the 20th century with attempts to narrow the universe of chemicals that might affect the disease by developing methods to screen chemicals using transplantable tumors in rodents. It was, however, four World War II{–}related programs, and the effects of drugs that evolved from them, that provided the impetus to establish in 1955 the national drug development effort known as the Cancer Chemotherapy National Service Center. The ability of combination chemotherapy to cure acute childhood leukemia and advanced Hodgkin{’}s disease in the 1960s and early 1970s overcame the prevailing pessimism about the ability of drugs to cure advanced cancers, facilitated the study of adjuvant chemotherapy, and helped foster the national cancer program. Today, chemotherapy has changed as important molecular abnormalities are being used to screen for potential new drugs as well as for targeted treatments. [Cancer Res 2008;68(21):8643{–}53] {©}2008 American Association for Cancer Research.}
+      \field{issn}{0008-5472}
+      \field{journaltitle}{Cancer Research}
+      \field{number}{21}
+      \field{title}{A History of Cancer Chemotherapy}
+      \field{volume}{68}
+      \field{year}{2008}
+      \field{pages}{8643\bibrangedash 8653}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1158/0008-5472.CAN-07-6611
+      \endverb
+      \verb{eprint}
+      \verb https://cancerres.aacrjournals.org/content/68/21/8643.full.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://cancerres.aacrjournals.org/content/68/21/8643
+      \endverb
+      \verb{url}
+      \verb https://cancerres.aacrjournals.org/content/68/21/8643
+      \endverb
+    \endentry
+    \entry{Dillard}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=78b533c0ffcba0340b9df0666fc915da}{%
+           family={Dillard},
+           familyi={D\bibinitperiod},
+           given={Paulette\bibnamedelima R.},
+           giveni={P\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9a91543ebe0ba2370cfdf2aef47dc4fa}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Ming-Fong},
+           giveni={M\bibinithyphendelim F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e3378e5614f0dbfa0d45c25c8974559c}{%
+           family={Khan},
+           familyi={K\bibinitperiod},
+           given={Shafiq\bibnamedelima A.},
+           giveni={S\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{21bbd3bf92b5175402097b8c89b11e53}
+      \strng{fullhash}{5e1886914bfb4f41922f8cd9d0cb23ea}
+      \strng{bibnamehash}{5e1886914bfb4f41922f8cd9d0cb23ea}
+      \strng{authorbibnamehash}{5e1886914bfb4f41922f8cd9d0cb23ea}
+      \strng{authornamehash}{21bbd3bf92b5175402097b8c89b11e53}
+      \strng{authorfullhash}{5e1886914bfb4f41922f8cd9d0cb23ea}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The proliferation and differentiation of normal prostate epithelial cells depends upon the action of androgens produced by the testis. Prostate cancers retain the ability to respond to androgens in the initial stages of cancer development, but progressively become independent of exogenous androgens in advanced stages of the disease while maintaining the expression of functional androgen receptor (AR). In the present study, we have determined the potential of prostate cancer cells to synthesize androgens from cholesterol which may be involved in intracrine regulation of AR in advanced stages of the disease. Established androgen-independent prostate cancer cell lines, PC3 and DU145 cells, expressed mRNA and proteins for scavenger receptor type B1 (SRB1), steroidogenic acute regulatory (StAR) protein, cytochrome P450 cholesterol side chain cleavage (P450scc), 3β-hydroxysteroid dehydrogenase (3β-HSD) and other enzymes involved in androgen biosynthesis. Expression of all these proteins and enzymes was significantly higher in the androgen-independent derivative of LNCaP prostate cancer cells (C81) than in the androgen-dependent cell line (C33). In serum-free cultures, the androgen-independent C81 cells secreted ∼5-fold higher testosterone than C33 cells as determined in the conditioned media by immunoassays. These cells could also directly convert radioactive cholesterol into testosterone which was identified by thin layer chromatography. These results for the first time show that prostate cancer cells in advanced stages of the disease could synthesize androgens from cholesterol and hence are not dependent upon testicular and/or adrenal androgens.}
+      \field{issn}{0303-7207}
+      \field{journaltitle}{Molecular and Cellular Endocrinology}
+      \field{number}{1}
+      \field{title}{Androgen-independent prostate cancer cells acquire the complete steroidogenic potential of synthesizing testosterone from cholesterol}
+      \field{volume}{295}
+      \field{year}{2008}
+      \field{pages}{115\bibrangedash 120}
+      \range{pages}{6}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.mce.2008.08.013
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0303720708003572
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0303720708003572
+      \endverb
+      \keyw{Prostate cancer,Androgen-independence,Androgen receptor,Androgen biosynthesis,Steroidogenesis,Intracrine regulation}
+    \endentry
+    \entry{Elmore}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=d244b0de8bc0fafb985ce4bde8bc9816}{%
+           family={Elmore},
+           familyi={E\bibinitperiod},
+           given={Joann\bibnamedelima G},
+           giveni={J\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=17b6e715c69bd3587502a8a03b2ed6f0}{%
+           family={Armstrong},
+           familyi={A\bibinitperiod},
+           given={Katrina},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c0404dd7bd70c43f73ef9631ef24124b}{%
+           family={Lehman},
+           familyi={L\bibinitperiod},
+           given={Constance\bibnamedelima D},
+           giveni={C\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8c935397c2279c9666438da7f6d22f3a}{%
+           family={Fletcher},
+           familyi={F\bibinitperiod},
+           given={Suzanne\bibnamedelima W},
+           giveni={S\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {American Medical Association}%
+      }
+      \strng{namehash}{a716387f539bacd0e3b1e489bc7420e4}
+      \strng{fullhash}{de8cd4e2129d1129bef779e60e440104}
+      \strng{bibnamehash}{de8cd4e2129d1129bef779e60e440104}
+      \strng{authorbibnamehash}{de8cd4e2129d1129bef779e60e440104}
+      \strng{authornamehash}{a716387f539bacd0e3b1e489bc7420e4}
+      \strng{authorfullhash}{de8cd4e2129d1129bef779e60e440104}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Jama}
+      \field{number}{10}
+      \field{title}{Screening for breast cancer}
+      \field{volume}{293}
+      \field{year}{2005}
+      \field{pages}{1245\bibrangedash 1256}
+      \range{pages}{12}
+    \endentry
+    \entry{Frei}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=0c24818c104c45ac3655c1bb89850831}{%
+           family={Frei},
+           familyi={F\bibinitperiod},
+           given={Emil},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=910f990c1a6322bc077c243a0a2c1866}{%
+           family={Canellos},
+           familyi={C\bibinitperiod},
+           given={George\bibnamedelima P.},
+           giveni={G\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{3d191927784d80d594ee9be682bd5bde}
+      \strng{fullhash}{3d191927784d80d594ee9be682bd5bde}
+      \strng{bibnamehash}{3d191927784d80d594ee9be682bd5bde}
+      \strng{authorbibnamehash}{3d191927784d80d594ee9be682bd5bde}
+      \strng{authornamehash}{3d191927784d80d594ee9be682bd5bde}
+      \strng{authorfullhash}{3d191927784d80d594ee9be682bd5bde}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The effect of dose and dose rate of cancer chemotherapeutic agents in experimental in vivo systems and in various clinical situations has been reviewed. In experimental in vivo systems, the dose-response curve for most chemotherapeutic agents is steep. Although the dose response curve may be linear for cytokinetically homogeneous experimental tumors, it deviates from linearity as a result of tumor heterogeneity. The steepness of the dose-response curve is related to the sensitivity of the tumor to a given drug. Thus, for highly sensitive tumors, the curve is very steep and generally linear; whereas for relatively insensitive tumors, dose may have little effect on response. These observations in general apply to the clinic. When dose has been a randomized variable, a dose-response curve is generally evident in sensitive tumors, such as the leukemias, the lymphomas, testicular cancer and small cell lung cancer. In contrast, when the difference in dose is in the range of twofold, the evidence for superiority of the high dose in such situations as 5-fluorouracil for colorectal cancer and dimethyl-triazeno-imidazole-car☐amide (DTIC) for melanoma is less impressive. The use of relatively low dose maintenance treatment following four to six courses of intensive combination chemotherapy for such diseases as testicular cancer and lymphoma may prolong the duration of remission but probably will not increase the cure rate. In adjuvant chemotherapy situations, in which prolonged disease-free survival is improved, the dose-response curve would appear to be quite steep. Conservative dosing in this setting may compromise the cure rate, and the proposed approach is to maintain full dose therapy and consider reducing the total duration of treatment. When high doses or concentrations of antitumor therapy can be achieved, such as in the marrow transplant situation and in isolation perfusion or regional infusion studies, there is in general clear evidence that a substantial increase in response rate occurs.}
+      \field{issn}{0002-9343}
+      \field{journaltitle}{The American Journal of Medicine}
+      \field{number}{4}
+      \field{title}{Dose: A critical factor in cancer chemotherapy}
+      \field{volume}{69}
+      \field{year}{1980}
+      \field{pages}{585\bibrangedash 594}
+      \range{pages}{10}
+      \verb{doi}
+      \verb https://doi.org/10.1016/0002-9343(80)90472-6
+      \endverb
+      \verb{urlraw}
+      \verb http://www.sciencedirect.com/science/article/pii/0002934380904726
+      \endverb
+      \verb{url}
+      \verb http://www.sciencedirect.com/science/article/pii/0002934380904726
+      \endverb
+    \endentry
+    \entry{Gallaher}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=3d683cd6a9fe9db1b87d48c045a2a402}{%
+           family={Gallaher},
+           familyi={G\bibinitperiod},
+           given={Jill\bibnamedelima A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cf631256582d56903e00c3ef17c92fad}{%
+           family={Enriquez-Navas},
+           familyi={E\bibinithyphendelim N\bibinitperiod},
+           given={Pedro\bibnamedelima M.},
+           giveni={P\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3e1a4c6b8dc23ff997b458e8fef11622}{%
+           family={Luddy},
+           familyi={L\bibinitperiod},
+           given={Kimberly\bibnamedelima A.},
+           giveni={K\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8af10caa96e694a1f978a72ae80f8b79}{%
+           family={Gatenby},
+           familyi={G\bibinitperiod},
+           given={Robert\bibnamedelima A.},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2d567efd8fe852b21c3063a18d34850d}{%
+           family={Anderson},
+           familyi={A\bibinitperiod},
+           given={Alexander\bibnamedelima R.A.},
+           giveni={A\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {American Association for Cancer Research}%
+      }
+      \strng{namehash}{3c1403de2dda799bafc4d312ce725e07}
+      \strng{fullhash}{bc53f50913d55aae732f25bc94e9c038}
+      \strng{bibnamehash}{bc53f50913d55aae732f25bc94e9c038}
+      \strng{authorbibnamehash}{bc53f50913d55aae732f25bc94e9c038}
+      \strng{authornamehash}{3c1403de2dda799bafc4d312ce725e07}
+      \strng{authorfullhash}{bc53f50913d55aae732f25bc94e9c038}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Treatment of advanced cancers has benefited from new agents that supplement or bypass conventional therapies. However, even effective therapies fail as cancer cells deploy a wide range of resistance strategies. We propose that evolutionary dynamics ultimately determine survival and proliferation of resistant cells. Therefore, evolutionary strategies should be used with conventional therapies to delay or prevent resistance. Using an agent-based framework to model spatial competition among sensitive and resistant populations, we applied antiproliferative drug treatments to varying ratios of sensitive and resistant cells. We compared a continuous maximum-tolerated dose schedule with an adaptive schedule aimed at tumor control via competition between sensitive and resistant cells. Continuous treatment cured mostly sensitive tumors, but with any resistant cells, recurrence was inevitable. We identified two adaptive strategies that control heterogeneous tumors: dose modulation controls most tumors with less drug, while a more vacation-oriented schedule can control more invasive tumors. These findings offer potential modifications to treatment regimens that may improve outcomes and reduce resistance and recurrence.Significance: By using drug dose modulation or treatment vacations, adaptive therapy strategies control the emergence of tumor drug resistance by spatially suppressing less fit resistant populations in favor of treatment sensitive ones. Cancer Res; 78(8); 2127{–}39. {©}2018 AACR.}
+      \field{issn}{0008-5472}
+      \field{journaltitle}{Cancer Research}
+      \field{number}{8}
+      \field{title}{Spatial Heterogeneity and Evolutionary Dynamics Modulate Time to Recurrence in Continuous and Adaptive Cancer Therapies}
+      \field{volume}{78}
+      \field{year}{2018}
+      \field{pages}{2127\bibrangedash 2139}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1158/0008-5472.CAN-17-2649
+      \endverb
+      \verb{eprint}
+      \verb https://cancerres.aacrjournals.org/content/78/8/2127.full.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://cancerres.aacrjournals.org/content/78/8/2127
+      \endverb
+      \verb{url}
+      \verb https://cancerres.aacrjournals.org/content/78/8/2127
+      \endverb
+    \endentry
+    \entry{Gao}{article}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=470fc6d455395b7f9e89947927271663}{%
+           family={Gao},
+           familyi={G\bibinitperiod},
+           given={Danfeng},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ad964a6cae01e6f2893e2ed92127b634}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Xiufen},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=98b77f6c60d2639974794086f55dfa76}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Beibei},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8372f858e943c5dd519a73446c204df6}{%
+           family={Meng},
+           familyi={M\bibinitperiod},
+           given={Dong},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ee5fdd872d59926532b2b320ed30429b}{%
+           family={Fang},
+           familyi={F\bibinitperiod},
+           given={Kai},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f9886d03030e5fd777b16a2078d29e4e}{%
+           family={Guo},
+           familyi={G\bibinitperiod},
+           given={Zijian},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=675acf02eec039dcc1a02ee5e4206180}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Lihua},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{476cfef68c117d0e6ef1fd828c7a0a52}
+      \strng{fullhash}{b675e9f0f25b944fa0849e344ecfbb60}
+      \strng{bibnamehash}{b675e9f0f25b944fa0849e344ecfbb60}
+      \strng{authorbibnamehash}{b675e9f0f25b944fa0849e344ecfbb60}
+      \strng{authornamehash}{476cfef68c117d0e6ef1fd828c7a0a52}
+      \strng{authorfullhash}{b675e9f0f25b944fa0849e344ecfbb60}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Aim: We aimed to identify circular RNAs (circRNAs) associated with breast cancer chemoresistance. Materials \& methods: CircRNA microarray expression profiles were obtained from Adriamycin (ADM) resistant MCF-7 breast cancer cells (MCF-7/ADM) and parental MCF-7 cells and were validated using quantitative real-time reverse transcription PCR. The expression data were analyzed bioinformatically. Results: We detected 3093 circRNAs and identified 18 circRNAs that are differentially expressed between MCF-7/ADM and MCF-7 cells; after validating by quantitative real-time reverse transcription PCR, we predicted the possible miRNAs and potential target genes of the seven upregulated circRNAs using TargetScan and miRanda. The bioinformatics analysis revealed several target genes related to cancer-related signaling pathways. Additionally, we discovered a regulatory role of the circ\_0006528-miR-7–5p-Raf1 axis in ADM-resistant breast cancer. Conclusion: These results revealed that circRNAs may play a role in breast cancer chemoresistance and that hsa\_circ\_0006528 might be a promising candidate for further functional analysis.}
+      \field{journaltitle}{Epigenomics}
+      \field{note}{PMID: 28803498}
+      \field{number}{9}
+      \field{title}{Screening circular RNA related to chemotherapeutic resistance in breast cancer}
+      \field{volume}{9}
+      \field{year}{2017}
+      \field{pages}{1175\bibrangedash 1188}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.2217/epi-2017-0055
+      \endverb
+      \verb{eprint}
+      \verb https://doi.org/10.2217/epi-2017-0055
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.2217/epi-2017-0055
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.2217/epi-2017-0055
+      \endverb
+    \endentry
+    \entry{Gatenby}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=8af10caa96e694a1f978a72ae80f8b79}{%
+           family={Gatenby},
+           familyi={G\bibinitperiod},
+           given={Robert\bibnamedelima A.},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7e2acefe8b2ecef05cfbb8051cda7b35}{%
+           family={Silva},
+           familyi={S\bibinitperiod},
+           given={Ariosto\bibnamedelima S.},
+           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a1aceb55ae49c0434242c55dd7a60de5}{%
+           family={Gillies},
+           familyi={G\bibinitperiod},
+           given={Robert\bibnamedelima J.},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a7fbfe1ed423ba282b93933726ecf1e5}{%
+           family={Frieden},
+           familyi={F\bibinitperiod},
+           given={B.\bibnamedelimi Roy},
+           giveni={B\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {American Association for Cancer Research}%
+      }
+      \strng{namehash}{fdea5b1d00db84e2c46e716ab40c728e}
+      \strng{fullhash}{03157bedefe2195d14ce6cb7a6d03f3b}
+      \strng{bibnamehash}{03157bedefe2195d14ce6cb7a6d03f3b}
+      \strng{authorbibnamehash}{03157bedefe2195d14ce6cb7a6d03f3b}
+      \strng{authornamehash}{fdea5b1d00db84e2c46e716ab40c728e}
+      \strng{authorfullhash}{03157bedefe2195d14ce6cb7a6d03f3b}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A number of successful systemic therapies are available for treatment of disseminated cancers. However, tumor response is often transient, and therapy frequently fails due to emergence of resistant populations. The latter reflects the temporal and spatial heterogeneity of the tumor microenvironment as well as the evolutionary capacity of cancer phenotypes to adapt to therapeutic perturbations. Although cancers are highly dynamic systems, cancer therapy is typically administered according to a fixed, linear protocol. Here we examine an adaptive therapeutic approach that evolves in response to the temporal and spatial variability of tumor microenvironment and cellular phenotype as well as therapy-induced perturbations. Initial mathematical models find that when resistant phenotypes arise in the untreated tumor, they are typically present in small numbers because they are less fit than the sensitive population. This reflects the {“}cost{”} of phenotypic resistance such as additional substrate and energy used to up-regulate xenobiotic metabolism, and therefore not available for proliferation, or the growth inhibitory nature of environments (i.e., ischemia or hypoxia) that confer resistance on phenotypically sensitive cells. Thus, in the Darwinian environment of a cancer, the fitter chemosensitive cells will ordinarily proliferate at the expense of the less fit chemoresistant cells. The models show that, if resistant populations are present before administration of therapy, treatments designed to kill maximum numbers of cancer cells remove this inhibitory effect and actually promote more rapid growth of the resistant populations. We present an alternative approach in which treatment is continuously modulated to achieve a fixed tumor population. The goal of adaptive therapy is to enforce a stable tumor burden by permitting a significant population of chemosensitive cells to survive so that they, in turn, suppress proliferation of the less fit but chemoresistant subpopulations. Computer simulations show that this strategy can result in prolonged survival that is substantially greater than that of high dose density or metronomic therapies. The feasibility of adaptive therapy is supported by in vivo experiments. [Cancer Res 2009;69(11):4894{–}903] Major Findings We present mathematical analysis of the evolutionary dynamics of tumor populations with and without therapy. Analytic solutions and numerical simulations show that, with pretreatment, therapy-resistant cancer subpopulations are present due to phenotypic or microenvironmental factors; maximum dose density chemotherapy hastens rapid expansion of resistant populations. The models predict that host survival can be maximized if {“}treatment-for-cure strategy{”} is replaced by {“}treatment-for-stability.{”} Specifically, the models predict that an optimal treatment strategy will modulate therapy to maintain a stable population of chemosensitive cells that can, in turn, suppress the growth of resistant populations under normal tumor conditions (i.e., when therapy-induced toxicity is absent). In vivo experiments using OVCAR xenografts treated with carboplatin show that adaptive therapy is feasible and, in this system, can produce long-term survival. {©}2009 American Association for Cancer Research.}
+      \field{issn}{0008-5472}
+      \field{journaltitle}{Cancer Research}
+      \field{number}{11}
+      \field{title}{Adaptive Therapy}
+      \field{volume}{69}
+      \field{year}{2009}
+      \field{pages}{4894\bibrangedash 4903}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1158/0008-5472.CAN-08-3658
+      \endverb
+      \verb{eprint}
+      \verb https://cancerres.aacrjournals.org/content/69/11/4894.full.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://cancerres.aacrjournals.org/content/69/11/4894
+      \endverb
+      \verb{url}
+      \verb https://cancerres.aacrjournals.org/content/69/11/4894
+      \endverb
+    \endentry
+    \entry{Goodman}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c65346039edce90d72f7f7ce43debd9b}{%
+           family={Goodman},
+           familyi={G\bibinitperiod},
+           given={Annekathryn},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {BMJ Publishing Group Ltd}%
+      }
+      \strng{namehash}{c65346039edce90d72f7f7ce43debd9b}
+      \strng{fullhash}{c65346039edce90d72f7f7ce43debd9b}
+      \strng{bibnamehash}{c65346039edce90d72f7f7ce43debd9b}
+      \strng{authorbibnamehash}{c65346039edce90d72f7f7ce43debd9b}
+      \strng{authornamehash}{c65346039edce90d72f7f7ce43debd9b}
+      \strng{authorfullhash}{c65346039edce90d72f7f7ce43debd9b}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Human papillomavirus (HPV) has been identified as a necessary factor in the development of pre-invasive and invasive cancers of the lower genital tract, of which cervical cancer is the most prevalent. A molecular understanding of malignant transformation and epidemiologic information has led to the development of many strategies for detection and early intervention. Newer tests for oncogenic subtypes of HPV have made it possible to predict the risk of future development of cervical cancer. This review summarizes the current understanding of HPV related disease and examines the role of HPV testing as a screening tool for cervical cancer. It summarizes the data from prospective and randomized controlled trials on HPV screening from Europe and North America and includes smaller studies from low and middle income countries where cervical cancer is the most common cancer in women.}
+      \field{journaltitle}{BMJ}
+      \field{title}{HPV testing as a screen for cervical cancer}
+      \field{volume}{350}
+      \field{year}{2015}
+      \verb{doi}
+      \verb 10.1136/bmj.h2372
+      \endverb
+      \verb{eprint}
+      \verb https://www.bmj.com/content/350/bmj.h2372.full.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.bmj.com/content/350/bmj.h2372
+      \endverb
+      \verb{url}
+      \verb https://www.bmj.com/content/350/bmj.h2372
+      \endverb
+    \endentry
+    \entry{Gronbaek}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=4f319c0a120d0d46eaee025dd283e462}{%
+           family={GRØNBÆK},
+           familyi={G\bibinitperiod},
+           given={KIRSTEN},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=79332822f946d2f43724c475e8c3de9d}{%
+           family={HOTHER},
+           familyi={H\bibinitperiod},
+           given={CHRISTOFFER},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fb8363f0883e6baa9c7d361398bd9dbc}{%
+           family={JONES},
+           familyi={J\bibinitperiod},
+           given={PETER\bibnamedelima A.},
+           giveni={P\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{633139a01e959d7e23a4eaa79853adca}
+      \strng{fullhash}{0fae85a5108cc56763084ecfb107411d}
+      \strng{bibnamehash}{0fae85a5108cc56763084ecfb107411d}
+      \strng{authorbibnamehash}{0fae85a5108cc56763084ecfb107411d}
+      \strng{authornamehash}{633139a01e959d7e23a4eaa79853adca}
+      \strng{authorfullhash}{0fae85a5108cc56763084ecfb107411d}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A cancer develops when a cell acquires specific growth advantages through the stepwise accumulation of heritable changes in gene function. Basically, this process is directed by changes in two different classes of genes: Tumor suppressor genes that inhibit cell growth and survival and oncogenes that promote cell growth and survival. Since several alterations are usually required for a cancer to fully develop, the malignant phenotype is determined by the compound status of tumor suppressor genes and oncogenes. Cancer genes may be changed by several mechanisms, which potentially alter the protein encoding nucleotide template, change the copy number of genes, or lead to increased gene transcription. Epigenetic alterations, which, by definition, comprise mitotically and meiotically heritable changes in gene expression that are not caused by changes in the primary DNA sequence, are increasingly being recognized for their roles in carcinogenesis. These epigenetic alterations may involve covalent modifications of amino acid residues in the histones around which the DNA is wrapped, and changes in the methylation status of cytosine bases (C) in the context of CpG dinucleotides within the DNA itself. Methylation of clusters of CpGs called “CpG-islands” in the promoters of genes has been associated with heritable gene silencing. The present review will focus on how disruption of the epigenome can contribute to cancer. In contrast to genetic alterations, gene silencing by epigenetic modifications is potentially reversible. Treatment by agents that inhibit cytosine methylation and histone deacetylation can initiate chromatin decondensation, demethylation and reestablishment of gene transcription. Accordingly, in the clinical setting, DNA methylation and histone modifications are very attractive targets for the development and implementation of new therapeutic approaches. Many clinical trials are ongoing, and epigenetic therapy has recently been approved by the United States Food and Drug Administration (US FDA) for use in the treatment of myelodysplastic syndrome (MDS) and primary cutaneous T-cell lymphoma (CTCL).}
+      \field{journaltitle}{APMIS}
+      \field{number}{10}
+      \field{title}{Epigenetic changes in cancer}
+      \field{volume}{115}
+      \field{year}{2007}
+      \field{pages}{1039\bibrangedash 1059}
+      \range{pages}{21}
+      \verb{doi}
+      \verb https://doi.org/10.1111/j.1600-0463.2007.apm\_636.xml.x
+      \endverb
+      \verb{eprint}
+      \verb https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1600-0463.2007.apm_636.xml.x
+      \endverb
+      \verb{urlraw}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1600-0463.2007.apm_636.xml.x
+      \endverb
+      \verb{url}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1600-0463.2007.apm_636.xml.x
+      \endverb
+      \keyw{Epigenetics,methylation,chromatin modifications,epigenetic therapy,cancer}
+    \endentry
+    \entry{HailJr}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=c3144a77b1d422bba9cbd621a0a63d26}{%
+           family={Hail},
+           familyi={H\bibinitperiod},
+           given={Numsen},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f9d052e32540c1d8008e05e55c129e63}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Ping},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8c14d40838bfda0ba812a3560177ce81}{%
+           family={Bushman},
+           familyi={B\bibinitperiod},
+           given={Lane\bibnamedelima R.},
+           giveni={L\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c6bbbdf377fc8c41c9b10e04414abc78}
+      \strng{fullhash}{8d3f206f5effa1083ae8d1dac3752572}
+      \strng{bibnamehash}{8d3f206f5effa1083ae8d1dac3752572}
+      \strng{authorbibnamehash}{8d3f206f5effa1083ae8d1dac3752572}
+      \strng{authornamehash}{c6bbbdf377fc8c41c9b10e04414abc78}
+      \strng{authorfullhash}{8d3f206f5effa1083ae8d1dac3752572}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Teriflunomide (TFN) is an inhibitor of de novo pyrimidine synthesis and the active metabolite of leflunomide. Leflunomide is prescribed to patients worldwide as an immunomodulatory and anti-inflammatory disease-modifying prodrug. Leflunomide inhibited the growth of human prostate cancer xenographs in mice, and leflunomide or TFN promoted cytostasis and/or apoptosis in cultured cells. These findings suggest that TFN could be useful in prostate cancer chemoprevention. We investigated the possible mechanistic aspects of this tenet by characterizing the effects of TFN using premalignant PWR-1E and malignant DU-145 human prostate epithelial cells. TFN promoted a dose- and time-dependent cytostasis or apoptosis induction in these cells. The cytostatic effects of TFN, which were reversible but not by the presence of excess uridine in the culture medium, included diminished cellular uridine levels, an inhibition in oxygen consumption, a suppression of reactive oxygen species (ROS) generation, S-phase cell cycle arrest, and a conspicuous reduction in the size and number of the nucleoli in the nuclei of these cells. Conversely, TFN's apoptogenic effects were characteristic of catastrophic mitochondrial disruption (i.e., a dissipation of mitochondrial inner transmembrane potential, enhanced ROS production, mitochondrial cytochrome c release, and cytoplasmic vacuolization) and followed by DNA fragmentation. The respiration-deficient derivatives of the DU-145 cells, which are also uridine auxotrophs, were markedly resistant to the cytostatic and apoptotic effects of TFN, implicating de novo pyrimidine synthesis and mitochondrial bioenergetics as the primary targets for TFN in the respiration competent cells. These mechanistic findings advocate a role for TFN and mitochondrial bioenergetics in prostate cancer chemoprevention.}
+      \field{issn}{1476-5586}
+      \field{journaltitle}{Neoplasia}
+      \field{number}{6}
+      \field{title}{Teriflunomide (Leflunomide) Promotes Cytostatic, Antioxidant, and Apoptotic Effects in Transformed Prostate Epithelial Cells: Evidence Supporting a Role for Teriflunomide in Prostate Cancer Chemoprevention}
+      \field{volume}{12}
+      \field{year}{2010}
+      \field{pages}{464\bibrangedash 475}
+      \range{pages}{12}
+      \verb{doi}
+      \verb https://doi.org/10.1593/neo.10168
+      \endverb
+      \verb{urlraw}
+      \verb http://www.sciencedirect.com/science/article/pii/S1476558610800041
+      \endverb
+      \verb{url}
+      \verb http://www.sciencedirect.com/science/article/pii/S1476558610800041
+      \endverb
+    \endentry
+    \entry{Hall}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=6aadfe987f17b1530508d095b72e6e96}{%
+           family={Hall},
+           familyi={H\bibinitperiod},
+           given={Matthew\bibnamedelima D.},
+           giveni={M\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e4743edb3ab70bf7cc420bae979e1bf1}{%
+           family={Handley},
+           familyi={H\bibinitperiod},
+           given={Misty\bibnamedelima D.},
+           giveni={M\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e8b69a5abfcdc6f8a43db16b81f66cd5}{%
+           family={Gottesman},
+           familyi={G\bibinitperiod},
+           given={Michael\bibnamedelima M.},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a6635c5324abe0a03031a75deb89afac}
+      \strng{fullhash}{315027bd790dfe625e602f258e7d2e62}
+      \strng{bibnamehash}{315027bd790dfe625e602f258e7d2e62}
+      \strng{authorbibnamehash}{315027bd790dfe625e602f258e7d2e62}
+      \strng{authornamehash}{a6635c5324abe0a03031a75deb89afac}
+      \strng{authorfullhash}{315027bd790dfe625e602f258e7d2e62}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{When cancer cells develop resistance to chemotherapeutics, it is frequently conferred by the ATP-dependent efflux pump P-glycoprotein (MDR1, P-gp, ABCB1). P-gp can efflux a wide range of cancer drugs; its expression confers cross-resistance, termed “multidrug resistance” (MDR), to a wide range of drugs. Strategies to overcome this resistance have been actively sought for more than 30 years, yet clinical solutions do not exist. A less understood aspect of MDR is the hypersensitivity of resistant cancer cells to other drugs, a phenomenon known as “collateral sensitivity” (CS). This review highlights the extent of this effect for the first time, and discusses hypotheses (e.g. generation of reactive oxygen species) to account for the underlying generality of this phenomenon, and proposes exploitation of CS as a strategy to improve response to chemotherapy.}
+      \field{issn}{0165-6147}
+      \field{journaltitle}{Trends in Pharmacological Sciences}
+      \field{number}{10}
+      \field{title}{Is resistance useless? Multidrug resistance and collateral sensitivity}
+      \field{volume}{30}
+      \field{year}{2009}
+      \field{pages}{546\bibrangedash 556}
+      \range{pages}{11}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.tips.2009.07.003
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0165614709001291
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0165614709001291
+      \endverb
+    \endentry
+    \entry{Hansen}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=aa540f961dd9a3521e72ca47b88160dd}{%
+           family={Hansen},
+           familyi={H\bibinitperiod},
+           given={Elsa},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b81f0a0e33e63f8373f8d55af6d56ee6}{%
+           family={Read},
+           familyi={R\bibinitperiod},
+           given={Andrew\bibnamedelima F.},
+           giveni={A\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{bf9b2ece8878c901f217c6075c99ffd9}
+      \strng{fullhash}{bf9b2ece8878c901f217c6075c99ffd9}
+      \strng{bibnamehash}{bf9b2ece8878c901f217c6075c99ffd9}
+      \strng{authorbibnamehash}{bf9b2ece8878c901f217c6075c99ffd9}
+      \strng{authornamehash}{bf9b2ece8878c901f217c6075c99ffd9}
+      \strng{authorfullhash}{bf9b2ece8878c901f217c6075c99ffd9}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Adaptive therapy is a promising new approach to cancer treatment. It is designed to leverage competition between drug-sensitive and drug-resistant cells in order to suppress resistance and maintain tumor control for longer. Prompted by encouraging results from a recent pilot clinical trial, we evaluate the design of this initial test of adaptive therapy and identify three simple modifications that should improve performance. These modifications are designed to increase competition and are easy to implement. Using the mathematical model that supported the recent adaptive therapy trial, we show that the suggested modifications further delay time to tumor progression and also increase the range of patients who can benefit from adaptive therapy.}
+      \field{issn}{2072-6694}
+      \field{journaltitle}{Cancers}
+      \field{number}{12}
+      \field{title}{Modifying Adaptive Therapy to Enhance Competitive Suppression}
+      \field{volume}{12}
+      \field{year}{2020}
+      \verb{doi}
+      \verb 10.3390/cancers12123556
+      \endverb
+      \verb{urlraw}
+      \verb https://www.mdpi.com/2072-6694/12/12/3556
+      \endverb
+      \verb{url}
+      \verb https://www.mdpi.com/2072-6694/12/12/3556
+      \endverb
+    \endentry
+    \entry{Heinlein}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=b17f81cfe11cb5f1bd8117eb5065f5a9}{%
+           family={Heinlein},
+           familyi={H\bibinitperiod},
+           given={Cynthia\bibnamedelima A.},
+           giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f6e3069a0a7caa0dbeb282055bc074b3}{%
+           family={Chang},
+           familyi={C\bibinitperiod},
+           given={Chawnshang},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{921c156ab95941a05d89df3a55eb7717}
+      \strng{fullhash}{921c156ab95941a05d89df3a55eb7717}
+      \strng{bibnamehash}{921c156ab95941a05d89df3a55eb7717}
+      \strng{authorbibnamehash}{921c156ab95941a05d89df3a55eb7717}
+      \strng{authornamehash}{921c156ab95941a05d89df3a55eb7717}
+      \strng{authorfullhash}{921c156ab95941a05d89df3a55eb7717}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{The normal development and maintenance of the prostate is dependent on androgen acting through the androgen receptor (AR). AR remains important in the development and progression of prostate cancer. AR expression is maintained throughout prostate cancer progression, and the majority of androgen-independent or hormone refractory prostate cancers express AR. Mutation of AR, especially mutations that result in a relaxation of AR ligand specificity, may contribute to the progression of prostate cancer and the failure of endocrine therapy by allowing AR transcriptional activation in response to antiandrogens or other endogenous hormones. Similarly, alterations in the relative expression of AR coregulators have been found to occur with prostate cancer progression and may contribute to differences in AR ligand specificity or transcriptional activity. Prostate cancer progression is also associated with increased growth factor production and an altered response to growth factors by prostate cancer cells. The kinase signal transduction cascades initiated by mitogenic growth factors modulate the transcriptional activity of AR and the interaction between AR and AR coactivators. The inhibition of AR activity through mechanisms in addition to androgen ablation, such as modulation of signal transduction pathways, may delay prostate cancer progression.}}
+      \field{issn}{0163-769X}
+      \field{journaltitle}{Endocrine Reviews}
+      \field{month}{04}
+      \field{number}{2}
+      \field{title}{{Androgen Receptor in Prostate Cancer}}
+      \field{volume}{25}
+      \field{year}{2004}
+      \field{pages}{276\bibrangedash 308}
+      \range{pages}{33}
+      \verb{doi}
+      \verb 10.1210/er.2002-0032
+      \endverb
+      \verb{eprint}
+      \verb https://academic.oup.com/edrv/article-pdf/25/2/276/8861726/edrv0276.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1210/er.2002-0032
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1210/er.2002-0032
+      \endverb
+    \endentry
+    \entry{Jain}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=838a7062125453918122ff0f85912769}{%
+           family={Jain},
+           familyi={J\bibinitperiod},
+           given={Harsh\bibnamedelima Vardhan},
+           giveni={H\bibinitperiod\bibinitdelim V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bcbc39525d7e31abdbbe70c3230ce859}{%
+           family={Clinton},
+           familyi={C\bibinitperiod},
+           given={Steven\bibnamedelima K.},
+           giveni={S\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5332880b2d6b53bac7ce0b3012af5891}{%
+           family={Bhinder},
+           familyi={B\bibinitperiod},
+           given={Arvinder},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=80588d7a0b759c79a5911fa7749ec68e}{%
+           family={Friedman},
+           familyi={F\bibinitperiod},
+           given={Avner},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {National Academy of Sciences}%
+      }
+      \strng{namehash}{d3ff8e1d3e8621d6ce0d96d6e9417228}
+      \strng{fullhash}{d265351c1958b4e7034560ba9b1b7ffc}
+      \strng{bibnamehash}{d265351c1958b4e7034560ba9b1b7ffc}
+      \strng{authorbibnamehash}{d265351c1958b4e7034560ba9b1b7ffc}
+      \strng{authornamehash}{d3ff8e1d3e8621d6ce0d96d6e9417228}
+      \strng{authorfullhash}{d265351c1958b4e7034560ba9b1b7ffc}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Prostate cancer progression depends in part on the complex interactions between testosterone, its active metabolite DHT, and androgen receptors. In a metastatic setting, the first line of treatment is the elimination of testosterone. However, such interventions are not curative because cancer cells evolve via multiple mechanisms to a castrate-resistant state, allowing progression to a lethal outcome. It is hypothesized that administration of antiandrogen therapy in an intermittent, as opposed to continuous, manner may bestow improved disease control with fewer treatment-related toxicities. The present study develops a biochemically motivated mathematical model of antiandrogen therapy that can be tested prospectively as a predictive tool. The model includes {“}personalized{”} parameters, which address the heterogeneity in the predicted course of the disease under various androgen-deprivation schedules. Model simulations are able to capture a variety of clinically observed outcomes for {“}average{”} patient data under different intermittent schedules. The model predicts that in the absence of a competitive advantage of androgen-dependent cancer cells over castration-resistant cancer cells, intermittent scheduling can lead to more rapid treatment failure as compared to continuous treatment. However, increasing a competitive advantage for hormone-sensitive cells swings the balance in favor of intermittent scheduling, delaying the acquisition of genetic or epigenetic alterations empowering androgen resistance. Given the near universal prevalence of antiandrogen treatment failure in the absence of competing mortality, such modeling has the potential of developing into a useful tool for incorporation into clinical research trials and ultimately as a prognostic tool for individual patients.}
+      \field{issn}{0027-8424}
+      \field{journaltitle}{Proceedings of the National Academy of Sciences}
+      \field{number}{49}
+      \field{title}{Mathematical modeling of prostate cancer progression in response to androgen ablation therapy}
+      \field{volume}{108}
+      \field{year}{2011}
+      \field{pages}{19701\bibrangedash 19706}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1073/pnas.1115750108
+      \endverb
+      \verb{eprint}
+      \verb https://www.pnas.org/content/108/49/19701.full.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.pnas.org/content/108/49/19701
+      \endverb
+      \verb{url}
+      \verb https://www.pnas.org/content/108/49/19701
+      \endverb
+    \endentry
+    \entry{Loeb}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=b058f7b682f18ed162697e33da6c5065}{%
+           family={Loeb},
+           familyi={L\bibinitperiod},
+           given={Lawrence\bibnamedelima A.},
+           giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d48b48658e1964a524b9c2b4530034db}{%
+           family={Emster},
+           familyi={E\bibinitperiod},
+           given={Virginia\bibnamedelima L.},
+           giveni={V\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4f45f7a091a4773b8c1bbbe6a6b5cb5d}{%
+           family={Warner},
+           familyi={W\bibinitperiod},
+           given={Kenneth\bibnamedelima E.},
+           giveni={K\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=44494689dfa8c28b54b320d01ed8e8d5}{%
+           family={Abbotts},
+           familyi={A\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8fbb75f64cb5d878dfa39deaac255a95}{%
+           family={Laszlo},
+           familyi={L\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {American Association for Cancer Research}%
+      }
+      \strng{namehash}{5687424cdb2d3ca07fbcc0dee79e2aac}
+      \strng{fullhash}{5879dd0cdcfdd562c3cf0e410520ebaa}
+      \strng{bibnamehash}{5879dd0cdcfdd562c3cf0e410520ebaa}
+      \strng{authorbibnamehash}{5879dd0cdcfdd562c3cf0e410520ebaa}
+      \strng{authornamehash}{5687424cdb2d3ca07fbcc0dee79e2aac}
+      \strng{authorfullhash}{5879dd0cdcfdd562c3cf0e410520ebaa}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This position paper summarizes the overwhelming evidence that tobacco smoking is the cause of 30 to 40\% of deaths from cancer. The focus is on lung cancer because of the sheer magnitude of this disease in males and the likelihood of a similar epidemic in females. There are two categories of evidence that indicate smoking to be the major cause of human lung cancer. Without exception, epidemiological studies have demonstrated a consistent association between smoking and lung cancer in men and now suggest a similar association in women. Chemical analyses of cigarette smoke reveal a multitude of known mutagens and carcinogens. Moreover, these chemicals are absorbed, are metabolized, and cause demonstrable genetic changes in smokers. Two consequences of smoking are evaluated. The results of treatment of lung cancer are not encouraging; despite vigorous therapy, the 5-year survival rate remains less than 10\%. The social and economic costs of lung cancer and the smoking habit impinge on the productiveness of our society. {©}1984 American Association for Cancer Research.}
+      \field{issn}{0008-5472}
+      \field{journaltitle}{Cancer Research}
+      \field{number}{12 Part 1}
+      \field{title}{Smoking and Lung Cancer: An Overview}
+      \field{volume}{44}
+      \field{year}{1984}
+      \field{pages}{5940\bibrangedash 5958}
+      \range{pages}{19}
+      \verb{eprint}
+      \verb https://cancerres.aacrjournals.org/content/44/12_Part_1/5940.full.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://cancerres.aacrjournals.org/content/44/12_Part_1/5940
+      \endverb
+      \verb{url}
+      \verb https://cancerres.aacrjournals.org/content/44/12_Part_1/5940
+      \endverb
+    \endentry
+    \entry{McLeod}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4b7dc2d9a65dce88035f8e3470f6df74}{%
+           family={McLeod},
+           familyi={M\bibinitperiod},
+           given={Steven\bibnamedelima R.},
+           giveni={S\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {[Nordic Society Oikos, Wiley]}%
+      }
+      \strng{namehash}{4b7dc2d9a65dce88035f8e3470f6df74}
+      \strng{fullhash}{4b7dc2d9a65dce88035f8e3470f6df74}
+      \strng{bibnamehash}{4b7dc2d9a65dce88035f8e3470f6df74}
+      \strng{authorbibnamehash}{4b7dc2d9a65dce88035f8e3470f6df74}
+      \strng{authornamehash}{4b7dc2d9a65dce88035f8e3470f6df74}
+      \strng{authorfullhash}{4b7dc2d9a65dce88035f8e3470f6df74}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Carrying capacity in plant-herbivore systems generally refers to the equilibrium density that can be attained by a herbivore. In this paper I have summarised and analysed models and methods for calculating the carrying capacity of mammalian herbivores. I examined the models for their ability to objectively and quantitatively estimate carrying capacity in deterministic and stochastic environments. Of the seven model types reviewed, only the interactive model was suitable for calculating carrying capacity in both types of environment. The interactive model relates plant biomass to the rate of increase and food intake of herbivores. The carrying capacity predictions of the model were tested using a red kangaroo-shrubland assemblage. I adjusted the degree of environmental stochasticity (rainfall) for the assemblage and modelled the resulting plant-herbivore dynamics. The results indicated that the concept of carrying capacity could be validly applied to deterministic, or low variance, environments but in stochastic environments that are characterised by a high degree of unpredictable environmental variance the concept is not useful for describing plant-herbivore dynamics.}
+      \field{issn}{00301299, 16000706}
+      \field{journaltitle}{Oikos}
+      \field{number}{3}
+      \field{title}{Is the Concept of Carrying Capacity Useful in Variable Environments?}
+      \field{volume}{79}
+      \field{year}{1997}
+      \field{pages}{529\bibrangedash 542}
+      \range{pages}{14}
+      \verb{urlraw}
+      \verb http://www.jstor.org/stable/3546897
+      \endverb
+      \verb{url}
+      \verb http://www.jstor.org/stable/3546897
+      \endverb
+    \endentry
+    \entry{Mokhtari}{article}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=3b53dd52c33aaa229b3d3dcb9532cd8e}{%
+           family={Mokhtari},
+           familyi={M\bibinitperiod},
+           given={Reza\bibnamedelima Bayat},
+           giveni={R\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=53c7d5977ee95674d14923a77a341c70}{%
+           family={Homayouni},
+           familyi={H\bibinitperiod},
+           given={Tina\bibnamedelima S},
+           giveni={T\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ea6b450a078ea8f5b5baaba4c3863ba6}{%
+           family={Baluch},
+           familyi={B\bibinitperiod},
+           given={Narges},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c9261784b6bd6c8d448910fd2cf59603}{%
+           family={Morgatskaya},
+           familyi={M\bibinitperiod},
+           given={Evgeniya},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7e3576ffe8b83100181050ed0a37722e}{%
+           family={Kumar},
+           familyi={K\bibinitperiod},
+           given={Sushil},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a7b40402f5de0e941040c2abd469ab03}{%
+           family={Das},
+           familyi={D\bibinitperiod},
+           given={Bikul},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=13e08f90b8885282bdcc05cc2acb2e79}{%
+           family={Yeger},
+           familyi={Y\bibinitperiod},
+           given={Herman},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Impact Journals, LLC}%
+      }
+      \strng{namehash}{2cda553a5b2d1bb4e819cbf4de38858b}
+      \strng{fullhash}{2a400c689506c28cf683edcc1af933d2}
+      \strng{bibnamehash}{2a400c689506c28cf683edcc1af933d2}
+      \strng{authorbibnamehash}{2a400c689506c28cf683edcc1af933d2}
+      \strng{authornamehash}{2cda553a5b2d1bb4e819cbf4de38858b}
+      \strng{authorfullhash}{2a400c689506c28cf683edcc1af933d2}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1949-2553}
+      \field{journaltitle}{Oncotarget}
+      \field{number}{23}
+      \field{title}{Combination therapy in combating cancer}
+      \field{volume}{8}
+      \field{year}{2017}
+      \field{pages}{38022\bibrangedash 38043}
+      \range{pages}{22}
+      \verb{doi}
+      \verb https://doi.org/10.18632/oncotarget.16723
+      \endverb
+      \verb{urlraw}
+      \verb https://www.oncotarget.com/article/16723/
+      \endverb
+      \verb{url}
+      \verb https://www.oncotarget.com/article/16723/
+      \endverb
+    \endentry
+    \entry{Moolgavkar}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=0cbf7f197ba031f06717e42bad6e2d5f}{%
+           family={Moolgavkar},
+           familyi={M\bibinitperiod},
+           given={Suresh\bibnamedelima H.},
+           giveni={S\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=798b00a64a13885dafff1333edce185a}{%
+           family={Knudson},
+           familyi={K\bibinitperiod},
+           given={Alfred\bibnamedelima G.},
+           giveni={A\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{627bf74e335d42b487b1ed26ad64aa19}
+      \strng{fullhash}{627bf74e335d42b487b1ed26ad64aa19}
+      \strng{bibnamehash}{627bf74e335d42b487b1ed26ad64aa19}
+      \strng{authorbibnamehash}{627bf74e335d42b487b1ed26ad64aa19}
+      \strng{authornamehash}{627bf74e335d42b487b1ed26ad64aa19}
+      \strng{authorfullhash}{627bf74e335d42b487b1ed26ad64aa19}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{A model for carcinogenesis is presented that provides a framework for understanding the roles of “spontaneous” events, hereditary factors, and environmental agents in human carcinogenesis and for interpreting experimental carcinogenesis. This model incorporates two features: a) transition of target stem cells into cancer cells via an intermediate stage in two irreversible steps, and b) growth and differentiation of normal target and intermediate cells. Cast in mathematical terms, the model can be fitted to age-specific incidence data on human cancers of both children and adults and can illuminate the relative importance of agents that affect transition rates, tissue growth, and tissue differentiation. This is illustrated by application of the model to a) the epidemiology of lung cancer with emphasis on the role of cigarette smoking and b) the epidemiology of breast cancer with emphasis on the roles of hormones, radiation, and heredity. The nature of the two events and of the intermediate stage is considered in light of hereditary conditions that predispose to cancer in humans. The modes of action of radiation and chemicals in carcinogenesis are discussed, as are predictions based on the model and amenable to experimental verification.}}
+      \field{issn}{0027-8874}
+      \field{journaltitle}{JNCI: Journal of the National Cancer Institute}
+      \field{month}{06}
+      \field{number}{6}
+      \field{title}{{Mutation and Cancer: A Model for Human Carcinogenesis2}}
+      \field{volume}{66}
+      \field{year}{1981}
+      \field{pages}{1037\bibrangedash 1052}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1093/jnci/66.6.1037
+      \endverb
+      \verb{eprint}
+      \verb https://academic.oup.com/jnci/article-pdf/66/6/1037/18077150/66-6-1037.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1093/jnci/66.6.1037
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1093/jnci/66.6.1037
+      \endverb
+    \endentry
+    \entry{Morikawa}{article}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=2a8a83e155af3ec94a367a700b90ca9e}{%
+           family={Morikawa},
+           familyi={M\bibinitperiod},
+           given={Yasuyuki},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3a676981617baf677bb8b78dd05ac9ea}{%
+           family={Koike},
+           familyi={K\bibinitperiod},
+           given={Hidekazu},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1613f17c31266aac114c3ebe1d409648}{%
+           family={Sekine},
+           familyi={S\bibinitperiod},
+           given={Yoshitaka},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7b085c4036225b5fba7e3f0b16b66ee9}{%
+           family={Matsui},
+           familyi={M\bibinitperiod},
+           given={Hiroshi},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5d17c5ae7504c6bcc31bb78e30483e95}{%
+           family={Shibata},
+           familyi={S\bibinitperiod},
+           given={Yasuhiro},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5e7ba922e87049807d1320188433354b}{%
+           family={Ito},
+           familyi={I\bibinitperiod},
+           given={Kazuto},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e8ab06cb95e48e3696626ea79f6054a2}{%
+           family={Suzuki},
+           familyi={S\bibinitperiod},
+           given={Kazuhiro},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b65fec250fa06a62ca596c06e46c4874}
+      \strng{fullhash}{0b9d466fd13829e46c14d78bb45b9e56}
+      \strng{bibnamehash}{0b9d466fd13829e46c14d78bb45b9e56}
+      \strng{authorbibnamehash}{0b9d466fd13829e46c14d78bb45b9e56}
+      \strng{authornamehash}{b65fec250fa06a62ca596c06e46c4874}
+      \strng{authorfullhash}{0b9d466fd13829e46c14d78bb45b9e56}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Background Docetaxel is a first-line treatment choice in castration-resistant prostate cancer (CRPC). However, the management of CRPC remains an important challenge in oncology. There have been many reports on the effects of rapamycin, which is an inhibitor of the mammalian target of rapamycin (mTOR), in the treatment of carcinogenesis. We assessed the cytotoxic effects of the combination treatment of docetaxel and rapamycin in prostate cancer cells. Furthermore, we examined the relationship between these treatments and survivin, which is a member of the inhibitory apoptosis family. Methods Prostate cancer cells were cultured and treated with docetaxel and rapamycin. The effects on proliferation were evaluated with the MTS assay. In addition, we evaluated the effect on proliferation of the combination treatment induced knockdown of survivin expression by small interfering RNA transfection and docetaxel. Protein expression levels were assayed using western blotting. PC3 cells and xenograft growth in nude mice were used to evaluate the in vivo efficacy of docetaxel and its combination with rapamycin. Results In vitro and in vivo, the combination of rapamycin with docetaxel resulted in a greater inhibition of proliferation than treatment with rapamycin or docetaxel alone. In addition, in vitro and in vivo, rapamycin decreased basal surviving levels, and cotreatment with docetaxel further decreased these levels. Transfection siRNA against survivin enhanced the cytotoxicity of docetaxel in PC3 cells. Conclusion The rapamycin-dependent enhancement of the cytotoxic effects of docetaxel was associated with the downregulation of survivin expression. Our results suggest that the combination of docetaxel and rapamycin is a candidate for the improved treatment of advanced prostate cancer.}
+      \field{issn}{0006-291X}
+      \field{journaltitle}{Biochemical and Biophysical Research Communications}
+      \field{number}{3}
+      \field{title}{Rapamycin enhances docetaxel-induced cytotoxicity in a androgen-independent prostate cancer xenograft model by survivin downregulation}
+      \field{volume}{419}
+      \field{year}{2012}
+      \field{pages}{584\bibrangedash 589}
+      \range{pages}{6}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.bbrc.2012.02.089
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0006291X12003397
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0006291X12003397
+      \endverb
+      \keyw{Survivin,Rapamycin,Docetaxel,Antitumor sensitization effect,Prostate cancer}
+    \endentry
+    \entry{cancer_therapy}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=fd9ee57179a15116ed6a560a15d30afd}{%
+           family={NCI},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{fd9ee57179a15116ed6a560a15d30afd}
+      \strng{fullhash}{fd9ee57179a15116ed6a560a15d30afd}
+      \strng{bibnamehash}{fd9ee57179a15116ed6a560a15d30afd}
+      \strng{authorbibnamehash}{fd9ee57179a15116ed6a560a15d30afd}
+      \strng{authornamehash}{fd9ee57179a15116ed6a560a15d30afd}
+      \strng{authorfullhash}{fd9ee57179a15116ed6a560a15d30afd}
+      \field{extraname}{1}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{cancer.gov}
+      \field{title}{Types of Cancer Treatment}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://www.cancer.gov/about-cancer//treatment/types
+      \endverb
+      \verb{url}
+      \verb https://www.cancer.gov/about-cancer//treatment/types
+      \endverb
+    \endentry
+    \entry{cancergov}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=fd9ee57179a15116ed6a560a15d30afd}{%
+           family={NCI},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{fd9ee57179a15116ed6a560a15d30afd}
+      \strng{fullhash}{fd9ee57179a15116ed6a560a15d30afd}
+      \strng{bibnamehash}{fd9ee57179a15116ed6a560a15d30afd}
+      \strng{authorbibnamehash}{fd9ee57179a15116ed6a560a15d30afd}
+      \strng{authornamehash}{fd9ee57179a15116ed6a560a15d30afd}
+      \strng{authorfullhash}{fd9ee57179a15116ed6a560a15d30afd}
+      \field{extraname}{2}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{cancer.gov}
+      \field{title}{What Is Cancer?}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://www.cancer.gov/about-cancer/understanding/what-is-cancer
+      \endverb
+      \verb{url}
+      \verb https://www.cancer.gov/about-cancer/understanding/what-is-cancer
+      \endverb
+    \endentry
+    \entry{Sawyers}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e9219f0b59b77a50f8343b0e055c448b}{%
+           family={Sawyers},
+           familyi={S\bibinitperiod},
+           given={Charles},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group}%
+      }
+      \strng{namehash}{e9219f0b59b77a50f8343b0e055c448b}
+      \strng{fullhash}{e9219f0b59b77a50f8343b0e055c448b}
+      \strng{bibnamehash}{e9219f0b59b77a50f8343b0e055c448b}
+      \strng{authorbibnamehash}{e9219f0b59b77a50f8343b0e055c448b}
+      \strng{authornamehash}{e9219f0b59b77a50f8343b0e055c448b}
+      \strng{authorfullhash}{e9219f0b59b77a50f8343b0e055c448b}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature}
+      \field{number}{7015}
+      \field{title}{Targeted cancer therapy}
+      \field{volume}{432}
+      \field{year}{2004}
+      \field{pages}{294\bibrangedash 297}
+      \range{pages}{4}
+    \endentry
+    \entry{Schilder}{article}{}
+      \name{author}{8}{}{%
+        {{un=0,uniquepart=base,hash=7db5114a1d11b5bde02f598044131347}{%
+           family={Schilder},
+           familyi={S\bibinitperiod},
+           given={R.\bibnamedelimi J.},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=df58d09b3050aeba28a36bd6c4161182}{%
+           family={Hall},
+           familyi={H\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5508ecd73e74cb99a4782582a3880a16}{%
+           family={Monks},
+           familyi={M\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1df4a0dca07392e88a546c725cccb75c}{%
+           family={Handel},
+           familyi={H\bibinitperiod},
+           given={L.\bibnamedelimi M.},
+           giveni={L\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c3dc99b9b31d36e8e085c53788b6bf5a}{%
+           family={Fornace\bibnamedelima Jr.},
+           familyi={F\bibinitperiod\bibinitdelim J\bibinitperiod},
+           given={A.\bibnamedelimi J.},
+           giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8c5822ab3470942b3ecc1c2a909dec48}{%
+           family={Ozols},
+           familyi={O\bibinitperiod},
+           given={R.\bibnamedelimi F.},
+           giveni={R\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=af773ba2e9afd8c404ef4381b4466540}{%
+           family={Fojo},
+           familyi={F\bibinitperiod},
+           given={A.\bibnamedelimi T.},
+           giveni={A\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f230bfe9aa848ab5c2e6ea3cf01d08dc}{%
+           family={Hamilton},
+           familyi={H\bibinitperiod},
+           given={T.\bibnamedelimi C.},
+           giveni={T\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f55dbe4ec20615f4b57e16fd4c91f882}
+      \strng{fullhash}{f64881b6f8c53dcfa54a762941346da4}
+      \strng{bibnamehash}{f64881b6f8c53dcfa54a762941346da4}
+      \strng{authorbibnamehash}{f64881b6f8c53dcfa54a762941346da4}
+      \strng{authornamehash}{f55dbe4ec20615f4b57e16fd4c91f882}
+      \strng{authorfullhash}{f64881b6f8c53dcfa54a762941346da4}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Abstract Intracellular thiols have been proposed as mediators of resistance to alkylating agents and cisplatin. As metallothionein is the predominant protein thiol, we examined its relationship to cisplatin resistance in human ovarian cancer cell lines. A human ovarian carcinoma cell line, A2780, derived from an untreated patient, was treated with cisplatin in several ways and the induced resistance to cisplatin ranged from 13- to 68-fold. The degree of resistance was dependent upon the method of selection. The drug-resistant cell lines also developed low levels of cross-resistance to cadmium. Additional cell lines established from untreated patients or ovarian cancer patients refractory to cisplatin- and/or carboplatin-containing combination chemotherapy were studied. The most cisplatin-resistant cell lines, OVCAR-8 and -10, were from patients previously treated with intensive chemotherapy. OVCAR-8 was relatively cross-resistant to cadmium while OVCAR-10 appeared relatively sensitive. Cell lines were examined for expression of metallothionein mRNA to evaluate the relationship between cisplatin resistance, cadmium cross-resistance and metallothionein expression. Only two of the cell lines with in vitro-induced resistance to cisplatin, 2780E80 and 2780CP70B3, had detectable metallothionein mRNA. The other cell lines selected in vitro for cisplatin resistance, as well as the parental A2780 ovarian cancer cell line, showed no expression at our level of detection. There was variable expression of metallothionein among the OVCAR cell lines. Cell lines from untreated patients, OVCAR-5 and -7, did express metallothionein, while the most cisplatin-resistant cell lines, OVCAR-8 and -10, did nat. We also examined cisplatin induction of metallothionein mRNA in the cell lines. Only 2780CP70B3 among the cell lines with in vitro-induced cisplatin resistance showed increased expression after short-term exposure to cisplatin. OVCAR-4 also had a slight increase in expression after exposure to cisplatin. Mouse C127 cells transfected with a bovine papilloma virus-metallothionein gene construct were compared for cisplatin sensitivity to the same cell type transfected with bovine papilloma virus alone. In this model system, metallothionein expression did not influence cisplatin cytotoxicity. On the basis of these studies, we conclude that there is no causal relationship between metallothionein expression and cisplatin resistance.}
+      \field{journaltitle}{International Journal of Cancer}
+      \field{number}{3}
+      \field{title}{Metallothionein gene expression and resistance to cisplatin in human ovarian cancer}
+      \field{volume}{45}
+      \field{year}{1990}
+      \field{pages}{416\bibrangedash 422}
+      \range{pages}{7}
+      \verb{doi}
+      \verb https://doi.org/10.1002/ijc.2910450306
+      \endverb
+      \verb{eprint}
+      \verb https://onlinelibrary.wiley.com/doi/pdf/10.1002/ijc.2910450306
+      \endverb
+      \verb{urlraw}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.1002/ijc.2910450306
+      \endverb
+      \verb{url}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.1002/ijc.2910450306
+      \endverb
+    \endentry
+    \entry{Scott}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=79312663b6956f65878b849a1e169c4b}{%
+           family={Scott},
+           familyi={S\bibinitperiod},
+           given={Jacob},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6d372706ecb7a0d91eb981cb03f10baf}{%
+           family={Marusyk},
+           familyi={M\bibinitperiod},
+           given={Andriy},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{6686bd8e618e2fab81edd7be1af42348}
+      \strng{fullhash}{6686bd8e618e2fab81edd7be1af42348}
+      \strng{bibnamehash}{6686bd8e618e2fab81edd7be1af42348}
+      \strng{authorbibnamehash}{6686bd8e618e2fab81edd7be1af42348}
+      \strng{authornamehash}{6686bd8e618e2fab81edd7be1af42348}
+      \strng{authorfullhash}{6686bd8e618e2fab81edd7be1af42348}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{It is generally accepted that the initiation and progression of cancers is the result of somatic clonal evolution. Despite many peculiarities, evolution within populations of somatic cells should obey the same Darwinian principles as evolution within natural populations, i.e. variability of heritable phenotypes provides the substrate for context-specific selection forces leading to increased population frequencies of phenotypes, which are better adapted to their environment. Yet, within cancer biology, the more prevalent way to view evolution is as being entirely driven by the accumulation of “driver” mutations. Context-specific selection forces are either ignored, or viewed as constraints from which tumor cells liberate themselves during the course of malignant progression. In this review, we will argue that explicitly focusing on selection forces acting on the populations of neoplastic cells as the driving force of somatic clonal evolution might provide for a more accurate conceptual framework compared to the mutation-centric driver gene paradigm. Whereas little can be done to counteract the “bad luck” of stochastic occurrences of cancer-related mutations, changes in selective pressures and the phenotypic adaptations they induce can, in principle, be exploited to limit the incidence of cancers and to increase the efficiency of existing and future therapies. This article is part of a Special Issue entitled: Evolutionary principles - heterogeneity in cancer?, edited by Dr. Robert A. Gatenby.}
+      \field{issn}{0304-419X}
+      \field{journaltitle}{Biochimica et Biophysica Acta (BBA) - Reviews on Cancer}
+      \field{note}{Evolutionary principles - heterogeneity in cancer?}
+      \field{number}{2}
+      \field{title}{Somatic clonal evolution: A selection-centric perspective}
+      \field{volume}{1867}
+      \field{year}{2017}
+      \field{pages}{139\bibrangedash 150}
+      \range{pages}{12}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.bbcan.2017.01.006
+      \endverb
+      \verb{urlraw}
+      \verb http://www.sciencedirect.com/science/article/pii/S0304419X1730029X
+      \endverb
+      \verb{url}
+      \verb http://www.sciencedirect.com/science/article/pii/S0304419X1730029X
+      \endverb
+      \keyw{Cancer,Initiation,Progression,Natural selection,Selective pressures,Driver}
+    \endentry
+    \entry{cancer_stats}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=2d1a5d371c52baad1757c7e9a2e3c02c}{%
+           family={Siegel},
+           familyi={S\bibinitperiod},
+           given={Rebecca\bibnamedelima L.},
+           giveni={R\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f233aeeca03f343c26cf976d001101bb}{%
+           family={Miller},
+           familyi={M\bibinitperiod},
+           given={Kimberly\bibnamedelima D.},
+           giveni={K\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=09ac5412e148bbfcf4752ab0dd203ad4}{%
+           family={Fuchs},
+           familyi={F\bibinitperiod},
+           given={Hannah\bibnamedelima E.},
+           giveni={H\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6fe437d47a0f5a4a476be97810534e27}{%
+           family={Jemal},
+           familyi={J\bibinitperiod},
+           given={Ahmedin},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{931a0b2fc77290974a6f3d11f54d9c53}
+      \strng{fullhash}{6d5a46e45be42b82d0ba99a6e88ba300}
+      \strng{bibnamehash}{6d5a46e45be42b82d0ba99a6e88ba300}
+      \strng{authorbibnamehash}{6d5a46e45be42b82d0ba99a6e88ba300}
+      \strng{authornamehash}{931a0b2fc77290974a6f3d11f54d9c53}
+      \strng{authorfullhash}{6d5a46e45be42b82d0ba99a6e88ba300}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Abstract Each year, the American Cancer Society estimates the numbers of new cancer cases and deaths in the United States and compiles the most recent data on population-based cancer occurrence. Incidence data (through 2017) were collected by the Surveillance, Epidemiology, and End Results Program; the National Program of Cancer Registries; and the North American Association of Central Cancer Registries. Mortality data (through 2018) were collected by the National Center for Health Statistics. In 2021, 1,898,160 new cancer cases and 608,570 cancer deaths are projected to occur in the United States. After increasing for most of the 20th century, the cancer death rate has fallen continuously from its peak in 1991 through 2018, for a total decline of 31\%, because of reductions in smoking and improvements in early detection and treatment. This translates to 3.2 million fewer cancer deaths than would have occurred if peak rates had persisted. Long-term declines in mortality for the 4 leading cancers have halted for prostate cancer and slowed for breast and colorectal cancers, but accelerated for lung cancer, which accounted for almost one-half of the total mortality decline from 2014 to 2018. The pace of the annual decline in lung cancer mortality doubled from 3.1\% during 2009 through 2013 to 5.5\% during 2014 through 2018 in men, from 1.8\% to 4.4\% in women, and from 2.4\% to 5\% overall. This trend coincides with steady declines in incidence (2.2\%-2.3\%) but rapid gains in survival specifically for nonsmall cell lung cancer (NSCLC). For example, NSCLC 2-year relative survival increased from 34\% for persons diagnosed during 2009 through 2010 to 42\% during 2015 through 2016, including absolute increases of 5\% to 6\% for every stage of diagnosis; survival for small cell lung cancer remained at 14\% to 15\%. Improved treatment accelerated progress against lung cancer and drove a record drop in overall cancer mortality, despite slowing momentum for other common cancers.}
+      \field{journaltitle}{CA: A Cancer Journal for Clinicians}
+      \field{number}{1}
+      \field{title}{Cancer Statistics, 2021}
+      \field{volume}{71}
+      \field{year}{2021}
+      \field{pages}{7\bibrangedash 33}
+      \range{pages}{27}
+      \verb{doi}
+      \verb https://doi.org/10.3322/caac.21654
+      \endverb
+      \verb{eprint}
+      \verb https://acsjournals.onlinelibrary.wiley.com/doi/pdf/10.3322/caac.21654
+      \endverb
+      \verb{urlraw}
+      \verb https://acsjournals.onlinelibrary.wiley.com/doi/abs/10.3322/caac.21654
+      \endverb
+      \verb{url}
+      \verb https://acsjournals.onlinelibrary.wiley.com/doi/abs/10.3322/caac.21654
+      \endverb
+      \keyw{cancer cases,cancer statistics,death rates,incidence,mortality}
+    \endentry
+    \entry{Snippert}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=2753c368ed7f06cfeefe534a1b482cc2}{%
+           family={Snippert},
+           familyi={S\bibinitperiod},
+           given={Hugo\bibnamedelima J.},
+           giveni={H\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6b058fb1fd313fa938d8a541d80eba05}{%
+           family={Schepers},
+           familyi={S\bibinitperiod},
+           given={Arnout\bibnamedelima G.},
+           giveni={A\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f6806728ef60b93e4d16364ea8d3bf69}{%
+           family={Es},
+           familyi={E\bibinitperiod},
+           given={Johan\bibnamedelima H.},
+           giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0,
+           prefix={van},
+           prefixi={v\bibinitperiod},
+           prefixun=0}}%
+        {{un=0,uniquepart=base,hash=7f25339184eaaa5b34933eba1baa427a}{%
+           family={Simons},
+           familyi={S\bibinitperiod},
+           given={Benjamin\bibnamedelima D.},
+           giveni={B\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=33c24f144adf9910fa9b0cf732e641a0}{%
+           family={Clevers},
+           familyi={C\bibinitperiod},
+           given={Hans},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f47d9eafa8278807c372d01534d3f64e}
+      \strng{fullhash}{6e52f95c516f8b9e9c8674c922ad1084}
+      \strng{bibnamehash}{6e52f95c516f8b9e9c8674c922ad1084}
+      \strng{authorbibnamehash}{6e52f95c516f8b9e9c8674c922ad1084}
+      \strng{authornamehash}{f47d9eafa8278807c372d01534d3f64e}
+      \strng{authorfullhash}{6e52f95c516f8b9e9c8674c922ad1084}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Abstract The concept of ‘field cancerization’ describes the clonal expansion of genetically altered, but morphologically normal cells that predisposes a tissue to cancer development. Here, we demonstrate that biased stem cell competition in the mouse small intestine can initiate the expansion of such clones. We quantitatively analyze how the activation of oncogenic K-ras in individual Lgr5+ stem cells accelerates their cell division rate and creates a biased drift towards crypt clonality. K-ras mutant crypts then clonally expand within the epithelium through enhanced crypt fission, which distributes the existing Paneth cell niche over the two new crypts. Thus, an unequal competition between wild-type and mutant intestinal stem cells initiates a biased drift that leads to the clonal expansion of crypts carrying oncogenic mutations.}
+      \field{journaltitle}{EMBO reports}
+      \field{number}{1}
+      \field{title}{Biased competition between Lgr5 intestinal stem cells driven by oncogenic mutation induces clonal expansion}
+      \field{volume}{15}
+      \field{year}{2014}
+      \field{pages}{62\bibrangedash 69}
+      \range{pages}{8}
+      \verb{doi}
+      \verb https://doi.org/10.1002/embr.201337799
+      \endverb
+      \verb{eprint}
+      \verb https://www.embopress.org/doi/pdf/10.1002/embr.201337799
+      \endverb
+      \verb{urlraw}
+      \verb https://www.embopress.org/doi/abs/10.1002/embr.201337799
+      \endverb
+      \verb{url}
+      \verb https://www.embopress.org/doi/abs/10.1002/embr.201337799
+      \endverb
+      \keyw{crypt fission,field cancerization,K-ras,Lgr5 intestinal stem cells,neutral competition}
+    \endentry
+    \entry{Steward}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=52521c074dffb3ec99e19845cb5d4656}{%
+           family={Stewart},
+           familyi={S\bibinitperiod},
+           given={Grant\bibnamedelima D.},
+           giveni={G\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=504de8623c854c52ec39f1c1171fed12}{%
+           family={Ross},
+           familyi={R\bibinitperiod},
+           given={James\bibnamedelima A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=711c207157bc48fd167aad78cd0b48a8}{%
+           family={McLaren},
+           familyi={M\bibinitperiod},
+           given={Duncan\bibnamedelima B.},
+           giveni={D\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d381f9f619e39794cb21cb047ab7e874}{%
+           family={Parker},
+           familyi={P\bibinitperiod},
+           given={Christopher\bibnamedelima C.},
+           giveni={C\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=726a26ca56483b016b471dba505647be}{%
+           family={Habib},
+           familyi={H\bibinitperiod},
+           given={Fouad\bibnamedelima K.},
+           giveni={F\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=13d9be0d47913761788770195a439c25}{%
+           family={Riddick},
+           familyi={R\bibinitperiod},
+           given={Antony\bibnamedelima C.P.},
+           giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{16dbb942f758da4e96537a68d0cbe735}
+      \strng{fullhash}{35e405e42e6058c8da39238a9e291839}
+      \strng{bibnamehash}{35e405e42e6058c8da39238a9e291839}
+      \strng{authorbibnamehash}{35e405e42e6058c8da39238a9e291839}
+      \strng{authornamehash}{16dbb942f758da4e96537a68d0cbe735}
+      \strng{authorfullhash}{35e405e42e6058c8da39238a9e291839}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Research into the hypoxic tumour microenvironment is accelerating and the reversal of hypoxia is increasingly being suggested as a mechanism for improving cancer treatment. Recent studies have suggested that hypoxia is also a feature in prostate cancer and is associated with a poor prognosis. Hypoxia has been shown to cause radio-resistance and hence hamper one of the major treatments for prostate cancer. However, unlike other solid tumours, such as cervical and head-and-neck cancer, there are inconsistencies and unanswered questions about the relevance of hypoxia in prostate cancer. This review outlines the role of low-oxygen conditions in prostate cancer and the areas where further studies are required.}
+      \field{journaltitle}{BJU International}
+      \field{number}{1}
+      \field{title}{The relevance of a hypoxic tumour microenvironment in prostate cancer}
+      \field{volume}{105}
+      \field{year}{2010}
+      \field{pages}{8\bibrangedash 13}
+      \range{pages}{6}
+      \verb{doi}
+      \verb https://doi.org/10.1111/j.1464-410X.2009.08921.x
+      \endverb
+      \verb{eprint}
+      \verb https://bjui-journals.onlinelibrary.wiley.com/doi/pdf/10.1111/j.1464-410X.2009.08921.x
+      \endverb
+      \verb{urlraw}
+      \verb https://bjui-journals.onlinelibrary.wiley.com/doi/abs/10.1111/j.1464-410X.2009.08921.x
+      \endverb
+      \verb{url}
+      \verb https://bjui-journals.onlinelibrary.wiley.com/doi/abs/10.1111/j.1464-410X.2009.08921.x
+      \endverb
+      \keyw{prostate cancer,hypoxia,radiotherapy,hypoxia-inducible factor-1,vascular endothelial growth factor}
+    \endentry
+    \entry{Strobl}{article}{}
+      \name{author}{9}{}{%
+        {{un=0,uniquepart=base,hash=ddbc6256acc3c7a6a69eb7f4204133b4}{%
+           family={Strobl},
+           familyi={S\bibinitperiod},
+           given={Maximilian},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9013d38f255a5afc389905c7ded2e093}{%
+           family={West},
+           familyi={W\bibinitperiod},
+           given={Jeffrey},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6d36ed6808485a052e7467eae22dd2d4}{%
+           family={Viossat},
+           familyi={V\bibinitperiod},
+           given={Yannick},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ff4a89aafa943f2925a257bdaf54bf4f}{%
+           family={Damaghi},
+           familyi={D\bibinitperiod},
+           given={Mehdi},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=882d37fb2e399e1408c2d916204e378c}{%
+           family={Robertson-Tessi},
+           familyi={R\bibinithyphendelim T\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8a2c236c841f5c359343c659a4bfdfb2}{%
+           family={Brown},
+           familyi={B\bibinitperiod},
+           given={Joel},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=46c62d04b39f463a25037e0edf2d6d60}{%
+           family={Gatenby},
+           familyi={G\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9a498776baf84bda308ff3b231f896ca}{%
+           family={Maini},
+           familyi={M\bibinitperiod},
+           given={Philip},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9905d15ac081525ac71116428ddfb78e}{%
+           family={Anderson},
+           familyi={A\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Cold Spring Harbor Laboratory}%
+      }
+      \strng{namehash}{d42b7ef12cea3701d032f638cd033350}
+      \strng{fullhash}{524933e7118f9015dc9b2049fab483c1}
+      \strng{bibnamehash}{524933e7118f9015dc9b2049fab483c1}
+      \strng{authorbibnamehash}{524933e7118f9015dc9b2049fab483c1}
+      \strng{authornamehash}{d42b7ef12cea3701d032f638cd033350}
+      \strng{authorfullhash}{524933e7118f9015dc9b2049fab483c1}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{“}Control and conquer{”} - this is the philosophy behind adaptive therapy, which seeks to exploit intra-tumoural competition to avoid, or at least, delay the emergence of therapy resistance in cancer. Motivated by promising results from theoretical, experimental and, most recently, a clinical study in prostate cancer, there is an increasing interest in extending this approach to other cancers. As such, it is urgent to understand the characteristics of a cancer which determine whether it will respond well to adaptive therapy, or not. A plausible candidate for such a selection criterion is the fitness cost of resistance. In this paper, we study a simple competition model between sensitive \&amp; resistant cell populations to investigate whether the presence of a cost is a necessary condition for adaptive therapy to extend the time to progression beyond that of a standard-of-care continuous therapy. We find that for tumours close to their environmental carrying capacity such a cost of resistance is not required. However, for tumours growing far from carrying capacity, a cost may be required to see meaningful gains. Notably, we show that in such cases it is important to consider the cell turnover in the tumour and we discuss its role in modulating the impact of a cost of resistance. Overall, our work helps to clarify under which circumstances adaptive therapy may be beneficial, and suggests that turnover may play an unexpectedly important role in the decision making process.}
+      \field{journaltitle}{bioRxiv}
+      \field{title}{Turnover modulates the need for a cost of resistance in adaptive therapy}
+      \field{year}{2020}
+      \verb{doi}
+      \verb 10.1101/2020.01.22.914366
+      \endverb
+      \verb{eprint}
+      \verb https://www.biorxiv.org/content/early/2020/03/18/2020.01.22.914366.full.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.biorxiv.org/content/early/2020/03/18/2020.01.22.914366
+      \endverb
+      \verb{url}
+      \verb https://www.biorxiv.org/content/early/2020/03/18/2020.01.22.914366
+      \endverb
+    \endentry
+    \entry{Takahashi}{article}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=3eab1158137dcce5b41856de3bc73bc7}{%
+           family={Takahashi},
+           familyi={T\bibinitperiod},
+           given={Toshiko},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=94e61eac196ad68e9653a34c07e6d380}{%
+           family={Hoshi},
+           familyi={H\bibinitperiod},
+           given={Senji},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=52f39995abb97819e7b42d6d74809f26}{%
+           family={Satoh},
+           familyi={S\bibinitperiod},
+           given={Makoto},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=835bb591625e9b3c96059154497d2886}{%
+           family={Kaneda},
+           familyi={K\bibinitperiod},
+           given={Takashi},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dcb8d769df8a2b0aa08612a80dbac69e}{%
+           family={Suzuki},
+           familyi={S\bibinitperiod},
+           given={Ken-Ichi},
+           giveni={K\bibinithyphendelim I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d03bac7ff88e1d20276b76d29b201a00}{%
+           family={Nakagawara},
+           familyi={N\bibinitperiod},
+           given={Kan-Ichi},
+           giveni={K\bibinithyphendelim I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4720cc2128034f60b99daa5e5f2adf17}{%
+           family={Orikasa},
+           familyi={O\bibinitperiod},
+           given={Seiichi},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4b6a4cd07e8c8ecc61602b1309f5d3e3}
+      \strng{fullhash}{c446aeb7b877e3b82b862cd2ce4d32e2}
+      \strng{bibnamehash}{c446aeb7b877e3b82b862cd2ce4d32e2}
+      \strng{authorbibnamehash}{c446aeb7b877e3b82b862cd2ce4d32e2}
+      \strng{authornamehash}{4b6a4cd07e8c8ecc61602b1309f5d3e3}
+      \strng{authorfullhash}{c446aeb7b877e3b82b862cd2ce4d32e2}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Abstract Purpose : Reverse transcriptase–polymerase chain reaction (RT–PCR) offers a potentially more sensitive assay for detecting cells expressing prostate-specific antigen (PSA) mRNA in peripheral circulation. But the sensitivity and specificity are variable depending on the position of the PSA amplification. To increase sensitivity and specificity, the whole PSA cDNA (1466 bp) was separated into eight different parts. Methods : We examined RT–PCR on 12 urogenital cell lines, including three prostate cancer (LNCaP, PC3, DU145), five human renal cell carcinoma (SMKT-R3, TOS-1, TOS-2, R4, ACHN), two urinary bladder cancer (YTS-1, KK-47) and two testicular cancer (NEC8, NEC14) cell lines. The sizes of the eight fragmented PSA used in the experiment were PSA-1 (1–257 bp), PSA-2 (1–322 bp), PSA-3 ( 172–507 bp), PSA-4 (172–851 bp), PSA-5 (595–1347 bp), PSA-6 (682 967 bp), PSA-7 (682–1347 bp) and PSA-8 (863–1466 bp). Results : All cell lines had positive signals from PSA-6, PSA-7 and PSA-8. The positive signals from PSA-1, PSA-2 and PSA-3 were detected in some other cell lines in addition to the three prostate cancer cell lines. Only LNCaP which produces the PSA protein had a positive signal from PSA-5. PC3 and DU145 (which do not produce PSA) and LNCaP had a positive signal from PSA-4. Therefore, the inner primer PSA-4′ (578–782 bp) used to increase sensitivity and specificity. Nested RT–PCR on the 12 cell lines, using the PSA-4 and 4′ primers, detected more clear bands in the three prostate cancer cells. Conclusion : Nested RT–PCR using PSA-4 (outer primer) and PSA-4′ (inner primer) may be useful for detecting prostate cancer cells in the peripheral blood.}
+      \field{journaltitle}{International Journal of Urology}
+      \field{number}{10}
+      \field{title}{The study of PSA gene expression on urogenital cell lines}
+      \field{volume}{6}
+      \field{year}{1999}
+      \field{pages}{526\bibrangedash 531}
+      \range{pages}{6}
+      \verb{doi}
+      \verb https://doi.org/10.1046/j.1442-2042.1999.00104.x
+      \endverb
+      \verb{eprint}
+      \verb https://onlinelibrary.wiley.com/doi/pdf/10.1046/j.1442-2042.1999.00104.x
+      \endverb
+      \verb{urlraw}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.1046/j.1442-2042.1999.00104.x
+      \endverb
+      \verb{url}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.1046/j.1442-2042.1999.00104.x
+      \endverb
+      \keyw{cell lines,metastasis,prostate cancer,prostate-specific antigen,reverse transcriptase–polymerase chain reaction}
+    \endentry
+    \entry{Titus}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=48eb0c2ba17a4480ab65c41e8fd13a57}{%
+           family={Titus},
+           familyi={T\bibinitperiod},
+           given={Mark\bibnamedelima A.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=64be3df8f3ba4fc00d17f462ffecd5c3}{%
+           family={Schell},
+           familyi={S\bibinitperiod},
+           given={Michael\bibnamedelima J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=991330b318a417dc983183656730f63f}{%
+           family={Lih},
+           familyi={L\bibinitperiod},
+           given={Fred\bibnamedelima B.},
+           giveni={F\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4b980cb2e54e917adab84fcee8bcaaf7}{%
+           family={Tomer},
+           familyi={T\bibinitperiod},
+           given={Kenneth\bibnamedelima B.},
+           giveni={K\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5b76bcf1d91c0da2d60031ea29262b4f}{%
+           family={Mohler},
+           familyi={M\bibinitperiod},
+           given={James\bibnamedelima L.},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {American Association for Cancer Research}%
+      }
+      \strng{namehash}{b892a153c6da7ade1648019a9a30d810}
+      \strng{fullhash}{a5d6ef33f3496bbe9346a50eb63cd6b4}
+      \strng{bibnamehash}{a5d6ef33f3496bbe9346a50eb63cd6b4}
+      \strng{authorbibnamehash}{a5d6ef33f3496bbe9346a50eb63cd6b4}
+      \strng{authornamehash}{b892a153c6da7ade1648019a9a30d810}
+      \strng{authorfullhash}{a5d6ef33f3496bbe9346a50eb63cd6b4}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Purpose: Prostate cancer eventually recurs during androgen deprivation therapy despite castrate levels of serum androgens. Expression of androgen receptor and androgen receptor{–}regulated proteins suggests androgen receptor activation in recurrent prostate cancer. Many groups have pursued mechanisms of ligand-independent androgen receptor activation but we found high levels of testicular androgens in recurrent prostate cancer tissue using RIA. Experimental Designs: Prostate specimens from 36 men were procured preserving blood flow to prevent ischemia and cyropreserved immediately. Recurrent prostate cancer specimens from 18 men whose cancer recurred locally during androgen deprivation therapy and androgen-stimulated benign prostate specimens from 18 men receiving no hormonal treatments were studied. Tissue levels of testosterone and dihydrotestosterone were measured in each specimen using liquid chromatography/electrospray tandem mass spectrometry. Testosterone and dihydrotestosterone levels were compared with clinical variables and treatment received. Results: Testosterone levels were similar in recurrent prostate cancer (3.75 pmol/g tissue) and androgen-stimulated benign prostate (2.75 pmol/g tissue, Wilcoxon two-sided, P = 0.30). Dihydrotestosterone levels decreased 91\% in recurrent prostate cancer (1.25 pmol/g tissue) compared with androgen-stimulated benign prostate (13.7 pmol/g tissue; Wilcoxon two-sided, P \&lt; 0.0001) although dihydrotestosterone levels in most specimens of recurrent prostate cancer were sufficient for androgen receptor activation. Testosterone or dihydrotestosterone levels were not related to metastatic status, antiandrogen treatment, or survival (Wilcoxon rank sum, all P \&gt; 0.2). Conclusions: Recurrent prostate cancer may develop the capacity to biosynthesize testicular androgens from adrenal androgens or cholesterol. This surprising finding suggests intracrine production of dihydrotestosterone and should be exploited for novel treatment of recurrent prostate cancer.}
+      \field{issn}{1078-0432}
+      \field{journaltitle}{Clinical Cancer Research}
+      \field{number}{13}
+      \field{title}{Testosterone and Dihydrotestosterone Tissue Levels in Recurrent Prostate Cancer}
+      \field{volume}{11}
+      \field{year}{2005}
+      \field{pages}{4653\bibrangedash 4657}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1158/1078-0432.CCR-05-0525
+      \endverb
+      \verb{eprint}
+      \verb https://clincancerres.aacrjournals.org/content/11/13/4653.full.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://clincancerres.aacrjournals.org/content/11/13/4653
+      \endverb
+      \verb{url}
+      \verb https://clincancerres.aacrjournals.org/content/11/13/4653
+      \endverb
+    \endentry
+    \entry{Trichopoulos}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=72ec4cc77b93b240a389d609b9a32686}{%
+           family={Trichopoulos},
+           familyi={T\bibinitperiod},
+           given={Dimitrios},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5c8c3a758c5f177337047d2ab7b7678f}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Frederick\bibnamedelima P.},
+           giveni={F\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=704552ebaa7897b0b1517dca3a5cef6d}{%
+           family={Hunter},
+           familyi={H\bibinitperiod},
+           given={David\bibnamedelima J.},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Scientific American, a division of Nature America, Inc.}%
+      }
+      \strng{namehash}{ac698f44b2ce0b958dbf92c32ec320fa}
+      \strng{fullhash}{af9b164e2367560533be5b62b97486b3}
+      \strng{bibnamehash}{af9b164e2367560533be5b62b97486b3}
+      \strng{authorbibnamehash}{af9b164e2367560533be5b62b97486b3}
+      \strng{authornamehash}{ac698f44b2ce0b958dbf92c32ec320fa}
+      \strng{authorfullhash}{af9b164e2367560533be5b62b97486b3}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{00368733, 19467087}
+      \field{journaltitle}{Scientific American}
+      \field{number}{3}
+      \field{title}{What Causes Cancer?}
+      \field{volume}{275}
+      \field{year}{1996}
+      \field{pages}{80\bibrangedash 87}
+      \range{pages}{8}
+      \verb{urlraw}
+      \verb http://www.jstor.org/stable/24993351
+      \endverb
+      \verb{url}
+      \verb http://www.jstor.org/stable/24993351
+      \endverb
+    \endentry
+    \entry{Viossat}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=6d36ed6808485a052e7467eae22dd2d4}{%
+           family={Viossat},
+           familyi={V\bibinitperiod},
+           given={Yannick},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4c3b34dab5a67abd0fa22b65554fde5e}{%
+           family={Noble},
+           familyi={N\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Cold Spring Harbor Laboratory}%
+      }
+      \strng{namehash}{50ff43ee996e1aca114be0ad1d8965e3}
+      \strng{fullhash}{50ff43ee996e1aca114be0ad1d8965e3}
+      \strng{bibnamehash}{50ff43ee996e1aca114be0ad1d8965e3}
+      \strng{authorbibnamehash}{50ff43ee996e1aca114be0ad1d8965e3}
+      \strng{authornamehash}{50ff43ee996e1aca114be0ad1d8965e3}
+      \strng{authorfullhash}{50ff43ee996e1aca114be0ad1d8965e3}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Evolutionary theory suggests that the emergence of resistance to cancer therapy may be prevented or delayed by exploiting competitive ecological interactions between drug-sensitive and resistant tumor cell subpopulations. Recent studies have shown that a strategy aiming for containment, not elimination, can control tumor burden more effectively than more aggressive conventional therapy in vitro, in mouse models, and in the clinic. However, although various mathematical and computational models have been proposed to explain the superiority of particular containment strategies (such as adaptive therapy), this evolutionary approach to cancer therapy lacks a rigorous theoretical foundation. Here we combine mathematical analysis and numerical simulations to establish general conditions under which a containment strategy is expected to control tumor burden more effectively than applying the maximum tolerated dose. We show that when resistant cells are present, an idealized strategy of containing a tumor at a maximum tolerable size maximizes time to treatment failure (that is, the time at which tumor burden becomes intolerable). These results are very general and do not depend on any fitness cost of resistance. We provide formulas for predicting the clinical benefits attributable to containment strategies in a wide range of scenarios, and we compare outcomes of theoretically optimal treatments with those of more practical protocols. Our results strengthen the rationale for clinical trials of evolutionarily-informed cancer therapy.}
+      \field{journaltitle}{bioRxiv}
+      \field{title}{The logic of containing tumors}
+      \field{year}{2020}
+      \verb{doi}
+      \verb 10.1101/2020.01.22.915355
+      \endverb
+      \verb{eprint}
+      \verb https://www.biorxiv.org/content/early/2020/01/29/2020.01.22.915355.full.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.biorxiv.org/content/early/2020/01/29/2020.01.22.915355
+      \endverb
+      \verb{url}
+      \verb https://www.biorxiv.org/content/early/2020/01/29/2020.01.22.915355
+      \endverb
+    \endentry
+    \entry{West}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=7b9e4dde24d3c2b60ace549f16309c59}{%
+           family={West},
+           familyi={W\bibinitperiod},
+           given={Jeffrey\bibnamedelima B.},
+           giveni={J\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=83b0b99c277349296c2da4982a916e9e}{%
+           family={Dinh},
+           familyi={D\bibinitperiod},
+           given={Mina\bibnamedelima N.},
+           giveni={M\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1b317e78db63f2b75ea11a5f46762cb4}{%
+           family={Brown},
+           familyi={B\bibinitperiod},
+           given={Joel\bibnamedelima S.},
+           giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3eb1c07fdc70058c7605ad69ecff6f0f}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Jingsong},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c4606ebcf604380f2de56bc56df1ed2c}{%
+           family={Anderson},
+           familyi={A\bibinitperiod},
+           given={Alexander\bibnamedelima R.},
+           giveni={A\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8af10caa96e694a1f978a72ae80f8b79}{%
+           family={Gatenby},
+           familyi={G\bibinitperiod},
+           given={Robert\bibnamedelima A.},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {American Association for Cancer Research}%
+      }
+      \strng{namehash}{2a719931fea8c64bf026982b24925a6c}
+      \strng{fullhash}{f25baa7e3d3d9082c97b853bd9ed1e93}
+      \strng{bibnamehash}{f25baa7e3d3d9082c97b853bd9ed1e93}
+      \strng{authorbibnamehash}{f25baa7e3d3d9082c97b853bd9ed1e93}
+      \strng{authornamehash}{2a719931fea8c64bf026982b24925a6c}
+      \strng{authorfullhash}{f25baa7e3d3d9082c97b853bd9ed1e93}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Purpose: Integration of evolutionary dynamics into systemic therapy for metastatic cancers can prolong tumor control compared with standard maximum tolerated dose (MTD) strategies. Prior investigations have focused on monotherapy, but many clinical cancer treatments combine two or more drugs. Optimizing the evolutionary dynamics in multidrug therapy is challenging because of the complex cellular interactions and the large parameter space of potential variations in drugs, doses, and treatment schedules. However, multidrug therapy also represents an opportunity to further improve outcomes using evolution-based strategies.Experimental Design: We examine evolution-based strategies for two-drug therapy and identify an approach that divides the treatment drugs into primary and secondary roles. The primary drug has the greatest efficacy and/or lowest toxicity. The secondary drug is applied solely to reduce the resistant population to the primary drug.Results: Simulations from the mathematical model demonstrate that the primary{–}secondary approach increases time to progression (TTP) compared with conventional strategies in which drugs are administered without regard to evolutionary dynamics. We apply our model to an ongoing adaptive therapy clinical trial of evolution-based administration of abiraterone to treat metastatic castrate-resistant prostate cancer. Model simulations, parameterized with data from individual patients who progressed, demonstrate that strategic application of docetaxel during abiraterone therapy would have significantly increased their TTP.Conclusions: Mathematical models can integrate evolutionary dynamics into multidrug cancer clinical trials. This has the potential to improve outcomes and to develop clinical trials in which these mathematical models are also used to estimate the mechanism(s) of treatment failure and explore alternative strategies to improve outcomes in future trials.}
+      \field{issn}{1078-0432}
+      \field{journaltitle}{Clinical Cancer Research}
+      \field{number}{14}
+      \field{title}{Multidrug Cancer Therapy in Metastatic Castrate-Resistant Prostate Cancer: An Evolution-Based Strategy}
+      \field{volume}{25}
+      \field{year}{2019}
+      \field{pages}{4413\bibrangedash 4421}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1158/1078-0432.CCR-19-0006
+      \endverb
+      \verb{eprint}
+      \verb https://clincancerres.aacrjournals.org/content/25/14/4413.full.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://clincancerres.aacrjournals.org/content/25/14/4413
+      \endverb
+      \verb{url}
+      \verb https://clincancerres.aacrjournals.org/content/25/14/4413
+      \endverb
+    \endentry
+    \entry{Whitmore}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9f51442c461f936724b872ecc3679adc}{%
+           family={Whitmore},
+           familyi={W\bibinitperiod},
+           given={Willet\bibnamedelima F.},
+           giveni={W\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9f51442c461f936724b872ecc3679adc}
+      \strng{fullhash}{9f51442c461f936724b872ecc3679adc}
+      \strng{bibnamehash}{9f51442c461f936724b872ecc3679adc}
+      \strng{authorbibnamehash}{9f51442c461f936724b872ecc3679adc}
+      \strng{authornamehash}{9f51442c461f936724b872ecc3679adc}
+      \strng{authorfullhash}{9f51442c461f936724b872ecc3679adc}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A survey of the prostatic cancer problem is presented, including the pathology, clinical classification, incidence, natural history, diagnosis, methods of treatment, choice of treatment and results. The endocrine aspects of therapy have been particularly stressed since this is the most practical and promising therapeutic approach in the majority of patients.}
+      \field{issn}{0002-9343}
+      \field{journaltitle}{The American Journal of Medicine}
+      \field{number}{5}
+      \field{title}{Hormone therapy in prostatic cancer}
+      \field{volume}{21}
+      \field{year}{1956}
+      \field{pages}{697\bibrangedash 713}
+      \range{pages}{17}
+      \verb{doi}
+      \verb https://doi.org/10.1016/0002-9343(56)90086-9
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/0002934356900869
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/0002934356900869
+      \endverb
+    \endentry
+    \entry{Wyld}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=e71f5384e45efef7200de1a2ba108967}{%
+           family={Wyld},
+           familyi={W\bibinitperiod},
+           given={Lynda},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=407c3998be9d0175d3aab55647eadac9}{%
+           family={Audisio},
+           familyi={A\bibinitperiod},
+           given={Riccardo\bibnamedelima A},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1d7b8c26ef962d9f7ca59f7435caaa76}{%
+           family={Poston},
+           familyi={P\bibinitperiod},
+           given={Graeme\bibnamedelima J},
+           giveni={G\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group}%
+      }
+      \strng{namehash}{7161833e096206fe4bd9a2c14d97197e}
+      \strng{fullhash}{b27e6fde8b7e99f8455196ed97ee516b}
+      \strng{bibnamehash}{b27e6fde8b7e99f8455196ed97ee516b}
+      \strng{authorbibnamehash}{b27e6fde8b7e99f8455196ed97ee516b}
+      \strng{authornamehash}{7161833e096206fe4bd9a2c14d97197e}
+      \strng{authorfullhash}{b27e6fde8b7e99f8455196ed97ee516b}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature reviews Clinical oncology}
+      \field{number}{2}
+      \field{title}{The evolution of cancer surgery and future perspectives}
+      \field{volume}{12}
+      \field{year}{2015}
+      \field{pages}{115}
+      \range{pages}{1}
+    \endentry
+    \entry{Zhang}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=3eb1c07fdc70058c7605ad69ecff6f0f}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Jingsong},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e05a48eef9ee8b223471f3aa23dc6882}{%
+           family={Cunningham},
+           familyi={C\bibinitperiod},
+           given={Jessica\bibnamedelima J.},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1b317e78db63f2b75ea11a5f46762cb4}{%
+           family={Brown},
+           familyi={B\bibinitperiod},
+           given={Joel\bibnamedelima S.},
+           giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8af10caa96e694a1f978a72ae80f8b79}{%
+           family={Gatenby},
+           familyi={G\bibinitperiod},
+           given={Robert\bibnamedelima A.},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a5177c9145aebd8d968af423798b7295}
+      \strng{fullhash}{5d38545bc71a1697a97735141d18abeb}
+      \strng{bibnamehash}{5d38545bc71a1697a97735141d18abeb}
+      \strng{authorbibnamehash}{5d38545bc71a1697a97735141d18abeb}
+      \strng{authornamehash}{a5177c9145aebd8d968af423798b7295}
+      \strng{authorfullhash}{5d38545bc71a1697a97735141d18abeb}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Abiraterone treats metastatic castrate-resistant prostate cancer by inhibiting CYP17A, an enzyme for testosterone auto-production. With standard dosing, evolution of resistance with treatment failure (radiographic progression) occurs at a median of {\textasciitilde}16.5 months. We hypothesize time to progression (TTP) could be increased by integrating evolutionary dynamics into therapy. We developed an evolutionary game theory model using Lotka--Volterra equations with three competing cancer ``species'': androgen dependent, androgen producing, and androgen independent. Simulations with standard abiraterone dosing demonstrate strong selection for androgen-independent cells and rapid treatment failure. Adaptive therapy, using patient-specific tumor dynamics to inform on/off treatment cycles, suppresses proliferation of androgen-independent cells and lowers cumulative drug dose. In a pilot clinical trial, 10 of 11 patients maintained stable oscillations of tumor burdens; median TTP is at least 27 months with reduced cumulative drug use of 47{\%} of standard dosing. The outcomes show significant improvement over published studies and a contemporaneous population.}
+      \field{issn}{2041-1723}
+      \field{journaltitle}{Nature Communications}
+      \field{month}{11}
+      \field{number}{1}
+      \field{title}{Integrating evolutionary dynamics into treatment of metastatic castrate-resistant prostate cancer}
+      \field{volume}{8}
+      \field{year}{2017}
+      \field{pages}{1816}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1038/s41467-017-01968-5
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1038/s41467-017-01968-5
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1038/s41467-017-01968-5
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

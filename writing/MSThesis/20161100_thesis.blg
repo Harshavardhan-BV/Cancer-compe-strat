@@ -1,0 +1,17 @@
+[0] Config.pm:312> INFO - This is Biber 2.15
+[1] Config.pm:315> INFO - Logfile is '20161100_thesis.blg'
+[117] biber:330> INFO - === Mon Jul  5, 2021, 10:06:00
+[142] Biber.pm:415> INFO - Reading '20161100_thesis.bcf'
+[252] Biber.pm:952> INFO - Found 48 citekeys in bib section 0
+[276] Biber.pm:4334> INFO - Processing section 0
+[294] Biber.pm:4523> INFO - Looking for bibtex format file 'References.bib' for section 0
+[304] bibtex.pm:1682> INFO - LaTeX decoding ...
+[415] bibtex.pm:1494> INFO - Found BibTeX data source 'References.bib'
+[770] Utils.pm:395> WARN - month field 'Nov' in entry 'Zhang' is not an integer - this will probably not sort properly.
+[1048] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1049] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1049] Biber.pm:4162> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[1049] Biber.pm:4168> INFO - No sort tailoring available for locale 'en-US'
+[1122] bbl.pm:651> INFO - Writing '20161100_thesis.bbl' with encoding 'UTF-8'
+[1208] bbl.pm:754> INFO - Output to 20161100_thesis.bbl
+[1209] Biber.pm:128> INFO - WARNINGS: 1

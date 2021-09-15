@@ -1,0 +1,1639 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.6.3)  5 JUL 2021 10:06
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**20161100_thesis.tex
+(./20161100_thesis.tex
+LaTeX2e <2020-10-01> patch level 4
+L3 programming layer <2021-02-18> (./iiser-thesis.cls
+Document Class: iiser-thesis 
+(/usr/share/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2020/04/10 v1.4m Standard LaTeX document class
+(/usr/share/texmf-dist/tex/latex/base/bk12.clo
+File: bk12.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
+)
+\c@part=\count179
+\c@chapter=\count180
+\c@section=\count181
+\c@subsection=\count182
+\c@subsubsection=\count183
+\c@paragraph=\count184
+\c@subparagraph=\count185
+\c@figure=\count186
+\c@table=\count187
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+)
+(/usr/share/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+(/usr/share/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+(/usr/share/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(/usr/share/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+))
+\Gm@cnth=\count188
+\Gm@cntv=\count189
+\c@Gm@tempcnt=\count190
+\Gm@bindingoffset=\dimen139
+\Gm@wd@mp=\dimen140
+\Gm@odd@mp=\dimen141
+\Gm@even@mp=\dimen142
+\Gm@layoutwidth=\dimen143
+\Gm@layoutheight=\dimen144
+\Gm@layouthoffset=\dimen145
+\Gm@layoutvoffset=\dimen146
+\Gm@dimlist=\toks16
+)
+(/usr/share/texmf-dist/tex/latex/ccicons/ccicons.sty
+Package: ccicons 2017/10/30 v1.6 LaTeX support for Creative Commons icons
+
+(/usr/share/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
+
+(/usr/share/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/share/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks17
+\XKV@tempa@toks=\toks18
+)
+\XKV@depth=\count191
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+)))
+\bd@comm@signline@lngth=\skip49
+)
+(/usr/share/texmf-dist/tex/latex/preprint/fullpage.sty
+Package: fullpage 1999/02/23 1.1 (PWD)
+\FP@margin=\skip50
+)
+(/usr/share/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks19
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/share/texmf-dist/tex/latex/base/latexsym.sty
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
+)
+(/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2020/09/23 v2.17i AMS math features
+\@mathmargin=\skip51
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks20
+\ex@=\dimen147
+))
+(/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen148
+)
+(/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count192
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count193
+\leftroot@=\count194
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count195
+\DOTSCASE@=\count196
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box47
+\strutbox@=\box48
+\big@size=\dimen149
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count197
+\c@MaxMatrixCols=\count198
+\dotsspace@=\muskip16
+\c@parentequation=\count199
+\dspbrk@lvl=\count266
+\tag@help=\toks21
+\row@=\count267
+\column@=\count268
+\maxfields@=\count269
+\andhelp@=\toks22
+\eqnshift@=\dimen150
+\alignsep@=\dimen151
+\tagshift@=\dimen152
+\tagwidth@=\dimen153
+\totwidth@=\dimen154
+\lineht@=\dimen155
+\@envbody=\toks23
+\multlinegap=\skip52
+\multlinetaggap=\skip53
+\mathdisplay@stack=\toks24
+LaTeX Info: Redefining \[ on input line 2923.
+LaTeX Info: Redefining \] on input line 2924.
+)
+(/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+(/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen156
+\Gin@req@width=\dimen157
+)
+(/usr/share/texmf-dist/tex/latex/preprint/authblk.sty
+Package: authblk 2001/02/27 1.3 (PWD)
+\affilsep=\skip54
+\@affilsep=\skip55
+\c@Maxaffil=\count270
+\c@authors=\count271
+\c@affil=\count272
+)
+(/usr/share/texmf-dist/tex/latex/doublestroke/dsfont.sty
+Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
+)
+(/usr/share/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks25
+\thm@bodyfont=\toks26
+\thm@headfont=\toks27
+\thm@notefont=\toks28
+\thm@headpunct=\toks29
+\thm@preskip=\skip56
+\thm@postskip=\skip57
+\thm@headsep=\skip58
+\dth@everypar=\toks30
+)
+(/usr/share/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2020/02/24 v1.2b Standard LaTeX Color (DPC)
+
+(/usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+)
+(/usr/share/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count273
+\float@exts=\toks31
+\float@box=\box49
+\@float@everytoks=\toks32
+\@floatcapt=\box50
+)
+(/usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2021-02-27 v7.00k Hypertext links for LaTeX
+
+(/usr/share/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(/usr/share/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+)
+(/usr/share/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/usr/share/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(/usr/share/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(/usr/share/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(/usr/share/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+(/usr/share/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+)
+\@linkdim=\dimen158
+\Hy@linkcounter=\count274
+\Hy@pagecounter=\count275
+
+(/usr/share/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2021-02-27 v7.00k Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(/usr/share/texmf-dist/tex/latex/hyperref/hyperref-langpatches.def
+File: hyperref-langpatches.def 2021-02-27 v7.00k Hyperref: patches for babel la
+nguages
+)
+(/usr/share/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(/usr/share/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count276
+
+(/usr/share/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2021-02-27 v7.00k Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Option `breaklinks' set `true' on input line 4073.
+Package hyperref Info: Hyper figures OFF on input line 4192.
+Package hyperref Info: Link nesting OFF on input line 4197.
+Package hyperref Info: Hyper index ON on input line 4200.
+Package hyperref Info: Plain pages OFF on input line 4207.
+Package hyperref Info: Backreferencing OFF on input line 4212.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4445.
+\c@Hy@tempcnt=\count277
+
+(/usr/share/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4804.
+\XeTeXLinkMargin=\dimen159
+
+(/usr/share/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(/usr/share/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count278
+\Field@Width=\dimen160
+\Fld@charsize=\dimen161
+Package hyperref Info: Hyper figures OFF on input line 6075.
+Package hyperref Info: Link nesting OFF on input line 6080.
+Package hyperref Info: Hyper index ON on input line 6083.
+Package hyperref Info: backreferencing OFF on input line 6090.
+Package hyperref Info: Link coloring OFF on input line 6095.
+Package hyperref Info: Link coloring with OCG OFF on input line 6100.
+Package hyperref Info: PDF/A mode OFF on input line 6105.
+LaTeX Info: Redefining \ref on input line 6145.
+LaTeX Info: Redefining \pageref on input line 6149.
+
+(/usr/share/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi packa
+ge
+with kernel methods
+)
+\Hy@abspage=\count279
+\c@Item=\count280
+\c@Hfootnote=\count281
+)
+Package hyperref Info: Driver: hpdftex.
+
+(/usr/share/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2021-02-27 v7.00k Hyperref driver for pdfTeX
+
+(/usr/share/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery packag
+e
+with kernel methods
+)
+\Fld@listcount=\count282
+\c@bookmark@seq@number=\count283
+
+(/usr/share/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+
+(/usr/share/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
+)
+\Hy@SectionHShift=\skip59
+)
+(/usr/share/texmf-dist/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2020/12/31 v3.16 programmable bibliographies (PK/MW)
+
+(/usr/share/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count284
+)
+(/usr/share/texmf-dist/tex/latex/logreq/logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count285
+
+(/usr/share/texmf-dist/tex/latex/logreq/logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+(/usr/share/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\c@tabx@nest=\count286
+\c@listtotal=\count287
+\c@listcount=\count288
+\c@liststart=\count289
+\c@liststop=\count290
+\c@citecount=\count291
+\c@citetotal=\count292
+\c@multicitecount=\count293
+\c@multicitetotal=\count294
+\c@instcount=\count295
+\c@maxnames=\count296
+\c@minnames=\count297
+\c@maxitems=\count298
+\c@minitems=\count299
+\c@citecounter=\count300
+\c@maxcitecounter=\count301
+\c@savedcitecounter=\count302
+\c@uniquelist=\count303
+\c@uniquename=\count304
+\c@refsection=\count305
+\c@refsegment=\count306
+\c@maxextratitle=\count307
+\c@maxextratitleyear=\count308
+\c@maxextraname=\count309
+\c@maxextradate=\count310
+\c@maxextraalpha=\count311
+\c@abbrvpenalty=\count312
+\c@highnamepenalty=\count313
+\c@lownamepenalty=\count314
+\c@maxparens=\count315
+\c@parenlevel=\count316
+\blx@tempcnta=\count317
+\blx@tempcntb=\count318
+\blx@tempcntc=\count319
+\blx@maxsection=\count320
+\blx@maxsegment@0=\count321
+\blx@notetype=\count322
+\blx@parenlevel@text=\count323
+\blx@parenlevel@foot=\count324
+\blx@sectionciteorder@0=\count325
+\blx@entrysetcounter=\count326
+\blx@biblioinstance=\count327
+\labelnumberwidth=\skip60
+\labelalphawidth=\skip61
+\biblabelsep=\skip62
+\bibitemsep=\skip63
+\bibnamesep=\skip64
+\bibinitsep=\skip65
+\bibparsep=\skip66
+\bibhang=\skip67
+\blx@bcfin=\read2
+\blx@bcfout=\write3
+\blx@langwohyphens=\language87
+\c@mincomprange=\count328
+\c@maxcomprange=\count329
+\c@mincompwidth=\count330
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+
+(/usr/share/texmf-dist/tex/latex/biblatex/blx-dm.def
+File: blx-dm.def 2020/12/31 v3.16 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'apa.dbx' found.
+
+(/usr/share/texmf-dist/tex/latex/biblatex-apa/apa.dbx
+File: apa.dbx 2020/08/28 v9.14 APA biblatex style data model
+)
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count331
+\c@savedafterword=\count332
+\c@annotator=\count333
+\c@savedannotator=\count334
+\c@author=\count335
+\c@savedauthor=\count336
+\c@bookauthor=\count337
+\c@savedbookauthor=\count338
+\c@commentator=\count339
+\c@savedcommentator=\count340
+\c@editor=\count341
+\c@savededitor=\count342
+\c@editora=\count343
+\c@savededitora=\count344
+\c@editorb=\count345
+\c@savededitorb=\count346
+\c@editorc=\count347
+\c@savededitorc=\count348
+\c@foreword=\count349
+\c@savedforeword=\count350
+\c@holder=\count351
+\c@savedholder=\count352
+\c@introduction=\count353
+\c@savedintroduction=\count354
+\c@namea=\count355
+\c@savednamea=\count356
+\c@nameb=\count357
+\c@savednameb=\count358
+\c@namec=\count359
+\c@savednamec=\count360
+\c@translator=\count361
+\c@savedtranslator=\count362
+\c@shortauthor=\count363
+\c@savedshortauthor=\count364
+\c@shorteditor=\count365
+\c@savedshorteditor=\count366
+\c@groupauthor=\count367
+\c@savedgroupauthor=\count368
+\c@narrator=\count369
+\c@savednarrator=\count370
+\c@execproducer=\count371
+\c@savedexecproducer=\count372
+\c@execdirector=\count373
+\c@savedexecdirector=\count374
+\c@with=\count375
+\c@savedwith=\count376
+\c@labelname=\count377
+\c@savedlabelname=\count378
+\c@institution=\count379
+\c@savedinstitution=\count380
+\c@lista=\count381
+\c@savedlista=\count382
+\c@listb=\count383
+\c@savedlistb=\count384
+\c@listc=\count385
+\c@savedlistc=\count386
+\c@listd=\count387
+\c@savedlistd=\count388
+\c@liste=\count389
+\c@savedliste=\count390
+\c@listf=\count391
+\c@savedlistf=\count392
+\c@location=\count393
+\c@savedlocation=\count394
+\c@organization=\count395
+\c@savedorganization=\count396
+\c@origlocation=\count397
+\c@savedoriglocation=\count398
+\c@origpublisher=\count399
+\c@savedorigpublisher=\count400
+\c@publisher=\count401
+\c@savedpublisher=\count402
+\c@language=\count403
+\c@savedlanguage=\count404
+\c@origlanguage=\count405
+\c@savedoriglanguage=\count406
+\c@citation=\count407
+\c@savedcitation=\count408
+\c@pageref=\count409
+\c@savedpageref=\count410
+\shorthandwidth=\skip68
+\shortjournalwidth=\skip69
+\shortserieswidth=\skip70
+\shorttitlewidth=\skip71
+\shortauthorwidth=\skip72
+\shorteditorwidth=\skip73
+\locallabelnumberwidth=\skip74
+\locallabelalphawidth=\skip75
+\localshorthandwidth=\skip76
+\localshortjournalwidth=\skip77
+\localshortserieswidth=\skip78
+\localshorttitlewidth=\skip79
+\localshortauthorwidth=\skip80
+\localshorteditorwidth=\skip81
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+
+(/usr/share/texmf-dist/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2020/12/31 v3.16 biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+
+(/usr/share/texmf-dist/tex/latex/biblatex/biblatex.def
+File: biblatex.def 2020/12/31 v3.16 biblatex compatibility (PK/MW)
+\c@textcitecount=\count411
+\c@textcitetotal=\count412
+\c@textcitemaxnames=\count413
+\c@biburlbigbreakpenalty=\count414
+\c@biburlbreakpenalty=\count415
+\c@biburlnumpenalty=\count416
+\c@biburlucpenalty=\count417
+\c@biburllcpenalty=\count418
+\biburlbigskip=\muskip18
+\biburlnumskip=\muskip19
+\biburlucskip=\muskip20
+\biburllcskip=\muskip21
+\c@smartand=\count419
+)
+Package biblatex Info: Trying to load bibliography style 'apa'...
+Package biblatex Info: ... file 'apa.bbx' found.
+
+(/usr/share/texmf-dist/tex/latex/biblatex-apa/apa.bbx
+File: apa.bbx 2020/08/28 v9.14 APA biblatex references style
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+
+(/usr/share/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+File: standard.bbx 2020/12/31 v3.16 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count420
+\c@bbx:relatedtotal=\count421
+))
+Package biblatex Info: Trying to load citation style 'apa'...
+Package biblatex Info: ... file 'apa.cbx' found.
+
+(/usr/share/texmf-dist/tex/latex/biblatex-apa/apa.cbx
+File: apa.cbx 2020/08/28 v9.14 APA biblatex citation style
+Package biblatex Info: Delimiter 'nameyeardelim' in context '' already defined,
+ overwriting.
+Package biblatex Info: Delimiter 'nameyeardelim' in context 'textcite' already 
+defined, overwriting.
+Package biblatex Info: Delimiter 'andothersdelim' in context '' already defined
+, overwriting.
+Package biblatex Info: Redefining '\fullcite'.
+Package biblatex Info: Redefining '\citeauthor'.
+Package biblatex Info: Redefining '\citeyear'.
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcites'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\footcitetexts'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\smartcites'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+
+(/usr/share/texmf-dist/tex/latex/biblatex/biblatex.cfg
+File: biblatex.cfg 
+))
+(/usr/share/texmf-dist/tex/latex/xurl/xurl.sty
+Package: xurl 2020/12/30 v 0.09a modify URL breaks
+
+xurl: Set penalties for biblatex
+) (/usr/share/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
+\LTleft=\skip82
+\LTright=\skip83
+\LTpre=\skip84
+\LTpost=\skip85
+\LTchunksize=\count422
+\LTcapwidth=\dimen162
+\LT@head=\box51
+\LT@firsthead=\box52
+\LT@foot=\box53
+\LT@lastfoot=\box54
+\LT@cols=\count423
+\LT@rows=\count424
+\c@LT@tables=\count425
+\c@LT@chunks=\count426
+\LT@p@ftn=\toks33
+)
+(/usr/share/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2020/10/26 v3.5g Customizing captions (AR)
+
+(/usr/share/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
+\captionmargin=\dimen163
+\captionmargin@=\dimen164
+\captionwidth=\dimen165
+\caption@tempdima=\dimen166
+\caption@indent=\dimen167
+\caption@parindent=\dimen168
+\caption@hangindent=\dimen169
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count427
+\c@continuedfloat=\count428
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: longtable package is loaded.
+
+(/usr/share/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2020/05/30 v1.4b longtable captions (AR)
+))
+(/usr/share/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2020/10/07 v1.3j Sub-captions (AR)
+\c@subfigure=\count429
+\c@subtable=\count430
+)
+(/usr/share/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip86
+\multirow@cntb=\count431
+\multirow@dima=\skip87
+\bigstrutjot=\dimen170
+)
+\c@theo=\count432
+\c@ex=\count433
+\c@exer=\count434
+\c@rem=\count435
+\c@defi=\count436
+\c@notation=\count437
+\@quotelevel=\count438
+\@quotereset=\count439
+
+(/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count440
+\l__pdf_internal_box=\box55
+)
+(./20161100_thesis.aux (./chapters/Intro.aux) (./chapters/Methods.aux)
+(./chapters/Results.aux) (./chapters/Discussion.aux)
+(./chapters/Supplementary.aux))
+\openout1 = `20161100_thesis.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: letterpaper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: includefoot twoside 
+* h-part:(L,W,R)=(108.405pt, 433.62001pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=469.75502pt
+* \textheight=620.43001pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=0.0pt
+* \headheight=0.0pt
+* \headsep=0.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=36.135pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count441
+\scratchdimen=\dimen171
+\scratchbox=\box56
+\nofMPsegments=\count442
+\nofMParguments=\count443
+\everyMPshowfont=\toks34
+\MPscratchCnt=\count444
+\MPscratchDim=\dimen172
+\MPnumerator=\count445
+\makeMPintoPDFobject=\count446
+\everyMPtoPDFconversion=\toks35
+) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package hyperref Info: Link coloring OFF on input line 131.
+
+(/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
+
+(/usr/share/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/usr/share/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count447
+)
+LaTeX Info: Redefining \ref on input line 131.
+LaTeX Info: Redefining \pageref on input line 131.
+LaTeX Info: Redefining \nameref on input line 131.
+
+(./20161100_thesis.out) (./20161100_thesis.out)
+\@outlinefile=\write4
+\openout4 = `20161100_thesis.out'.
+
+Package biblatex Info: Trying to load language 'english' -> 'english-apa'...
+Package biblatex Info: ... file 'english-apa.lbx' found.
+
+(/usr/share/texmf-dist/tex/latex/biblatex-apa/english-apa.lbx
+File: english-apa.lbx 2020/08/28 v9.14 APA biblatex localisation
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+
+(/usr/share/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2020/12/31 v3.16 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load language 'american' -> 'american-apa'...
+Package biblatex Info: ... file 'american-apa.lbx' found.
+
+(/usr/share/texmf-dist/tex/latex/biblatex-apa/american-apa.lbx
+File: american-apa.lbx 2020/08/28 v9.14 APA biblatex localisation
+Package biblatex Info: Trying to load language 'american'...
+Package biblatex Info: ... file 'american.lbx' found.
+
+(/usr/share/texmf-dist/tex/latex/biblatex/lbx/american.lbx
+File: american.lbx 2020/12/31 v3.16 biblatex localization (PK/MW)
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+
+(/usr/share/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2020/12/31 v3.16 biblatex localization (PK/MW)
+))))
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Data encoding 'utf8' specified.
+(biblatex)             No need to reencode data.
+Package biblatex Info: Document encoding is UTF8 ....
+
+(/usr/share/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2021-02-18 L3 programming layer (loader) 
+)
+Package biblatex Info: ... and expl3
+(biblatex)             2021-02-18 L3 programming layer (loader) 
+(biblatex)             is new enough (at least 2020/04/06),
+(biblatex)             setting 'casechanger=expl3'.
+
+(/usr/share/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty
+(/usr/share/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/share/texmf-dist/tex/latex/l3packages/xparse/xparse-2020-10-01.sty
+(/usr/share/texmf-dist/tex/latex/l3packages/xparse/xparse-generic.tex)))
+Package: blx-case-expl3 2020/12/31 v3.16 expl3 case changing code for biblatex
+)
+\openout3 = `20161100_thesis.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file '20161100_thesis.bbl' found.
+
+(./20161100_thesis.bbl)
+Package biblatex Info: Reference section=0 on input line 131.
+Package biblatex Info: Reference segment=0 on input line 131.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 133
+.
+ (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 133
+.
+
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 13
+3.
+
+(/usr/share/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+<iiser-logo.png, id=108, 100.375pt x 84.315pt>
+File: iiser-logo.png Graphic file (type png)
+<use iiser-logo.png>
+Package pdftex.def Info: iiser-logo.png  used on input line 133.
+(pdftex.def)             Requested size: 100.37474pt x 84.31477pt.
+LaTeX Font Info:    Font shape `U/ccicons/m/n' will be
+(Font)              scaled to size 12.0pt on input line 133.
+ [1
+
+
+{/home/bv/.texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./iiser-logo.
+png>] [2
+
+
+] [3] [4
+
+
+] [5]
+[6
+
+
+] [7
+
+] [8
+
+
+] [9
+
+] [10
+
+
+] [11] [12
+
+
+] (./20161100_thesis.toc [13
+
+
+])
+\tf@toc=\write5
+\openout5 = `20161100_thesis.toc'.
+
+ [14]
+(./20161100_thesis.lof
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [15
+
+
+])
+\tf@lof=\write6
+\openout6 = `20161100_thesis.lof'.
+
+
+[16] (./20161100_thesis.lot)
+\tf@lot=\write7
+\openout7 = `20161100_thesis.lot'.
+
+ [17
+
+
+] [18
+
+]
+\openout2 = `chapters/Intro.aux'.
+
+ (./chapters/Intro.tex
+Chapter 1.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [1
+
+
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2]
+<./figures//compe_release.pdf, id=326, 1719.90186pt x 349.34537pt>
+File: ./figures//compe_release.pdf Graphic file (type pdf)
+<use ./figures//compe_release.pdf>
+Package pdftex.def Info: ./figures//compe_release.pdf  used on input line 17.
+(pdftex.def)             Requested size: 469.75502pt x 95.41727pt.
+
+[3 <./figures//compe_release.pdf>]
+<./figures//at.pdf, id=358, 1719.90186pt x 349.34537pt>
+File: ./figures//at.pdf Graphic file (type pdf)
+<use ./figures//at.pdf>
+Package pdftex.def Info: ./figures//at.pdf  used on input line 31.
+(pdftex.def)             Requested size: 469.75502pt x 95.41727pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4]
+[5 <./figures//at.pdf>] [6] [7]) [8]
+\openout2 = `chapters/Methods.aux'.
+
+ (./chapters/Methods.tex
+Chapter 2.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9
+
+
+
+
+]
+<./figures//f_res.pdf, id=427, 361.35pt x 216.81pt>
+File: ./figures//f_res.pdf Graphic file (type pdf)
+<use ./figures//f_res.pdf>
+Package pdftex.def Info: ./figures//f_res.pdf  used on input line 25.
+(pdftex.def)             Requested size: 234.8775pt x 140.92813pt.
+
+Underfull \vbox (badness 7238) has occurred while \output is active []
+
+ [10 <./figures//f_res.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12]
+<./figures//github.pdf, id=503, 1151.30125pt x 1151.30125pt>
+File: ./figures//github.pdf Graphic file (type pdf)
+<use ./figures//github.pdf>
+Package pdftex.def Info: ./figures//github.pdf  used on input line 121.
+(pdftex.def)             Requested size: 70.46037pt x 70.44534pt.
+
+[13 <./figures//github.pdf>]
+Overfull \hbox (3.11557pt too wide) in alignment at lines 128--131
+ [] [] [] [] 
+ []
+
+
+Overfull \hbox (3.11557pt too wide) in alignment at lines 131--134
+ [] [] [] [] 
+ []
+
+
+Overfull \hbox (3.11557pt too wide) in alignment at lines 134--136
+ [] [] [] [] 
+ []
+
+
+Overfull \hbox (4.89258pt too wide) in paragraph at lines 152--152
+[]|[]\OT1/cmr/m/n/12 Equation 2.14[][]| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 160--160
+[]|\OT1/cmr/m/n/12 Maximum Car-ry-ing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 160--160
+\OT1/cmr/m/n/12 ca-pac-ity, com-ing up
+ []
+
+
+Underfull \hbox (badness 6741) in paragraph at lines 160--160
+\OT1/cmr/m/n/12 through the en-vi-ron-
+ []
+
+
+Overfull \hbox (4.89258pt too wide) in paragraph at lines 166--166
+[]|[]\OT1/cmr/m/n/12 Equation 2.10[][]| 
+ []
+
+
+Underfull \hbox (badness 1675) in paragraph at lines 167--167
+[]|\OT1/cmr/m/n/12 Functional de-pen-dence
+ []
+
+
+Overfull \hbox (8.15643pt too wide) in paragraph at lines 173--173
+[]|[]\OT1/cmr/m/n/12 Equation 2.11[][],
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 173--173
+[]\OT1/cmr/m/n/12 Equa-
+ []
+
+
+Overfull \hbox (4.89258pt too wide) in paragraph at lines 174--174
+[]|[]\OT1/cmr/m/n/12 Equation 2.13[][]| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 191--191
+[]|\OT1/cmr/m/n/12 Lower limit/threshold
+ []
+
+
+Underfull \hbox (badness 1490) in paragraph at lines 194--194
+[]|\OT1/cmr/m/n/12 Doubling time of cell
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 200--200
+[]|\OT1/cmr/m/n/12 (ATCC,
+ []
+
+
+Underfull \hbox (badness 1147) in paragraph at lines 201--201
+\OT1/cmr/m/n/12 num-ber in ab-sence of
+ []
+
+
+Underfull \hbox (badness 1147) in paragraph at lines 202--202
+\OT1/cmr/m/n/12 num-ber in ab-sence of
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 208--208
+[]|\OT1/cmr/m/n/12 (Morikawa
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 214--214
+[]|\OT1/cmr/m/n/12 (Stewart
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 214--214
+\OT1/cmr/m/n/12 et al.,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 214--214
+[]\OT1/cmr/m/n/12 2010[]),(Ti-tus
+ []
+
+
+Underfull \hbox (badness 1412) in paragraph at lines 215--215
+[]|\OT1/cmr/m/n/12 (Acharya et
+ []
+
+
+Overfull \hbox (3.11557pt too wide) in alignment at lines 136--219
+ [] [] [] [] 
+ []
+
+[14]) [15]
+\openout2 = `chapters/Results.aux'.
+
+ (./chapters/Results.tex [16
+
+
+
+
+]
+Chapter 3.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 4.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 4.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4.
+
+<./figures//Tpro-Tneg_testlims.pdf, id=559, 722.7pt x 361.35pt>
+File: ./figures//Tpro-Tneg_testlims.pdf Graphic file (type pdf)
+<use ./figures//Tpro-Tneg_testlims.pdf>
+Package pdftex.def Info: ./figures//Tpro-Tneg_testlims.pdf  used on input line 
+15.
+(pdftex.def)             Requested size: 469.75502pt x 234.88023pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<./figures//Tpro-Tneg_o2lims.pdf, id=560, 722.7pt x 216.81pt>
+File: ./figures//Tpro-Tneg_o2lims.pdf Graphic file (type pdf)
+<use ./figures//Tpro-Tneg_o2lims.pdf>
+Package pdftex.def Info: ./figures//Tpro-Tneg_o2lims.pdf  used on input line 22
+.
+(pdftex.def)             Requested size: 469.75502pt x 140.92813pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[17] [18 <./figures//Tpro-Tneg_testlims.pdf> <./figures//Tpro-Tneg_o2lims.pdf
+
+pdfTeX warning: pdflatex (file ./figures//Tpro-Tneg_o2lims.pdf): PDF inclusion:
+ multiple pdfs with page group included in a single page
+>]
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 44.
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 44.
+ [19] [20]
+<./figures//Tpro-Tneg_cases_normal.pdf, id=666, 1084.05pt x 578.16pt>
+File: ./figures//Tpro-Tneg_cases_normal.pdf Graphic file (type pdf)
+<use ./figures//Tpro-Tneg_cases_normal.pdf>
+Package pdftex.def Info: ./figures//Tpro-Tneg_cases_normal.pdf  used on input l
+ine 85.
+(pdftex.def)             Requested size: 469.75502pt x 250.53596pt.
+<./figures//Tpro-Tneg_cases_poor.pdf, id=667, 1084.05pt x 578.16pt>
+File: ./figures//Tpro-Tneg_cases_poor.pdf Graphic file (type pdf)
+<use ./figures//Tpro-Tneg_cases_poor.pdf>
+Package pdftex.def Info: ./figures//Tpro-Tneg_cases_poor.pdf  used on input lin
+e 91.
+(pdftex.def)             Requested size: 469.75502pt x 250.53596pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[21]
+
+LaTeX Warning: Text page 22 contains only floats.
+
+
+Overfull \vbox (2.34189pt too high) has occurred while \output is active []
+
+
+[22 <./figures//Tpro-Tneg_cases_normal.pdf> <./figures//Tpro-Tneg_cases_poor.pd
+f
+
+pdfTeX warning: pdflatex (file ./figures//Tpro-Tneg_cases_poor.pdf): PDF inclus
+ion: multiple pdfs with page group included in a single page
+>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 101.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 101.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 101.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 101.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 101.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 101.
+
+<./figures//Tpos-Tpro_testlims.pdf, id=804, 722.7pt x 216.81pt>
+File: ./figures//Tpos-Tpro_testlims.pdf Graphic file (type pdf)
+<use ./figures//Tpos-Tpro_testlims.pdf>
+Package pdftex.def Info: ./figures//Tpos-Tpro_testlims.pdf  used on input line 
+112.
+(pdftex.def)             Requested size: 469.75502pt x 140.92813pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<./figures//Tpos-Tpro_o2lims.pdf, id=805, 722.7pt x 216.81pt>
+File: ./figures//Tpos-Tpro_o2lims.pdf Graphic file (type pdf)
+<use ./figures//Tpos-Tpro_o2lims.pdf>
+Package pdftex.def Info: ./figures//Tpos-Tpro_o2lims.pdf  used on input line 11
+9.
+(pdftex.def)             Requested size: 469.75502pt x 140.92813pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[23
+
+] [24 <./figures//Tpos-Tpro_testlims.pdf> <./figures//Tpos-Tpro_o2lims.pdf
+
+pdfTeX warning: pdflatex (file ./figures//Tpos-Tpro_o2lims.pdf): PDF inclusion:
+ multiple pdfs with page group included in a single page
+>] [25] [26]
+<./figures//Tpos-Tpro_cases_test.pdf, id=911, 1084.05pt x 578.16pt>
+File: ./figures//Tpos-Tpro_cases_test.pdf Graphic file (type pdf)
+<use ./figures//Tpos-Tpro_cases_test.pdf>
+Package pdftex.def Info: ./figures//Tpos-Tpro_cases_test.pdf  used on input lin
+e 183.
+(pdftex.def)             Requested size: 469.75502pt x 250.53596pt.
+<./figures//Tpos-Tpro_cases_o2.pdf, id=912, 1084.05pt x 578.16pt>
+File: ./figures//Tpos-Tpro_cases_o2.pdf Graphic file (type pdf)
+<use ./figures//Tpos-Tpro_cases_o2.pdf>
+Package pdftex.def Info: ./figures//Tpos-Tpro_cases_o2.pdf  used on input line 
+189.
+(pdftex.def)             Requested size: 469.75502pt x 250.53596pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<./figures//Tpos-Tpro_cases.pdf, id=913, 1445.4pt x 794.97pt>
+File: ./figures//Tpos-Tpro_cases.pdf Graphic file (type pdf)
+<use ./figures//Tpos-Tpro_cases.pdf>
+Package pdftex.def Info: ./figures//Tpos-Tpro_cases.pdf  used on input line 199
+.
+(pdftex.def)             Requested size: 469.75502pt x 258.36218pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[27] [28 <./figures//Tpos-Tpro_cases_test.pdf> <./figures//Tpos-Tpro_cases_o2.p
+df
+
+pdfTeX warning: pdflatex (file ./figures//Tpos-Tpro_cases_o2.pdf): PDF inclusio
+n: multiple pdfs with page group included in a single page
+>] [29 <./figures//Tpos-Tpro_cases.pdf>] [30
+
+]
+Chapter 4.
+[31] [32]
+<./figures//All3_efficiency_1:1:1.pdf, id=1150, 1084.05pt x 578.16pt>
+File: ./figures//All3_efficiency_1:1:1.pdf Graphic file (type pdf)
+<use ./figures//All3_efficiency_1:1:1.pdf>
+Package pdftex.def Info: ./figures//All3_efficiency_1:1:1.pdf  used on input li
+ne 239.
+(pdftex.def)             Requested size: 469.75502pt x 250.53596pt.
+<./figures//All3_efficiency_8:1:1.pdf, id=1151, 1084.05pt x 578.16pt>
+File: ./figures//All3_efficiency_8:1:1.pdf Graphic file (type pdf)
+<use ./figures//All3_efficiency_8:1:1.pdf>
+Package pdftex.def Info: ./figures//All3_efficiency_8:1:1.pdf  used on input li
+ne 245.
+(pdftex.def)             Requested size: 469.75502pt x 250.53596pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[33]
+
+LaTeX Warning: Text page 34 contains only floats.
+
+
+Underfull \vbox (badness 6775) has occurred while \output is active []
+
+ [34 <./figures//All3_efficiency_1:1:1.pdf> <./figures//All3_efficiency_8:1:1.p
+df
+
+pdfTeX warning: pdflatex (file ./figures//All3_efficiency_8:1:1.pdf): PDF inclu
+sion: multiple pdfs with page group included in a single page
+>]
+Chapter 5.
+<./figures//All3_therapy-SOC_1:1:1.pdf, id=1230, 1084.05pt x 578.16pt>
+File: ./figures//All3_therapy-SOC_1:1:1.pdf Graphic file (type pdf)
+<use ./figures//All3_therapy-SOC_1:1:1.pdf>
+Package pdftex.def Info: ./figures//All3_therapy-SOC_1:1:1.pdf  used on input l
+ine 263.
+(pdftex.def)             Requested size: 469.75502pt x 250.53596pt.
+<./figures//All3_therapy-SOC_8:1:1.pdf, id=1231, 1084.05pt x 578.16pt>
+File: ./figures//All3_therapy-SOC_8:1:1.pdf Graphic file (type pdf)
+<use ./figures//All3_therapy-SOC_8:1:1.pdf>
+Package pdftex.def Info: ./figures//All3_therapy-SOC_8:1:1.pdf  used on input l
+ine 269.
+(pdftex.def)             Requested size: 469.75502pt x 250.53596pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[35
+
+]
+
+LaTeX Warning: Text page 36 contains only floats.
+
+
+Underfull \vbox (badness 6775) has occurred while \output is active []
+
+ [36 <./figures//All3_therapy-SOC_1:1:1.pdf> <./figures//All3_therapy-SOC_8:1:1
+.pdf
+
+pdfTeX warning: pdflatex (file ./figures//All3_therapy-SOC_8:1:1.pdf): PDF incl
+usion: multiple pdfs with page group included in a single page
+>] [37]
+<./figures//All3_therapy-standardization.pdf, id=1322, 1445.4pt x 578.16pt>
+File: ./figures//All3_therapy-standardization.pdf Graphic file (type pdf)
+<use ./figures//All3_therapy-standardization.pdf>
+Package pdftex.def Info: ./figures//All3_therapy-standardization.pdf  used on i
+nput line 293.
+(pdftex.def)             Requested size: 469.75502pt x 187.89977pt.
+<./figures//All3_therapy-standardization-sw.pdf, id=1323, 1445.4pt x 578.16pt>
+File: ./figures//All3_therapy-standardization-sw.pdf Graphic file (type pdf)
+<use ./figures//All3_therapy-standardization-sw.pdf>
+Package pdftex.def Info: ./figures//All3_therapy-standardization-sw.pdf  used o
+n input line 297.
+(pdftex.def)             Requested size: 469.75502pt x 187.89977pt.
+ [38 <./figures//All3_therapy-standardization.pdf> <./figures//All3_therapy-sta
+ndardization-sw.pdf
+
+pdfTeX warning: pdflatex (file ./figures//All3_therapy-standardization-sw.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+>]
+<./figures//All3_therapy_1:1:1-1000.pdf, id=1409, 1084.05pt x 578.16pt>
+File: ./figures//All3_therapy_1:1:1-1000.pdf Graphic file (type pdf)
+<use ./figures//All3_therapy_1:1:1-1000.pdf>
+Package pdftex.def Info: ./figures//All3_therapy_1:1:1-1000.pdf  used on input 
+line 317.
+(pdftex.def)             Requested size: 469.75502pt x 250.53596pt.
+<./figures//All3_therapy_8:1:1-1000.pdf, id=1410, 1084.05pt x 578.16pt>
+File: ./figures//All3_therapy_8:1:1-1000.pdf Graphic file (type pdf)
+<use ./figures//All3_therapy_8:1:1-1000.pdf>
+Package pdftex.def Info: ./figures//All3_therapy_8:1:1-1000.pdf  used on input 
+line 323.
+(pdftex.def)             Requested size: 469.75502pt x 250.53596pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<./figures//All3_therapy_1:1:1-2000.pdf, id=1411, 1084.05pt x 578.16pt>
+File: ./figures//All3_therapy_1:1:1-2000.pdf Graphic file (type pdf)
+<use ./figures//All3_therapy_1:1:1-2000.pdf>
+Package pdftex.def Info: ./figures//All3_therapy_1:1:1-2000.pdf  used on input 
+line 333.
+(pdftex.def)             Requested size: 469.75502pt x 250.53596pt.
+<./figures//All3_therapy_8:1:1-2000.pdf, id=1412, 1084.05pt x 578.16pt>
+File: ./figures//All3_therapy_8:1:1-2000.pdf Graphic file (type pdf)
+<use ./figures//All3_therapy_8:1:1-2000.pdf>
+Package pdftex.def Info: ./figures//All3_therapy_8:1:1-2000.pdf  used on input 
+line 339.
+(pdftex.def)             Requested size: 469.75502pt x 250.53596pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<./figures//All3_therapy_1:1:1-4000.pdf, id=1413, 1084.05pt x 578.16pt>
+File: ./figures//All3_therapy_1:1:1-4000.pdf Graphic file (type pdf)
+<use ./figures//All3_therapy_1:1:1-4000.pdf>
+Package pdftex.def Info: ./figures//All3_therapy_1:1:1-4000.pdf  used on input 
+line 349.
+(pdftex.def)             Requested size: 469.75502pt x 250.53596pt.
+<./figures//All3_therapy_8:1:1-4000.pdf, id=1414, 1084.05pt x 578.16pt>
+File: ./figures//All3_therapy_8:1:1-4000.pdf Graphic file (type pdf)
+<use ./figures//All3_therapy_8:1:1-4000.pdf>
+Package pdftex.def Info: ./figures//All3_therapy_8:1:1-4000.pdf  used on input 
+line 355.
+(pdftex.def)             Requested size: 469.75502pt x 250.53596pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[39] [40 <./figures//All3_therapy_1:1:1-1000.pdf> <./figures//All3_therapy_8:1:
+1-1000.pdf
+
+pdfTeX warning: pdflatex (file ./figures//All3_therapy_8:1:1-1000.pdf): PDF inc
+lusion: multiple pdfs with page group included in a single page
+>] [41 <./figures//All3_therapy_1:1:1-2000.pdf> <./figures//All3_therapy_8:1:1-
+2000.pdf
+
+pdfTeX warning: pdflatex (file ./figures//All3_therapy_8:1:1-2000.pdf): PDF inc
+lusion: multiple pdfs with page group included in a single page
+>] [42 <./figures//All3_therapy_1:1:1-4000.pdf> <./figures//All3_therapy_8:1:1-
+4000.pdf
+
+pdfTeX warning: pdflatex (file ./figures//All3_therapy_8:1:1-4000.pdf): PDF inc
+lusion: multiple pdfs with page group included in a single page
+>]
+<./figures//All3_therapy_200day_1:1:1.pdf, id=1676, 1084.05pt x 578.16pt>
+File: ./figures//All3_therapy_200day_1:1:1.pdf Graphic file (type pdf)
+<use ./figures//All3_therapy_200day_1:1:1.pdf>
+Package pdftex.def Info: ./figures//All3_therapy_200day_1:1:1.pdf  used on inpu
+t line 372.
+(pdftex.def)             Requested size: 469.75502pt x 250.53596pt.
+<./figures//All3_therapy_200day_8:1:1.pdf, id=1677, 1084.05pt x 578.16pt>
+File: ./figures//All3_therapy_200day_8:1:1.pdf Graphic file (type pdf)
+<use ./figures//All3_therapy_200day_8:1:1.pdf>
+Package pdftex.def Info: ./figures//All3_therapy_200day_8:1:1.pdf  used on inpu
+t line 378.
+(pdftex.def)             Requested size: 469.75502pt x 250.53596pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[43
+
+]
+
+LaTeX Warning: Text page 44 contains only floats.
+
+
+Overfull \vbox (2.34189pt too high) has occurred while \output is active []
+
+
+[44 <./figures//All3_therapy_200day_1:1:1.pdf> <./figures//All3_therapy_200day_
+8:1:1.pdf
+
+pdfTeX warning: pdflatex (file ./figures//All3_therapy_200day_8:1:1.pdf): PDF i
+nclusion: multiple pdfs with page group included in a single page
+>]
+<./figures//All3_therapy-combi_1:1:1.pdf, id=1769, 1084.05pt x 578.16pt>
+File: ./figures//All3_therapy-combi_1:1:1.pdf Graphic file (type pdf)
+<use ./figures//All3_therapy-combi_1:1:1.pdf>
+Package pdftex.def Info: ./figures//All3_therapy-combi_1:1:1.pdf  used on input
+ line 397.
+(pdftex.def)             Requested size: 422.77664pt x 225.48149pt.
+<./figures//All3_therapy-combi_8:1:1.pdf, id=1770, 1084.05pt x 578.16pt>
+File: ./figures//All3_therapy-combi_8:1:1.pdf Graphic file (type pdf)
+<use ./figures//All3_therapy-combi_8:1:1.pdf>
+Package pdftex.def Info: ./figures//All3_therapy-combi_8:1:1.pdf  used on input
+ line 403.
+(pdftex.def)             Requested size: 422.77664pt x 225.48149pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) [45
+
+]
+
+LaTeX Warning: Text page 46 contains only floats.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [46 <./figures//All3_therapy-combi_1:1:1.pdf> <./figures//All3_therapy-combi_8
+:1:1.pdf
+
+pdfTeX warning: pdflatex (file ./figures//All3_therapy-combi_8:1:1.pdf): PDF in
+clusion: multiple pdfs with page group included in a single page
+>]
+\openout2 = `chapters/Discussion.aux'.
+
+ (./chapters/Discussion.tex
+Chapter 6.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [47
+
+
+
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [48]
+[49] [50]) [51]
+\openout2 = `chapters/Supplementary.aux'.
+
+ (./chapters/Supplementary.tex [52
+
+
+
+
+]
+Appendix A.
+<./figures//All3_efficiency_1:1:1-1000.pdf, id=1905, 1084.05pt x 578.16pt>
+File: ./figures//All3_efficiency_1:1:1-1000.pdf Graphic file (type pdf)
+<use ./figures//All3_efficiency_1:1:1-1000.pdf>
+Package pdftex.def Info: ./figures//All3_efficiency_1:1:1-1000.pdf  used on inp
+ut line 8.
+(pdftex.def)             Requested size: 469.75502pt x 250.53596pt.
+<./figures//All3_efficiency_8:1:1-1000.pdf, id=1906, 1084.05pt x 578.16pt>
+File: ./figures//All3_efficiency_8:1:1-1000.pdf Graphic file (type pdf)
+<use ./figures//All3_efficiency_8:1:1-1000.pdf>
+Package pdftex.def Info: ./figures//All3_efficiency_8:1:1-1000.pdf  used on inp
+ut line 17.
+(pdftex.def)             Requested size: 469.75502pt x 250.53596pt.
+<./figures//All3_efficiency_1:1:1-2000.pdf, id=1907, 1084.05pt x 578.16pt>
+File: ./figures//All3_efficiency_1:1:1-2000.pdf Graphic file (type pdf)
+<use ./figures//All3_efficiency_1:1:1-2000.pdf>
+Package pdftex.def Info: ./figures//All3_efficiency_1:1:1-2000.pdf  used on inp
+ut line 23.
+(pdftex.def)             Requested size: 469.75502pt x 250.53596pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<./figures//All3_efficiency_8:1:1-2000.pdf, id=1908, 1084.05pt x 578.16pt>
+File: ./figures//All3_efficiency_8:1:1-2000.pdf Graphic file (type pdf)
+<use ./figures//All3_efficiency_8:1:1-2000.pdf>
+Package pdftex.def Info: ./figures//All3_efficiency_8:1:1-2000.pdf  used on inp
+ut line 32.
+(pdftex.def)             Requested size: 469.75502pt x 250.53596pt.
+<./figures//All3_efficiency_1:1:1-4000.pdf, id=1909, 1084.05pt x 578.16pt>
+File: ./figures//All3_efficiency_1:1:1-4000.pdf Graphic file (type pdf)
+<use ./figures//All3_efficiency_1:1:1-4000.pdf>
+Package pdftex.def Info: ./figures//All3_efficiency_1:1:1-4000.pdf  used on inp
+ut line 38.
+(pdftex.def)             Requested size: 469.75502pt x 250.53596pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<./figures//All3_efficiency_8:1:1-4000.pdf, id=1910, 1084.05pt x 578.16pt>
+File: ./figures//All3_efficiency_8:1:1-4000.pdf Graphic file (type pdf)
+<use ./figures//All3_efficiency_8:1:1-4000.pdf>
+Package pdftex.def Info: ./figures//All3_efficiency_8:1:1-4000.pdf  used on inp
+ut line 47.
+(pdftex.def)             Requested size: 469.75502pt x 250.53596pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<./figures//All3_efficiency-mixed_1:1:1.pdf, id=1911, 1084.05pt x 578.16pt>
+File: ./figures//All3_efficiency-mixed_1:1:1.pdf Graphic file (type pdf)
+<use ./figures//All3_efficiency-mixed_1:1:1.pdf>
+Package pdftex.def Info: ./figures//All3_efficiency-mixed_1:1:1.pdf  used on in
+put line 59.
+(pdftex.def)             Requested size: 422.77664pt x 225.48149pt.
+<./figures//All3_efficiency-mixed_8:1:1.pdf, id=1912, 1084.05pt x 578.16pt>
+File: ./figures//All3_efficiency-mixed_8:1:1.pdf Graphic file (type pdf)
+<use ./figures//All3_efficiency-mixed_8:1:1.pdf>
+Package pdftex.def Info: ./figures//All3_efficiency-mixed_8:1:1.pdf  used on in
+put line 65.
+(pdftex.def)             Requested size: 422.77664pt x 225.48149pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<figures/All3_therapy-standardization-total.pdf, id=1913, 1445.4pt x 578.16pt>
+File: figures/All3_therapy-standardization-total.pdf Graphic file (type pdf)
+<use figures/All3_therapy-standardization-total.pdf>
+Package pdftex.def Info: figures/All3_therapy-standardization-total.pdf  used o
+n input line 77.
+(pdftex.def)             Requested size: 469.75502pt x 187.89977pt.
+<figures/All3_therapy-standardization-total-sw.pdf, id=1914, 1445.4pt x 578.16p
+t>
+File: figures/All3_therapy-standardization-total-sw.pdf Graphic file (type pdf)
+
+<use figures/All3_therapy-standardization-total-sw.pdf>
+Package pdftex.def Info: figures/All3_therapy-standardization-total-sw.pdf  use
+d on input line 81.
+(pdftex.def)             Requested size: 469.75502pt x 187.89977pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) [53 <./figures//All3_efficiency_1:1:1-1000.pdf>] [54 <./figures//All3_efficie
+ncy_8:1:1-1000.pdf> <./figures//All3_efficiency_1:1:1-2000.pdf
+
+pdfTeX warning: pdflatex (file ./figures//All3_efficiency_1:1:1-2000.pdf): PDF 
+inclusion: multiple pdfs with page group included in a single page
+>] [55 <./figures//All3_efficiency_8:1:1-2000.pdf> <./figures//All3_efficiency_
+1:1:1-4000.pdf
+
+pdfTeX warning: pdflatex (file ./figures//All3_efficiency_1:1:1-4000.pdf): PDF 
+inclusion: multiple pdfs with page group included in a single page
+>] [56 <./figures//All3_efficiency_8:1:1-4000.pdf>] [57 <./figures//All3_effici
+ency-mixed_1:1:1.pdf> <./figures//All3_efficiency-mixed_8:1:1.pdf
+
+pdfTeX warning: pdflatex (file ./figures//All3_efficiency-mixed_8:1:1.pdf): PDF
+ inclusion: multiple pdfs with page group included in a single page
+>] [58 <./figures/All3_therapy-standardization-total.pdf> <./figures/All3_thera
+py-standardization-total-sw.pdf
+
+pdfTeX warning: pdflatex (file ./figures/All3_therapy-standardization-total-sw.
+pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>] [59
+
+
+
+] [60] [61] [62] [63] (./20161100_thesis.aux (./chapters/Intro.aux)
+(./chapters/Methods.aux) (./chapters/Results.aux) (./chapters/Discussion.aux)
+(./chapters/Supplementary.aux))
+Package rerunfilecheck Info: File `20161100_thesis.out' has not changed.
+(rerunfilecheck)             Checksum: 8FCAF9A06A377F4D046F73803743F717;4091.
+Package logreq Info: Writing requests to '20161100_thesis.run.xml'.
+\openout1 = `20161100_thesis.run.xml'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 20504 strings out of 478994
+ 352028 string characters out of 5864752
+ 1196089 words of memory out of 5000000
+ 37405 multiletter control sequences out of 15000+600000
+ 420009 words of font info for 97 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 83i,14n,117p,3422b,4955s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texmf-dist/fonts/type1/public/ccicons/ccicons.pfb></usr/share/tex
+mf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy8.pfb></usr/share/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmbx8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmmib10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/
+cmmib8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
+r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
+usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.
+pfb>
+Output written on 20161100_thesis.pdf (81 pages, 1209814 bytes).
+PDF statistics:
+ 2521 PDF objects out of 2984 (max. 8388607)
+ 1091 compressed objects within 11 object streams
+ 252 named destinations out of 1000 (max. 500000)
+ 409 words of extra memory for PDF output out of 10000 (max. 10000000)
+
